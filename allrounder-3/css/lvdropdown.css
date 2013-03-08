@@ -1,0 +1,132 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+#topmenu ul.menu, #topmenu ul.menu ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	list-style-position:outside;
+	position:relative;
+	line-height:1.5em; 
+	z-index:999;
+	display:inline-block;
+	width: 100%;
+}
+#topmenu ul.menu li, #topmenu ul.menu ul li {
+	list-style:none;
+}
+#topmenu ul.menu {
+	background-repeat: repeat-x;
+}
+#topmenu ul.menu li {
+	float:left;
+	position:relative;
+}
+#topmenu ul.menu li a, #topmenu ul.menu li span.separator {
+	display:block;
+	padding:10px 15px;	/* height of level1 links */
+	text-decoration:none;
+	vertical-align:middle;
+	min-height:24px;
+	background-repeat: repeat-x;
+}
+	/***** IMAGES *****/
+#topmenu ul.menu li a img { 
+	vertical-align:middle;
+	padding-right: 5px;
+}
+#topmenu ul.menu li a span {
+	vertical-align:middle;
+}
+
+	/***** FONT SIZE *****/
+#topmenu ul.menu li a, 
+#topmenu ul.menu li span.separator,
+#topmenu ul.menu li a span {
+	font-size:14px;
+}
+#topmenu ul.menu li ul li a, 
+#topmenu ul.menu li ul li span.separator,
+#topmenu ul.menu li ul li a span {
+	font-size:12px;
+}
+#topmenu ul.menu li ul li {
+	border:0 !important;
+}
+
+#topmenu ul.menu li.parent a, #topmenu ul.menu li.parent span.separator {
+	background-image: url(../images/menu-parent-smooth.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 30px;
+}
+#topmenu ul.menu li.parent a:hover, #topmenu ul.menu li.parent span.separator:hover {
+	background-image: url(../images/menu-parent-hover-smooth.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 30px;
+}
+#topmenu ul.menu li#current.parent a, #topmenu ul.menu li#current.parent span.separator {
+	background-image: url(../images/menu-parent-hover-smooth.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 30px;
+}
+
+
+	/***** LEVEL 2 *****/
+
+#topmenu ul.menu ul {
+	position:absolute;
+	top:2.2em;		/* double line height of level 1 ul */
+	display:none;
+	padding:5px;	/* border of level2 ul */
+	width:214px;
+	border-radius: 4px;
+}
+#topmenu ul.menu ul li {
+	margin:2px;
+	width:210px;
+}
+#topmenu ul.menu li ul li a, #topmenu ul.menu li ul li span.separator {
+	float:left;
+	padding:4px 8px 4px 8px !important; /* height of level2 links */
+	height:auto;
+	width:194px;
+	background: none !important;
+}
+#topmenu ul.menu li ul li a:hover {
+	background: none !important;
+}
+
+#topmenu ul.menu li ul li.parent {
+	background-image: url(../images/menulili_parent.gif) !important;
+	background-position: right !important;
+	background-repeat: no-repeat !important;
+}
+#topmenu ul.menu li ul li.parent:hover {
+	background-image: url(../images/menulili_parent_hover.gif) !important;
+	background-position: right !important;
+	background-repeat: no-repeat !important;
+}
+#topmenu ul.menu li li.parent a, #topmenu ul.menu li li.parent span.separator,
+#topmenu ul.menu li li.parent a:hover, #topmenu ul.menu li li.parent span.separator:hover,
+#topmenu ul.menu li li#current.parent a, #topmenu ul.menu li li#current.parent span.separator {
+	padding-right:8px !important;
+}
+
+#topmenu ul.menu ul ul{
+	top:auto;
+}	
+#topmenu ul.menu li ul ul {
+	left:190px;
+	margin:0px 0 0 10px;
+}
+#topmenu ul.menu li:hover ul ul, #topmenu ul.menu li:hover ul ul ul, #topmenu ul.menu li:hover ul ul ul ul{
+	display:none;
+}
+#topmenu ul.menu li:hover ul, #topmenu ul.menu li li:hover ul, #topmenu ul.menu li li li:hover ul, #topmenu ul.menu li li li li:hover ul{
+	display:block;
+}

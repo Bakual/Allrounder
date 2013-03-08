@@ -1,0 +1,51 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+/****************** Joomla Backend Parameter Style Pimp ******************/
+
+#welcomefields-options,#globtemplfields-options, #fontfields-options, #logofields-options, #templcolorfields-options, #ddcolors-options, #advanced-options {
+	font-size:1.4em;
+	padding-left: 40px;
+	background-repeat:no-repeat;
+	display:block;
+	height:32px;
+	line-height:32px;
+	text-shadow: 1px 1px 1px #fff, 1px 2px 3px #aaa;
+}
+#welcomefields-options {
+	background-image: url('../images/xml/tip.png');
+}
+#globtemplfields-options {
+	background-image: url('../images/xml/sitemap.png');
+}
+#fontfields-options {
+	background-image: url('../images/xml/fonts.png');
+}
+#logofields-options {
+	background-image: url('../images/xml/logo.png');
+}
+#templcolorfields-options {
+	background-image: url('../images/xml/tempcolors.png');
+}
+#ddcolors-options {
+	background-image: url('../images/xml/ddcolors.png');
+}
+#advanced-options {
+	background-image: url('../images/xml/advanced.png');
+}
+b.ttip {
+	background-image: url('../images/xml/ttip.png');
+	background-repeat:no-repeat;
+	padding-left:18px;
+	cursor:help;
+}
+span.info {
+	margin:0 0 10px 40px;
+	display:block;
+	color: #0099FF;
+}
+fieldset.panelform label, fieldset.panelform div.paramrow label, fieldset.panelform span.faux-label {
+    min-width: 160px;
+}

@@ -1,0 +1,138 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+#topmenu {
+	ul.menu, ul.menu ul {
+		margin:0;
+		padding:0;
+		list-style-type:none;
+		list-style-position:outside;
+		position:relative;
+		line-height:1.5em; 
+		z-index:999;
+		display:inline-block;
+		width: 100%;
+	}
+	ul.menu {
+		background-repeat: repeat-x;
+		li, ul li {
+			list-style: none;
+		}
+		li {
+			float:left;
+			position: relative;
+			a, span.separator {
+				display: block;
+				padding: 10px 15px;	/* height of level1 links */
+				text-decoration: none;
+				vertical-align: middle;
+				min-height: 24px;
+				background-repeat: repeat-x;
+			}
+			a {
+					/***** IMAGES *****/
+				img {
+					vertical-align: middle;
+					padding-right: 5px;
+				}
+				span {
+					vertical-align: middle;
+				}
+			}
+				/***** FONT SIZE *****/
+			a, span.separator, a span {
+				font-size: 14px;
+			}
+			ul {
+				li {
+					border:0 !important;
+					a, span.separator, a span {
+						font-size: 12px;
+					}
+						/***** LEVEL 2 *****/
+					a, span.separator {
+						float:left;
+						padding:4px 8px 4px 8px !important; /* height of level2 links */
+						height:auto;
+						width:194px;
+						background: none !important;
+					}
+					a:hover {
+						background: none !important;
+					}
+					&.parent {
+						background-image: url(../images/menulili_parent.gif) !important;
+						background-position: right !important;
+						background-repeat: no-repeat !important;
+						&:hover {
+							background-image: url(../images/menulili_parent_hover.gif) !important;
+							background-position: right !important;
+							background-repeat: no-repeat !important;
+						}
+					}
+				}
+				ul {
+					left:190px;
+					margin:0px 0 0 10px;
+				}
+			}
+			&.parent {
+				a, span.separator {
+					background-image: url(../images/menu-parent-smooth.png);
+					background-repeat: no-repeat;
+					background-position: center right;
+					padding-right: 30px;
+					&:hover {
+						background-image: url(../images/menu-parent-hover-smooth.png);
+						background-repeat: no-repeat;
+						background-position: center right;
+						padding-right: 30px;
+					}
+				}
+			}
+			&#current.parent {
+				a, span.separator {
+					background-image: url(../images/menu-parent-hover-smooth.png);
+					background-repeat: no-repeat;
+					background-position: center right;
+					padding-right: 30px;
+				}
+			}
+			li.parent, li#current.parent {
+				a, span.separator, a:hover, span.separator:hover {
+					padding-right:8px !important;
+				}
+			}
+			&:hover {
+				ul {
+					ul, ul ul, ul ul ul {
+						display:none;
+					}
+				}
+			}
+			&:hover, li:hover, li li:hover, li li li:hover {
+				ul {
+					display:block;
+				}
+			}
+		}
+			/***** LEVEL 2 *****/
+		ul {
+			position:absolute;
+			top:2.2em;		/* double line height of level 1 ul */
+			display:none;
+			padding:5px;	/* border of level2 ul */
+			width:214px;
+			border-radius: 4px;
+			li {
+				margin:2px;
+				width:210px;
+			}
+			ul {
+				top:auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,317 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+/* Module Styles Start */
+
+
+
+	/* Module Round Styles */
+
+div.module {
+	background-image : url(../images/modules/module-lb.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	margin-top:10px;
+}
+
+div.module div {
+	background-image : url(../images/modules/module-rb.png);
+	background-repeat: no-repeat;
+	background-position:right bottom;
+}
+div.module div div {
+	background-image : url(../images/modules/module-rt.png);
+	background-repeat: no-repeat;
+	background-position:right top;
+}
+div.module div div div {
+	padding:10px;
+	background-image : url(../images/modules/module-lt.png);
+	background-repeat: no-repeat;
+	background-position:left top;
+}
+div.module div div div div {
+	border:0;
+	padding:0;
+	background-image:none;
+}
+
+div.module h3.moduleh3 {
+	font-size:120%;
+	padding:0;
+	margin:0;
+	margin:0 0 10px 0;
+	padding:7px 8px;
+	font-size:1.3em;
+	background-image : url(../images/module-h3.png);
+	background-repeat : repeat-x;
+}
+
+	/* Module Round Styles end */
+
+
+
+#slider {
+	width:auto;
+}
+#banner {
+	position:absolute;
+	right:0;
+	max-width:50%;
+	max-height:80px;
+	overflow:hidden;
+	margin:5px 26px 5px 5px;
+	padding:5px;
+}
+
+#beforehead123, #beforehead45, #beforehead6out,
+#afterhead123, #afterhead45, #afterhead6out,
+#top123, #top45, #top6out,
+#advert123, #advert45, #advert6out,
+#advert789, #advert1011, #advert12out,
+#bottom123, #bottom45, #bottom6out,
+#foot123, #foot45, #foot6out {
+	width: 100%;
+	display: inline-block;
+	margin: 15px 0;
+	padding: 0;
+	height: auto;
+}
+#beforehead1, #beforehead2, #beforehead3,
+#afterhead1, #afterhead2, #afterhead3,
+#top1, #top2, #top3,
+#advert1, #advert2, #advert3,
+#advert7, #advert8, #advert9,
+#bottom1, #bottom2, #bottom3,
+#foot1, #foot2, #foot3 {
+	float:left;
+	width: 31.2%;
+	margin: 0 1%;
+	padding: 0;
+}
+#beforehead4, #beforehead5,
+#afterhead4, #afterhead5,
+#top4, #top5,
+#advert4, #advert5,
+#advert10, #advert11,
+#bottom4, #bottom5,
+#foot4, #foot5 {
+	float:left;
+	width: 47.9%;
+	margin: 0 1%;
+	padding: 0;
+}
+#beforehead6, #afterhead6, #top6, #advert6,
+#advert12, #bottom6, #foot6 {
+	float:left;
+	width: 97.9%;
+	margin: 0 1%;
+	padding: 0;
+}
+
+
+/* special module styles */
+
+div.module-style1 {
+	background-image : url(../images/modules/module-lb.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-color:#fff;
+	border:1px solid #ddd;
+	color: #505050;
+}
+div.module-style1 div {
+	background-image : url(../images/modules/paper-rb.png);
+	background-repeat: no-repeat;
+	background-position:right bottom;
+}
+div.module-style1 div div {
+	background-image : url(../images/modules/module-rt.png);
+	background-repeat: no-repeat;
+	background-position:right top;
+}
+div.module-style1 div div div {
+	padding:10px;
+	background-image : url(../images/modules/module-lt.png);
+	background-repeat: no-repeat;
+	background-position:left top;
+}
+
+div.module-style2 {
+	background-color:#FFFF99;
+	border:1px solid #dddd00;
+	color: #000066;
+	font-family:"Comic Sans MS";
+	background-image : url(../images/modules/module-bg.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+div.module-style3 {
+	background-color:#000;
+	border:5px solid #333;
+	color: #aaa;
+	background-image : url(../images/modules/carbon.jpg);
+}
+div.module-style4 {
+	background-color:#333;
+	border:5px solid #444;
+	color: #eee;
+	background-image : url(../images/modules/rausch.jpg);
+}
+div.module-style5 {
+	background-color:#222;
+	border:5px solid #333;
+	color: #eee;
+	background-image : url(../images/modules/scan.jpg);
+}
+div.module-style6 {
+	background-color:#bbb;
+	border:5px solid #ccc;
+	color: #000;
+	font-weight:bold;
+	background-image : url(../images/modules/riffle.jpg);
+}
+
+div.module-style2 div div div, div.module-style3 div div div, 
+div.module-style4 div div div, div.module-style5 div div div, 
+div.module-style6 div div div {
+	padding:10px;
+}
+
+div.module-style1 div div div div, div.module-style2 div div div div, 
+div.module-style3 div div div div, div.module-style4 div div div div, 
+div.module-style5 div div div div, div.module-style6 div div div div {
+	border:0;
+	padding:0;
+	background-image:none;
+}
+
+div.module-style1 h3.moduleh3, div.module-style2 h3.moduleh3, 
+div.module-style3 h3.moduleh3, div.module-style4 h3.moduleh3, 
+div.module-style5 h3.moduleh3, div.module-style6 h3.moduleh3 {
+	font-size:120%;
+	padding:0;
+	margin:0;
+	margin:0 0 10px 0;
+	padding:7px 8px;
+	font-size:1.3em;
+}
+div.module-style6 h3.moduleh3 {
+	background-image : url(../images/modules/riffle-h3.jpg);
+	border:2px solid #ccc;
+	background-repeat: repeat-x;
+	height:30px;
+	line-height:30px;
+	margin:0;
+	padding:0 20px;
+}
+
+/* Module Styles End */
+
+	/* top-panel */
+
+#toppanel {
+	width: 99.9%;
+	height:auto;
+	display:none;
+	margin:0;
+	position:relative;
+	z-index:9999;
+}
+a#toppanel-toggle {
+	width: 110px;
+	height:18px;
+	display:block;
+	position:fixed;
+	top:0;
+	right:60px;
+	z-index:9999;
+	background-image:url('../images/toppanel-toggle.png');
+	background-repeat:no-repeat;	
+	background-position:left bottom;
+}
+a#toppanel-toggle:hover {
+	height:26px;
+	text-decoration:none;
+	background-position: 0 -26px;
+}
+
+	/* side-panel */
+
+#sidepanel-outer {
+	position:fixed;
+	left:0;
+	top:30%;
+	z-index:9999;
+	display:inline-block;
+}
+#sidepanel {
+	display:none;
+	padding: 10px 20px;
+	min-height:110px;
+	float:left;	
+}
+a#sidepanel-toggle {
+	width: 18px;
+	height:110px;
+	display:block;
+	float:left;
+	margin-top:10px;	
+	background-image:url('../images/leftpanel-toggle.png');
+	background-repeat:no-repeat;
+	background-position: right top;
+}
+a#sidepanel-toggle:hover {
+	width: 26px;
+	text-decoration:none;
+	color: #440000;
+	background-position: -26px;
+}
+
+/* footer modules */
+#footermodule {
+	font-size: 11px;
+	width: 80%;
+	overflow: hidden;
+	text-align:center;
+	padding:10px 0 10px 10%;
+}
+
+#footermodule1234, #footermodule5 {
+	font-size: 11px;
+	width: 80%;
+	overflow: hidden;
+	padding:0 0 5px 10%;
+}
+#footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
+	font-size:11px !important;
+	line-height:normal !important;
+}
+#footermodule1, #footermodule2, #footermodule3, #footermodule4  {
+	float:left;
+	width: 22%;
+	margin: 0;
+	padding: 0 1.4%;
+}
+#footermodule1234 .moduletable h3, #footermodule5 .moduletable h3 {
+	font-size:11px;
+	text-transform:uppercase;
+	margin:0 0 3px 0;
+}
+#footermodule1234 .moduletable, #footermodule5 .moduletable {
+	font-size:10px;
+	margin:10px 0;
+}
+/* all menus */
+li.current { 
+	font-weight: bold;
+}
+/* search module */
+.search input.button {
+	margin:0;
+	padding:1px 2px !important;
+	vertical-align:middle;
+}

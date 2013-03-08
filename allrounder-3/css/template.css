@@ -1,0 +1,444 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+/****************** LAYOUT ******************/
+
+html {
+	height : 101%;
+}
+body {
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size:0.8em;
+	margin:0;
+	padding:0;
+	line-height:1.3em;
+	background-image:url('../images/background.png');
+	overflow-x:hidden;
+}
+#wrapper, #foot_container {
+	margin: 0 auto;
+}
+#wrapper {
+	padding: 0 0 10px 0;
+}
+#foot_container {
+	padding:0 0 7px 0;
+	overflow:visible;
+}
+#header_container {
+    height: auto;
+	width: 100%;
+	margin:auto;
+	padding: 14px 0 0 0;
+}
+#header {
+	min-height: 120px;
+	margin: 0 -21px 15px -21px;
+	padding:0 0 0 21px;
+	position:relative;
+	background-image:url('../images/header.png');
+	background-repeat:repeat-x;
+	border-radius: 5px 5px 0 0;	
+}
+/* triangles in header */
+.heckl {  
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-left: 19px solid transparent;  
+	top: 100%;  
+	left: 0;  
+	position: absolute;  
+}
+.heckr {  
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-right: 19px solid transparent;  
+	top: 100%;  
+	right: 0;  
+	position: absolute;  
+}
+/* triangles in header end */
+#logo {
+	width: auto;
+	overflow:hidden;
+}
+a.imglogo {
+	line-height: normal;
+	font-size:36px;
+	display:block;
+	margin:0;
+	padding:0;
+}
+a.imglogo:hover {
+	text-decoration:none;
+}
+a.medialogo {
+	line-height: normal;
+	font-size:36px;
+	display:block;
+	margin:0;
+	padding:0;
+}
+a.medialogo:hover {
+	text-decoration:none;
+}
+
+#logo a.logo {
+	line-height: normal;
+	font-size:46px;
+	display:block;
+	margin:0;
+	letter-spacing:-1px;
+	padding: 20px 40px 10px 60px;
+}
+a.logo:hover {
+	text-decoration:none;
+}
+div.slogan {
+	line-height: normal;
+	font-size:18px;
+	display:block;
+	margin:0;
+	padding: 0 40px 10px 100px;
+}
+#headermodule1,#headermodule2 {
+}
+#topmenu_container {
+	width: 100%;
+	margin:0;
+	height: auto;
+	min-height:30px;
+}
+#topmenu {
+	height:auto;
+    margin:auto;
+}
+#topmenu ul, #topmenu ul li {
+	list-style : none;
+}
+#subhead {
+	height:33px;
+	width: 99.5%;
+	margin: 10px .2% 0 .2%;
+	overflow:hidden;
+	background-image:url('../images/subhead.png');
+	background-repeat:repeat-x;
+}
+#search {
+	position:relative;
+	float:right;
+	padding: 0 0 0 18px;
+	margin: 4px 4px 4px 0;
+	background-image:url('../images/search.png');
+	background-repeat:no-repeat;
+	background-position: left 2px;
+
+}
+#container {
+	text-align:left;
+	padding: 10px 7px 0 7px;
+	margin:auto;
+}
+#container2 {
+	text-align:left;
+	margin:auto;
+}
+#page_content {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+#leftcol {
+	width: 21%;
+	float: left;
+	margin:0;
+	padding: 0 0 10px 0;
+}
+#rightcol {
+	float: right;
+	margin:0;
+	padding: 0 0 10px 0;
+}
+/* left and right NOT loaded */
+#content_out {
+	margin: 0 0 0 0.2%;
+}
+/* just left loaded */
+#content_outleft {
+	float:right;
+}
+/* left and right loaded */
+#content_outmiddle {
+	float:left;
+	margin: 0 1%;
+}
+/* just right loaded */
+#content_outright {
+	float:left;
+}
+#maincontent {
+	float:left;
+	width: 93.6%;
+	padding: 20px 3% 20px 3%;
+	margin:10px 0 0 0;
+	min-height: 200px;
+	overflow:hidden;
+	background-image:url('../images/background.png');
+}
+.clr {
+	clear:both;
+}
+#subfoot {
+	min-height: 15px;
+	line-height: 15px;
+	width: 100%;
+}
+.copytext {
+	padding: 3px 0;
+	font-size: 11px;
+	text-align:center;
+	font-weight:bold;
+}
+#footer {
+	min-height: 80px;
+	margin: 0 -16px 0 -16px;
+	padding:0;
+	position:relative;
+	overflow:visible;
+	background-image:url('../images/footer.png');
+	background-repeat:repeat-x;
+}
+.footer-inner {
+	display:inline-block;
+	width:100%;
+	min-height:62px;
+}
+.feckl {  
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-left: 14px solid transparent;  
+	top: -11px;  
+	left: 0;  
+	position: absolute;  
+}
+.feckr {  
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-right: 14px solid transparent;  
+	top: -11px;  
+	right: 0;  
+	position: absolute;  
+}
+
+#scroll_up {
+	float: right;
+	width: 10%;
+}
+a#gotop {
+	display:block;
+	height:50px;
+	line-height:45px;
+	width:100%;
+	text-align:center;
+}
+a#gotop:hover {
+	text-decoration:overline;
+}
+
+.footer-bottom {
+	display:inline-block;
+	width: 100%;
+	line-height:normal;
+	font-style:italic;
+}
+span#date {
+	font-size:10px;
+	float:left;
+	padding-left:20px;
+}
+
+span#copy {
+	font-size:10px;
+	text-align:right;
+	float:right;
+	padding-right:20px;
+}
+span#copy a:hover {
+	text-decoration:none;
+}
+
+#leftcol .module, #leftcol .module_menu, #leftcol .module_text, 
+#rightcol .module, #rightcol .module_menu, #rightcol .module_text {
+	margin-top:0;
+	background-color: transparent;
+	border:0;
+}
+#leftcol .module div div, #leftcol .module_menu div div, #leftcol .module_text div div, 
+#rightcol .module div div, #rightcol .module_menu div div, #rightcol .module_text div div {
+}
+#leftcol .module div.lvround-inner, #leftcol .module_menu div.lvround-inner, #leftcol .module_text div.lvround-inner, 
+#rightcol .module div.lvround-inner, #rightcol .module_menu div.lvround-inner, #rightcol .module_text div.lvround-inner {
+	margin: 0;
+	padding: 10px 3%;
+}
+#leftcol .module div div div div, #leftcol .module_menu div div div div, #leftcol .module_text div div div div, 
+#rightcol .module div div div div, #rightcol .module_menu div div div div, #rightcol .module_text div div div div {
+	border: 0;
+}
+#leftcol h3.moduleh3, #rightcol h3.moduleh3 {
+	font-size: 120%;
+	background-image:url('../images/h3-module.png');
+	background-repeat:repeat-x;
+	border-bottom:0;
+}
+#wrapper #leftcol h3.moduleh3 {
+	min-height:35px;
+	line-height:35px;
+	margin: 10px 0 0 -20px;
+	padding: 0 10px 0 30px;
+	text-align:left;
+	position:relative;
+	border-bottom:0;
+	border-radius: 5px 5px 0 0;	
+}
+#wrapper #rightcol h3.moduleh3 {
+	min-height:30px;
+	line-height:30px;
+	margin: 10px -20px 0 0;
+	padding: 0 30px 0 10px;
+	text-align:right;
+	position:relative;	
+	border-radius: 5px 5px 0 0;	
+}
+.h3eckl {  
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-left: 11px solid transparent;  
+	top: 100%;  
+	left: 0;  
+	position: absolute;  
+}
+.h3eckr {  
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-right: 11px solid transparent;  
+	top: 100%;  
+	right: 0;  
+	position: absolute;  
+}
+.moduletable h3 {
+	margin: 10px 0;
+}
+/****************** MENUES ******************/
+
+/**** Mainmenu with suffix: _menu START ****/
+
+.module_menu ul.menu {
+	margin: 0;
+	padding : 0;
+	background : none;
+	list-style:none;
+}
+.module_menu ul.menu li {
+	margin : 0;
+	padding : 0 0 0 20px;
+	background : none;
+	list-style:none;
+	margin: 0;
+	background-image:url('../images/menu-li.png');
+	background-repeat:no-repeat;
+	background-position: 0 8px;
+	
+}
+.module_menu ul.menu li a, .module_menu ul.menu li span.separator {
+	display : block;
+	vertical-align : middle;
+	text-align : left;
+	text-decoration : none;
+	padding:3px 0;
+	margin:4px 0 0 0;
+	border-bottom:1px dotted #ccc;
+	clear:both;
+	overflow:visible;
+}
+.module_menu ul.menu li a img { 
+	vertical-align:middle;
+	padding-right: 5px;
+}
+.module_menu ul.menu li a span {
+	vertical-align:middle;
+}
+.module_menu ul.menu li.current a {
+	font-weight:bold;
+}
+.module_menu ul.menu li.current ul li a {
+	font-weight:normal;
+}
+.module_menu ul.menu li ul {
+	margin : 0 0 0 10px;
+	padding : 0px;
+}
+.module_menu ul.menu li li {
+	list-style: none !important;
+	margin :0;
+	padding : 0;
+	min-height:22px;
+	line-height: 22px;
+	background : none;
+}
+.module_menu ul.menu ul li a {
+	background: none;
+	font-size:90%;
+	min-height:18px;
+	line-height:18px;
+}
+/**** Mainmenu with suffix: _menu END ****/
+
+/* Mainmenu normal */
+
+ul.menu {
+	line-height:22px;
+}
+ul.menu li a span {
+	clear:both;
+	vertical-align:middle;
+}
+
+/* Mainmenu normal END */
+
+
+.input, .inputbox {
+	font-size:11px;
+	padding : 2px 3px 2px 3px;
+	margin : 2px 3px 2px 3px;
+}
+a, a:link, a:visited, a:active, a:focus {
+	outline : none;
+	text-decoration : none;
+}
+
+.shadow-left {
+    display: block;
+	height:8px;
+	background-image:url('../images/shadow-l.png');
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.shadow-right {
+    display: block;
+	height:8px;
+	background-image:url('../images/shadow-r.png');
+	background-repeat:no-repeat;
+	background-position: right;
+	margin-top:-8px;
+	margin-bottom:10px;
+}
+
+/* To disable the shadows in modules using suffix "-shadows-off" */
+.module-outer-shadows-off .shadow-left,
+.module-outer-shadows-off .shadow-right {
+	display:none;
+}
+
