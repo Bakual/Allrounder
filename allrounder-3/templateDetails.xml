@@ -21,6 +21,7 @@
 	</description>
 	<files>
 		<folder>css</folder>
+		<folder>less</folder>
 		<folder>fields</folder>
 		<folder>html</folder>
 		<folder>images</folder>
@@ -42,6 +43,10 @@
 		<fields name="params">
 			<fieldset name="welcomefields" description="" label="TPL_ALLROUNDER_WELCOME">
 				<field name="spacer" type="spacer" label="TPL_ALLROUNDER_WELCOMETEXT" />
+				<field name="useLESS" type="radio" class="btn-group" default="1" label="Use LESS files" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 			</fieldset>
 			<fieldset name="globtemplfields" description="" label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
 				addfieldpath="/templates/allrounder-3/fields" >
@@ -121,7 +126,7 @@
 				<field name="sloganColor" class="color {required:false}" type="text" default="FF2402" label="TPL_ALLROUNDER_SLOGAN_COLOR" description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"></field>
 			</fieldset>
 			<fieldset name="templcolorfields" description="" label="TPL_ALLROUNDER_COLORS_TEMPLATE">
-				<field name="styleid" type="styleid" default="0" label="TPL_ALLROUNDER_COLORS" />
+				<field name="styleID" type="styleid" default="0" label="TPL_ALLROUNDER_COLORS" />
 				<field name="ownColors" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_USE_OWN_COLORS" description="TPL_ALLROUNDER_USE_OWN_COLORS_DESC">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
