@@ -10,7 +10,9 @@ $path	= $this->baseurl.'/templates/'.$this->template;
 <!--- ADD CSS Files -->
 <?php if ($this->params->get('useLESS') and $styleID = $this->params->get('styleID')) : ?>
 	<link href="<?php echo $path; ?>/css/template<?php echo $styleID; ?>.css" rel="stylesheet" type="text/css" media="all" />
-<?php else :
+	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
+	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
+else :
 	if ($this->params->get('cssCompress')) : ?>
 		<link href="<?php echo $path; ?>/css/css_compress.php" rel="stylesheet" type="text/css" media="all" />
 		<link href="<?php echo $path; ?>/css/lvdropdown.css" rel="stylesheet" type="text/css" media="all" />
@@ -40,23 +42,19 @@ if ($this->params->get('css3effects')) : ?>
 <?php if ($this->params->get('jsCompress')) : ?>
 	<script type="text/javascript" src="<?php echo $path; ?>/js/js_compress.php"></script>
 <?php else :
-	// Add JavaScript Frameworks
-	JHtml::_('bootstrap.framework');
-	JHtml::_('jquery.framework');
-
-	// Load optional rtl Bootstrap css and Bootstrap bugfixes
-	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
-
 	$doc = JFactory::getDocument();
+	if ($this->params->get('useLESS')) :
+		// Add JavaScript Frameworks
+		JHtml::_('jquery.framework');
+	else :
+		$doc->addScript($path.'/js/jquery-1.7.2.min.js');
+		$doc->addScriptDeclaration('var jq = jQuery.noConflict();');
+	endif;
 	$doc->addScript($path.'/js/lv-dropdown.js');
 	$doc->addScript($path.'/js/jq.easy-tooltip.min.js');
 	$doc->addScript($path.'/js/jq.easy-caption.min.js');
 	$doc->addScript($path.'/js/reflection.js');
 	$doc->addScript($path.'/js/effects.js');
-/*	<script type="text/javascript" src="<?php echo $path; ?>/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript">
-		var jq = jQuery.noConflict();
-	</script> */
 endif;
 
 // Layout parameters
