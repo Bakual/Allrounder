@@ -4,7 +4,7 @@
  * @version 0.1
  * @author Thomas Hunziker
  * @copyright (C) 2013 - Thomas Hunziker
- * Based on https://github.com/ndeet/plg_system_less
+ * Loosely based on https://github.com/ndeet/plg_system_less
  * @author Andreas Tasch 
  * @copyright (C) 2012 - Andreas Tasch
  * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -35,8 +35,8 @@ class plgSystemLessallrounder extends JPlugin
 			$registry->loadString($table->params);
 			$table->params = $registry;
 		}
-		// Check if parameter "styleid" is set
-		if (!$table->params->get('styleid', 0))
+		// Check if parameter "styleID" is set
+		if (!$table->params->get('styleID', 0))
 		{
 			return;
 		}
