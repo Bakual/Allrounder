@@ -126,7 +126,7 @@
 				<field name="sloganColor" class="color {required:false}" type="text" default="FF2402" label="TPL_ALLROUNDER_SLOGAN_COLOR" description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"></field>
 			</fieldset>
 			<fieldset name="templcolorfields" description="" label="TPL_ALLROUNDER_COLORS_TEMPLATE">
-				<field name="styleID" type="styleid" default="0" label="TPL_ALLROUNDER_COLORS" />
+				<field name="styleID" type="styleid" default="" label="TPL_ALLROUNDER_COLORS" />
 				<field name="ownColors" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_USE_OWN_COLORS" description="TPL_ALLROUNDER_USE_OWN_COLORS_DESC">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
