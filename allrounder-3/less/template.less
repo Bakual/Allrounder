@@ -93,6 +93,7 @@
 @import "joomla.less";
 @import "typo.less";
 @import "modules.less";
+@import "layout.less";
 
 /****************** LAYOUT ******************/
 
@@ -139,6 +140,11 @@ body {
 	border-left:1px solid e('#' + @headBorderColor);
 	border-right:1px solid e('#' + @headBorderColor);
 }
+#sidepanel {
+	background: #222;
+	border: 2px solid #434345;
+	border-left:0;
+}
 
 /* triangles in header */
 .heckl {
@@ -158,8 +164,12 @@ body {
 	right: 0;  
 	position: absolute;  
 }
+.heckl, .heckr {  
+	border-top: 10px solid e('#' + @headCornerColor);
+}
 /* triangles in header end */
 #logo {
+	color:#ddd;
 	width: auto;
 	overflow:hidden;
 	a.logo {
@@ -171,33 +181,29 @@ body {
 		padding: 20px 40px 10px 60px;
 	}
 }
-a.imglogo {
-	line-height: normal;
-	font-size:36px;
-	display:block;
-	margin:0;
-	padding:0;
-}
-a.medialogo {
-	line-height: normal;
-	font-size:36px;
-	display:block;
-	margin:0;
-	padding:0;
-	&:hover {
+a {
+	&, &:link, &:visited, &:active, &:focus {
+		outline : none;
+		text-decoration : none;
+		color: @linkColor;
+	}
+	&:active {
+		color: #0099FF !important;
+	}
+	&.imglogo, &.medialogo {
+		color: #ddd !important;
+		line-height: normal;
+		font-size:36px;
+		display:block;
+		margin:0;
+		padding:0;
+		&:hover {
+			text-decoration:none;
+		}
+	}
+	&.logo:hover {
 		text-decoration:none;
 	}
-}
-
-a.logo:hover {
-	text-decoration:none;
-}
-div.slogan {
-	line-height: normal;
-	font-size:18px;
-	display:block;
-	margin:0;
-	padding: 0 40px 10px 100px;
 }
 
 #topmenu_container {
@@ -305,14 +311,14 @@ div.slogan {
 #footer {
 	min-height: 80px;
 	margin: 0 -16px 0 -16px;
-	padding:0;
-	position:relative;
-	overflow:visible;
-	background-image:url('../images/footer.png');
-	background-repeat:repeat-x;
+	padding: 0;
+	position: relative;
+	overflow: visible;
+	background-image: url('../images/footer.png');
+	background-repeat: repeat-x;
 	background-color: e('#' + @footBgColor);
-	border:1px solid e('#' + @footBorderColor);
-	border-bottom:2px solid e('#' + @footBorderColor);
+	border: 1px solid e('#' + @footBorderColor);
+	border-bottom: 2px solid e('#' + @footBorderColor);
 	a#gotop {
 		color: e('#' + @gotopLinkColor);
 	}
@@ -338,6 +344,9 @@ div.slogan {
 	right: 0;  
 	position: absolute;  
 }
+.feckl, .feckr {  
+	border-bottom: 10px solid e('#' + @footCornerColor);
+}
 
 #scroll_up {
 	float: right;
@@ -360,21 +369,22 @@ a#gotop {
 	line-height:normal;
 	font-style:italic;
 }
-span#date {
-	font-size:10px;
-	float:left;
-	padding-left:20px;
-}
-
-span#copy {
-	font-size:10px;
-	text-align:right;
-	float:right;
-	padding-right:20px;$
-	a {
-		color: e('#' + @fontColor);
-		&:hover {
-			text-decoration:none;
+span {
+	&#date {
+		font-size:10px;
+		float:left;
+		padding-left:20px;
+	}
+	&#copy {
+		font-size:10px;
+		text-align:right;
+		float:right;
+		padding-right:20px;
+		a {
+			color: e('#' + @fontColor);
+			&:hover {
+				text-decoration:none;
+			}
 		}
 	}
 }
@@ -436,20 +446,19 @@ span#copy {
 		border-left: 1px solid e('#' + @moduleh3BorderInnerColor);
 	}
 }
-.h3eckl, .h3eckr {
-	width: 0; height: 0;  
-	line-height: 0;  
-	border-left: 11px solid transparent;  
-	top: 100%;  
-	left: 0;  
-	position: absolute;  
-	border-top: 10px solid e('#' + @moduleh3CornerColor);
-}
 .h3eckl {
 	left: 0;  
 }
 .h3eckr {
 	right: 0;  
+}
+.h3eckl, .h3eckr {
+	width: 0; height: 0;  
+	line-height: 0;  
+	border-left: 11px solid transparent;  
+	top: 100%;  
+	position: absolute;  
+	border-top: 10px solid e('#' + @moduleh3CornerColor);
 }
 .moduletable h3 {
 	margin: 10px 0;
@@ -484,15 +493,18 @@ span#copy {
 			color: e('#' + @mainMenuFont);
 			border-bottom:1px dotted e('#' + @mainMenuBorderBottom);
 		}
-		a:hover, a:active, a:focus {
-			color: e('#' + @mainMenuFontHover!important);
-		}
-		a img {
-			vertical-align: middle;
-			padding-right: 5px;
-		}
-		a span {
-			vertical-align: middle;
+		a {
+			&:hover, &:active, &:focus {
+				color: e('#' + @mainMenuFontHover!important);
+				font-weight:bold;
+			}
+			img {
+				vertical-align: middle;
+				padding-right: 5px;
+			}
+			span {
+				vertical-align: middle;
+			}
 		}
 		&.current a {
 			font-weight: bold;
@@ -550,12 +562,6 @@ ul.menu {
 	}
 }
 
-a, a:link, a:visited, a:active, a:focus {
-	outline : none;
-	text-decoration : none;
-	color: @linkColor;
-}
-
 .shadow-left {
 	display: block;
 	height:8px;
@@ -580,13 +586,7 @@ a, a:link, a:visited, a:active, a:focus {
 	}
 }
 
-.heckl, .heckr {  
-	border-top: 10px solid e('#' + @headCornerColor);
-}
 
-.feckl, .feckr {  
-	border-bottom: 10px solid e('#' + @footCornerColor);
-}
 #footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
 	color: e('#' + @footColor);
 }
@@ -596,16 +596,27 @@ a, a:link, a:visited, a:active, a:focus {
 	border: 1px solid e('#' + @articleBorderColor);
 }
 
-.page-header h2, .page-header h2 a {
-	color: e('#' + @articletitleColor) !important;
-}
-
-div.item-separator {
-	border-bottom:3px double e('#' + @itemSeparatorColor) !important;
+.page-header h2, h2.item-title {
+	&, a {
+		color: e('#' + @articletitleColor) !important;
+	}
 }
 
 .breadcrumbs, .breadcrumbs span {
 	color: e('#' + @breadcrumbColor);
+}
+
+div {
+	&.slogan {
+		line-height: normal;
+		font-size:18px;
+		display:block;
+		margin:0;
+		padding: 0 40px 10px 100px;
+	}
+	&.item-separator {
+		border-bottom: 3px double e('#' + @itemSeparatorColor) !important;
+	}
 }
 
 /**** Global Modules ****/
@@ -619,28 +630,97 @@ div.module {
 	}
 }
 
-input.button, button.button, button.validate, .pagenav, ul.pagenav li a {
-	color: #555;
-	background-color: #efefef;
+input.btn, button.btn, input.button, button.button, button.validate, .pagenav, ul.pagenav li a {
 	color: e('#' + @buttonColor);
-	background-color: e('#' + @buttonBgColor);
 	border-top: 1px solid e('#' + @buttonBorderTop);
 	border-left: 1px solid e('#' + @buttonBorderLeft);
 	border-right: 1px solid e('#' + @buttonBorderRight);
 	border-bottom: 1px solid e('#' + @buttonBorderBottom);
-}
-input.button:hover, button.button:hover, button.validate:hover, .pagenav, ul.pagenav li a:hover {
-	color: e('#' + @buttonHoverColor);
-	background-color: e('#' + @buttonBgHoverColor);
+	background-color: e('#' + @buttonBgColor);
+	background-image:url('../images/button.png');
+	background-repeat:repeat-x;
+	&:hover {
+		color: e('#' + @buttonHoverColor);
+		background-color: e('#' + @buttonBgHoverColor);
+	}
 }
 
-/**** Default Tooltips ****/
+/* easy tooltips start */
 .easy-tooltip-default {
 	border: 1px solid e('#' + @tooltipBorder);
 	background-color: e('#' + @tooltipBg);
 	color: e('#' + @tooltipFont);
 }
+.easy-tooltip-title {
+	display:block;
+	text-align:center;
+	border-bottom:1px dotted;
+	font-weight:bold;
+}
+.tip-white {
+	color: #505050;
+	background-color:#fff;
+	border: 1px solid #ddd;
+}
+.tip-black {
+	color:#fcfcfc;
+	background-color:#333;
+	border:1px solid #111;
+}
+.tip-blue {
+	color:#1b475a;
+	background-color:#d9f1fb;
+	border:1px solid #7fcdee;
+}
+.tip-red {
+	color:#fcfcfc;
+	background-color:#bb3b1d;
+	border:1px solid #8f2a0f;
+}
+.tip-green {
+	color:#558221;
+	background-color:#f2fdf1;
+	border:1px solid #b6e184;
+}
+.tip-yellow {
+	color: #5b5316;
+	background-color:#f9f2ba;
+	border: 1px solid #e9d315;
+}
+/* easy tooltips end */
 
+/* easy caption start */
+.easy-caption-background {
+	background-color:#000000;
+	border-top:1px solid #555;
+}
+.easy-caption-foreground {
+	color:#bbb;
+}
+.easy-caption-title {
+	border-bottom:1px dotted #bbb;
+	color: #fff;
+}
+.easy-caption-wrapper {
+	background:#eee;
+	border:1px solid #ccc;
+}
+.easy-caption-close {
+	color:#fff;
+	background:#000;
+	border:1px solid #333;
+}
+/* easy caption end */
+
+/* article images */
+.item-image {
+	padding:7px;
+	background:#eee;
+	border:1px solid #ccc;
+}
+p.img_caption {
+	color: #555;
+}
 
 /* Dropdown menu */
 #topmenu {
@@ -657,7 +737,7 @@ input.button:hover, button.button:hover, button.validate:hover, .pagenav, ul.pag
 			color:e('#' + @ulLiaHoverColor);
 		}
 		li {
-			border-right:1px solid e('#' + @ulLiBorderRight) !important;
+			border-right: 1px solid e('#' + @ulLiBorderRight) !important;
 			a, span.separator {
 				border-top:1px solid e('#' + @ulLiaBorderTop) !important;
 				border-right:1px solid e('#' + @ulLiaBorderRight) !important;

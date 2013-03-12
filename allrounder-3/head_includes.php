@@ -1,19 +1,21 @@
 <?php
 defined('_JEXEC') or die('No direct access');
-// Shortcut to Templatepath
-$path	= $this->baseurl.'/templates/'.$this->template;
+// Shortcuts
+$tpl	= JFactory::getApplication()->getTemplate(true);
+$path	= $this->baseurl.'/templates/'.$tpl->template;
+$params	= $tpl->params;
 ?>
 <meta name="designer" content="Juergen Koller - http://www.lernvid.com" />
 <meta name="licence" content="Creative Commons 3.0" />
 <link href="<?php echo $path; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 <!--- ADD CSS Files -->
-<?php if ($this->params->get('useLESS') and $styleID = $this->params->get('styleID')) : ?>
-	<link href="<?php echo $path; ?>/css/template<?php echo $styleID; ?>.css" rel="stylesheet" type="text/css" media="all" />
+<?php if ($params->get('useLESS')) : ?>
+	<link href="<?php echo $path; ?>/css/template<?php echo $tpl->id; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 else :
-	if ($this->params->get('cssCompress')) : ?>
+	if ($params->get('cssCompress')) : ?>
 		<link href="<?php echo $path; ?>/css/css_compress.php" rel="stylesheet" type="text/css" media="all" />
 		<link href="<?php echo $path; ?>/css/lvdropdown.css" rel="stylesheet" type="text/css" media="all" />
 	<?php else : ?>
@@ -28,7 +30,7 @@ else :
 		<link href="<?php echo $path; ?>/css/modules.css" rel="stylesheet" type="text/css" media="all" />
 	<?php endif;
 endif;
-if ($this->params->get('css3effects')) : ?>
+if ($params->get('css3effects')) : ?>
 	<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
 <?php endif; ?>
 
@@ -39,11 +41,11 @@ if ($this->params->get('css3effects')) : ?>
 
 <!--- ADD JavaScript Files -->
 
-<?php if ($this->params->get('jsCompress')) : ?>
+<?php if ($params->get('jsCompress')) : ?>
 	<script type="text/javascript" src="<?php echo $path; ?>/js/js_compress.php"></script>
 <?php else :
 	$doc = JFactory::getDocument();
-	if ($this->params->get('useLESS')) :
+	if ($params->get('useLESS')) :
 		// Add JavaScript Frameworks
 		JHtml::_('jquery.framework');
 	else :
@@ -64,16 +66,16 @@ require("php/layout.php");
 require("php/fonts.php");
 
 // ADD own template colors
-if ($this->params->get('ownColors') and !$this->params->get('useLESS')) :
+if ($params->get('ownColors') and !$params->get('useLESS')) :
 	require("php/template_colors.php");
 endif;
 
 // ADD own dropdown-menu colors
-if ($this->params->get('dropdownColors') and !$this->params->get('useLESS')) :
+if ($params->get('dropdownColors') and !$params->get('useLESS')) :
 	require("php/dropdown_colors.php");
 endif;
 
-if ($this->params->get('ribbonsOnOff')) :
+if ($params->get('ribbonsOnOff')) :
 	require("php/ribbons.php");
 endif;
 
@@ -84,11 +86,11 @@ if($this->countModules("position-8")&&!$this->countModules("position-7")){ $cont
 if($this->countModules("position-7")&&$this->countModules("position-8")) { $contentwidth="middle"; }
 
 //parameter shortys
-$whatWidth = $this->params->get('whatWidth'); // dynamic or fixed width
+$whatWidth = $params->get('whatWidth'); // dynamic or fixed width
 
-if (!$this->params->get('useLESS')) :
-	$leftcolWidth = ($this->params->get('leftcolWidth'));
-	$rightcolWidth = ($this->params->get('rightcolWidth')); ?>
+if (!$params->get('useLESS')) :
+	$leftcolWidth = ($params->get('leftcolWidth'));
+	$rightcolWidth = ($params->get('rightcolWidth')); ?>
 	<!-- math the width of the 3 columns -->
 	<style type="text/css">
 		#leftcol {width: <?php echo $leftcolWidth;?>%;}
@@ -99,6 +101,6 @@ if (!$this->params->get('useLESS')) :
 	</style>
 <?php endif;
 
-if ($customCss = $this->params->get('customCss')) :
+if ($customCss = $params->get('customCss')) :
 	$doc->addStyleDeclaration(htmlspecialchars($customCss));
 endif;

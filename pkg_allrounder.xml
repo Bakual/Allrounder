@@ -11,7 +11,7 @@
 	<packagename>allrounder</packagename>
 	<description>Allrounder Package</description>
 	<files>
-		<file type="template" id="tpl_allrounder-3" >tpl_allrounder.zip</file>
+		<file type="template" id="tpl_allrounder-3" >allrounder-3.zip</file>
 		<file type="plugin" id="plg_lessallrounder">plg_lessallrounder.zip</file>
 	</files>
 </extension>

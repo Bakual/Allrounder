@@ -35,8 +35,8 @@ class plgSystemLessallrounder extends JPlugin
 			$registry->loadString($table->params);
 			$table->params = $registry;
 		}
-		// Check if parameter "styleID" is set
-		if (!$table->params->get('styleID', 0))
+		// Check if parameter "useLESS" is set
+		if (!$table->params->get('useLESS', 0))
 		{
 			return;
 		}
@@ -52,12 +52,12 @@ class plgSystemLessallrounder extends JPlugin
 			require_once('lessc.php');
 			$less = new lessc;
 
-/*			if ($table->params->get('cssCompress', 0))
+			if ($table->params->get('cssCompress', 0))
 			{
 				$less->setFormatter('compressed');
 			}
 			else
-			{ */
+			{
 				// Joomla way
 				$formatter = new lessc_formatter_classic;
 				$formatter->disableSingle = true;
@@ -66,15 +66,20 @@ class plgSystemLessallrounder extends JPlugin
 				$formatter->selectorSeparator = ",";
 				$formatter->indentChar = "\t";
 				$less->setFormatter($formatter);
-//			}
+			}
 			$params_array	= $table->params->toArray();
 			// workaround because bootstrap has same variable name and template stores colors without preceding '#'
 			$params_array['linkColorTemplate']	= '#'.$params_array['linkColor'];
 			unset($params_array['linkColor']);
+dump($table);
+			// Adding templatepath to params
+			$params_array['templatePath']	= JURI::base(true).'/templates/'.$table->title;
+			$params_array['basePath']		= JURI::base(true);
 
+			// Maybe do a foreach here and make LESS safe (htmlspecialchar()?
 			$less->setVariables($params_array);
-			$less->unsetVariable('contentheadingImage');
-			$less->unsetVariable('contentheadingImageMedia');
+//			$less->unsetVariable('contentheadingImage');
+//			$less->unsetVariable('contentheadingImageMedia');
 			$less->unsetVariable('copyText');
 			$less->unsetVariable('customCssCode');
 			$less->unsetVariable('mediaLogo');

@@ -1,0 +1,36 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+/* Template layout parameters */
+#wrapper {
+	margin-top: @wrapperMarginTop;
+}
+#foot_container {
+	margin-bottom: @footerMarginBottom;
+}
+#topmenu ul.menu {
+	&, li a, li span.separator {
+		background-image: e("url('" + @templatePath + '/images/dropdown-' + @dropdownImage + ".png')");
+	}
+	li {
+		&.parent {
+			a, span.separator {
+				background-image: e("url('" + @templatePath + '/images/menu-parent-' + @dropdownImage + ".png')");
+			}
+		}
+		&.parent a:hover, &.parent span.separator:hover, &#current.parent a, &#current.parent span.separator {
+			background-image: e("url('" + @templatePath + '/images/menu-parent-hover-' + @dropdownImage + ".png')");
+		}
+	}
+}
+
+.page-header h2, h2.item-title when (@contentheadingImage = 1) {
+	background-image: e("url('" + @basePath + @contentheadingImageMedia + "')");
+}
+.page-header h2, h2.item-title when (@contentheadingImage = 2) {
+	background-image: none !important;
+	padding-left: 0px !important;
+	line-height: normal !important;
+}

@@ -265,10 +265,11 @@ dd {
 	}
 }
 
-.archive .article-info dd,
-.article-info dd {
-	margin:2px 0 0px 0;
-	line-height:1.2em;
+.archive .article-info, .article-info {
+	dd {
+		margin:2px 0 0px 0;
+		line-height:1.2em;
+	}
 }
 .article-info dd span {
 	text-transform:none;
@@ -279,14 +280,17 @@ dd {
 
 /****************** CATEGORIES LIST ******************/
 
-.category-list .filters {
-	display:inline-block;
-	width: 100%;
+.category-list { 
+	.filters {
+		display:inline-block;
+		width: 100%;
+	}
+	li {
+		display:inline-block;
+		width: 100%;
+	}
 }
-.category-list li {
-	display:inline-block;
-	width: 100%;
-}
+
 /****************** TABLES ******************/
 
 table {

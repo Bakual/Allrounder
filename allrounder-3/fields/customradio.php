@@ -4,15 +4,16 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined('JPATH_BASE') or die;
+defined('_JEXEC') or die;
 
+JFormHelper::loadFieldClass('radio');
 /**
- * ID Field class for the Allrounder Template
+ * CustomRadio Field class for the Allrounder Template
  *
  * @package		Allroudner
  * @since		4.0
  */
-class JFormFieldStyleid extends JFormField
+class JFormFieldCustomradio extends JFormFieldRadio
 {
 	/**
 	 * The form field type.
@@ -20,7 +21,7 @@ class JFormFieldStyleid extends JFormField
 	 * @var		string
 	 * @since	1.6
 	 */
-	protected $type		= 'Styleid';
+	protected $type		= 'Customradio';
 
 	/**
 	 * Method to get the field input markup.
@@ -30,12 +31,7 @@ class JFormFieldStyleid extends JFormField
 	 */
 	protected function getInput()
 	{
-		$class = $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
-
-		$this->value = (int)$this->form->getValue('id', 0);
-
-		$html	= '<input type="hidden" name="'.$this->name.'" id="'.$this->id.'" value="'
-			.$this->value.'"'.$class.' />'; 
+		$html	= parent::getInput();
 
 		return $html;
 	}
