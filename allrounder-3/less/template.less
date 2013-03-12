@@ -93,21 +93,26 @@
 @import "joomla.less";
 @import "typo.less";
 @import "modules.less";
-@import "layout.less";
 
 /****************** LAYOUT ******************/
 
 html {
 	height : 101%;
 }
+.guarded-font() when not (@ownFont = 1) {
+	font-family: @fontFamily;
+}
+.guarded-font() when (@ownFont = 1) {
+	font-family: @ownfontFamily;
+}
 body {
-	font-family: Verdana, Helvetica, Sans-Serif;
-	font-size:0.8em;
-	margin:0;
-	padding:0;
-	line-height:1.3em;
-	background-image:url('../images/background.png');
-	overflow-x:hidden;
+	.guarded-font();
+	font-size: @fontSize;
+	margin: 0;
+	padding: 0;
+	line-height: @lineHeight;
+	background-image: url(../images/background.png);
+	overflow-x: hidden;
 	background-color: e('#' + @bodyBgColor);
 	color: e('#' + @fontColor);
 }
@@ -118,6 +123,7 @@ body {
 }
 
 #foot_container {
+	margin-bottom: @footerMarginBottom;
 	padding:0 0 7px 0;
 	overflow:visible;
 }
@@ -416,6 +422,7 @@ span {
 	}
 }
 #wrapper {
+	margin-top: @wrapperMarginTop;
 	padding: 0 0 10px 0;
 	#leftcol, #rightcol {
 		h3.moduleh3 {
@@ -596,7 +603,17 @@ ul.menu {
 	border: 1px solid e('#' + @articleBorderColor);
 }
 
+// guarded-background() is a conditional mixing. It will not be outputted in the CSS by itself.
+.guarded-background() when (@contentheadingImage = 1) {
+	background-image: url(@{basePath}@{contentheadingImageMedia});
+}
+.guarded-background() when (@contentheadingImage = 2) {
+	background-image: none !important;
+	padding-left: 0px !important;
+	line-height: normal !important;
+}
 .page-header h2, h2.item-title {
+	.guarded-background();
 	&, a {
 		color: e('#' + @articletitleColor) !important;
 	}
@@ -720,55 +737,4 @@ input.btn, button.btn, input.button, button.button, button.validate, .pagenav, u
 }
 p.img_caption {
 	color: #555;
-}
-
-/* Dropdown menu */
-#topmenu {
-	height:auto;
-	margin:auto;
-	ul, ul li {
-		list-style : none;
-	}
-	ul.menu {
-		background-color:e('#' + @ddBackground) !important;
-		border-top:3px double e('#' + @ddBorderTop) !important;
-		border-bottom:3px double e('#' + @ddBorderBottom) !important;
-		a:hover {
-			color:e('#' + @ulLiaHoverColor);
-		}
-		li {
-			border-right: 1px solid e('#' + @ulLiBorderRight) !important;
-			a, span.separator {
-				border-top:1px solid e('#' + @ulLiaBorderTop) !important;
-				border-right:1px solid e('#' + @ulLiaBorderRight) !important;
-				border-left:1px solid e('#' + @ulLiaBorderLeft) !important;
-				border-bottom:1px solid e('#' + @ulLiaBorderBottom) !important;
-				color:e('#' + @ulLiaColor);
-				background-color:e('#' + @ulLiaBackground);
-			}
-			/** LEVEL 2 **/
-			ul li {
-				a, span.separator {
-					border-top:1px solid e('#' + @ulLiliaBorderTop) !important;
-					border-right:1px solid e('#' + @ulLiliaBorderRight) !important;
-					border-left:1px solid e('#' + @ulLiliaBorderLeft) !important;
-					border-bottom:1px solid e('#' + @ulLiliaBorderBottom) !important;
-					color:e('#' + @ulLiliaColor);
-				}
-				a:hover {
-					color:e('#' + @ulLiliaHoverColor);
-				}
-			}
-			li {
-				background-color:e('#' + @ulLiliBackground);
-				&:hover {
-					background-color:e('#' + @ulLiliHoverBackground);
-				}
-			}
-		}
-		ul {
-			border:2px solid e('#' + @ululBorder) !important;
-			background-color:e('#' + @ululBackground);
-		}
-	}
 }

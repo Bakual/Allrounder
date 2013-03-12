@@ -4,23 +4,35 @@
 **********************************************/
 
 #topmenu {
-	ul.menu, ul.menu ul {
-		margin:0;
-		padding:0;
-		list-style-type:none;
-		list-style-position:outside;
-		position:relative;
-		line-height:1.5em; 
-		z-index:999;
-		display:inline-block;
-		width: 100%;
+	height:auto;
+	margin:auto;
+	ul, ul li {
+		list-style : none;
 	}
 	ul.menu {
 		background-repeat: repeat-x;
-		li, ul li {
-			list-style: none;
+		background-color:e('#' + @ddBackground) !important;
+		border-top:3px double e('#' + @ddBorderTop) !important;
+		border-bottom:3px double e('#' + @ddBorderBottom) !important;
+		a:hover {
+			color:e('#' + @ulLiaHoverColor);
+		}
+		&, ul {
+			margin:0;
+			padding:0;
+			list-style-type:none;
+			list-style-position:outside;
+			position:relative;
+			line-height:1.5em; 
+			z-index:999;
+			display:inline-block;
+			width: 100%;
+		}
+		&, li a, li span.separator {
+			background-image: url(../images/dropdown-@{dropdownImage}.png)
 		}
 		li {
+			border-right: 1px solid e('#' + @ulLiBorderRight) !important;
 			float:left;
 			position: relative;
 			a, span.separator {
@@ -30,6 +42,12 @@
 				vertical-align: middle;
 				min-height: 24px;
 				background-repeat: repeat-x;
+				background-color:e('#' + @ulLiaBackground);
+				border-top:1px solid e('#' + @ulLiaBorderTop) !important;
+				border-right:1px solid e('#' + @ulLiaBorderRight) !important;
+				border-left:1px solid e('#' + @ulLiaBorderLeft) !important;
+				border-bottom:1px solid e('#' + @ulLiaBorderBottom) !important;
+				color:e('#' + @ulLiaColor);
 			}
 			a {
 					/***** IMAGES *****/
@@ -45,6 +63,9 @@
 			a, span.separator, a span {
 				font-size: 14px;
 			}
+			&, ul & {
+				list-style: none;
+			}
 			ul {
 				li {
 					border:0 !important;
@@ -58,8 +79,14 @@
 						height:auto;
 						width:194px;
 						background: none !important;
+						border-top:1px solid e('#' + @ulLiliaBorderTop) !important;
+						border-right:1px solid e('#' + @ulLiliaBorderRight) !important;
+						border-left:1px solid e('#' + @ulLiliaBorderLeft) !important;
+						border-bottom:1px solid e('#' + @ulLiliaBorderBottom) !important;
+						color:e('#' + @ulLiliaColor);
 					}
 					a:hover {
+						color:e('#' + @ulLiliaHoverColor);
 						background: none !important;
 					}
 					&.parent {
@@ -80,12 +107,12 @@
 			}
 			&.parent {
 				a, span.separator {
-					background-image: url(../images/menu-parent-smooth.png);
+					background-image: url(../images/menu-parent-@{dropdownImage}.png);
 					background-repeat: no-repeat;
 					background-position: center right;
 					padding-right: 30px;
 					&:hover {
-						background-image: url(../images/menu-parent-hover-smooth.png);
+						background-image: url(../images/menu-parent-hover-@{dropdownImage}.png);
 						background-repeat: no-repeat;
 						background-position: center right;
 						padding-right: 30px;
@@ -94,10 +121,16 @@
 			}
 			&#current.parent {
 				a, span.separator {
-					background-image: url(../images/menu-parent-hover-smooth.png);
+					background-image: url(../images/menu-parent-hover-@{dropdownImage}.png);
 					background-repeat: no-repeat;
 					background-position: center right;
 					padding-right: 30px;
+				}
+			}
+			li {
+				background-color:e('#' + @ulLiliBackground);
+				&:hover {
+					background-color:e('#' + @ulLiliHoverBackground);
 				}
 			}
 			li.parent, li#current.parent {
@@ -120,11 +153,13 @@
 		}
 			/***** LEVEL 2 *****/
 		ul {
+			background-color:e('#' + @ululBackground);
 			position:absolute;
 			top:2.2em;		/* double line height of level 1 ul */
 			display:none;
 			padding:5px;	/* border of level2 ul */
 			width:214px;
+			border:2px solid e('#' + @ululBorder) !important;
 			border-radius: 4px;
 			li {
 				margin:2px;

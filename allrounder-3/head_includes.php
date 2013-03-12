@@ -29,6 +29,22 @@ else :
 		<link href="<?php echo $path; ?>/css/typo.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="<?php echo $path; ?>/css/modules.css" rel="stylesheet" type="text/css" media="all" />
 	<?php endif;
+
+	// Layout parameters
+	require('php/layout.php');
+
+	// Define fonts
+	require('php/fonts.php');
+
+	// ADD own template colors
+	if ($params->get('ownColors')) :
+		require('php/template_colors.php');
+	endif;
+
+	// ADD own dropdown-menu colors
+	if ($params->get('dropdownColors')) :
+		require('php/dropdown_colors.php');
+	endif;
 endif;
 if ($params->get('css3effects')) : ?>
 	<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
@@ -59,24 +75,8 @@ if ($params->get('css3effects')) : ?>
 	$doc->addScript($path.'/js/effects.js');
 endif;
 
-// Layout parameters
-require("php/layout.php");
-
-// Define fonts
-require("php/fonts.php");
-
-// ADD own template colors
-if ($params->get('ownColors') and !$params->get('useLESS')) :
-	require("php/template_colors.php");
-endif;
-
-// ADD own dropdown-menu colors
-if ($params->get('dropdownColors') and !$params->get('useLESS')) :
-	require("php/dropdown_colors.php");
-endif;
-
 if ($params->get('ribbonsOnOff')) :
-	require("php/ribbons.php");
+	require('php/ribbons.php');
 endif;
 
 // check if the 3 columns are enabled
