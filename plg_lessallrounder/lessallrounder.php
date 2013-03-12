@@ -71,15 +71,18 @@ class plgSystemLessallrounder extends JPlugin
 			// workaround because bootstrap has same variable name and template stores colors without preceding '#'
 			$params_array['linkColorTemplate']	= '#'.$params_array['linkColor'];
 			unset($params_array['linkColor']);
-dump($table);
+
 			// Adding templatepath to params
-			$params_array['templatePath']	= JURI::base(true).'/templates/'.$table->title;
-			$params_array['basePath']		= JURI::base(true);
+			$params_array['basePath']		= ($table->client_id) ? JURI::base(true).'/' : JURI::root(true).'/';
+//			$params_array['templatePath']	= '"'.$params_array['basePath'].'templates/'.$table->template.'"';
+			$params_array['basePath']		= '"'.$params_array['basePath'].'"';
+
+			// Adding quotes around path variables so they are threated as strings
+			$params_array['contentheadingImageMedia']	= '"'.$params_array['contentheadingImageMedia'].'"';
 
 			// Maybe do a foreach here and make LESS safe (htmlspecialchar()?
 			$less->setVariables($params_array);
 //			$less->unsetVariable('contentheadingImage');
-//			$less->unsetVariable('contentheadingImageMedia');
 			$less->unsetVariable('copyText');
 			$less->unsetVariable('customCssCode');
 			$less->unsetVariable('mediaLogo');
