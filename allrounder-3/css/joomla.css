@@ -163,10 +163,10 @@ p.counter {
 	margin-left: 10px;
 }
 #maincontent ul.dropdown-menu li.print-icon {
-	background-image : url(../images/system/emailButton.png);
+	background-image : url(../images/system/printButton.png);
 }
 #maincontent ul.dropdown-menu li.email-icon {
-	background-image : url(../images/system/printButton.png);
+	background-image : url(../images/system/emailButton.png);
 }
 #maincontent ul.dropdown-menu li.edit-icon {
 	background-image : url(../images/system/editButton.png);

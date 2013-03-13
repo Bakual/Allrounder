@@ -116,7 +116,15 @@ body {
 	background-color: e('#' + @bodyBgColor);
 	color: e('#' + @fontColor);
 }
+/* whatWidth (Fixed or Dynamic) */
+.quarded-whatWidth() when (@whatWidth = 1) {
+	max-width: @pageMaxWidth;
+}
+.quarded-whatWidth() when not (@whatWidth = 1) {
+	width: @pageWidth;
+}
 #wrapper, #foot_container {
+	.quarded-whatWidth();
 	margin: 0 auto;
 	background-color: e('#' + @wrapperBgColor);
 	border: 1px solid e('#' + @wrapperBorderColor);
@@ -179,6 +187,7 @@ body {
 	width: auto;
 	overflow:hidden;
 	a.logo {
+		color: e('#' + @logoColor);
 		line-height: normal;
 		font-size:46px;
 		display:block;
@@ -625,6 +634,7 @@ ul.menu {
 
 div {
 	&.slogan {
+		color: e('#' + @sloganColor);
 		line-height: normal;
 		font-size:18px;
 		display:block;
@@ -738,3 +748,17 @@ input.btn, button.btn, input.button, button.button, button.validate, .pagenav, u
 p.img_caption {
 	color: #555;
 }
+
+/* Ribbons off */
+.guarded-ribbons() when (@ribbonsOnOff = 1) {
+	#header, #footer, #wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3 {
+		margin:0;
+	}
+	#header {
+		padding:0;
+	}
+	.heckl, .heckr, .feckl, .feckr, .h3eckl, .h3eckr {  
+		display:none;
+	}
+}
+.guarded-ribbons();

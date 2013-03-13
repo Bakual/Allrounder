@@ -10,11 +10,13 @@ $params	= $tpl->params;
 <link href="<?php echo $path; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 <!--- ADD CSS Files -->
-<?php if ($params->get('useLESS')) : ?>
+<?php if ($params->get('useLESS')) :
+// LESS Mode ?>
 	<link href="<?php echo $path; ?>/css/template<?php echo $tpl->id; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 else :
+// "Legacy" Mode
 	if ($params->get('cssCompress')) : ?>
 		<link href="<?php echo $path; ?>/css/css_compress.php" rel="stylesheet" type="text/css" media="all" />
 		<link href="<?php echo $path; ?>/css/lvdropdown.css" rel="stylesheet" type="text/css" media="all" />
@@ -45,8 +47,12 @@ else :
 	if ($params->get('dropdownColors')) :
 		require('php/dropdown_colors.php');
 	endif;
+
+	if ($params->get('ribbonsOnOff')) :
+		require('php/ribbons.php');
+	endif;
 endif;
-if ($params->get('css3effects')) : ?>
+if (!$params->get('css3effects')) : ?>
 	<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
 <?php endif; ?>
 
@@ -62,7 +68,7 @@ if ($params->get('css3effects')) : ?>
 <?php else :
 	$doc = JFactory::getDocument();
 	if ($params->get('useLESS')) :
-		// Add JavaScript Frameworks
+		// Add JavaScript Framework from Joomla (JQuery 1.8.1)
 		JHtml::_('jquery.framework');
 	else :
 		$doc->addScript($path.'/js/jquery-1.7.2.min.js');
@@ -75,18 +81,11 @@ if ($params->get('css3effects')) : ?>
 	$doc->addScript($path.'/js/effects.js');
 endif;
 
-if ($params->get('ribbonsOnOff')) :
-	require('php/ribbons.php');
-endif;
-
 // check if the 3 columns are enabled
 $contentwidth = '';
 if($this->countModules("position-7")&&!$this->countModules("position-8")){ $contentwidth="left"; }
 if($this->countModules("position-8")&&!$this->countModules("position-7")){ $contentwidth="right"; }
 if($this->countModules("position-7")&&$this->countModules("position-8")) { $contentwidth="middle"; }
-
-//parameter shortys
-$whatWidth = $params->get('whatWidth'); // dynamic or fixed width
 
 if (!$params->get('useLESS')) :
 	$leftcolWidth = ($params->get('leftcolWidth'));
@@ -98,6 +97,16 @@ if (!$params->get('useLESS')) :
 		#content_outmiddle {width: <?php echo 98 - $rightcolWidth - $leftcolWidth;?>%;}
 		#content_outright {width: <?php echo 99 - $rightcolWidth;?>%;}
 		#content_outleft {width: <?php echo 99 - $leftcolWidth;?>%;}
+	</style>
+	<?php
+	// dynamic or fixed width
+	if ($params->get('whatWidth')) :
+		$style	= 'max-width:'.htmlspecialchars($this->params->get('pageMaxWidth'));
+	else :
+		$style	= 'width:'.htmlspecialchars($this->params->get('pageWidth'));
+	endif; ?>
+	<style type="text/css">
+		#wrapper, #foot_container {<?php echo $style; ?>;}
 	</style>
 <?php endif;
 
