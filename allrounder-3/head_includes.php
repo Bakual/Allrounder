@@ -110,6 +110,6 @@ if (!$params->get('useLESS')) :
 	</style>
 <?php endif;
 
-if ($customCss = $params->get('customCss')) :
-	$doc->addStyleDeclaration(htmlspecialchars($customCss));
+if ($params->get('customCss')) :
+	$doc->addStyleDeclaration(htmlspecialchars($params->get('customCssCode')));
 endif;
