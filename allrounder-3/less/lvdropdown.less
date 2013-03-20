@@ -11,11 +11,11 @@
 	}
 	ul.menu {
 		background-repeat: repeat-x;
-		background-color:e('#' + @ddBackground) !important;
-		border-top:3px double e('#' + @ddBorderTop) !important;
-		border-bottom:3px double e('#' + @ddBorderBottom) !important;
+		background-color: @ddBackground !important;
+		border-top: 3px double @ddBorderTop !important;
+		border-bottom: 3px double @ddBorderBottom !important;
 		a:hover {
-			color:e('#' + @ulLiaHoverColor);
+			color: @ulLiaHoverColor;
 		}
 		&, ul {
 			margin:0;
@@ -32,7 +32,7 @@
 			background-image: url(../images/dropdown-@{dropdownImage}.png)
 		}
 		li {
-			border-right: 1px solid e('#' + @ulLiBorderRight) !important;
+			border-right: 1px solid @ulLiBorderRight !important;
 			float:left;
 			position: relative;
 			a, span.separator {
@@ -42,12 +42,12 @@
 				vertical-align: middle;
 				min-height: 24px;
 				background-repeat: repeat-x;
-				background-color:e('#' + @ulLiaBackground);
-				border-top:1px solid e('#' + @ulLiaBorderTop) !important;
-				border-right:1px solid e('#' + @ulLiaBorderRight) !important;
-				border-left:1px solid e('#' + @ulLiaBorderLeft) !important;
-				border-bottom:1px solid e('#' + @ulLiaBorderBottom) !important;
-				color:e('#' + @ulLiaColor);
+				background-color: @ulLiaBackground;
+				border-top:1px solid @ulLiaBorderTop !important;
+				border-right:1px solid @ulLiaBorderRight !important;
+				border-left:1px solid @ulLiaBorderLeft !important;
+				border-bottom:1px solid @ulLiaBorderBottom !important;
+				color: @ulLiaColor;
 			}
 			a {
 					/***** IMAGES *****/
@@ -79,14 +79,14 @@
 						height:auto;
 						width:194px;
 						background: none !important;
-						border-top:1px solid e('#' + @ulLiliaBorderTop) !important;
-						border-right:1px solid e('#' + @ulLiliaBorderRight) !important;
-						border-left:1px solid e('#' + @ulLiliaBorderLeft) !important;
-						border-bottom:1px solid e('#' + @ulLiliaBorderBottom) !important;
-						color:e('#' + @ulLiliaColor);
+						border-top:1px solid @ulLiliaBorderTop !important;
+						border-right:1px solid @ulLiliaBorderRight !important;
+						border-left:1px solid @ulLiliaBorderLeft !important;
+						border-bottom:1px solid @ulLiliaBorderBottom !important;
+						color: @ulLiliaColor;
 					}
 					a:hover {
-						color:e('#' + @ulLiliaHoverColor);
+						color: @ulLiliaHoverColor;
 						background: none !important;
 					}
 					&.parent {
@@ -128,9 +128,9 @@
 				}
 			}
 			li {
-				background-color:e('#' + @ulLiliBackground);
+				background-color: @ulLiliBackground;
 				&:hover {
-					background-color:e('#' + @ulLiliHoverBackground);
+					background-color: @ulLiliHoverBackground;
 				}
 			}
 			li.parent, li#current.parent {
@@ -153,13 +153,13 @@
 		}
 			/***** LEVEL 2 *****/
 		ul {
-			background-color:e('#' + @ululBackground);
+			background-color: @ululBackground;
 			position:absolute;
 			top:2.2em;		/* double line height of level 1 ul */
 			display:none;
 			padding:5px;	/* border of level2 ul */
 			width:214px;
-			border:2px solid e('#' + @ululBorder) !important;
+			border:2px solid @ululBorder !important;
 			border-radius: 4px;
 			li {
 				margin:2px;

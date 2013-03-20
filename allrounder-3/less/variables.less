@@ -3,8 +3,14 @@
 // Copied from /media/jui/less/variables.less
 // Changed variables as they're set in template params:
 //   @linkColor
-//   @baseFontSize
-//   @baseLineHeight
+//   @baseFontSize		(@fontSize)
+//   @baseLineHeight	(@lineHeight)
+//   @bodyBackground	(@bodyBgColor)
+//   @textColor			(@fontColor)
+//
+// Adjusted values
+//   @sansFontFamily
+//
 // --------------------------------------------------
 
 
@@ -37,25 +43,25 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @grayDark;
+@bodyBackground:        @bodyBgColor; // Taken from template parameters (orig: @white)
+@textColor:             @fontColor; // Taken from template parameters (orig: @grayDark)
 
 
 // Links
 // -------------------------
-@linkColor:             @linkColorTemplate;
+// @linkColor:             #08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          @fontSize; // Taken from template parameters
-@baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        @lineHeight; // Taken from template parameters
+@baseFontSize:          @fontSize; // Taken from template parameters (orig: 14px)
+@baseFontFamily:        @sansFontFamily; // Todo: Take from template parameters (guarded!)
+@baseLineHeight:        @lineHeight; // Taken from template parameters (orig: 20px)
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily

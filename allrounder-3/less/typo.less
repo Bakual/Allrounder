@@ -79,15 +79,16 @@ hr {
 
 
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 25px; margin-bottom:10px;
+	margin-top: 25px;
+	margin-bottom:10px;
 	&.section {
-		background-image : url(../images/icons/section.png);
-		background-repeat : no-repeat;
-		padding:0 0 0 55px;
-		min-height:48px;
-		line-height:48px;
-		text-decoration:underline;
-		font-family:Georgia;
+		background-image: url(../images/icons/section.png);
+		background-repeat: no-repeat;
+		padding: 0 0 0 55px;
+		min-height: 48px;
+		line-height: 48px;
+		text-decoration: underline;
+		font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 	}
 }
 h1 {
@@ -102,7 +103,7 @@ h3 {
 	font-size: 1.3em;
 	&.section {font-size:1.8em;}
 	&.the-end {
-		font-family: Georgia;
+		font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 		text-align:right;
 	}
 }
@@ -286,7 +287,7 @@ table {
 	&.gray, &.blue, &.red, &.yellow, &.white {
 		border:0;
 		padding: 3px;
-		font-family:Verdana;
+		font-family: @sansFontFamily;  // -> Bootstrap (Verdana, ...)
 		th, td {
 			background-image:url('../images/tables.png');
 			background-repeat:repeat-x;
@@ -470,7 +471,7 @@ blockquote {
 	padding: 20px 30px 20px 40px;
 	font-style:italic;
 	font-size: 18px;
-	font-family: Georgia;
+	font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 	color: #333;
 	background:#fefefe;
 	border: 1px dotted #ccc;
@@ -489,7 +490,7 @@ pre {
 	background:#fff;
 	padding-left:12px;
 	font-size:11px;
-	font-family: monospace !important;
+	font-family: @monoFontFamily !important; // -> Bootstrap (monospace, ...)
 	color: #000;
 	background-image : url(../images/icons/pre.png);
 	background-position: right top;
@@ -497,7 +498,7 @@ pre {
 	overflow:auto;
 }
 span.dropcap {
-	font-family:Georgia;
+	font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 	float: left;
 	font-size: 3em;
 	line-height: 0.9em;
