@@ -112,7 +112,7 @@
 					<option value="1">JYES</option>
 				</field>
 				<field name="textLogo" type="textarea" default="ALLROUNDER" label="TPL_ALLROUNDER_TEXT_LOGO_INPUT" description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC" rows="1" cols="40"></field>
-				<field name="logoColor" class="color {required:false}" type="text" default="0299DC" label="TPL_ALLROUNDER_TEXT_LOGO_COLOR" description="TPL_ALLROUNDER_TEXT_LOGO_COLOR_DESC"></field>
+				<field name="logoColor" class="color {required:false,hash:true}" type="text" default="#0299DC" label="TPL_ALLROUNDER_TEXT_LOGO_COLOR" description="TPL_ALLROUNDER_TEXT_LOGO_COLOR_DESC"></field>
 				<field hr="true" type="spacer" />
 				<field type="spacer" label="TPL_ALLROUNDER_SLOGAN" />
 				<field name="showSlogan" type="radio" default="0" class="btn-group" label="TPL_ALLROUNDER_SHOW_SLOGAN" description="TPL_ALLROUNDER_SHOW_SLOGAN_DESC">
@@ -120,7 +120,7 @@
 					<option value="1">JYES</option>
 				</field>
 				<field name="slogan" type="textarea" default="my slogan goes here..." label="TPL_ALLROUNDER_SLOGANINPUT" description="TPL_ALLROUNDER_SLOGANINPUT_DESC" rows="1" cols="40"></field>
-				<field name="sloganColor" class="color {required:false}" type="text" default="FF2402" label="TPL_ALLROUNDER_SLOGAN_COLOR" description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"></field>
+				<field name="sloganColor" class="color {required:false,hash:true}" type="text" default="#FF2402" label="TPL_ALLROUNDER_SLOGAN_COLOR" description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"></field>
 			</fieldset>
 			<fieldset name="templcolorfields" description="" label="TPL_ALLROUNDER_COLORS_TEMPLATE">
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS" />
@@ -128,84 +128,84 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="bodyBgColor" class="color {required:false}" type="text" default="a2cdfd" label="TPL_ALLROUNDER_BODY_BACKGROUND" description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"></field>
-				<field name="fontColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_GLOBAL_FONT" description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"></field>
-				<field name="linkColor" class="color {required:false}" type="text" default="a52a2a" label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT" description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"></field>
+				<field name="bodyBgColor" class="color {required:false,hash:true}" type="text" default="#a2cdfd" label="TPL_ALLROUNDER_BODY_BACKGROUND" description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"></field>
+				<field name="fontColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_GLOBAL_FONT" description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"></field>
+				<field name="linkColor" class="color {required:false,hash:true}" type="text" default="#a52a2a" label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT" description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="wrapperBgColor" class="color {required:false}" type="text" default="efefef" label="TPL_ALLROUNDER_WRAPPER_BACKGROUND" description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"></field>
-				<field name="wrapperBorderColor" class="color {required:false}" type="text" default="FFFFFF" label="TPL_ALLROUNDER_WRAPPER_BORDER" description="TPL_ALLROUNDER_WRAPPER_BORDER_DESC"></field>
+				<field name="wrapperBgColor" class="color {required:false,hash:true}" type="text" default="#efefef" label="TPL_ALLROUNDER_WRAPPER_BACKGROUND" description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"></field>
+				<field name="wrapperBorderColor" class="color {required:false,hash:true}" type="text" default="#FFFFFF" label="TPL_ALLROUNDER_WRAPPER_BORDER" description="TPL_ALLROUNDER_WRAPPER_BORDER_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="headBgColor" class="color {required:false}" type="text" default="383838" label="TPL_ALLROUNDER_HEADER_BACKGROUND" description="TPL_ALLROUNDER_HEADER_BACKGROUND_DESC"></field>
-				<field name="headBorderColor" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_HEADER_BORDER" description="TPL_ALLROUNDER_HEADER_BORDER_DESC"></field>
-				<field name="headCornerColor" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_HEADER_CORNER" description="TPL_ALLROUNDER_HEADER_CORNER_DESC"></field>
+				<field name="headBgColor" class="color {required:false,hash:true}" type="text" default="#383838" label="TPL_ALLROUNDER_HEADER_BACKGROUND" description="TPL_ALLROUNDER_HEADER_BACKGROUND_DESC"></field>
+				<field name="headBorderColor" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_HEADER_BORDER" description="TPL_ALLROUNDER_HEADER_BORDER_DESC"></field>
+				<field name="headCornerColor" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_HEADER_CORNER" description="TPL_ALLROUNDER_HEADER_CORNER_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="subheadBgColor" class="color {required:false}" type="text" default="f9f9f9" label="TPL_ALLROUNDER_SUBHEAD_BACKGROUND" description="TPL_ALLROUNDER_SUBHEAD_BACKGROUND_DESC"></field>
-				<field name="subheadBorderColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_SUBHEAD_BORDER" description="TPL_ALLROUNDER_SUBHEAD_BORDER_DESC"></field>
-				<field name="breadcrumbColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_BREADCRUMB_FONT" description="TPL_ALLROUNDER_BREADCRUMB_FONT_DESC"></field>
+				<field name="subheadBgColor" class="color {required:false,hash:true}" type="text" default="#f9f9f9" label="TPL_ALLROUNDER_SUBHEAD_BACKGROUND" description="TPL_ALLROUNDER_SUBHEAD_BACKGROUND_DESC"></field>
+				<field name="subheadBorderColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_SUBHEAD_BORDER" description="TPL_ALLROUNDER_SUBHEAD_BORDER_DESC"></field>
+				<field name="breadcrumbColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_BREADCRUMB_FONT" description="TPL_ALLROUNDER_BREADCRUMB_FONT_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="contentBgColor" class="color {required:false}" type="text" default="f9f9f9" label="TPL_ALLROUNDER_CONTENT_BACKGROUND" description="TPL_ALLROUNDER_CONTENT_BACKGROUND_DESC"></field>
-				<field name="contentBorderColor" class="color {required:false}" type="text" default="E9E9E9" label="TPL_ALLROUNDER_CONTENT_BORDER" description="TPL_ALLROUNDER_CONTENT_BORDER_DESC"></field>
-				<field name="articleBgColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_ARTICLE_BG_COLOR" description="TPL_ALLROUNDER_ARTICLE_BG_COLOR_DESC"></field>
-				<field name="articleBorderColor" class="color {required:false}" type="text" default="e9e9e9" label="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR" description="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR_DESC"></field>
-				<field name="articletitleColor" class="color {required:false}" type="text" default="484848" label="TPL_ALLROUNDER_ARTICLE_TITLE_FONT" description="TPL_ALLROUNDER_ARTICLE_TITLE_FONT_DESC"></field>
-				<field name="itemSeparatorColor" class="color {required:false}" type="text" default="eeeeee" label="TPL_ALLROUNDER_ITEM_SEPARATOR_BORDER" description="TPL_ALLROUNDER_ITEM_SEPARATOR_BORDER_DESC"></field>
+				<field name="contentBgColor" class="color {required:false,hash:true}" type="text" default="#f9f9f9" label="TPL_ALLROUNDER_CONTENT_BACKGROUND" description="TPL_ALLROUNDER_CONTENT_BACKGROUND_DESC"></field>
+				<field name="contentBorderColor" class="color {required:false,hash:true}" type="text" default="#E9E9E9" label="TPL_ALLROUNDER_CONTENT_BORDER" description="TPL_ALLROUNDER_CONTENT_BORDER_DESC"></field>
+				<field name="articleBgColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_ARTICLE_BG_COLOR" description="TPL_ALLROUNDER_ARTICLE_BG_COLOR_DESC"></field>
+				<field name="articleBorderColor" class="color {required:false,hash:true}" type="text" default="#e9e9e9" label="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR" description="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR_DESC"></field>
+				<field name="articletitleColor" class="color {required:false,hash:true}" type="text" default="#484848" label="TPL_ALLROUNDER_ARTICLE_TITLE_FONT" description="TPL_ALLROUNDER_ARTICLE_TITLE_FONT_DESC"></field>
+				<field name="itemSeparatorColor" class="color {required:false,hash:true}" type="text" default="#eeeeee" label="TPL_ALLROUNDER_ITEM_SEPARATOR_BORDER" description="TPL_ALLROUNDER_ITEM_SEPARATOR_BORDER_DESC"></field>
 				<field type="spacer" hr="true" />
 				<field type="spacer" label="TPL_ALLROUNDER_SIDEBAR_MODULES" />
-				<field name="moduleh3BgColor" class="color {required:false}" type="text" default="383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC"></field>
-				<field name="moduleh3BorderTopColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP_DESC"></field>
-				<field name="moduleh3BorderInnerColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER_DESC"></field>
-				<field name="moduleh3BorderOuterColor" class="color {required:false}" type="text" default="999999" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER_DESC"></field>
-				<field name="moduleh3Color" class="color {required:false}" type="text" default="dddddd" label="TPL_ALLROUNDER_SIDEMODULE_H3_FONT" description="TPL_ALLROUNDER_SIDEMODULE_H3_FONT_DESC"></field>
-				<field name="moduleh3CornerColor" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER_DESC"></field>
-				<field name="moduleBgColor" class="color {required:false}" type="text" default="f9f9f9" label="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND_DESC"></field>
-				<field name="moduleBorderInnerColor" class="color {required:false}" type="text" default="dddddd" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER_DESC"></field>
-				<field name="moduleBorderOuterColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER_DESC"></field>
-				<field name="moduleColor" class="color {required:false}" type="text" default="505050" label="TPL_ALLROUNDER_SIDEMODULE_FONT" description="TPL_ALLROUNDER_SIDEMODULE_FONT_DESC"></field>
+				<field name="moduleh3BgColor" class="color {required:false,hash:true}" type="text" default="#383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC"></field>
+				<field name="moduleh3BorderTopColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP_DESC"></field>
+				<field name="moduleh3BorderInnerColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER_DESC"></field>
+				<field name="moduleh3BorderOuterColor" class="color {required:false,hash:true}" type="text" default="#999999" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER_DESC"></field>
+				<field name="moduleh3Color" class="color {required:false,hash:true}" type="text" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_H3_FONT" description="TPL_ALLROUNDER_SIDEMODULE_H3_FONT_DESC"></field>
+				<field name="moduleh3CornerColor" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER_DESC"></field>
+				<field name="moduleBgColor" class="color {required:false,hash:true}" type="text" default="#f9f9f9" label="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND_DESC"></field>
+				<field name="moduleBorderInnerColor" class="color {required:false,hash:true}" type="text" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER_DESC"></field>
+				<field name="moduleBorderOuterColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER_DESC"></field>
+				<field name="moduleColor" class="color {required:false,hash:true}" type="text" default="#505050" label="TPL_ALLROUNDER_SIDEMODULE_FONT" description="TPL_ALLROUNDER_SIDEMODULE_FONT_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="footBgColor" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_FOOTER_BACKGROUND" description="TPL_ALLROUNDER_FOOTER_BACKGROUND_DESC"></field>
-				<field name="footColor" class="color {required:false}" type="text" default="5B6C71" label="TPL_ALLROUNDER_FOOTER_FONT" description="TPL_ALLROUNDER_FOOTER_FONT_DESC"></field>
-				<field name="footBorderColor" class="color {required:false}" type="text" default="444444" label="TPL_ALLROUNDER_FOOTER_BORDER" description="TPL_ALLROUNDER_FOOTER_BORDER_DESC"></field>
-				<field name="footCornerColor" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_FOOTER_CORNER" description="TPL_ALLROUNDER_FOOTER_CORNER_DESC"></field>
+				<field name="footBgColor" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_FOOTER_BACKGROUND" description="TPL_ALLROUNDER_FOOTER_BACKGROUND_DESC"></field>
+				<field name="footColor" class="color {required:false,hash:true}" type="text" default="#5B6C71" label="TPL_ALLROUNDER_FOOTER_FONT" description="TPL_ALLROUNDER_FOOTER_FONT_DESC"></field>
+				<field name="footBorderColor" class="color {required:false,hash:true}" type="text" default="#444444" label="TPL_ALLROUNDER_FOOTER_BORDER" description="TPL_ALLROUNDER_FOOTER_BORDER_DESC"></field>
+				<field name="footCornerColor" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_FOOTER_CORNER" description="TPL_ALLROUNDER_FOOTER_CORNER_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="gotopLinkColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_GOTOP_COLOR" description="TPL_ALLROUNDER_GOTOP_COLOR_DESC"></field>
-				<field name="subfootBgColor" class="color {required:false}" type="text" default="313131" label="TPL_ALLROUNDER_SUBFOOT_BACKGROUND" description="TPL_ALLROUNDER_SUBFOOT_BACKGROUND_DESC"></field>
-				<field name="subfootColor" class="color {required:false}" type="text" default="5b6c71" label="TPL_ALLROUNDER_SUBFOOT_FONT" description="TPL_ALLROUNDER_SUBFOOT_FONT_DESC"></field>
-				<field name="subfootBorderTopColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP" description="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP_DESC"></field>
-				<field name="subfootBorderBottomColor" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM" description="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM_DESC"></field>
+				<field name="gotopLinkColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_GOTOP_COLOR" description="TPL_ALLROUNDER_GOTOP_COLOR_DESC"></field>
+				<field name="subfootBgColor" class="color {required:false,hash:true}" type="text" default="#313131" label="TPL_ALLROUNDER_SUBFOOT_BACKGROUND" description="TPL_ALLROUNDER_SUBFOOT_BACKGROUND_DESC"></field>
+				<field name="subfootColor" class="color {required:false,hash:true}" type="text" default="#5b6c71" label="TPL_ALLROUNDER_SUBFOOT_FONT" description="TPL_ALLROUNDER_SUBFOOT_FONT_DESC"></field>
+				<field name="subfootBorderTopColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP" description="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP_DESC"></field>
+				<field name="subfootBorderBottomColor" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM" description="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="mainMenuFont" class="color {required:false}" type="text" default="333333" label="TPL_ALLROUNDER_MAIN_MENU_FONT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_DESC"></field>
-				<field name="mainMenuBorderBottom" class="color {required:false}" type="text" default="cccccc" label="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM" description="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM_DESC"></field>
-				<field name="mainMenuFontHover" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER" description="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER_DESC"></field>
-				<field name="mainMenuFontCurrent" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT_DESC"></field>
-				<field name="mainMenuLiLiFont" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT" description="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT_DESC"></field>
+				<field name="mainMenuFont" class="color {required:false,hash:true}" type="text" default="#333333" label="TPL_ALLROUNDER_MAIN_MENU_FONT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_DESC"></field>
+				<field name="mainMenuBorderBottom" class="color {required:false,hash:true}" type="text" default="#cccccc" label="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM" description="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM_DESC"></field>
+				<field name="mainMenuFontHover" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER" description="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER_DESC"></field>
+				<field name="mainMenuFontCurrent" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT_DESC"></field>
+				<field name="mainMenuLiLiFont" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT" description="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT_DESC"></field>
 				<field type="spacer" hr="true" />
 				<field type="spacer" label="TPL_ALLROUNDER_GLOB_MODULES" />
-				<field name="moduletableFont" class="color {required:false}" type="text" default="505050" label="TPL_ALLROUNDER_MODULE_FONT" description="TPL_ALLROUNDER_MODULE_FONT_DESC"></field>
-				<field name="moduletableBg" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_MODULE_BG" description="TPL_ALLROUNDER_MODULE_BG_DESC"></field>
-				<field name="moduletableBorder" class="color {required:false}" type="text" default="dddddd" label="TPL_ALLROUNDER_MODULE_BORDER" description="TPL_ALLROUNDER_MODULE_BORDER_DESC"></field>
-				<field name="moduletableh3Bg" class="color {required:false}" type="text" default="efefef" label="TPL_ALLROUNDER_MODULE_H3_BG" description="TPL_ALLROUNDER_MODULE_H3_BG_DESC"></field>
-				<field name="moduletableh3Border" class="color {required:false}" type="text" default="dddddd" label="TPL_ALLROUNDER_MODULE_H3_BORDER" description="TPL_ALLROUNDER_MODULE_H3_BORDER_DESC"></field>				<field type="spacer" hr="true" />
-				<field name="inputFontColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_INPUT_FONT" description="TPL_ALLROUNDER_INPUT_FONT_DESC"></field>
-				<field name="inputBgColor" class="color {required:false}" type="text" default="efefef" label="TPL_ALLROUNDER_INPUT_BACKGROUND" description="TPL_ALLROUNDER_INPUT_BACKGROUND_DESC"></field>
-				<field name="inputHoverFontColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_INPUT_HOVER_FONT" description="TPL_ALLROUNDER_INPUT_HOVER_FONT_DESC"></field>
-				<field name="inputHoverBgColor" class="color {required:false}" type="text" default="f9f9f9" label="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND" description="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND_DESC"></field>
-				<field name="inputBorderTopColor" class="color {required:false}" type="text" default="cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_TOP" description="TPL_ALLROUNDER_INPUT_BORDER_TOP_DESC"></field>
-				<field name="inputBorderLeftColor" class="color {required:false}" type="text" default="cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_LEFT" description="TPL_ALLROUNDER_INPUT_BORDER_LEFT_DESC"></field>
-				<field name="inputBorderRightColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_RIGHT" description="TPL_ALLROUNDER_INPUT_BORDER_RIGHT_DESC"></field>
-				<field name="inputBorderBottomColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM" description="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM_DESC"></field>
+				<field name="moduletableFont" class="color {required:false,hash:true}" type="text" default="#505050" label="TPL_ALLROUNDER_MODULE_FONT" description="TPL_ALLROUNDER_MODULE_FONT_DESC"></field>
+				<field name="moduletableBg" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_MODULE_BG" description="TPL_ALLROUNDER_MODULE_BG_DESC"></field>
+				<field name="moduletableBorder" class="color {required:false,hash:true}" type="text" default="#dddddd" label="TPL_ALLROUNDER_MODULE_BORDER" description="TPL_ALLROUNDER_MODULE_BORDER_DESC"></field>
+				<field name="moduletableh3Bg" class="color {required:false,hash:true}" type="text" default="#efefef" label="TPL_ALLROUNDER_MODULE_H3_BG" description="TPL_ALLROUNDER_MODULE_H3_BG_DESC"></field>
+				<field name="moduletableh3Border" class="color {required:false,hash:true}" type="text" default="#dddddd" label="TPL_ALLROUNDER_MODULE_H3_BORDER" description="TPL_ALLROUNDER_MODULE_H3_BORDER_DESC"></field>				<field type="spacer" hr="true" />
+				<field name="inputFontColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_INPUT_FONT" description="TPL_ALLROUNDER_INPUT_FONT_DESC"></field>
+				<field name="inputBgColor" class="color {required:false,hash:true}" type="text" default="#efefef" label="TPL_ALLROUNDER_INPUT_BACKGROUND" description="TPL_ALLROUNDER_INPUT_BACKGROUND_DESC"></field>
+				<field name="inputHoverFontColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_INPUT_HOVER_FONT" description="TPL_ALLROUNDER_INPUT_HOVER_FONT_DESC"></field>
+				<field name="inputHoverBgColor" class="color {required:false,hash:true}" type="text" default="#f9f9f9" label="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND" description="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND_DESC"></field>
+				<field name="inputBorderTopColor" class="color {required:false,hash:true}" type="text" default="#cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_TOP" description="TPL_ALLROUNDER_INPUT_BORDER_TOP_DESC"></field>
+				<field name="inputBorderLeftColor" class="color {required:false,hash:true}" type="text" default="#cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_LEFT" description="TPL_ALLROUNDER_INPUT_BORDER_LEFT_DESC"></field>
+				<field name="inputBorderRightColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_RIGHT" description="TPL_ALLROUNDER_INPUT_BORDER_RIGHT_DESC"></field>
+				<field name="inputBorderBottomColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM" description="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="buttonColor" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_BUTTON_FONT" description="TPL_ALLROUNDER_BUTTON_FONT_DESC"></field>
-				<field name="buttonBgColor" class="color {required:false}" type="text" default="efefef" label="TPL_ALLROUNDER_BUTTON_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_BACKGROUND_DESC"></field>
-				<field name="buttonHoverColor" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_BUTTON_HOVER_FONT" description="TPL_ALLROUNDER_BUTTON_HOVER_FONT_DESC"></field>
-				<field name="buttonBgHoverColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND_DESC"></field>
-				<field name="buttonBorderTop" class="color {required:false}" type="text" default="cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_TOP" description="TPL_ALLROUNDER_BUTTON_BORDER_TOP_DESC"></field>
-				<field name="buttonBorderLeft" class="color {required:false}" type="text" default="cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_LEFT" description="TPL_ALLROUNDER_BUTTON_BORDER_LEFT_DESC"></field>
-				<field name="buttonBorderRight" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT" description="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT_DESC"></field>
-				<field name="buttonBorderBottom" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM" description="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM_DESC"></field>
+				<field name="buttonColor" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_BUTTON_FONT" description="TPL_ALLROUNDER_BUTTON_FONT_DESC"></field>
+				<field name="buttonBgColor" class="color {required:false,hash:true}" type="text" default="#efefef" label="TPL_ALLROUNDER_BUTTON_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_BACKGROUND_DESC"></field>
+				<field name="buttonHoverColor" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_BUTTON_HOVER_FONT" description="TPL_ALLROUNDER_BUTTON_HOVER_FONT_DESC"></field>
+				<field name="buttonBgHoverColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND_DESC"></field>
+				<field name="buttonBorderTop" class="color {required:false,hash:true}" type="text" default="#cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_TOP" description="TPL_ALLROUNDER_BUTTON_BORDER_TOP_DESC"></field>
+				<field name="buttonBorderLeft" class="color {required:false,hash:true}" type="text" default="#cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_LEFT" description="TPL_ALLROUNDER_BUTTON_BORDER_LEFT_DESC"></field>
+				<field name="buttonBorderRight" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT" description="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT_DESC"></field>
+				<field name="buttonBorderBottom" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM" description="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM_DESC"></field>
 				<field type="spacer" hr="true" />
-				<field name="tooltipBorder" class="color {required:false}" type="text" default="A6A7AB" label="TPL_ALLROUNDER_TOOLTIP_BORDER" description="TPL_ALLROUNDER_TOOLTIP_BORDER_DESC"></field>
-				<field name="tooltipBg" class="color {required:false}" type="text" default="F2F3F5" label="TPL_ALLROUNDER_TOOLTIP_BG" description="TPL_ALLROUNDER_TOOLTIP_BG_DESC"></field>
-				<field name="tooltipFont" class="color {required:false}" type="text" default="800000" label="TPL_ALLROUNDER_TOOLTIP_FONT" description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC"></field>
+				<field name="tooltipBorder" class="color {required:false,hash:true}" type="text" default="#A6A7AB" label="TPL_ALLROUNDER_TOOLTIP_BORDER" description="TPL_ALLROUNDER_TOOLTIP_BORDER_DESC"></field>
+				<field name="tooltipBg" class="color {required:false,hash:true}" type="text" default="#F2F3F5" label="TPL_ALLROUNDER_TOOLTIP_BG" description="TPL_ALLROUNDER_TOOLTIP_BG_DESC"></field>
+				<field name="tooltipFont" class="color {required:false,hash:true}" type="text" default="#800000" label="TPL_ALLROUNDER_TOOLTIP_FONT" description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC"></field>
 			</fieldset>
 			<fieldset name="ddcolors" description="" label="TPL_ALLROUNDER_DD_COLORS">
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS_DD" />
@@ -221,28 +221,28 @@
 					<option value="1">JYES</option>
 				</field>
 					<field type="spacer" label="TPL_ALLROUNDER_LEVEL_ONE" />
-				<field name="ddBackground" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_UL_BG" description="TPL_ALLROUNDER_UL_BG_DESC"></field>
-				<field name="ddBorderTop" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_UL_BORDER_TOP" description="TPL_ALLROUNDER_UL_BORDER_TOP_DESC"></field>
-				<field name="ddBorderBottom" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_UL_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_BORDER_BOTTOM_DESC"></field>
-				<field name="ulLiBorderRight" class="color {required:false}" type="text" default="555555" label="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT_DESC"></field>
-				<field name="ulLiaBorderTop" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_UL_LI_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_BORDER_TOP_DESC"></field>
-				<field name="ulLiaBorderRight" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT_DESC"></field>
-				<field name="ulLiaBorderLeft" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT_DESC"></field>
-				<field name="ulLiaBorderBottom" class="color {required:false}" type="text" default="333333" label="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM_DESC"></field>
-				<field name="ulLiaColor" class="color {required:false}" type="text" default="cccccc" label="TPL_ALLROUNDER_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_A_FONT_DESC"></field>
-				<field name="ulLiaBackground" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_UL_LI_A_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_A_BACKGROUND_DESC"></field>
-				<field name="ulLiaHoverColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT_DESC"></field>
+				<field name="ddBackground" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_UL_BG" description="TPL_ALLROUNDER_UL_BG_DESC"></field>
+				<field name="ddBorderTop" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_TOP" description="TPL_ALLROUNDER_UL_BORDER_TOP_DESC"></field>
+				<field name="ddBorderBottom" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_BORDER_BOTTOM_DESC"></field>
+				<field name="ulLiBorderRight" class="color {required:false,hash:true}" type="text" default="#555555" label="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT_DESC"></field>
+				<field name="ulLiaBorderTop" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_UL_LI_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_BORDER_TOP_DESC"></field>
+				<field name="ulLiaBorderRight" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT_DESC"></field>
+				<field name="ulLiaBorderLeft" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT_DESC"></field>
+				<field name="ulLiaBorderBottom" class="color {required:false,hash:true}" type="text" default="#333333" label="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM_DESC"></field>
+				<field name="ulLiaColor" class="color {required:false,hash:true}" type="text" default="#cccccc" label="TPL_ALLROUNDER_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_A_FONT_DESC"></field>
+				<field name="ulLiaBackground" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_A_BACKGROUND_DESC"></field>
+				<field name="ulLiaHoverColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT_DESC"></field>
 				<field type="spacer" label="TPL_ALLROUNDER_LEVEL_TWO" />
-				<field name="ululBackground" class="color {required:false}" type="text" default="222222" label="TPL_ALLROUNDER_UL_UL_BACKGROUND" description="TPL_ALLROUNDER_UL_UL_BACKGROUND_DESC"></field>
-				<field name="ululBorder" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_UL_UL_BORDER" description="TPL_ALLROUNDER_UL_UL_BORDER_DESC"></field>
-				<field name="ulLiliaBorderTop" class="color {required:false}" type="text" default="000000" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP_DESC"></field>
-				<field name="ulLiliaBorderRight" class="color {required:false}" type="text" default="333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT_DESC"></field>
-				<field name="ulLiliaBorderLeft" class="color {required:false}" type="text" default="333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT_DESC"></field>
-				<field name="ulLiliaBorderBottom" class="color {required:false}" type="text" default="333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM_DESC"></field>
-				<field name="ulLiliaColor" class="color {required:false}" type="text" default="999999" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT_DESC"></field>
-				<field name="ulLiliaHoverColor" class="color {required:false}" type="text" default="ffffff" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT_DESC"></field>
-				<field name="ulLiliBackground" class="color {required:false}" type="text" default="171717" label="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND_DESC"></field>
-				<field name="ulLiliHoverBackground" class="color {required:false}" type="text" default="212121" label="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND_DESC"></field>
+				<field name="ululBackground" class="color {required:false,hash:true}" type="text" default="#222222" label="TPL_ALLROUNDER_UL_UL_BACKGROUND" description="TPL_ALLROUNDER_UL_UL_BACKGROUND_DESC"></field>
+				<field name="ululBorder" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_UL_UL_BORDER" description="TPL_ALLROUNDER_UL_UL_BORDER_DESC"></field>
+				<field name="ulLiliaBorderTop" class="color {required:false,hash:true}" type="text" default="#000000" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP_DESC"></field>
+				<field name="ulLiliaBorderRight" class="color {required:false,hash:true}" type="text" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT_DESC"></field>
+				<field name="ulLiliaBorderLeft" class="color {required:false,hash:true}" type="text" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT_DESC"></field>
+				<field name="ulLiliaBorderBottom" class="color {required:false,hash:true}" type="text" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM_DESC"></field>
+				<field name="ulLiliaColor" class="color {required:false,hash:true}" type="text" default="#999999" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT_DESC"></field>
+				<field name="ulLiliaHoverColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT_DESC"></field>
+				<field name="ulLiliBackground" class="color {required:false,hash:true}" type="text" default="#171717" label="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND_DESC"></field>
+				<field name="ulLiliHoverBackground" class="color {required:false,hash:true}" type="text" default="#212121" label="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND_DESC"></field>
 			</fieldset>
 			<fieldset name="advanced" label="TPL_ALLROUNDER_ADVANCED_OPTIONS">
 				<field type="spacer" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE" />
