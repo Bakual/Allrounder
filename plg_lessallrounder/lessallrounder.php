@@ -49,7 +49,7 @@ class plgSystemLessallrounder extends JPlugin
 		//check if .less file exists and is readable
 		if (is_readable($lessFile))
 		{
-			require_once('lessc.php');
+			require_once('lessc.inc.php');
 			$less = new lessc;
 
 			if ($table->params->get('cssCompress', 0))
@@ -68,26 +68,27 @@ class plgSystemLessallrounder extends JPlugin
 				$less->setFormatter($formatter);
 			}
 			$params_array	= $table->params->toArray();
-			// workaround because bootstrap has same variable name and template stores colors without preceding '#'
-			$params_array['linkColorTemplate']	= '#'.$params_array['linkColor'];
-			unset($params_array['linkColor']);
+
+			// Sanityzing params for LESS
+			foreach ($params_array as &$value)
+			{
+				// Adding quotes around variable so it's threated as string if a slash is in it.
+				if (strpos($value, '/') !== false)
+				{
+					$value	= '"'.$value.'"';
+				}
+				// Quoting empty values as they break the compiler
+				if ($value == '')
+				{
+					$value	= '""';
+				}
+			}
 
 			// Adding templatepath to params
-			$params_array['basePath']		= ($table->client_id) ? JURI::base(true).'/' : JURI::root(true).'/';
-//			$params_array['templatePath']	= '"'.$params_array['basePath'].'templates/'.$table->template.'"';
-			$params_array['basePath']		= '"'.$params_array['basePath'].'"';
+			$basePath					= ($table->client_id) ? JURI::base(true) : JURI::root(true);
+			$params_array['basePath']	= '"'.$basePath.'/"';
 
-			// Adding quotes around path variables so they are threated as strings
-			$params_array['contentheadingImageMedia']	= '"'.$params_array['contentheadingImageMedia'].'"';
-
-			// Maybe do a foreach here and make LESS safe (htmlspecialchar()?
 			$less->setVariables($params_array);
-//			$less->unsetVariable('contentheadingImage');
-			$less->unsetVariable('copyText');
-			$less->unsetVariable('customCssCode');
-			$less->unsetVariable('mediaLogo');
-			$less->unsetVariable('slogan');
-			$less->unsetVariable('textLogo');
 
 			try {
 				$less->compileFile($lessFile, $cssFile);
