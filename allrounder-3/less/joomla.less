@@ -192,14 +192,6 @@ p.counter {
 		font-variant:small-caps;
 		border-bottom:1px dashed;
 	}
-	h2, h2.item-title {
-		background-image:url('../images/balloon.png');
-		background-repeat:no-repeat;
-		min-height:32px;
-		line-height:32px;
-		padding-left: 40px;
-		margin: 10px 0;
-	}
 }
 
 /****************** ARTICLE INFOS ******************/
@@ -294,20 +286,29 @@ dd {
 /****************** TABLES ******************/
 
 table {
+	&.weblinks, &.newsfeeds, &.category, &.jlist-table {
+		th {
+			font-size:16px;
+		}
+	}
 	&.weblinks, &.category {
-		font-size:1em;
-		margin:10px 10px 20px 0px;
-		width:99%;
+		font-size: 1em;
+		margin: 10px 10px 20px 0px;
+		width: 99%;
 		td {
 			padding: 5px 0;
 		}
 		th {
-			text-align:left;
-			padding: 8px 0;	
+			text-align: left;
+			padding: 8px 0;
 		}
 	}
 	&.weblinks td {
-		border-collapse:collapse;
+		border-collapse: collapse;
+	}
+	&.category th a img {
+		padding: 2px 10px;
+		border: solid 0px;
 	}
 }
 
@@ -347,11 +348,6 @@ fieldset.filters {
 	margin-right:7px
 }
 
-/* CATEGORY TABLE */
-
-table.category th a img {
-	padding:2px 10px
-}
 .filter-search {
 	float:left;
 	.inputbox {
@@ -494,19 +490,6 @@ dl#content-pane.tabs {
 	}
 	h3 {
 		clear:both;
-	}
-}
-
-/* tables   */
-
-table {
-	&.weblinks, &.newsfeeds, &.category, &.jlist-table {
-		th {
-			font-size:16px;
-		}
-	}
-	&.category th a img {
-		border:solid 0px ;
 	}
 }
 
