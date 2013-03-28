@@ -303,7 +303,20 @@ a {
 	background-image:url('../images/background.png');
 	background-color: @contentBgColor;
 	border: 3px double @contentBorderColor;
+	div.search, .categories-list, .category-list, .archive , .contact-category, .weblink-category,  .newsfeed-category, .login, .profile, .profile-edit, .registration, .remind, .reset, .finder {
+		background-color: @articleBgColor;
+		border: 1px solid @articleBorderColor;
+		overflow:hidden;
+		padding:2%;
+	}
 }
+.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact {
+	background-color: @articleBgColor;
+	border: 1px solid @articleBorderColor;
+	overflow:hidden;
+	padding:2%;
+}
+
 .clr {
 	clear:both;
 }
@@ -607,10 +620,6 @@ ul.menu {
 	color: @footColor;
 }
 
-.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact {
-	background-color: @articleBgColor;
-	border: 1px solid @articleBorderColor;
-}
 
 // guarded-background() is a conditional mixing. It will not be outputted in the CSS by itself.
 .guarded-background() when (@contentheadingImage = 0) {
@@ -637,7 +646,6 @@ ul.menu {
 		color: @articletitleColor !important;
 	}
 }
-
 .breadcrumbs, .breadcrumbs span {
 	color: @breadcrumbColor;
 }

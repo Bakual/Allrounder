@@ -148,7 +148,6 @@
 				<field name="articleBgColor" class="color {required:false,hash:true}" type="text" default="#ffffff" label="TPL_ALLROUNDER_ARTICLE_BG_COLOR" description="TPL_ALLROUNDER_ARTICLE_BG_COLOR_DESC"></field>
 				<field name="articleBorderColor" class="color {required:false,hash:true}" type="text" default="#e9e9e9" label="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR" description="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR_DESC"></field>
 				<field name="articletitleColor" class="color {required:false,hash:true}" type="text" default="#484848" label="TPL_ALLROUNDER_ARTICLE_TITLE_FONT" description="TPL_ALLROUNDER_ARTICLE_TITLE_FONT_DESC"></field>
-				<field name="itemSeparatorColor" class="color {required:false,hash:true}" type="text" default="#eeeeee" label="TPL_ALLROUNDER_ITEM_SEPARATOR_BORDER" description="TPL_ALLROUNDER_ITEM_SEPARATOR_BORDER_DESC"></field>
 				<field type="spacer" hr="true" />
 				<field type="spacer" label="TPL_ALLROUNDER_SIDEBAR_MODULES" />
 				<field name="moduleh3BgColor" class="color {required:false,hash:true}" type="text" default="#383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC"></field>

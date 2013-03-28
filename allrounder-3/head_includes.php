@@ -71,7 +71,7 @@ if (!$params->get('css3effects')) : ?>
 		// Add JavaScript Framework from Joomla (JQuery 1.8.1)
 		JHtml::_('jquery.framework');
 	else :
-		$doc->addScript($path.'/js/jquery-1.7.2.min.js');
+		$doc->addScript($path.'/js/jquery-1.9.1.min.js');
 		$doc->addScriptDeclaration('var jq = jQuery.noConflict();');
 	endif;
 	$doc->addScript($path.'/js/lv-dropdown.js');

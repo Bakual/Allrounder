@@ -171,9 +171,6 @@ input.btn:hover, button.btn:hover, button.validate:hover, .pagenav, ul.pagenav l
 .page-header h2, .page-header h2 a, h2.item-title, h2.item-title a {
 	color: #353535 !important;
 }
-div.item-separator {
-	border-bottom:3px double #eee;
-}
 
 
 /****************** Menu Colors ******************/
@@ -242,7 +239,11 @@ div.item-separator {
 /* Joomla specific */
 
 	/* articles */
-.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact {
+.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact,
+#maincontent div.search, #maincontent .categories-list, #maincontent .category-list, 
+#maincontent .archive , #maincontent .contact-category, #maincontent .weblink-category, 
+#maincontent .newsfeed-category, #maincontent .login, #maincontent .profile, #maincontent .profile-edit, 
+#maincontent .registration, #maincontent .remind, #maincontent .reset, #maincontent .finder {
 	background-color:#fff;
 	border: 1px solid #E9E9E9;
 }

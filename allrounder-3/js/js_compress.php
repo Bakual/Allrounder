@@ -10,7 +10,7 @@
   header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$expires) . ' GMT');
 
   $files = array(
-    "jquery-1.7.2.min.js",
+    "jquery-1.9.1.min.js",
     "jq-noconflict.js",
     "lv-dropdown.js",
     "jq.easy-tooltip.min.js",   

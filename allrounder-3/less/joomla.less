@@ -50,15 +50,8 @@
 .column-3 {
 	width:30%
 }
-.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact {
-	overflow:hidden;
-	padding:2%;
-}
 .items-more {
 	padding:10px 5px
-}
-span.row-separator {
-	display:none;
 }
 
 /****************** System TOOLTIPS ******************/
@@ -196,28 +189,15 @@ p.counter {
 
 /****************** ARTICLE INFOS ******************/
 
-.article-detailer {
-	font-weight:bold;
-	background-image:url('../images/article-detailer-plus.png');
-	background-position: 5px;
-	background-repeat:no-repeat;
-	padding: 0 0 0 20px;
-	margin:20px 0 5px 0;
-    display:block;
-	letter-spacing:2px;
-	height:22px;
-	line-height:22px;
-	cursor:pointer;
-}
 .article-info {
-    margin:0 0 30px 0px;
-    font-size:11px;
+	margin: 0 0 10px 0px;
+	font-size: 11px;
 	padding: 0 0 0 20px;
 }
 .article-info-term {
-	display:none;
+	font-weight: bold;
 }
-dd {
+div {
 	&.parent-category-name,
 	&.category-name,
 	&.create,
@@ -500,6 +480,9 @@ fieldset.filters {
 }
 
 /* login  */
+form#login-form input {
+	display:block;
+}
 
 
 /* forms */
@@ -508,7 +491,7 @@ form .control-group {
 	margin: 0 0 15px; 0;
 	input {
 		width: auto;
-		display:block;
+		display:inline;
 	}
 }
 
@@ -757,8 +740,42 @@ a.modal-button,
 	font-weight:bold; text-decoration:none;
 	margin-top:10px !important;
 }
+#publishing .control-group:first-child {
+	clear:both;
+	width:100%;
+	margin-top: 20px;
+	display: inline-block;
+}
 
+ul.actions li {
+	list-style: none !important;
+}
 /* -- buttons */
+
+#jform_publish_up, #jform_publish_down {
+    float: left !important;
+}
+button#jform_publish_up_img, button#jform_publish_down_img {
+    background-image: url("../images/system/printButton.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 10px !important;
+}
+
+
+.btn-toolbar {
+	.btn-group  {
+		width: auto;
+		display: inline;
+		.btn btn-primary {
+			float: left;
+		}
+		&:first-child {
+			float: left;
+			margin-right: 20px;
+		}
+	}
+}
 #editor-xtd-buttons {
 	padding: 0px;
 }
@@ -820,6 +837,9 @@ a.modal-button,
 
 /****************** GLOBAL THINGS ******************/
 
+div.clearfix {
+	clear:both;
+}
 .category-desc {
 	line-height:1.7em;
 	margin:10px 0;
@@ -839,11 +859,15 @@ fieldset {
 	border:0;
 }
 
-dl#system-message {
+div#system-message {
 	font-weight:bold;
 	font-size:15px;
-	dt.error {
+	.alert {
 		color: red;
+		background-color: #fff;
+		border: 1px solid;
+		padding: 5px 30px;
+		margin: 0 0 10px 0;
 	}
 }
 
@@ -853,18 +877,7 @@ dl#system-message {
 	padding:20px;
 }
 
-div.item-separator {
-	clear:both;
-	margin:15px 0;
-}
-
 p.readmore {
-	background-image:url('../images/readmore.png');
-	background-repeat: no-repeat;
-	padding-left:19px;
-	background-position: 0 1px;
-	line-height:normal;	
-	clear: both;
 	// Disable bootstrap markup
 	a {
 		border:none;
