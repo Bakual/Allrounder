@@ -1,0 +1,688 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+// CSS Reset
+@import "../../../media/jui/less/reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // default variables, template variables are injected with plugin
+@import "../../../media/jui/less/mixins.less";
+
+// Grid system and page structure
+@import "../../../media/jui/less/scaffolding.less";
+@import "../../../media/jui/less/grid.less";
+@import "../../../media/jui/less/layouts.less";
+
+// Base CSS
+@import "../../../media/jui/less/type.less";
+@import "../../../media/jui/less/code.less";
+@import "../../../media/jui/less/forms.less";
+@import "../../../media/jui/less/tables.less";
+
+// Components: common
+// @import "../../../media/jui/less/sprites.less";
+@import "../../../media/jui/less/dropdowns.less";
+@import "../../../media/jui/less/wells.less";
+@import "../../../media/jui/less/component-animations.less";
+@import "../../../media/jui/less/close.less";
+
+// Components: Buttons & Alerts
+// @import "../../../media/jui/less/buttons.less";
+@import "buttons.less"; // Local copy, fixing a bug and customizing
+@import "../../../media/jui/less/button-groups.less";
+@import "../../../media/jui/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "../../../media/jui/less/navs.less";
+@import "../../../media/jui/less/navbar.less";
+// @import "../../../media/jui/less/breadcrumbs.less"; // We've got our own.
+// @import "../../../media/jui/less/pagination.less"; // We've got our own.
+@import "../../../media/jui/less/pager.less";
+
+// Components: Popovers
+@import "../../../media/jui/less/modals.less";
+@import "../../../media/jui/less/tooltip.less";
+@import "../../../media/jui/less/popovers.less";
+
+// Components: Misc
+@import "../../../media/jui/less/thumbnails.less";
+@import "../../../media/jui/less/labels-badges.less";
+@import "../../../media/jui/less/progress-bars.less";
+@import "../../../media/jui/less/accordion.less";
+@import "../../../media/jui/less/carousel.less";
+@import "../../../media/jui/less/hero-unit.less";
+
+// Utility classes
+@import "../../../media/jui/less/utilities.less";
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../../media/jui/less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Phones to portrait tablets and narrow desktops
+@import "../../../media/jui/less/responsive-767px-max.less";
+
+// Tablets to regular desktops
+@import "../../../media/jui/less/responsive-768px-979px.less";
+
+// Large desktops
+@import "../../../media/jui/less/responsive-1200px-min.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../../media/jui/less/responsive-navbar.less";
+
+// Extended for JUI
+@import "../../../media/jui/less/bootstrap-extended.less"; // Has to be last to override when necessary
+
+// Icon Font
+// @import "../../../media/jui/less/icomoon.less";
+@import "icomoon.less"; // Local copy, references don't work otherwise
+
+// Custom LESS files
+@import "joomla.less";
+@import "typo.less";
+@import "breadcrumbs.less";
+@import "lvdropdown.less";
+@import "modules.less";
+@import "ribbons.less";
+@import "pagination.less";
+
+/****************** LAYOUT ******************/
+
+/* html {
+	height : 101%; -> needed?
+} */
+.guarded-font() when not (@ownFont = 1) {
+	font-family: @fontFamily;
+}
+.guarded-font() when (@ownFont = 1) {
+	font-family: @ownfontFamily;
+}
+body {
+	.guarded-font(); // Would be @baseFontFamily in Bootstrap (scaffolding)
+	background-image: url(../images/background.png);
+	overflow-x: hidden;
+//	font-size: @fontSize; -> Bootstrap (scaffolding)
+//	margin: 0; -> Bootstrap (scaffolding)
+//	padding: 0; -> needed?
+//	line-height: @lineHeight; -> Bootstrap (scaffolding)
+//	background-color: @bodyBgColor; -> Bootstrap (scaffolding)
+//	color: @fontColor; -> Bootstrap (scaffolding)
+}
+
+/* whatWidth (Fixed or Dynamic) */
+// Could maybe done with container and container-fluid
+.quarded-whatWidth() when (@whatWidth = 1) {
+	max-width: @pageMaxWidth;
+}
+.quarded-whatWidth() when not (@whatWidth = 1) {
+	width: @pageWidth;
+}
+#wrapper, #foot_container {
+	.quarded-whatWidth();
+	margin: 0 auto;
+	background-color: @wrapperBgColor;
+	border: 1px solid @wrapperBorderColor;
+}
+#foot_container {
+	margin-bottom: @footerMarginBottom;
+	padding: 0 0 7px 0;
+	overflow: visible;
+}
+#header_container {
+	height: auto;
+	width: 100%;
+	margin: auto;
+	padding: 14px 0 0 0;
+}
+#header {
+	min-height: 120px;
+	margin: 0 -21px 15px -21px;
+	padding: 0 0 0 21px;
+	position: relative;
+	background-image: url('../images/header.png');
+	background-repeat: repeat-x;
+	background-color: @headBgColor;
+	.border-top-radius(5px);
+	border-top: 1px solid @headBorderColor;
+	border-left: 1px solid @headBorderColor;
+	border-right: 1px solid @headBorderColor;
+}
+#sidepanel {
+	background: #222;
+	border: 2px solid #434345;
+	border-left: 0;
+}
+#logo {
+	color: #ddd;
+	width: auto;
+	overflow: hidden;
+	a.logo {
+		color: @logoColor;
+		line-height: normal;
+		font-size: 46px;
+		display: block;
+		margin: 0;
+		letter-spacing: -1px;
+		padding: 20px 40px 10px 60px;
+	}
+}
+a {
+/* object, img, a {
+	outline:none; -> Needed for what?
+} */
+/*	&, &:link, &:visited, &:active, &:focus {
+		outline : none; -> Needed for what?
+		text-decoration : none; -> Bootstrap (scaffolding)
+		color: @linkColor; -> Bootstrap (scaffolding)
+	} */
+/*	&:hover {
+		text-decoration : underline; -> Bootstrap (scaffolding)
+	} */
+	&:active {
+		color: #0099FF !important;
+	}
+	&.imglogo, &.medialogo {
+		display: block; // -> Multiple pictures go below each. Removing would put them side by side.
+//		color: #ddd !important; -> why a color for an image link?
+//		line-height: normal;
+//		font-size:36px;
+//		margin:0;
+//		padding:0;
+/*		&:hover {
+			text-decoration:none; // -> No text link, so no text-deco anyway.
+		} */
+	}
+	&.logo:hover {
+		text-decoration: none;
+	}
+}
+
+#topmenu_container {
+	width: 100%;
+	margin: 0;
+	height: auto;
+	min-height: 30px;
+}
+#subhead {
+	height: 33px;
+	width: 99.5%;
+	margin: 10px .2% 0 .2%;
+	overflow: hidden;
+	background-image: url('../images/subhead.png');
+	background-repeat: repeat-x;
+	background-color: @subheadBgColor;
+	border: 1px solid @subheadBorderColor;
+}
+#search {
+	position: relative;
+	float: right;
+	padding: 0 0 0 18px;
+	margin: 4px 4px 4px 0;
+	background-image: url('../images/search.png');
+	background-repeat: no-repeat;
+	background-position: left 2px;
+}
+#container {
+	text-align:left;
+	padding: 10px 7px 0 7px;
+	margin:auto;
+}
+/* What's that? I don't see a container2 element anywhere
+#container2 {
+	text-align:left;
+	margin:auto;
+} */
+/* What's that? I don't see a page_content element anywhere
+#page_content {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+} */
+#leftcol {
+	float: left;
+	margin: 0;
+	padding: 0 0 10px 0;
+	width: e(@leftcolWidth + '%');
+}
+#rightcol {
+	float: right;
+	margin: 0;
+	padding: 0 0 10px 0;
+	width: e(@rightcolWidth + '%');
+}
+/* left and right NOT loaded */
+#content_out {
+	margin: 0 0 0 0.2%;
+}
+/* just left loaded */
+#content_outleft {
+	float: right;
+	width: e((99 - @leftcolWidth) + '%');
+}
+/* left and right loaded */
+#content_outmiddle {
+	float: left;
+	margin: 0 1%;
+	width: e((98 - @rightcolWidth - @leftcolWidth) + '%');
+}
+/* just right loaded */
+#content_outright {
+	float: left;
+	width: e((99 - @rightcolWidth) + '%');
+}
+#maincontent {
+	float: left;
+	width: 93.6%;
+	padding: 20px 3% 20px 3%;
+	margin: 10px 0 0 0;
+	min-height: 200px;
+	overflow: hidden;
+	background-image: url('../images/background.png');
+	background-color: @contentBgColor;
+	border: 3px double @contentBorderColor;
+	div.search, .categories-list, .category-list, .archive , .contact-category, .weblink-category,  .newsfeed-category, .login .well, .profile, .profile-edit, .registration, .remind, .reset, .finder {
+		.border-radius(0);
+		background-color: @articleBgColor;
+		border: 1px solid @articleBorderColor;
+		overflow: hidden;
+		padding: 2%;
+	}
+}
+#subfoot {
+	min-height: 15px;
+	line-height: 15px;
+	width: 100%;
+	background-color: @subfootBgColor;
+	border-top: 1px solid @subfootBorderTopColor;
+	border-bottom: 1px solid @subfootBorderBottomColor;
+}
+.copytext {
+	padding: 3px 0;
+	font-size: 11px;
+	text-align: center;
+	font-weight: bold;
+	color: @subfootColor;
+}
+
+#footer {
+	min-height: 80px;
+	margin: 0 -16px 0 -16px;
+	padding: 0;
+	position: relative;
+	overflow: visible;
+	background-image: url('../images/footer.png');
+	background-repeat: repeat-x;
+	background-color: @footBgColor;
+	border: 1px solid @footBorderColor;
+	border-bottom: 2px solid @footBorderColor;
+	a#gotop {
+		color: @gotopLinkColor;
+	}
+}
+.footer-inner {
+	display: inline-block;
+	width: 100%;
+	min-height: 62px;
+}
+
+#scroll_up {
+	float: right;
+	width: 10%;
+	a#gotop {
+		display: block;
+		height: 50px;
+		line-height: 45px;
+		width: 100%;
+		text-align: center;
+		&:hover {
+			text-decoration: overline;
+		}
+	}
+}
+
+.footer-bottom {
+	display: inline-block;
+	width: 100%;
+	line-height: normal;
+	font-style: italic;
+	span {
+		&#date {
+			font-size: 10px;
+			float: left;
+			padding-left: 20px;
+		}
+		&#copy {
+			font-size: 10px;
+			text-align: right;
+			float: right;
+			padding-right: 20px;
+			a {
+				color: @fontColor;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+#leftcol, #rightcol {
+	.module, .module_menu, .module_text {
+		margin-top: 0;
+		background-color: transparent;
+		border: 0;
+		div.lvround-inner {
+			margin: 0;
+			padding: 10px 3%;
+			background-color: @moduleBgColor;
+			border: 1px solid @moduleBorderInnerColor;
+			color: @moduleColor;
+		}
+		div div {
+			border: 1px solid @moduleBorderOuterColor;
+		}
+		div div div div {
+			border: 0;
+		}
+	}
+	h3.moduleh3 {
+		font-size: 120%;
+		background-image: url('../images/h3-module.png');
+		background-repeat: repeat-x;
+		border-bottom: 0;
+	}
+}
+#wrapper {
+	margin-top: @wrapperMarginTop;
+	padding: 0 0 10px 0;
+	#leftcol, #rightcol {
+		h3.moduleh3 {
+			background-color: @moduleh3BgColor;
+			border-top:	1px solid @moduleh3BorderTopColor;
+			color: @moduleh3Color;
+			position:relative;
+			.border-top-radius(5px);
+		}
+	}
+	#leftcol h3.moduleh3 {
+		min-height:35px;
+		line-height:35px;
+		margin: 10px 0 0 -20px;
+		padding: 0 10px 0 30px;
+		text-align:left;
+		border-bottom:0;
+		border-left: 1px solid @moduleh3BorderOuterColor;
+		border-right: 1px solid @moduleh3BorderInnerColor;
+	}
+	#rightcol h3.moduleh3 {
+		min-height:30px;
+		line-height:30px;
+		margin: 10px -20px 0 0;
+		padding: 0 30px 0 10px;
+		text-align:right;
+		border-right: 1px solid @moduleh3BorderOuterColor;
+		border-left: 1px solid @moduleh3BorderInnerColor;
+	}
+}
+.moduletable h3 {
+	margin: 10px 0;
+}
+/****************** MENUES ******************/
+
+/**** Mainmenu with suffix: _menu START ****/
+.module_menu ul.menu {
+	margin: 0;
+	padding: 0;
+	background: none;
+	list-style: none;
+	li {
+		margin: 0;
+		padding: 0 0 0 20px;
+		background: none;
+		list-style: none;
+		margin: 0;
+		background-image: url('../images/menu-li.png');
+		background-repeat: no-repeat;
+		background-position: 0 8px;
+		a, span.separator {
+			display: block;
+			vertical-align: middle;
+			text-align: left;
+			text-decoration: none;
+			padding: 3px 0;
+			margin: 4px 0 0 0;
+			border-bottom: 1px dotted #ccc;
+			clear: both;
+			overflow: visible;
+			color: @mainMenuFont;
+			border-bottom:1px dotted @mainMenuBorderBottom;
+		}
+		a {
+			&:hover, &:active, &:focus {
+				color: @mainMenuFontHover!important;
+				font-weight:bold;
+			}
+			img {
+				vertical-align: middle;
+				padding-right: 5px;
+			}
+			span {
+				vertical-align: middle;
+			}
+		}
+		&.current a {
+			font-weight: bold;
+			color: @mainMenuFontCurrent;
+		}
+		&.current ul li a {
+			font-weight: normal;
+			color: @mainMenuLiLiFont;
+		}
+		ul {
+			margin: 0 0 0 10px;
+			padding: 0px;
+		}
+		li {
+			list-style: none !important;
+			margin: 0;
+			padding: 0;
+			min-height: 22px;
+			line-height: 22px;
+			background: none;
+		}
+	}
+	ul li a {
+		background: none;
+		font-size:90%;
+		min-height:18px;
+		line-height:18px;
+	}
+}
+/**** Mainmenu with suffix: _menu END ****/
+
+/* Mainmenu normal */
+ul.menu {
+	line-height: 22px;
+	li a span {
+		clear: both;
+		vertical-align: middle;
+	}
+}
+/* Mainmenu normal END */
+
+.input, .inputbox {
+	font-size: @baseFontSize - 2 !important;
+	padding : 2px 3px 2px 3px;
+	margin : 2px 3px 2px 3px;
+	color: @inputFontColor;
+	background-color: @inputBgColor;
+	border-top: 1px solid @inputBorderTopColor;
+	border-left: 1px solid @inputBorderLeftColor;
+	border-right: 1px solid @inputBorderRightColor;
+	border-bottom: 1px solid @inputBorderBottomColor;
+	&:hover {
+		color: @inputHoverFontColor;
+		background-color: @inputHoverBgColor;
+	}
+}
+
+.shadow-left {
+	display: block;
+	height:8px;
+	background-image:url('../images/shadow-l.png');
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.shadow-right {
+	display: block;
+	height:8px;
+	background-image:url('../images/shadow-r.png');
+	background-repeat:no-repeat;
+	background-position: right;
+	margin-top:-8px;
+	margin-bottom:10px;
+}
+
+/* To disable the shadows in modules using suffix "-shadows-off" */
+.module-outer-shadows-off {
+	.shadow-left, .shadow-right {
+		display:none;
+	}
+}
+
+
+#footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
+	color: @footColor;
+}
+
+
+// guarded-background() is a conditional mixing. It will not be outputted in the CSS by itself.
+.guarded-background() when (@contentheadingImage = 0) {
+	background-image: url(../images/balloon.png);
+	padding-left: 40px;
+	line-height: 32px;
+}
+.guarded-background() when (@contentheadingImage = 1) {
+	background-image: url(@{basePath}@{contentheadingImageMedia});
+	padding-left: 40px;
+	line-height: 32px;
+}
+.guarded-background() when (@contentheadingImage = 2) {
+	background-image: none !important;
+	padding-left: 0px !important;
+	line-height: normal !important;
+}
+.page-header h2, h2.item-title {
+	.guarded-background();
+	background-repeat: no-repeat;
+	min-height: 32px;
+	margin: 10px 0;
+	&, a {
+		color: @articletitleColor !important;
+	}
+}
+
+div {
+	&.slogan {
+		color: @sloganColor;
+		line-height: normal;
+		font-size:18px;
+		display:block;
+		margin:0;
+		padding: 0 40px 10px 100px;
+	}
+	&.item-separator {
+		border-bottom: 3px double @itemSeparatorColor !important;
+	}
+}
+
+/**** Global Modules ****/
+div.module {
+	color: @moduletableFont;
+	background-color: @moduletableBg;
+	border: 1px solid @moduletableBorder;
+	h3.moduleh3 {
+		background-color: @moduletableh3Bg;
+		border: 1px solid @moduletableh3Border;
+	}
+}
+
+/* easy tooltips start */
+.easy-tooltip-default {
+	border: 1px solid @tooltipBorder;
+	background-color: @tooltipBg;
+	color: @tooltipFont;
+}
+.easy-tooltip-title {
+	display:block;
+	text-align:center;
+	border-bottom:1px dotted;
+	font-weight:bold;
+}
+.tip-white {
+	color: #505050;
+	background-color:#fff;
+	border: 1px solid #ddd;
+}
+.tip-black {
+	color:#fcfcfc;
+	background-color:#333;
+	border:1px solid #111;
+}
+.tip-blue {
+	color:#1b475a;
+	background-color:#d9f1fb;
+	border:1px solid #7fcdee;
+}
+.tip-red {
+	color:#fcfcfc;
+	background-color:#bb3b1d;
+	border:1px solid #8f2a0f;
+}
+.tip-green {
+	color:#558221;
+	background-color:#f2fdf1;
+	border:1px solid #b6e184;
+}
+.tip-yellow {
+	color: #5b5316;
+	background-color:#f9f2ba;
+	border: 1px solid #e9d315;
+}
+/* easy tooltips end */
+
+/* easy caption start */
+.easy-caption-background {
+	background-color:#000000;
+	border-top:1px solid #555;
+}
+.easy-caption-foreground {
+	color:#bbb;
+}
+.easy-caption-title {
+	border-bottom:1px dotted #bbb;
+	color: #fff;
+}
+.easy-caption-wrapper {
+	background:#eee;
+	border:1px solid #ccc;
+}
+.easy-caption-close {
+	color:#fff;
+	background:#000;
+	border:1px solid #333;
+}
+/* easy caption end */
+

@@ -1,6 +1,6 @@
 jQuery(document).ready(function(jq) {
 
-	// Mainmenu with suffix _menu	
+	// Mainmenu with suffix _menu
 	jq('.module_menu ul.menu li a').hover(function(){
 		jq(this).stop().animate({'padding-left':'20px'},{
 			queue:false,

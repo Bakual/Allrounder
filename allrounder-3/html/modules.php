@@ -40,7 +40,7 @@ function modChrome_lvround_left($module, &$params, &$attribs)
 				</div>
 			</div>
 		</div>
-		<div class="clr"></div>
+		<div class="clearfix"></div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
@@ -64,7 +64,7 @@ function modChrome_lvround_right($module, &$params, &$attribs)
 				</div>
 			</div>
 		</div>
-		<div class="clr"></div>
+		<div class="clearfix"></div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
@@ -82,12 +82,12 @@ function modChrome_lvround($module, &$params, &$attribs)
 							<h3 class="moduleh3"><strong><?php echo $module->title; ?></strong></h3>
 						<?php endif; ?>
 						<?php echo $module->content; ?>
-						<div class="clr"></div>
+						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="clr"></div>
+		<div class="clearfix"></div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>

@@ -79,9 +79,9 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #bbb;
+@btnBackground:                     @buttonBgColor; // Taken from template parameters (orig: @white)
+@btnBackgroundHighlight:            @buttonBgHoverColor; // orig: darken(@white, 10%)
+@btnBorder:                         @buttonBorderTop; // Taken from template parameters (orig: #bbb)
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
@@ -104,7 +104,7 @@
 
 // Forms
 // -------------------------
-@inputBackground:               @white;
+@inputBackground:               @inputBgColor; // Taken from template parameters (orig: @white)
 @inputBorder:                   #ccc;
 @inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;

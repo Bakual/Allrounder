@@ -1,0 +1,63 @@
+/* ribbons in header */
+.heckl {
+	border-left: 19px solid transparent;
+	left: 0;
+}
+.heckr {  
+	border-right: 19px solid transparent;  
+	right: 0;  
+}
+.heckl, .heckr {  
+	top: 100%;  
+	width: 0px;
+	height: 0px;
+	line-height: 0px;
+	border-top: 10px solid @headCornerColor;
+	position: absolute;
+}
+/* ribbons in footer */
+.feckl {  
+	border-left: 14px solid transparent;  
+	left: 0;  
+}
+.feckr {  
+	border-right: 14px solid transparent;  
+	right: 0;  
+}
+.feckl, .feckr {  
+	top: -11px;  
+	width: 0;
+	height: 0;  
+	line-height: 0;  
+	border-bottom: 10px solid @footCornerColor;
+	position: absolute;  
+}
+/* ribbons in module h3 */
+.h3eckl {
+	left: 0;  
+}
+.h3eckr {
+	right: 0;  
+}
+.h3eckl, .h3eckr {
+	width: 0;
+	height: 0;  
+	line-height: 0;  
+	border-left: 11px solid transparent;  
+	top: 100%;  
+	border-top: 10px solid @moduleh3CornerColor;
+	position: absolute;  
+}
+/* Ribbons off */
+.guarded-ribbons() when (@ribbonsOnOff = 1) {
+	#header, #footer, #wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3 {
+		margin: 0;
+	}
+	#header {
+		padding: 0;
+	}
+	.heckl, .heckr, .feckl, .feckr, .h3eckl, .h3eckr {  
+		display: none;
+	}
+}
+.guarded-ribbons();
