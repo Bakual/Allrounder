@@ -49,7 +49,7 @@
 	position: absolute;  
 }
 /* Ribbons off */
-.guarded-ribbons() when (@ribbonsOnOff = 1) {
+.guarded-ribbons() when not (@ribbonsOnOff = 1) {
 	#header, #footer, #wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3 {
 		margin: 0;
 	}

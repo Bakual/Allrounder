@@ -98,6 +98,8 @@ class plgSystemLessallrounder extends JPlugin
 			{
 				JError::raiseWarning(100, 'lessphp error: '.$e->getMessage());
 			}
+			$this->loadLanguage();
+			JFactory::getApplication()->enqueueMessage(JText::sprintf('PLG_SYSTEM_LESSALLROUNDER_SUCCESS', $cssFile), 'message');
 		}
 	}
 }

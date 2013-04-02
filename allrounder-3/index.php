@@ -17,7 +17,7 @@ $doc	= JFactory::getDocument();
 	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 	// TODO: Switch param to make it more logical?
-	if (!$params->get('css3effects')) : ?>
+	if ($params->get('css3effects')) : ?>
 		<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
 	<?php endif;
 	if ($params->get('jsCompress')) : ?>

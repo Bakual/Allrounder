@@ -31,7 +31,7 @@
 		<folder>php</folder>
 		<filename>component.php</filename>
 		<filename>favicon.ico</filename>
-		<filename>head_includes.php</filename>
+<!--		<filename>head_includes.php</filename> -->
 		<filename>index.html</filename>
 		<filename>index.php</filename>
 		<filename>template_thumbnail.png</filename>
@@ -40,16 +40,12 @@
 		<fields name="params">
 			<fieldset name="welcomefields" description="" label="TPL_ALLROUNDER_WELCOME"
 				addfieldpath="/templates/allrounder-3/fields">
-				<field name="spacer" type="spacer" label="TPL_ALLROUNDER_WELCOMETEXT" />
-				<field name="useLESS" type="customradio" class="btn-group" default="0" label="Use LESS files" >
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
+				<field name="useLESS" type="loadjscss" label="TPL_ALLROUNDER_WELCOMETEXT" />
 			</fieldset>
 			<fieldset name="globtemplfields" description="" label="TPL_ALLROUNDER_TEMPLATE_LAYOUT">
-				<field name="whatWidth" type="radio" default="1" label="TPL_ALLROUNDER_TEMPLATE_WIDTH" description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC">
-					<option value="1">DYNAMIC</option>
+				<field name="whatWidth" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_TEMPLATE_WIDTH" description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC">
 					<option value="0">FIXED</option>
+					<option value="1">DYNAMIC</option>
 				</field>
 				<field type="spacer" label="TPL_ALLROUNDER_IF_DYNAMIC" />
 				<field name="pageMaxWidth" type="text" default="1180px" label="TPL_ALLROUNDER_MAX_WIDTH" description="TPL_ALLROUNDER_MAX_WIDTH_DESC"></field>
@@ -253,12 +249,12 @@
 				<field name="contentheadingImageMedia" type="media" size="40" hide_default="1" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA" description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA_DESC" />
 				<field type="spacer" label="TPL_ALLROUNDER_RIBBONS" />
 				<field name="ribbonsOnOff" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_RIBBONSONOFF" description="TPL_ALLROUNDER_RIBBONSONOFF_DESC">
-					<option value="1">JOFF</option>
-					<option value="0">JON</option>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
 				</field>
 				<field name="css3effects" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_CSS3EFFECTS" description="TPL_ALLROUNDER_CSS3EFFECTS_DESC">
-					<option value="1">JOFF</option>
-					<option value="0">JON</option>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
 				</field>
 				<field type="spacer" hr="true" />
 				<field type="spacer" label="TPL_ALLROUNDER_COPYRIGHT_FOOTER" />
@@ -289,8 +285,6 @@
 					<option value="1">JYES</option>
 				</field>
 				<field name="customCssCode" type="textarea" default="/* enter your CSS code here */" label="TPL_ALLROUNDER_OWN_CSS" description="TPL_ALLROUNDER_OWN_CSS_DESC" rows="40" cols="60"></field>
-				<field type="spacer" label="&lt;script src='../templates/allrounder-3/js/jscolor/jscolor.js' type='text/javascript'&gt;&lt;/script&gt;" />
-				<field type="spacer" label="&lt;link href='../templates/allrounder-3/css/params.css' rel='stylesheet' type='text/css' media='all' /&gt;" />
 			</fieldset>
 		</fields>
 	</config>
