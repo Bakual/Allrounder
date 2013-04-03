@@ -5,13 +5,7 @@
 
 /****************** Joomla Backend Parameter Style Pimp ******************/
 
-#welcomefields-options,
-#globtemplfields-options,
-#fontfields-options,
-#logofields-options,
-#templcolorfields-options,
-#ddcolors-options,
-#advanced-options {
+.fieldset_header {
 	font-size: 1.4em;
 	padding-left: 40px;
 	background-repeat: no-repeat;
@@ -46,11 +40,6 @@ b.ttip {
 	background-repeat: no-repeat;
 	padding-left: 18px;
 	cursor: help;
-}
-span.info {
-	margin: 0 0 10px 40px;
-	display: block;
-	color: #0099FF;
 }
 fieldset.panelform label,
 fieldset.panelform div.paramrow label,
