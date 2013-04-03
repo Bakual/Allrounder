@@ -7,16 +7,16 @@ $params	= $tpl->params;
 $doc	= JFactory::getDocument();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="designer" content="Juergen Koller - http://www.lernvid.com" />
 	<meta name="licence" content="Creative Commons 3.0" />
 	<link href="<?php echo $path; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<link href="<?php echo $path; ?>/css/template<?php echo $tpl->id; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<jdoc:include type="head" />
+	<link href="<?php echo $path; ?>/css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
-	// TODO: Switch param to make it more logical?
 	if ($params->get('css3effects')) : ?>
 		<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
 	<?php endif;
@@ -37,22 +37,21 @@ $doc	= JFactory::getDocument();
 	if($this->countModules("position-7")&&$this->countModules("position-8")) { $contentwidth="middle"; }
 	// dynamic or fixed width
 	if ($params->get('whatWidth')) :
-		$style	= 'max-width:'.htmlspecialchars($this->params->get('pageMaxWidth'));
+		$style	= 'max-width:'.htmlspecialchars($params->get('pageMaxWidth'));
 	else :
-		$style	= 'width:'.htmlspecialchars($this->params->get('pageWidth'));
+		$style	= 'width:'.htmlspecialchars($params->get('pageWidth'));
 	endif;
 	$doc->addStyleDeclaration('#wrapper, #foot_container {'.$style.';}');
 	if ($params->get('customCss')) :
 		$doc->addStyleDeclaration(htmlspecialchars($params->get('customCssCode')));
 	endif; ?>
-	<jdoc:include type="head" />
 </head>
 <body>
 	<div id="wrapper">
 		<?php require('modules/toppanel.php'); ?>
 		<?php require('modules/beforehead.php'); ?>
 		<div id="header_container">
-			<?php if ($this->params->get('showHeader')) : ?>
+			<?php if ($params->get('showHeader')) : ?>
 				<div id="header">
 					<?php if ($this->countModules('headermodule1')) : ?>
 						<div id="headermodule1">
@@ -68,19 +67,17 @@ $doc	= JFactory::getDocument();
 						</div>
 					<?php endif; ?>
 					<div id="logo">
-						<?php if ($this->params->get('showimgLogo')) : ?>
-							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>/images/logo/<?php echo htmlspecialchars($this->params->get('imgLogo')); ?>"/></a>
+						<?php if ($params->get('showimgLogo')) : ?>
+							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>/images/logo/<?php echo htmlspecialchars($params->get('imgLogo')); ?>"/></a>
 						<?php endif;?>
-						<?php if ($this->params->get('showMediaLogo')) : ?>
-							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($this->params->get('mediaLogo')); ?>"/></a>
+						<?php if ($params->get('showMediaLogo')) : ?>
+							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
 						<?php endif;?>
-						<?php if ($this->params->get('showtextLogo')) :
-							$style	= ($this->params->get('useLESS')) ? '' : 'style="color :#'.htmlspecialchars($this->params->get('logoColor')).';" ' ?>
-							<a <?php echo $style; ?>class="logo" href="index.php"><?php echo htmlspecialchars($this->params->get('textLogo')); ?></a>
+						<?php if ($params->get('showtextLogo')) : ?>
+							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo')); ?></a>
 						<?php endif;?>
-						<?php if ($this->params->get('showSlogan')) :
-							$style	= ($this->params->get('useLESS')) ? '' : 'style="color :#'.htmlspecialchars($this->params->get('sloganColor')).';" ' ?>
-							<div <?php echo $style; ?>class="slogan"><?php echo htmlspecialchars($this->params->get('slogan')); ?></div>
+						<?php if ($params->get('showSlogan')) : ?>
+							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>
 						<?php endif;?>
 					</div>
 					<?php if ($this->countModules('headermodule2')) : ?>
@@ -160,10 +157,10 @@ $doc	= JFactory::getDocument();
 				<jdoc:include type="modules" name="footer" />
 			</div>
 		<?php endif; ?>
-		<?php if ($this->params->get('showSubfoot')) : ?>
+		<?php if ($params->get('showSubfoot')) : ?>
 			<div id="subfoot">
-				<?php if ($this->params->get('showCopy')) : ?>
-					<div class="copytext">&copy; <?php echo htmlspecialchars($this->params->get('copyText')); ?></div>
+				<?php if ($params->get('showCopy')) : ?>
+					<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText')); ?></div>
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
@@ -176,7 +173,7 @@ $doc	= JFactory::getDocument();
 				<?php require('modules/footermodules.php'); ?>
 			</div>
 			<div class="footer-bottom">
-				<?php if ($this->params->get('showDate')) : ?>
+				<?php if ($params->get('showDate')) : ?>
 					<span id="date"><?php echo JHTML::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
 				<?php endif; ?>
 				<span id="copy"><a href="http://www.lernvid.com" title="Joomla Templates" target="_blank">Template designed by LernVid.com</a></span>
