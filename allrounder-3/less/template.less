@@ -29,15 +29,16 @@
 @import "../../../media/jui/less/close.less";
 
 // Components: Buttons & Alerts
-@import "../../../media/jui/less/buttons.less";
+// @import "../../../media/jui/less/buttons.less";
+@import "buttons.less"; // Local copy, fixing a bug and customizing
 @import "../../../media/jui/less/button-groups.less";
 @import "../../../media/jui/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
 @import "../../../media/jui/less/navs.less";
 @import "../../../media/jui/less/navbar.less";
-// @import "../../../media/jui/less/breadcrumbs.less";
-// @import "../../../media/jui/less/pagination.less";
+// @import "../../../media/jui/less/breadcrumbs.less"; // We've got our own.
+// @import "../../../media/jui/less/pagination.less"; // We've got our own.
 @import "../../../media/jui/less/pager.less";
 
 // Components: Popovers
@@ -86,19 +87,22 @@
 
 // Icon Font
 // @import "../../../media/jui/less/icomoon.less";
-@import "icomoon.less";
+@import "icomoon.less"; // Local copy, references don't work otherwise
 
 // Custom LESS files
-@import "lvdropdown.less";
 @import "joomla.less";
 @import "typo.less";
+@import "breadcrumbs.less";
+@import "lvdropdown.less";
 @import "modules.less";
+@import "ribbons.less";
+@import "pagination.less";
 
 /****************** LAYOUT ******************/
 
-html {
-	height : 101%;
-}
+/* html {
+	height : 101%; -> needed?
+} */
 .guarded-font() when not (@ownFont = 1) {
 	font-family: @fontFamily;
 }
@@ -106,17 +110,19 @@ html {
 	font-family: @ownfontFamily;
 }
 body {
-	.guarded-font();
-//	font-size: @fontSize; -> Bootstrap
-//	margin: 0; -> Bootstrap
-	padding: 0;
-	line-height: @lineHeight;
+	.guarded-font(); // Would be @baseFontFamily in Bootstrap (scaffolding)
 	background-image: url(../images/background.png);
 	overflow-x: hidden;
-//	background-color: @bodyBgColor; -> Bootstrap
-//	color: @fontColor; -> Bootstrap
+//	font-size: @fontSize; -> Bootstrap (scaffolding)
+//	margin: 0; -> Bootstrap (scaffolding)
+//	padding: 0; -> needed?
+//	line-height: @lineHeight; -> Bootstrap (scaffolding)
+//	background-color: @bodyBgColor; -> Bootstrap (scaffolding)
+//	color: @fontColor; -> Bootstrap (scaffolding)
 }
+
 /* whatWidth (Fixed or Dynamic) */
+// Could maybe done with container and container-fluid
 .quarded-whatWidth() when (@whatWidth = 1) {
 	max-width: @pageMaxWidth;
 }
@@ -129,147 +135,130 @@ body {
 	background-color: @wrapperBgColor;
 	border: 1px solid @wrapperBorderColor;
 }
-
 #foot_container {
 	margin-bottom: @footerMarginBottom;
-	padding:0 0 7px 0;
-	overflow:visible;
+	padding: 0 0 7px 0;
+	overflow: visible;
 }
 #header_container {
-    height: auto;
+	height: auto;
 	width: 100%;
-	margin:auto;
+	margin: auto;
 	padding: 14px 0 0 0;
 }
 #header {
 	min-height: 120px;
 	margin: 0 -21px 15px -21px;
-	padding:0 0 0 21px;
-	position:relative;
-	background-image:url('../images/header.png');
-	background-repeat:repeat-x;
+	padding: 0 0 0 21px;
+	position: relative;
+	background-image: url('../images/header.png');
+	background-repeat: repeat-x;
 	background-color: @headBgColor;
-	border-radius: 5px 5px 0 0;
-	border-top:1px solid @headBorderColor;
-	border-left:1px solid @headBorderColor;
-	border-right:1px solid @headBorderColor;
+	.border-top-radius(5px);
+	border-top: 1px solid @headBorderColor;
+	border-left: 1px solid @headBorderColor;
+	border-right: 1px solid @headBorderColor;
 }
 #sidepanel {
 	background: #222;
 	border: 2px solid #434345;
-	border-left:0;
+	border-left: 0;
 }
-
-/* triangles in header */
-.heckl {
-	width: 0px;
-	height: 0px;
-	line-height: 0px;
-	border-left: 19px solid transparent;
-	top: 100%;
-	left: 0;
-	position: absolute;
-}
-.heckr {  
-	width: 0; height: 0;  
-	line-height: 0;  
-	border-right: 19px solid transparent;  
-	top: 100%;  
-	right: 0;  
-	position: absolute;  
-}
-.heckl, .heckr {  
-	border-top: 10px solid @headCornerColor;
-}
-/* triangles in header end */
 #logo {
-	color:#ddd;
+	color: #ddd;
 	width: auto;
-	overflow:hidden;
+	overflow: hidden;
 	a.logo {
 		color: @logoColor;
 		line-height: normal;
-		font-size:46px;
-		display:block;
-		margin:0;
-		letter-spacing:-1px;
+		font-size: 46px;
+		display: block;
+		margin: 0;
+		letter-spacing: -1px;
 		padding: 20px 40px 10px 60px;
 	}
 }
 a {
-	&, &:link, &:visited, &:active, &:focus {
-		outline : none;
-		text-decoration : none;
-		color: @linkColor;
-	}
+/* object, img, a {
+	outline:none; -> Needed for what?
+} */
+/*	&, &:link, &:visited, &:active, &:focus {
+		outline : none; -> Needed for what?
+		text-decoration : none; -> Bootstrap (scaffolding)
+		color: @linkColor; -> Bootstrap (scaffolding)
+	} */
+/*	&:hover {
+		text-decoration : underline; -> Bootstrap (scaffolding)
+	} */
 	&:active {
 		color: #0099FF !important;
 	}
 	&.imglogo, &.medialogo {
-		color: #ddd !important;
-		line-height: normal;
-		font-size:36px;
-		display:block;
-		margin:0;
-		padding:0;
-		&:hover {
-			text-decoration:none;
-		}
+		display: block; // -> Multiple pictures go below each. Removing would put them side by side.
+//		color: #ddd !important; -> why a color for an image link?
+//		line-height: normal;
+//		font-size:36px;
+//		margin:0;
+//		padding:0;
+/*		&:hover {
+			text-decoration:none; // -> No text link, so no text-deco anyway.
+		} */
 	}
 	&.logo:hover {
-		text-decoration:none;
+		text-decoration: none;
 	}
 }
 
 #topmenu_container {
 	width: 100%;
-	margin:0;
+	margin: 0;
 	height: auto;
-	min-height:30px;
+	min-height: 30px;
 }
 #subhead {
-	height:33px;
+	height: 33px;
 	width: 99.5%;
 	margin: 10px .2% 0 .2%;
-	overflow:hidden;
-	background-image:url('../images/subhead.png');
-	background-repeat:repeat-x;
+	overflow: hidden;
+	background-image: url('../images/subhead.png');
+	background-repeat: repeat-x;
 	background-color: @subheadBgColor;
 	border: 1px solid @subheadBorderColor;
 }
 #search {
-	position:relative;
-	float:right;
+	position: relative;
+	float: right;
 	padding: 0 0 0 18px;
 	margin: 4px 4px 4px 0;
-	background-image:url('../images/search.png');
-	background-repeat:no-repeat;
+	background-image: url('../images/search.png');
+	background-repeat: no-repeat;
 	background-position: left 2px;
-
 }
 #container {
 	text-align:left;
 	padding: 10px 7px 0 7px;
 	margin:auto;
 }
+/* What's that? I don't see a container2 element anywhere
 #container2 {
 	text-align:left;
 	margin:auto;
-}
+} */
+/* What's that? I don't see a page_content element anywhere
 #page_content {
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
-}
+} */
 #leftcol {
 	float: left;
-	margin:0;
+	margin: 0;
 	padding: 0 0 10px 0;
 	width: e(@leftcolWidth + '%');
 }
 #rightcol {
 	float: right;
-	margin:0;
+	margin: 0;
 	padding: 0 0 10px 0;
 	width: e(@rightcolWidth + '%');
 }
@@ -279,46 +268,37 @@ a {
 }
 /* just left loaded */
 #content_outleft {
-	float:right;
+	float: right;
 	width: e((99 - @leftcolWidth) + '%');
 }
 /* left and right loaded */
 #content_outmiddle {
-	float:left;
+	float: left;
 	margin: 0 1%;
 	width: e((98 - @rightcolWidth - @leftcolWidth) + '%');
 }
 /* just right loaded */
 #content_outright {
-	float:left;
+	float: left;
 	width: e((99 - @rightcolWidth) + '%');
 }
 #maincontent {
-	float:left;
+	float: left;
 	width: 93.6%;
 	padding: 20px 3% 20px 3%;
-	margin:10px 0 0 0;
+	margin: 10px 0 0 0;
 	min-height: 200px;
-	overflow:hidden;
-	background-image:url('../images/background.png');
+	overflow: hidden;
+	background-image: url('../images/background.png');
 	background-color: @contentBgColor;
 	border: 3px double @contentBorderColor;
-	div.search, .categories-list, .category-list, .archive , .contact-category, .weblink-category,  .newsfeed-category, .login, .profile, .profile-edit, .registration, .remind, .reset, .finder {
+	div.search, .categories-list, .category-list, .archive , .contact-category, .weblink-category,  .newsfeed-category, .login .well, .profile, .profile-edit, .registration, .remind, .reset, .finder {
+		.border-radius(0);
 		background-color: @articleBgColor;
 		border: 1px solid @articleBorderColor;
-		overflow:hidden;
-		padding:2%;
+		overflow: hidden;
+		padding: 2%;
 	}
-}
-.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact {
-	background-color: @articleBgColor;
-	border: 1px solid @articleBorderColor;
-	overflow:hidden;
-	padding:2%;
-}
-
-.clr {
-	clear:both;
 }
 #subfoot {
 	min-height: 15px;
@@ -331,8 +311,8 @@ a {
 .copytext {
 	padding: 3px 0;
 	font-size: 11px;
-	text-align:center;
-	font-weight:bold;
+	text-align: center;
+	font-weight: bold;
 	color: @subfootColor;
 }
 
@@ -352,66 +332,47 @@ a {
 	}
 }
 .footer-inner {
-	display:inline-block;
-	width:100%;
-	min-height:62px;
-}
-.feckl {  
-	width: 0; height: 0;  
-	line-height: 0;  
-	border-left: 14px solid transparent;  
-	top: -11px;  
-	left: 0;  
-	position: absolute;  
-}
-.feckr {  
-	width: 0; height: 0;  
-	line-height: 0;  
-	border-right: 14px solid transparent;  
-	top: -11px;  
-	right: 0;  
-	position: absolute;  
-}
-.feckl, .feckr {  
-	border-bottom: 10px solid @footCornerColor;
+	display: inline-block;
+	width: 100%;
+	min-height: 62px;
 }
 
 #scroll_up {
 	float: right;
 	width: 10%;
-}
-a#gotop {
-	display:block;
-	height:50px;
-	line-height:45px;
-	width:100%;
-	text-align:center;
-	&:hover {
-		text-decoration:overline;
+	a#gotop {
+		display: block;
+		height: 50px;
+		line-height: 45px;
+		width: 100%;
+		text-align: center;
+		&:hover {
+			text-decoration: overline;
+		}
 	}
 }
 
 .footer-bottom {
-	display:inline-block;
+	display: inline-block;
 	width: 100%;
-	line-height:normal;
-	font-style:italic;
-}
-span {
-	&#date {
-		font-size:10px;
-		float:left;
-		padding-left:20px;
-	}
-	&#copy {
-		font-size:10px;
-		text-align:right;
-		float:right;
-		padding-right:20px;
-		a {
-			color: @fontColor;
-			&:hover {
-				text-decoration:none;
+	line-height: normal;
+	font-style: italic;
+	span {
+		&#date {
+			font-size: 10px;
+			float: left;
+			padding-left: 20px;
+		}
+		&#copy {
+			font-size: 10px;
+			text-align: right;
+			float: right;
+			padding-right: 20px;
+			a {
+				color: @fontColor;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -419,9 +380,9 @@ span {
 
 #leftcol, #rightcol {
 	.module, .module_menu, .module_text {
-		margin-top:0;
+		margin-top: 0;
 		background-color: transparent;
-		border:0;
+		border: 0;
 		div.lvround-inner {
 			margin: 0;
 			padding: 10px 3%;
@@ -438,9 +399,9 @@ span {
 	}
 	h3.moduleh3 {
 		font-size: 120%;
-		background-image:url('../images/h3-module.png');
-		background-repeat:repeat-x;
-		border-bottom:0;
+		background-image: url('../images/h3-module.png');
+		background-repeat: repeat-x;
+		border-bottom: 0;
 	}
 }
 #wrapper {
@@ -452,7 +413,7 @@ span {
 			border-top:	1px solid @moduleh3BorderTopColor;
 			color: @moduleh3Color;
 			position:relative;
-			border-radius: 5px 5px 0 0;
+			.border-top-radius(5px);
 		}
 	}
 	#leftcol h3.moduleh3 {
@@ -474,20 +435,6 @@ span {
 		border-right: 1px solid @moduleh3BorderOuterColor;
 		border-left: 1px solid @moduleh3BorderInnerColor;
 	}
-}
-.h3eckl {
-	left: 0;  
-}
-.h3eckr {
-	right: 0;  
-}
-.h3eckl, .h3eckr {
-	width: 0; height: 0;  
-	line-height: 0;  
-	border-left: 11px solid transparent;  
-	top: 100%;  
-	position: absolute;  
-	border-top: 10px solid @moduleh3CornerColor;
 }
 .moduletable h3 {
 	margin: 10px 0;
@@ -576,7 +523,7 @@ ul.menu {
 /* Mainmenu normal END */
 
 .input, .inputbox {
-	font-size:11px;
+	font-size: @baseFontSize - 2 !important;
 	padding : 2px 3px 2px 3px;
 	margin : 2px 3px 2px 3px;
 	color: @inputFontColor;
@@ -623,19 +570,19 @@ ul.menu {
 
 // guarded-background() is a conditional mixing. It will not be outputted in the CSS by itself.
 .guarded-background() when (@contentheadingImage = 0) {
+	background-image: none !important;
+	padding-left: 0px !important;
+	line-height: normal !important;
+}
+.guarded-background() when (@contentheadingImage = 1) {
 	background-image: url(../images/balloon.png);
 	padding-left: 40px;
 	line-height: 32px;
 }
-.guarded-background() when (@contentheadingImage = 1) {
+.guarded-background() when (@contentheadingImage = 2) {
 	background-image: url(@{basePath}@{contentheadingImageMedia});
 	padding-left: 40px;
 	line-height: 32px;
-}
-.guarded-background() when (@contentheadingImage = 2) {
-	background-image: none !important;
-	padding-left: 0px !important;
-	line-height: normal !important;
 }
 .page-header h2, h2.item-title {
 	.guarded-background();
@@ -645,9 +592,6 @@ ul.menu {
 	&, a {
 		color: @articletitleColor !important;
 	}
-}
-.breadcrumbs, .breadcrumbs span {
-	color: @breadcrumbColor;
 }
 
 div {
@@ -672,21 +616,6 @@ div.module {
 	h3.moduleh3 {
 		background-color: @moduletableh3Bg;
 		border: 1px solid @moduletableh3Border;
-	}
-}
-
-input.btn, button.btn, input.button, button.button, button.validate, .pagenav, ul.pagenav li a {
-	color: @buttonColor;
-	border-top: 1px solid @buttonBorderTop;
-	border-left: 1px solid @buttonBorderLeft;
-	border-right: 1px solid @buttonBorderRight;
-	border-bottom: 1px solid @buttonBorderBottom;
-	background-color: @buttonBgColor;
-	background-image:url('../images/button.png');
-	background-repeat:repeat-x;
-	&:hover {
-		color: @buttonHoverColor;
-		background-color: @buttonBgHoverColor;
 	}
 }
 
@@ -757,26 +686,3 @@ input.btn, button.btn, input.button, button.button, button.validate, .pagenav, u
 }
 /* easy caption end */
 
-/* article images */
-.item-image {
-	padding:7px;
-	background:#eee;
-	border:1px solid #ccc;
-}
-p.img_caption {
-	color: #555;
-}
-
-/* Ribbons off */
-.guarded-ribbons() when (@ribbonsOnOff = 1) {
-	#header, #footer, #wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3 {
-		margin:0;
-	}
-	#header {
-		padding:0;
-	}
-	.heckl, .heckr, .feckl, .feckr, .h3eckl, .h3eckr {  
-		display:none;
-	}
-}
-.guarded-ribbons();
