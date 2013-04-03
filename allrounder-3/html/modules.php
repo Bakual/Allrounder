@@ -1,6 +1,5 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
-
 /**
  * This is a file to add template specific chrome to module rendering.  To use it you would
  * set the style attribute for the given module(s) include in your template to use the style
@@ -21,8 +20,6 @@ defined('_JEXEC') or die('Restricted access');
  * the header can be configured through a 'headerLevel' attribute of the <jdoc:include /> tag.
  * Defaults to <h3> if none given
  */
-
-
 function modChrome_lvround_left($module, &$params, &$attribs)
 { ?>
 	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
@@ -44,8 +41,7 @@ function modChrome_lvround_left($module, &$params, &$attribs)
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
-	<?php
-}
+<?php }
 
 function modChrome_lvround_right($module, &$params, &$attribs)
 { ?>
@@ -68,8 +64,7 @@ function modChrome_lvround_right($module, &$params, &$attribs)
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
-	<?php
-}
+<?php }
 
 function modChrome_lvround($module, &$params, &$attribs)
 { ?>
@@ -91,5 +86,4 @@ function modChrome_lvround($module, &$params, &$attribs)
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
-	<?php
-}
+<?php }
