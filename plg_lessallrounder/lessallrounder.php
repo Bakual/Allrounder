@@ -44,8 +44,7 @@ class plgSystemLessallrounder extends JPlugin
 		//path to less file
 		$client			= ($table->client_id) ? JPATH_ADMINISTRATOR : JPATH_SITE;
 		$templatePath	= $client.'/templates/'.$table->template;
-		$lessFile		= $templatePath.'/less/bootstrap.less';
-//		$lessFile		= $templatePath.'/less/template.less';
+		$lessFile		= $templatePath.'/less/template.less';
 		$cssFile		= $templatePath.'/css/template'.$table->id.'.css';
 		//check if .less file exists and is readable
 		if (is_readable($lessFile))
