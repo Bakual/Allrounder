@@ -6,4 +6,4 @@ jQuery(document).ready(function($){
 			$(this).find('ul:first').css({visibility: "hidden"});
 		}
 	);
-}
+});

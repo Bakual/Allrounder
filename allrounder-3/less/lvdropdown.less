@@ -18,20 +18,21 @@
 			color: @ulLiaHoverColor;
 		}
 		&, ul {
-			margin:0;
-			padding:0;
-			list-style-type:none;
-			list-style-position:outside;
-			position:relative;
-			line-height:1.5em; 
-			z-index:999;
-			display:inline-block;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			list-style-position: outside;
+			position: relative;
+			line-height: 1.5em; 
+			z-index: 999;
+			display: inline-block;
 			width: 100%;
 		}
 		&, li a, li span.separator {
 			background-image: url(../images/dropdown-@{dropdownImage}.png)
 		}
 		li {
+			line-height: 1.5em; 
 			border-right: 1px solid @ulLiBorderRight !important;
 			float:left;
 			position: relative;
@@ -153,6 +154,7 @@
 		}
 			/***** LEVEL 2 *****/
 		ul {
+			font-size: 12px;
 			background-color: @ululBackground;
 			position:absolute;
 			top:2.2em;		/* double line height of level 1 ul */

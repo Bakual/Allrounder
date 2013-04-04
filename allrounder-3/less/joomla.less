@@ -139,14 +139,26 @@
 .article-info-term {
 	font-weight: bold;
 }
+// Anpassung für Bilder statt IcoMoon
+.icon-calendar,
+.icon-drawer-2,
+.icon-archive,
+.icon-eye-open,
+.icon-eye {
+	width: 16px;
+	margin-left: -2px;
+}
+
+.parent-category-name {
+	background-image:url('../images/parent-category.png');
+}
+.category-name a:before {
+	background-image:url('../images/category.png');
+}
 div {
 	&.parent-category-name,
-	&.category-name,
-	&.create,
 	&.modified,
-	&.published,
-	&.createdby,
-	&.hits {
+	&.createdby {
 		padding-left:20px;
 		min-height:16px;
 		line-height:16px;
@@ -157,40 +169,28 @@ div {
 		width:100%;
 	}
 	&.parent-category-name {
-		background-image:url('../images/parent-catagory.png');
-	}
-	&.category-name {
-		background-image:url('../images/category.png');
-	}
-	&.create {
-		background-image:url('../images/create.png');
+		background-image:url('../images/parent-category.png');
 	}
 	&.modified {
 		background-image:url('../images/modified.png');
 	}
-	&.published {
-		background-image:url('../images/create.png');
-	}
 	&.createdby {
 		background-image:url('../images/createdby.png');
 	}
-	&.hits {
-		background-image:url('../images/hits.png');
-	}
 }
 
-.archive .article-info, .article-info {
+/* .archive .article-info, .article-info {
 	dd {
 		margin:2px 0 0px 0;
 		line-height:1.2em;
 	}
-}
-.article-info dd span {
+} */
+/* .article-info dd span {
 	text-transform:none;
 	display:inline-block;
 	padding:0 5px 0 0px;
 	margin:0 10px 0 0px;
-}
+} */
 
 /****************** CATEGORIES LIST ******************/
 
@@ -677,20 +677,7 @@ button#jform_publish_up_img, button#jform_publish_down_img {
     background-repeat: no-repeat;
     padding: 10px !important;
 }
-/*
-.btn-toolbar {
-	.btn-group  {
-		width: auto;
-		display: inline;
-		.btn btn-primary {
-			float: left;
-		}
-		&:first-child {
-			float: left;
-			margin-right: 20px;
-		}
-	}
-} */
+
 #editor-xtd-buttons {
 	padding: 0px;
 }

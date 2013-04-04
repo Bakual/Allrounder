@@ -46,3 +46,6 @@ fieldset.panelform div.paramrow label,
 fieldset.panelform span.faux-label {
 	min-width: 160px;
 }
+span.spacer hr {
+	width: 380px;
+}
