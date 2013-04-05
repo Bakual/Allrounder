@@ -225,7 +225,7 @@
 				</field>
 				<field name="contentheadingImageMedia" type="media" size="40" hide_default="1" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA" description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA_DESC" />
 				<field type="spacer" label="TPL_ALLROUNDER_RIBBONS" />
-				<field name="ribbonsOnOff" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_RIBBONSONOFF" description="TPL_ALLROUNDER_RIBBONSONOFF_DESC">
+				<field name="ribbonsOnOff" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_RIBBONSONOFF" description="TPL_ALLROUNDER_RIBBONSONOFF_DESC">
 					<option value="0">JOFF</option>
 					<option value="1">JON</option>
 				</field>
