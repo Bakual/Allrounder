@@ -59,7 +59,7 @@
 				<field name="footerMarginBottom" type="text" default="0px" label="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM" description="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM_DESC"></field>
 			</fieldset>
 			<fieldset name="fontfields" description="" label="TPL_ALLROUNDER_FONTS">
-				<field name="fontSize" type="text" size="10" default="13px" label="TPL_ALLROUNDER_FONT_SIZE" description="TPL_ALLROUNDER_FONT_SIZE_DESC"></field>
+				<field name="baseFontSize" type="text" size="10" default="13px" label="TPL_ALLROUNDER_FONT_SIZE" description="TPL_ALLROUNDER_FONT_SIZE_DESC"></field>
 				<field name="fontFamily" type="list" default="Verdana, Helvetica, Sans-Serif" label="TPL_ALLROUNDER_FONT_FAMILY" description="TPL_ALLROUNDER_FONT_FAMILY_DESC">
 					<option value="Verdana, Helvetica, Sans-Serif">Verdana, Helvetica, Sans-Serif</option>
 					<option value="Arial, Helvetica, Sans-Serif">Arial, Helvetica, Sans-Serif</option>
@@ -75,7 +75,7 @@
 					<option value="1">JYES</option>
 				</field>
 				<field name="ownfontFamily" type="text" size="40" default="Georgia" label="TPL_ALLROUNDER_OWN_FONT_FAMILY" description="TPL_ALLROUNDER_OWN_FONT_FAMILY_DESC"></field>
-				<field name="lineHeight" type="text" size="10" default="1.3em" label="TPL_ALLROUNDER_LINE_HEIGHT" description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"></field>
+				<field name="baseLineHeight" type="text" size="10" default="1.3em" label="TPL_ALLROUNDER_LINE_HEIGHT" description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"></field>
 			</fieldset>
 			<fieldset name="logofields" description="" label="TPL_ALLROUNDER_LOGOCONFIG">
 				<field type="spacer" label="TPL_ALLROUNDER_LOGOS" />
@@ -108,8 +108,8 @@
 			</fieldset>
 			<fieldset name="templcolorfields" description="" label="TPL_ALLROUNDER_COLORS_TEMPLATE">
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS" />
-				<field name="bodyBgColor" class="" type="color" default="#a2cdfd" label="TPL_ALLROUNDER_BODY_BACKGROUND" description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"></field>
-				<field name="fontColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_GLOBAL_FONT" description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"></field>
+				<field name="bodyBackground" class="" type="color" default="#a2cdfd" label="TPL_ALLROUNDER_BODY_BACKGROUND" description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"></field>
+				<field name="textColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_GLOBAL_FONT" description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"></field>
 				<field name="linkColor" class="" type="color" default="#a52a2a" label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT" description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"></field>
 				<field type="spacer" hr="true" />
 				<field name="wrapperBgColor" class="" type="color" default="#efefef" label="TPL_ALLROUNDER_WRAPPER_BACKGROUND" description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"></field>
