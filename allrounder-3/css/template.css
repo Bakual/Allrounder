@@ -6095,144 +6095,28 @@ td p {
 .filter-search .inputbox {
 	width: 6em;
 }
-legend.element-invisible {
-	position: absolute;
-	margin-left: -3000px;
-	margin-top: -3000px;
-	height: 0px;
-}
 .cat-items {
 	margin-top: 20px;
-}
-.accordion-heading {
-	font-size: 150%;
-	margin: 30px 0 10px 0;
-}
-.accordion-body {
-	padding: 0 10px 20px 10px;
-}
-.contact-category padding:0 10px
-	#adminForm fieldset.filters {
-	border: 0;
-	padding: 0;
-}
-.contact-image {
-	margin: 10px 0;
-	float: right;
-	overflow: hidden;
-}
-.contact-image img {
-	float: right;
-}
-address {
-	font-style: normal;
-	margin: 10px 0;
-}
-address span {
-	display: block;
 }
 .contact-position {
 	font-weight: bold;
 	font-size: 1.4em;
 }
-.contact-address {
-	margin: 20px 0 10px 0;
-}
-.contact-email div {
-	padding: 2px 0;
-	margin: 0 0 10px 0;
-}
-.contact-email label {
-	display: block;
-}
-span.contact-image {
+fieldset[id*="profile"] {
 	margin-bottom: 10px;
-	overflow: hidden;
-	display: block;
-}
-#contact-textmsg {
-	padding: 2px 0 10px 0;
-}
-#contact-email-copy {
-	float: left;
-	margin-right: 10px;
-}
-.contact .button {
-	float: none !important;
-	clear: left;
-	display: block;
-	margin: 20px 0 0 0;
-}
-.contact #contact-slider {
-	width: 100%;
-}
-.contact dl.tabs {
-	background: url(../images/nav_level_1.gif) repeat-x;
-}
-.contact dl.tabs h3 {
-	margin: 0;
-	padding: 0;
-}
-.contact div.current {
-	clear: both;
-	padding: 10px 10px;
-	max-width: 500px;
-}
-.contact div.current dd {
-	padding: 0;
-	margin: 0;
-}
-dl.tabs {
-	float: left;
-	margin: 50px 0 0 0;
-	z-index: 50;
-	clear: both;
-}
-dl.tabs dt {
-	float: left;
-	padding: 4px 10px;
-	margin-right: 3px;
-	border-right: 3px double #ccc;
-}
-dl.tabs dt.open a {
-	z-index: 100;
-	text-decoration: underline;
-}
-dl#content-pane.tabs {
-	margin: 1px 0 0 0;
-}
-.contact .jicons-icons {
-	float: left;
-	margin-right: 7px;
-}
-.contact address {
-	margin-left: 23px;
-}
-.contact h3 {
-	clear: both;
-}
-#main table.moduletable td,
-#main table.moduletable tr {
-	border: 0;
-}
-#users-profile-core,
-#member-profile,
-#users-profile-custom {
+	padding: 0 15px;
 	border: solid 1px #ccc;
 }
-#users-profile-core,
-#users-profile-custom {
-	margin: 10px 0 15px 0;
-	padding: 15px;
+fieldset[id*="profile"] legend {
+	border: none;
+	width: auto;
 }
-#users-profile-core dt,
-#users-profile-custom dt {
-	float: left;
-	width: 10em;
+fieldset[id*="profile"] dt {
+	width: 14em;
 	padding: 3px 0;
 }
-#users-profile-core dd,
-#users-profile-custom dd {
+fieldset[id*="profile"] dd {
+	margin-left: 15em;
 	padding: 3px 0;
 }
 #member-profile fieldset,
@@ -6240,111 +6124,65 @@ dl#content-pane.tabs {
 	margin: 10px 0 15px 0;
 	padding: 15px;
 }
-#users-profile-core legend,
-.profile-edit legend,
-.registration legend {
-	font-weight: bold;
+div.search .searchintro {
+	margin-top: 10px;
 }
-.searchintro {
-	font-weight: normal;
-	margin: 20px 0 20px;
-}
-#searchForm {
-	padding: 0 5px;
-}
-div.search .element-invisible {
-	display: none;
-}
-div.search .inputbox {
-	padding: 4px 20px 4px 20px;
+div.search input[name="searchword"] {
+	padding-left: 10px;
+	padding-right: 10px;
 	margin: 0 15px 0 0;
 	min-width: 150px;
 }
-.form-limit {
-	margin: 20px 0 0;
-	text-align: right;
-	padding: 0 10px 0 20px;
+div.search .only,
+div.search .phrases {
+	padding: 15px;
+	padding-top: 0;
 }
-.highlight {
-	font-weight: bold;
-}
-.ordering-box {
-	width: 40%;
-	float: right;
-}
-fieldset.phrases {
-	width: 100%;
-}
-.phrases-box {
+div.search .phrases-box {
 	width: 60%;
 	float: left;
 }
-.only,
-.phrases {
-	margin: 10px 0 0 0px;
-	padding: 15px;
-	line-height: 1.3em;
+div.search .ordering-box,
+div.search .form-limit {
+	width: 40%;
+	float: right;
 }
-label.ordering {
-	display: block;
-	margin: 10px 0 10px 0;
-}
-.word {
-	padding: 10px 10px 10px 0;
-}
-.word input {
-	font-weight: bold;
-	margin: 1px 1px 1px 10px;
-	padding: 3px;
-}
-.word input:focus {
-	margin: 0 0 0 9px;
-}
-.word label {
-	font-weight: bold;
-}
-fieldset.only label,
-fieldset.phrases label {
-	margin: 0 10px 0 0px;
-}
-.ordering-box label.ordering {
-	margin: 0 10px 5px 0;
+div.search .ordering-box label,
+div.search .form-limit label {
+	margin-top: 8px;
+	margin-right: 10px;
 	float: left;
 }
-form .search label {
-	display: none;
-}
-.phrases .inputbox {
+div.search #ordering {
 	width: 10em;
 }
-.phrases .inputbox option {
+div.search #ordering option {
 	padding: 2px;
 }
-dl.search-results dt.result-title {
-	padding: 15px 15px 0px 5px;
-	font-weight: bold;
+div.search dl.search-results dt.result-title {
+	padding-top: 15px;
+	padding-left: 5px;
 }
-dl.search-results dd {
-	padding: 2px 15px 2px 5px;
+div.search dl.search-results dd.result-category {
+	padding: 10px 15px 5px 5px;
 }
-dl.search-results dd.result-text {
+div.search dl.search-results dd.result-text {
 	padding: 10px 15px 10px 5px;
 	line-height: 1.7em;
 }
-dl.search-results dd.result-created {
-	padding: 2px 15px 15px 5px;
-}
-dl.search-results dd.result-category S {
-	padding: 10px 15px 5px 5px;
-}
-.highlight {
-	background: #FF9999;
-	color: red;
+div.search dl.search-results dd.result-text .highlight {
 	font-weight: bold;
+	background-color: #FF9999;
+	color: red;
 	padding: 2px;
+}
+div.search dl.search-results dd.result-created {
+	padding: 2px 15px 15px 5px;
+	font-size: 11px;
 }
 legend {
 	padding: 3px 5px;
+	font-weight: bold;
 }
 fieldset {
 	border: 0;
@@ -6361,9 +6199,6 @@ form#adminForm {
 	border: solid 1px #ddd;
 	padding: 20px 15px;
 	margin: 10px 0 15px 0;
-}
-.edit form#adminForm legend {
-	font-weight: bold;
 }
 #editor-xtd-buttons,
 .toggle-editor {
@@ -6595,6 +6430,13 @@ button.validate .badge {
 .hideme {
 	margin-bottom: 30px;
 	padding: 5px 30px 20px 30px;
+}
+.accordion-heading {
+	font-size: 150%;
+	margin: 10px 0 10px 0;
+}
+.accordion-body {
+	padding: 0 10px 0px 10px;
 }
 hr {
 	border: none;
@@ -7740,23 +7582,6 @@ input.search-query {
 	border-top: 10px solid #222222;
 	position: absolute;
 }
-#header,
-#footer,
-#wrapper #leftcol h3.moduleh3,
-#wrapper #rightcol h3.moduleh3 {
-	margin: 0;
-}
-#header {
-	padding: 0;
-}
-.heckl,
-.heckr,
-.feckl,
-.feckr,
-.h3eckl,
-.h3eckr {
-	display: none;
-}
 .pagination {
 	padding-top: 10px;
 }
@@ -8114,7 +7939,7 @@ a.logo:hover {
 	padding-right: 20px;
 }
 .footer-bottom span#copy a {
-	color: #555555;
+	color: ;
 }
 .footer-bottom span#copy a:hover {
 	text-decoration: none;
@@ -8215,6 +8040,7 @@ a.logo:hover {
 	background: none;
 	list-style: none;
 	margin: 0;
+	line-height: 22px;
 	background-image: url('../images/menu-li.png');
 	background-repeat: no-repeat;
 	background-position: 0 8px;
