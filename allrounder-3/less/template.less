@@ -239,17 +239,6 @@ a {
 	padding: 10px 7px 0 7px;
 	margin:auto;
 }
-/* What's that? I don't see a container2 element anywhere
-#container2 {
-	text-align:left;
-	margin:auto;
-} */
-/* What's that? I don't see a page_content element anywhere
-#page_content {
-	padding: 0px;
-	margin: 0px;
-	width: 100%;
-} */
 #leftcol {
 	float: left;
 	margin: 0;
@@ -523,38 +512,50 @@ ul.menu {
 }
 /* Mainmenu normal END */
 
-.input, .inputbox {
-//	font-size: @baseFontSize - 2 !important;
-	padding : 2px 3px 2px 3px;
-	margin : 2px 3px 2px 3px;
+/* Input styling, type declarations to override bootstrap (forms.less) */
+select,
+textarea,
+input,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
 	color: @inputFontColor;
-	background-color: @inputBgColor;
-	border-top: 1px solid @inputBorderTopColor;
-	border-left: 1px solid @inputBorderLeftColor;
-	border-right: 1px solid @inputBorderRightColor;
-	border-bottom: 1px solid @inputBorderBottomColor;
+	border-top-color: @inputBorderTopColor;
+	border-left-color: @inputBorderLeftColor;
+	border-right-color: @inputBorderRightColor;
+	border-bottom-color: @inputBorderBottomColor;
 	&:hover {
 		color: @inputHoverFontColor;
 		background-color: @inputHoverBgColor;
 	}
 }
-.shadow-left {
+
+.shadow-left, .shadow-right {
 	display: block;
-	height:8px;
-	background-image:url('../images/shadow-l.png');
-	background-repeat:no-repeat;
+	height: 8px;
+	background-repeat: no-repeat;
+}
+.shadow-left {
+	background-image: url('../images/shadow-l.png');
 	background-position: left;
 }
 .shadow-right {
-	display: block;
-	height:8px;
-	background-image:url('../images/shadow-r.png');
-	background-repeat:no-repeat;
+	background-image: url('../images/shadow-r.png');
 	background-position: right;
-	margin-top:-8px;
-	margin-bottom:10px;
+	margin-top: -8px;
 }
-
 /* To disable the shadows in modules using suffix "-shadows-off" */
 .module-outer-shadows-off {
 	.shadow-left, .shadow-right {
