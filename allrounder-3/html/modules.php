@@ -67,9 +67,12 @@ function modChrome_lvround_right($module, &$params, &$attribs)
 <?php }
 
 function modChrome_lvround($module, &$params, &$attribs)
-{ ?>
-	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
-		<div class="module<?php echo $params->get('moduleclass_sfx'); ?>">
+{ 
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = ($bootstrapSize) ? ' span'.$bootstrapSize : '';
+?>
+	<div class="module<?php echo $params->get('moduleclass_sfx'); ?><?php echo $moduleClass; ?>">
+		<div class="module-content">
 			<div>
 				<div>
 					<div class="lvround-inner">

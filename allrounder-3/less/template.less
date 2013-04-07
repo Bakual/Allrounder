@@ -542,26 +542,6 @@ input[type="color"],
 	}
 }
 
-.shadow-left, .shadow-right {
-	display: block;
-	height: 8px;
-	background-repeat: no-repeat;
-}
-.shadow-left {
-	background-image: url('../images/shadow-l.png');
-	background-position: left;
-}
-.shadow-right {
-	background-image: url('../images/shadow-r.png');
-	background-position: right;
-	margin-top: -8px;
-}
-/* To disable the shadows in modules using suffix "-shadows-off" */
-.module-outer-shadows-off {
-	.shadow-left, .shadow-right {
-		display:none;
-	}
-}
 
 
 #footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
@@ -606,17 +586,6 @@ div {
 	}
 	&.item-separator {
 		border-bottom: 3px double @itemSeparatorColor !important;
-	}
-}
-
-/**** Global Modules ****/
-div.module {
-	color: @moduletableFont;
-	background-color: @moduletableBg;
-	border: 1px solid @moduletableBorder;
-	h3.moduleh3 {
-		background-color: @moduletableh3Bg;
-		border: 1px solid @moduletableh3Border;
 	}
 }
 

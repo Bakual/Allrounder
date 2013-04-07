@@ -5,45 +5,50 @@
 
 /* Module Styles Start */
 
-	/* Module Round Styles */
+/* Module Round Styles */
 div.module {
-	background-image : url(../images/modules/module-lb.png);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	margin-top:10px;
-	div {
-		background-image : url(../images/modules/module-rb.png);
+	div.module-content {
+		color: @moduletableFont;
+		border: 1px solid @moduletableBorder;
+		background-color: @moduletableBg;
+		background-image : url(../images/modules/module-lb.png);
 		background-repeat: no-repeat;
-		background-position:right bottom;
+		background-position: left bottom;
+		margin-top: 10px;
 		div {
-			background-image : url(../images/modules/module-rt.png);
+			background-image : url(../images/modules/module-rb.png);
 			background-repeat: no-repeat;
-			background-position:right top;
+			background-position: right bottom;
 			div {
-				padding:10px;
-				background-image : url(../images/modules/module-lt.png);
+				background-image : url(../images/modules/module-rt.png);
 				background-repeat: no-repeat;
-				background-position:left top;
+				background-position:right top;
 				div {
-					border:0;
-					padding:0;
-					background-image:none;
+					padding:10px;
+					background-image : url(../images/modules/module-lt.png);
+					background-repeat: no-repeat;
+					background-position:left top;
+					div {
+						border:0;
+						padding:0;
+						background-image:none;
+					}
 				}
 			}
 		}
 	}
 	h3.moduleh3 {
-		font-size:120%;
-		padding:0;
-		margin:0;
-		margin:0 0 10px 0;
-		padding:7px 8px;
-		font-size:1.3em;
-		background-image : url(../images/module-h3.png);
-		background-repeat : repeat-x;
+		font-size: 120%;
+		margin: 0 0 10px 0;
+		padding: 7px 8px;
+		font-size: 1.3em;
+		background-image: url(../images/module-h3.png);
+		background-repeat: repeat-x;
+		background-color: @moduletableh3Bg;
+		border: 1px solid @moduletableh3Border;
 	}
 }
-	/* Module Round Styles end */
+/* Module Round Styles end */
 
 #slider {
 	width:auto;
@@ -58,10 +63,22 @@ div.module {
 	padding:5px;
 }
 
+/* new positions */
+.advert-top {
+	width: 100%;
+	display: inline-block;
+	margin: 15px 0;
+	padding: 0;
+	height: auto;
+	float: left;
+	margin: 0 1%;
+	padding: 0;
+}
+
+/* old positions */
 #beforehead123, #beforehead45, #beforehead6out,
 #afterhead123, #afterhead45, #afterhead6out,
 #top123, #top45, #top6out,
-#advert123, #advert45, #advert6out,
 #advert789, #advert1011, #advert12out,
 #bottom123, #bottom45, #bottom6out,
 #foot123, #foot45, #foot6out {
@@ -74,7 +91,6 @@ div.module {
 #beforehead1, #beforehead2, #beforehead3,
 #afterhead1, #afterhead2, #afterhead3,
 #top1, #top2, #top3,
-#advert1, #advert2, #advert3,
 #advert7, #advert8, #advert9,
 #bottom1, #bottom2, #bottom3,
 #foot1, #foot2, #foot3 {
@@ -86,7 +102,6 @@ div.module {
 #beforehead4, #beforehead5,
 #afterhead4, #afterhead5,
 #top4, #top5,
-#advert4, #advert5,
 #advert10, #advert11,
 #bottom4, #bottom5,
 #foot4, #foot5 {
@@ -95,7 +110,7 @@ div.module {
 	margin: 0 1%;
 	padding: 0;
 }
-#beforehead6, #afterhead6, #top6, #advert6,
+#beforehead6, #afterhead6, #top6, 
 #advert12, #bottom6, #foot6 {
 	float:left;
 	width: 97.9%;
@@ -104,100 +119,138 @@ div.module {
 }
 
 
-/* special module styles */
-
-div.module-style1 {
-	background-image : url(../images/modules/module-lb.png);
+/* Module shadow */
+.shadow-left, .shadow-right {
+	display: block;
+	height: 8px;
 	background-repeat: no-repeat;
-	background-position: left bottom;
-	background-color:#fff;
-	border:1px solid #ddd;
-	color: #505050;
-	div {
-		background-image : url(../images/modules/paper-rb.png);
+}
+.shadow-left {
+	background-image: url('../images/shadow-l.png');
+	background-position: left;
+}
+.shadow-right {
+	background-image: url('../images/shadow-r.png');
+	background-position: right;
+	margin-top: -8px;
+}
+/* To disable the shadows in modules using suffix " shadows-off" */
+/* Note that this changed from previous version, it means it's now possible to hide shadows for special styles as well using eg "-style1 shadows-off" */
+.shadows-off {
+	.shadow-left, .shadow-right {
+		display:none;
+	}
+}
+
+/* special module styles */
+div.module-style1 {
+	div.module-content {
+		background-image : url(../images/modules/module-lb.png);
 		background-repeat: no-repeat;
-		background-position:right bottom;
+		background-position: left bottom;
+		background-color:#fff;
+		border:1px solid #ddd;
+		color: #505050;
 		div {
-			background-image : url(../images/modules/module-rt.png);
+			background-image : url(../images/modules/paper-rb.png);
 			background-repeat: no-repeat;
-			background-position:right top;
+			background-position:right bottom;
 			div {
-				padding:10px;
-				background-image : url(../images/modules/module-lt.png);
+				background-image : url(../images/modules/module-rt.png);
 				background-repeat: no-repeat;
-				background-position:left top;
+				background-position:right top;
+				div {
+					padding:10px;
+					background-image : url(../images/modules/module-lt.png);
+					background-repeat: no-repeat;
+					background-position:left top;
+				}
 			}
 		}
 	}
 }
 
 div.module-style2 {
-	background-color:#FFFF99;
-	border:1px solid #dddd00;
-	color: #000066;
-	font-family: "Comic Sans MS";
-	background-image : url(../images/modules/module-bg.png);
-	background-repeat: repeat-x;
-	background-position: left bottom;
+	div.module-content {
+		background-color:#FFFF99;
+		border:1px solid #dddd00;
+		color: #000066;
+		font-family: "Comic Sans MS";
+		background-image : url(../images/modules/module-bg.png);
+		background-repeat: repeat-x;
+		background-position: left bottom;
+	}
 }
 
 div.module-style3 {
-	background-color:#000;
-	border:5px solid #333;
-	color: #aaa;
-	background-image : url(../images/modules/carbon.jpg);
+	div.module-content {
+		background-color:#000;
+		border:5px solid #333;
+		color: #aaa;
+		background-image : url(../images/modules/carbon.jpg);
+	}
 }
 div.module-style4 {
-	background-color:#333;
-	border:5px solid #444;
-	color: #eee;
-	background-image : url(../images/modules/rausch.jpg);
+	div.module-content {
+		background-color:#333;
+		border:5px solid #444;
+		color: #eee;
+		background-image : url(../images/modules/rausch.jpg);
+	}
 }
 div.module-style5 {
-	background-color:#222;
-	border:5px solid #333;
-	color: #eee;
-	background-image : url(../images/modules/scan.jpg);
+	div.module-content {
+		background-color:#222;
+		border:5px solid #333;
+		color: #eee;
+		background-image : url(../images/modules/scan.jpg);
+	}
 }
 div.module-style6 {
-	background-color:#bbb;
-	border:5px solid #ccc;
-	color: #000;
-	font-weight:bold;
-	background-image : url(../images/modules/riffle.jpg);
-	h3.moduleh3 {
-		background-image : url(../images/modules/riffle-h3.jpg);
-		border:2px solid #ccc;
-		background-repeat: repeat-x;
-		height:30px;
-		line-height:30px;
-		margin:0;
-		padding:0 20px;
+	div.module-content {
+		background-color:#bbb;
+		border:5px solid #ccc;
+		color: #000;
+		font-weight:bold;
+		background-image : url(../images/modules/riffle.jpg);
+		h3.moduleh3 {
+			background-image : url(../images/modules/riffle-h3.jpg);
+			border:2px solid #ccc;
+			background-repeat: repeat-x;
+			height:30px;
+			line-height:30px;
+			margin:0;
+			padding:0 20px;
+		}
 	}
 }
 
 div.module-style {
 	&2, &3, &, &5, &6 {
-		div div div {
-			padding:10px;
+		div.module-content {
+			div div div {
+				padding:10px;
+			}
 		}
 	}
 }
 
 div.module-style {
 	&1, &2, &3, &4, &5, &6 {
-		div div div div {
-			border:0;
-			padding:0;
-			background-image:none;
-		}
-		h3.moduleh3 {
-			font-size:120%;
-			padding:0;
-			margin:0;
-			margin:0 0 10px 0;
-			padding:7px 8px;
-			font-size:1.3em;
+		div.module-content {
+			div div div div {
+				border:0;
+				padding:0;
+				background-image:none;
+			}
+			h3.moduleh3 {
+				font-size:120%;
+				padding:0;
+				margin:0;
+				margin:0 0 10px 0;
+				padding:7px 8px;
+				font-size:1.3em;
+			}
 		}
 	}
 }
