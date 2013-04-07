@@ -18,7 +18,7 @@ $path	= $this->baseurl.'/templates/'.$tpl->template;
 	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction); ?>
 </head>
-<body class="contentpane modal">
+<body class="contentpane modal row-fluid">
 	<jdoc:include type="message" />
 	<jdoc:include type="component" />
 </body>

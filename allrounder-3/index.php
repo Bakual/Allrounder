@@ -131,7 +131,7 @@ $doc	= JFactory::getDocument();
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
 				<?php require('modules/advert_top.php'); ?>
-				<div id="maincontent">
+				<div id="maincontent" class="row-fluid">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>
