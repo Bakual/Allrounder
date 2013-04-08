@@ -279,50 +279,26 @@
 		<position>beforehead1</position>
 		<position>beforehead2</position>
 		<position>beforehead3</position>
-		<position>beforehead4</position>
-		<position>beforehead5</position>
-		<position>beforehead6</position>
 		<position>afterhead1</position>
 		<position>afterhead2</position>
 		<position>afterhead3</position>
-		<position>afterhead4</position>
-		<position>afterhead5</position>
-		<position>afterhead6</position>
 		<position>top1</position>
 		<position>top2</position>
 		<position>top3</position>
-		<position>top4</position>
-		<position>top5</position>
-		<position>top6</position>
 		<position>advert1</position>
 		<position>advert2</position>
 		<position>advert3</position>
 		<position>advert4</position>
 		<position>advert5</position>
 		<position>advert6</position>
-		<position>advert7</position>
-		<position>advert8</position>
-		<position>advert9</position>
-		<position>advert10</position>
-		<position>advert11</position>
-		<position>advert12</position>
 		<position>bottom1</position>
 		<position>bottom2</position>
 		<position>bottom3</position>
-		<position>bottom4</position>
-		<position>bottom5</position>
-		<position>bottom6</position>
 		<position>foot1</position>
 		<position>foot2</position>
 		<position>foot3</position>
-		<position>foot4</position>
-		<position>foot5</position>
-		<position>foot6</position>
 		<position>footermodule1</position>
 		<position>footermodule2</position>
-		<position>footermodule3</position>
-		<position>footermodule4</position>
-		<position>footermodule5</position>
 		<position>debug</position>
 	</positions>
 </extension>

@@ -5,7 +5,28 @@
 
 /* Module Styles Start */
 
-/* Module Round Styles */
+/* Basic Styling */
+div.module-content {
+	margin-top: 10px;
+	div div div {
+		padding: 10px;
+		div {
+			border: 0;
+			padding: 0;
+			background-image: none;
+		}
+	}
+	h3.moduleh3 {
+		font-size: 120%;
+		padding: 0;
+		margin: 0 0 10px 0;
+		padding: 7px 8px;
+		font-size: 1.3em;
+		line-height: 1em;
+	}
+}
+
+/* Default Style */
 div.module {
 	div.module-content {
 		color: @moduletableFont;
@@ -14,7 +35,6 @@ div.module {
 		background-image : url(../images/modules/module-lb.png);
 		background-repeat: no-repeat;
 		background-position: left bottom;
-		margin-top: 10px;
 		div {
 			background-image : url(../images/modules/module-rb.png);
 			background-repeat: no-repeat;
@@ -22,102 +42,101 @@ div.module {
 			div {
 				background-image : url(../images/modules/module-rt.png);
 				background-repeat: no-repeat;
-				background-position:right top;
+				background-position: right top;
 				div {
-					padding:10px;
 					background-image : url(../images/modules/module-lt.png);
 					background-repeat: no-repeat;
-					background-position:left top;
-					div {
-						border:0;
-						padding:0;
-						background-image:none;
-					}
+					background-position: left top;
+				}
+			}
+		}
+		h3.moduleh3 {
+			border: 1px solid @moduletableh3Border;
+			background-color: @moduletableh3Bg;
+			background-image: url(../images/module-h3.png);
+			background-repeat: repeat-x;
+		}
+	}
+}
+
+/* Special Styles */
+div.module-style1 {
+	div.module-content {
+		color: #505050;
+		border: 1px solid #ddd;
+		background-color: #fff;
+		background-image : url(../images/modules/module-lb.png);
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		div {
+			background-image : url(../images/modules/paper-rb.png);
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			div {
+				background-image : url(../images/modules/module-rt.png);
+				background-repeat: no-repeat;
+				background-position: right top;
+				div {
+					background-image : url(../images/modules/module-lt.png);
+					background-repeat: no-repeat;
+					background-position: left top;
 				}
 			}
 		}
 	}
-	h3.moduleh3 {
-		font-size: 120%;
-		margin: 0 0 10px 0;
-		padding: 7px 8px;
-		font-size: 1.3em;
-		background-image: url(../images/module-h3.png);
+}
+div.module-style2 {
+	div.module-content {
+		background-color: #FFFF99;
+		border: 1px solid #dddd00;
+		color: #000066;
+		font-family: "Comic Sans MS";
+		background-image : url(../images/modules/module-bg.png);
 		background-repeat: repeat-x;
-		background-color: @moduletableh3Bg;
-		border: 1px solid @moduletableh3Border;
+		background-position: left bottom;
 	}
 }
-/* Module Round Styles end */
-
-#slider {
-	width:auto;
+div.module-style3 {
+	div.module-content {
+		background-color: #000;
+		border: 5px solid #333;
+		color: #aaa;
+		background-image: url(../images/modules/carbon.jpg);
+	}
 }
-#banner {
-	position:absolute;
-	right:0;
-	max-width:50%;
-	max-height:80px;
-	overflow:hidden;
-	margin:5px 26px 5px 5px;
-	padding:5px;
+div.module-style4 {
+	div.module-content {
+		background-color: #333;
+		border: 5px solid #444;
+		color: #eee;
+		background-image: url(../images/modules/rausch.jpg);
+	}
 }
-
-/* new positions */
-.advert-top {
-	width: 100%;
-	display: inline-block;
-	margin: 15px 0;
-	padding: 0;
-	height: auto;
-	float: left;
-	margin: 0 1%;
-	padding: 0;
+div.module-style5 {
+	div.module-content {
+		background-color: #222;
+		border: 5px solid #333;
+		color: #eee;
+		background-image: url(../images/modules/scan.jpg);
+	}
 }
-
-/* old positions */
-#beforehead123, #beforehead45, #beforehead6out,
-#afterhead123, #afterhead45, #afterhead6out,
-#top123, #top45, #top6out,
-#advert789, #advert1011, #advert12out,
-#bottom123, #bottom45, #bottom6out,
-#foot123, #foot45, #foot6out {
-	width: 100%;
-	display: inline-block;
-	margin: 15px 0;
-	padding: 0;
-	height: auto;
+div.module-style6 {
+	div.module-content {
+		color: #000;
+		font-weight: bold;
+		border: 5px solid #ccc;
+		background-color: #bbb;
+		background-image: url(../images/modules/riffle.jpg);
+		h3.moduleh3 {
+			border: 2px solid #ccc;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 20px;
+			background-image: url(../images/modules/riffle-h3.jpg);
+			background-repeat: repeat-x;
+		}
+	}
 }
-#beforehead1, #beforehead2, #beforehead3,
-#afterhead1, #afterhead2, #afterhead3,
-#top1, #top2, #top3,
-#advert7, #advert8, #advert9,
-#bottom1, #bottom2, #bottom3,
-#foot1, #foot2, #foot3 {
-	float:left;
-	width: 31.2%;
-	margin: 0 1%;
-	padding: 0;
-}
-#beforehead4, #beforehead5,
-#afterhead4, #afterhead5,
-#top4, #top5,
-#advert10, #advert11,
-#bottom4, #bottom5,
-#foot4, #foot5 {
-	float:left;
-	width: 47.9%;
-	margin: 0 1%;
-	padding: 0;
-}
-#beforehead6, #afterhead6, #top6, 
-#advert12, #bottom6, #foot6 {
-	float:left;
-	width: 97.9%;
-	margin: 0 1%;
-	padding: 0;
-}
-
 
 /* Module shadow */
 .shadow-left, .shadow-right {
@@ -142,181 +161,88 @@ div.module {
 	}
 }
 
-/* special module styles */
-div.module-style1 {
-	div.module-content {
-		background-image : url(../images/modules/module-lb.png);
-		background-repeat: no-repeat;
-		background-position: left bottom;
-		background-color:#fff;
-		border:1px solid #ddd;
-		color: #505050;
-		div {
-			background-image : url(../images/modules/paper-rb.png);
-			background-repeat: no-repeat;
-			background-position:right bottom;
-			div {
-				background-image : url(../images/modules/module-rt.png);
-				background-repeat: no-repeat;
-				background-position:right top;
-				div {
-					padding:10px;
-					background-image : url(../images/modules/module-lt.png);
-					background-repeat: no-repeat;
-					background-position:left top;
-				}
-			}
-		}
-	}
-}
-
-div.module-style2 {
-	div.module-content {
-		background-color:#FFFF99;
-		border:1px solid #dddd00;
-		color: #000066;
-		font-family: "Comic Sans MS";
-		background-image : url(../images/modules/module-bg.png);
-		background-repeat: repeat-x;
-		background-position: left bottom;
-	}
-}
-
-div.module-style3 {
-	div.module-content {
-		background-color:#000;
-		border:5px solid #333;
-		color: #aaa;
-		background-image : url(../images/modules/carbon.jpg);
-	}
-}
-div.module-style4 {
-	div.module-content {
-		background-color:#333;
-		border:5px solid #444;
-		color: #eee;
-		background-image : url(../images/modules/rausch.jpg);
-	}
-}
-div.module-style5 {
-	div.module-content {
-		background-color:#222;
-		border:5px solid #333;
-		color: #eee;
-		background-image : url(../images/modules/scan.jpg);
-	}
-}
-div.module-style6 {
-	div.module-content {
-		background-color:#bbb;
-		border:5px solid #ccc;
-		color: #000;
-		font-weight:bold;
-		background-image : url(../images/modules/riffle.jpg);
-		h3.moduleh3 {
-			background-image : url(../images/modules/riffle-h3.jpg);
-			border:2px solid #ccc;
-			background-repeat: repeat-x;
-			height:30px;
-			line-height:30px;
-			margin:0;
-			padding:0 20px;
-		}
-	}
-}
-
-div.module-style {
-	&2, &3, &, &5, &6 {
-		div.module-content {
-			div div div {
-				padding:10px;
-			}
-		}
-	}
-}
-
-div.module-style {
-	&1, &2, &3, &4, &5, &6 {
-		div.module-content {
-			div div div div {
-				border:0;
-				padding:0;
-				background-image:none;
-			}
-			h3.moduleh3 {
-				font-size:120%;
-				padding:0;
-				margin:0;
-				margin:0 0 10px 0;
-				padding:7px 8px;
-				font-size:1.3em;
-			}
-		}
-	}
-}
 /* Module Styles End */
 
-	/* top-panel */
+/* Module Positions */
 
+#banner {
+	position: absolute;
+	right: 0;
+	max-width: 50%;
+	max-height: 80px;
+	overflow: hidden;
+	margin: 5px 26px 5px 5px;
+	padding: 5px;
+}
+#beforehead, #afterhead,
+#advert-top, #advert-bottom,
+#top, #bottom,
+#foot {
+	margin: 15px 1%;
+}
+
+/* top-panel */
 #toppanel {
 	width: 99.9%;
-	height:auto;
-	display:none;
-	margin:0;
-	position:relative;
-	z-index:9999;
+	height: auto;
+	display: none;
+	margin: 0;
+	position: relative;
+	z-index: 9999;
 }
 a#toppanel-toggle {
 	width: 110px;
-	height:18px;
-	display:block;
-	position:fixed;
-	top:0;
-	right:60px;
-	z-index:9999;
-	background-image:url('../images/toppanel-toggle.png');
-	background-repeat:no-repeat;
-	background-position:left bottom;
+	height: 18px;
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 60px;
+	z-index: 9999;
+	background-image: url('../images/toppanel-toggle.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
 	&:hover {
-		height:26px;
-		text-decoration:none;
+		height: 26px;
+		text-decoration: none;
 		background-position: 0 -26px;
 	}
 }
 
-	/* side-panel */
-
+/* side-panel */
 #sidepanel-outer {
-	position:fixed;
-	left:0;
-	top:30%;
-	z-index:9999;
-	display:inline-block;
+	position: fixed;
+	left: 0;
+	top: 30%;
+	z-index: 9999;
+	display: inline-block;
 }
 #sidepanel {
-	display:none;
+	display: none;
 	padding: 10px 20px;
-	min-height:110px;
-	float:left;	
+	min-height: 110px;
+	float: left;
+	background: #222;
+	border: 2px solid #434345;
+	border-left: 0;
 }
 a#sidepanel-toggle {
 	width: 18px;
-	height:110px;
-	display:block;
-	float:left;
-	margin-top:10px;	
-	background-image:url('../images/leftpanel-toggle.png');
-	background-repeat:no-repeat;
+	height: 110px;
+	display: block;
+	float: left;
+	margin-top: 10px;
+	background-image: url('../images/leftpanel-toggle.png');
+	background-repeat: no-repeat;
 	background-position: right top;
 	&:hover {
 		width: 26px;
-		text-decoration:none;
+		text-decoration: none;
 		color: #440000;
 		background-position: -26px;
 	}
 }
 
-/* footer modules */
+/* footer */
 #footermodule {
 	font-size: 11px;
 	width: 80%;
@@ -325,17 +251,17 @@ a#sidepanel-toggle {
 	padding:10px 0 10px 10%;
 }
 
-#footermodule1, #footermodule2, #footermodule3, #footermodule4  {
-	float:left;
-	width: 22%;
-	margin: 0;
-	padding: 0 1.4%;
-}
-#footermodule1234, #footermodule5 {
-	font-size: 11px;
+/* footermodules */
+#footermodules {
 	width: 80%;
+	font-size: 11px;
 	overflow: hidden;
-	padding:0 0 5px 10%;
+	padding: 0 0 5px 10%;
+	&, a, ul.menu {
+		color: @footColor;
+		font-size: 11px !important;
+		line-height: normal !important;
+	}
 	.moduletable {
 		font-size:10px;
 		margin:10px 0;
@@ -345,10 +271,6 @@ a#sidepanel-toggle {
 			margin:0 0 3px 0;
 		}
 	}
-}
-#footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
-	font-size:11px !important;
-	line-height:normal !important;
 }
 
 /* all menus */
