@@ -4,7 +4,6 @@ defined('_JEXEC') or die('Access to this location is RESTRICTED.');
 $tpl	= JFactory::getApplication()->getTemplate(true);
 $path	= $this->baseurl.'/templates/'.$tpl->template;
 $params	= $tpl->params;
-$doc	= JFactory::getDocument();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -20,31 +19,33 @@ $doc	= JFactory::getDocument();
 	if ($params->get('css3effects')) : ?>
 		<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
 	<?php endif;
-	if ($params->get('jsCompress')) : ?>
-		<script type="text/javascript" src="<?php echo $path; ?>/js/js_compress.php"></script>
-	<?php else :
-		JHtml::_('jquery.framework');
-		$doc->addScript($path.'/js/lv-dropdown.js');
-//		$doc->addScript($path.'/js/jq.easy-tooltip.min.js');
-		$doc->addScript($path.'/js/jq.easy-caption.min.js');
-		$doc->addScript($path.'/js/reflection.js');
-		$doc->addScript($path.'/js/effects.js');
-	endif;
-	// check if the 3 columns are enabled
-	$contentwidth	= '';
-	if($this->countModules("position-7")&&!$this->countModules("position-8")){ $contentwidth="left"; }
-	if($this->countModules("position-8")&&!$this->countModules("position-7")){ $contentwidth="right"; }
-	if($this->countModules("position-7")&&$this->countModules("position-8")) { $contentwidth="middle"; }
 	// dynamic or fixed width
 	if ($params->get('whatWidth')) :
 		$style	= 'max-width:'.htmlspecialchars($params->get('pageMaxWidth'));
 	else :
 		$style	= 'width:'.htmlspecialchars($params->get('pageWidth'));
-	endif;
-	$doc->addStyleDeclaration('#wrapper, #foot_container {'.$style.';}');
-	if ($params->get('customCss')) :
-		$doc->addStyleDeclaration(htmlspecialchars($params->get('customCssCode')));
 	endif; ?>
+	<style type="text/css">#wrapper, #foot_container {<?php echo $style; ?>;}</style>
+	<?php if ($params->get('customCss')) : ?>
+		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
+	<?php endif;
+	if ($params->get('jsCompress')) : ?>
+		<script type="text/javascript" src="<?php echo $path; ?>/js/js_compress.php"></script>
+	<?php else :
+		JHtml::_('jquery.framework');
+		// jq.easy-tooltip.min.js overrides the Bootstrap tooltip.
+		?>
+		<script src="<?php echo $path; ?>/js/lv-dropdown.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>/js/jq.easy-caption.min.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>/js/reflection.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
+	<?php endif;
+	// check if the 3 columns are enabled
+	$contentwidth	= '';
+	if($this->countModules("position-7")&&!$this->countModules("position-8")){ $contentwidth="left"; }
+	if($this->countModules("position-8")&&!$this->countModules("position-7")){ $contentwidth="right"; }
+	if($this->countModules("position-7")&&$this->countModules("position-8")) { $contentwidth="middle"; } ?>
 </head>
 <body>
 	<div id="wrapper">
