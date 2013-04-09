@@ -51,31 +51,39 @@
 
 /****************** PRINT-EMAIL ******************/
 
-/* Not needed when using Bootstrap + Icomoon 
+// Not needed when using Bootstrap + Icomoon 
 #maincontent {
-	ul.dropdown-menu {
-		margin:0;
-		padding:0;
+	ul.actions {
+		font-size: inherit;
+		margin: 0;
+		padding: 0;
 		li {
-			float:left;
-			list-style:none;
-			background-repeat: no-repeat;
+			display: inline;
 			font-size: 11px;
-			padding-left: 20px;
-			margin-left: 10px;
-			&.print-icon {
-				background-image : url(../images/system/printButton.png);
+			&.hidetext {
+				font-size: 0;
+				a span {
+					visibility: visible;
+				}
 			}
-			&.email-icon {
-				background-image : url(../images/system/emailButton.png);
+			a {
+				border-left: 1px solid;
+				padding-left: 5px;
+				padding-right: 3px;
 			}
-			&.edit-icon {
-				background-image : url(../images/system/editButton.png);
+			.icon-print:before {
+				content: url(../images/system/printButton.png);
+			}
+			.icon-envelope:before {
+				content: url(../images/system/emailButton.png);
+			}
+			.icon-edit:before {
+				content: url(../images/system/editButton.png);
 			}
 		}
 	}
 }
-*/
+
 
 /* vote */
 .content_rating, .content_vote {
@@ -96,6 +104,8 @@
 	}
 }
 
+
+
 /* Article Infos */
 .article-info {
 	margin: 0 0 10px 0px;
@@ -103,9 +113,17 @@
 	padding: 0 0 0 20px;
 }
 .article-info-term {
+	color: @linkColor;
 	font-weight: bold;
 	cursor: pointer;
 	margin-left: -5px;
+	margin-bottom: 1px;
+	letter-spacing: 2px;
+	display: inline-block;
+	&:hover {
+		margin-bottom: 0;
+		border-bottom: 1px solid @linkColor;
+	}
 	&:before {
 		content: url('../images/article-detailer-plus.png');
 		padding-right: 5px;

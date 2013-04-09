@@ -84,4 +84,9 @@ jQuery(document).ready(function($) {
 	$("div#system-message div").fadeOut({
 		duration: 15000
 	});
+
+	// Destroy dropdown for actions
+	$('ul.actions').prev().remove();
+	$('ul.actions').removeClass('dropdown-menu');
+	$('ul.actions li a span').parent().parent().addClass('hidetext');
 });
