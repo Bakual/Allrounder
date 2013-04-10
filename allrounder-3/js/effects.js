@@ -85,8 +85,9 @@ jQuery(document).ready(function($) {
 		duration: 15000
 	});
 
-	// Destroy dropdown for actions and hide text if an icon is present
-	$('ul.actions').prev().remove();
-	$('ul.actions').removeClass('dropdown-menu');
-	$('ul.actions [class*="icon-"]').parent().parent().addClass('hidetext');
+	// Destroy dropdown for actions
+	$('a.dropdown-toggle').remove();
+	$('ul.dropdown-menu').addClass('actions');
+	$('ul.dropdown-menu').removeClass('dropdown-menu');
+	$('ul.actions li a span').parent().parent().addClass('hidetext');
 });
