@@ -1,0 +1,99 @@
+/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+/*** CSS3 Effects (text-shadow, box-shadow, border-radius) 					***/
+/*** If you dont know what css3 is visit: http://www.css3.info/preview/ 	***/
+
+.guarded-effects() when (@css3effects = 1) {
+	.breadcrumbs {
+		text-shadow: 0 1px 0 #fff, 0 0 10px #bbb;
+	}
+	#leftcol, #rightcol {
+		h3.moduleh3 {
+			text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+		}
+	}
+	/**** Dropdown Menu Start ****/
+	#topmenu {
+		ul.menu {
+			ul {
+				box-shadow: 0 0 10px #000;
+			}
+			li {
+				a {
+					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+				}
+				/** LEVEL 2 **/
+				ul li a {
+					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+				}
+			}
+		}
+	}
+	/**** Dropdown Menu End ****/
+	#subfoot {
+		box-shadow: 0 0 5px #aaa;
+	}
+	.copytext {
+		text-shadow: 0 1px 1px #000;
+	}
+	#footermodules {
+		&, a, ul.menu {
+			text-shadow: 0 1px 1px #121212;
+		}
+	}
+	#footer a#gotop {
+		text-shadow: 1px 2px 1px #000;
+	}
+	span#copy a {
+		text-shadow: 0 1px 1px #000;
+	}
+	.input, .inputbox, input.button, button.button, button.validate, .pagenav, ul.pagenav li a, a.lvacc {
+		text-shadow: 0 1px 0 #fff, 0 0 10px #bbb;
+		border-radius: 3px;
+	}
+	.input, .inputbox {
+		box-shadow: inset 0 0 2px #ddd;
+	}
+	.contentheading {
+		&, a {
+			text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 0 0 3px #aaa;
+		}
+	}
+
+	.easy-tooltip-wrapper {
+		box-shadow: 1px 1px 6px #ccc;
+	}
+	.easy-tooltip-default, .tip-white, .tip-black, .tip-blue, .tip-red, .tip-green, .tip-yellow {
+		border-radius: 4px;
+		box-shadow: 0 0 7px #ccc;
+	}
+
+	.easy-caption-wrapper {
+		text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+		box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+		border-radius:3px;
+	}
+	.easy-caption-close {
+		border-radius:10px;
+	}
+
+	a.lvacc, .hideme {
+		border-radius: 4px;
+	}
+	pre {
+		box-shadow: 0 2px 3px #ccc;
+	}
+	img.featured, img.featured-dark {
+		box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+		border-radius:3px;
+	}
+	/* article images */
+	div[class^="img-intro-"], div[class^="img-fulltext-"] {
+		box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+		border-radius:3px;
+	}
+}
+.guarded-effects()

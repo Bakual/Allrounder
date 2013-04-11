@@ -5974,7 +5974,6 @@ input.invalid {
 	margin: 0;
 }
 #maincontent ul.actions {
-	font-size: inherit;
 	margin: 0;
 	padding: 0;
 }
@@ -5982,11 +5981,8 @@ input.invalid {
 	display: inline;
 	font-size: 11px;
 }
-#maincontent ul.actions li.hidetext {
+#maincontent ul.actions li.hide-text {
 	font-size: 0;
-}
-#maincontent ul.actions li.hidetext a span {
-	visibility: visible;
 }
 #maincontent ul.actions li a {
 	border-left: 1px solid;
@@ -7978,6 +7974,10 @@ h2.item-title {
 h2.item-title,
 h2.item-title a {
 	color: #484848 !important;
+}
+h2.item-title {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 15px;
 }
 div.slogan {
 	color: #ff2402;

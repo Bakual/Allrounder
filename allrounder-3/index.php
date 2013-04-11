@@ -16,9 +16,6 @@ $params	= $tpl->params;
 	<link href="<?php echo $path; ?>/css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
-	if ($params->get('css3effects')) : ?>
-		<link href="<?php echo $path; ?>/css/css3-effects.css" rel="stylesheet" type="text/css" media="all" />
-	<?php endif;
 	// dynamic or fixed width
 	if ($params->get('whatWidth')) :
 		$style	= 'max-width:'.htmlspecialchars($params->get('pageMaxWidth'));
