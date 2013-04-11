@@ -89,5 +89,5 @@ jQuery(document).ready(function($) {
 	$('a.dropdown-toggle').remove();
 	$('ul.dropdown-menu').addClass('actions');
 	$('ul.dropdown-menu').removeClass('dropdown-menu');
-	$('ul.actions li a span').parent().parent().addClass('hidetext');
+	$('ul.actions li a span').parent().parent().addClass('hide-text');
 });
