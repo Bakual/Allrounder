@@ -100,17 +100,7 @@
 
 /****************** LAYOUT ******************/
 
-/* html {
-	height : 101%; -> needed?
-} */
-.guarded-font() when not (@ownFont = 1) {
-	font-family: @fontFamily;
-}
-.guarded-font() when (@ownFont = 1) {
-	font-family: @ownfontFamily;
-}
 body {
-	.guarded-font(); // Would be @baseFontFamily in Bootstrap (scaffolding)
 	background-image: url(../images/background.png);
 	overflow-x: hidden;
 //	font-size: @fontSize; -> Bootstrap (scaffolding)

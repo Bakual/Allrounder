@@ -48,6 +48,7 @@ class JFormFieldLoadjscss extends JFormField
 	 */
 	protected function getInput()
 	{
+		JHtml::Script('templates/allrounder-3/js/params.js');
 		JHtml::Stylesheet('templates/allrounder-3/css/params.css');
 		$html	= '<input type="hidden" name="'.$this->name.'" id="'.$this->id.'" value="1" />';
 		return $html;

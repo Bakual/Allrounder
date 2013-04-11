@@ -49,3 +49,25 @@ fieldset.panelform span.faux-label {
 span.spacer hr {
 	width: 380px;
 }
+label.smooth, label.aero, laebl.carbon, label.leather {
+	color: #cccccc;
+	background-color: #222222;
+	background-position: center;
+}
+label.smooth:hover, label.aero:hover, laebl.carbon:hover, label.leather:hover {
+	color: #ffffff;
+	background-color: #222222;
+	background-position: center;
+}
+label.smooth {
+	background-image: url(../images/dropdown-smooth.png) !important;
+}
+label.aero {
+	background-image: url(../images/dropdown-aero.png) !important;
+}
+label.carbon {
+	background-image: url(../images/dropdown-carbon.png) !important;
+}
+label.leather {
+	background-image: url(../images/dropdown-leather.png) !important;
+}

@@ -60,21 +60,21 @@
 			</fieldset>
 			<fieldset name="fontfields" description="" label="TPL_ALLROUNDER_FONTS">
 				<field name="baseFontSize" type="text" size="10" default="13px" label="TPL_ALLROUNDER_FONT_SIZE" description="TPL_ALLROUNDER_FONT_SIZE_DESC"></field>
-				<field name="fontFamily" type="list" default="Verdana, Helvetica, Sans-Serif" label="TPL_ALLROUNDER_FONT_FAMILY" description="TPL_ALLROUNDER_FONT_FAMILY_DESC">
+				<field name="sansFontFamily" type="font"
+					label="TPL_ALLROUNDER_FONT_FAMILY" description="TPL_ALLROUNDER_FONT_FAMILY_DESC"
+					default="Verdana, Helvetica, Sans-Serif"
+					disabled="true"
+					onchange="toggleElement('sansFontFamily', 1);"
+				>
 					<option value="Verdana, Helvetica, Sans-Serif">Verdana, Helvetica, Sans-Serif</option>
 					<option value="Arial, Helvetica, Sans-Serif">Arial, Helvetica, Sans-Serif</option>
-					<option value="'Times New Roman', Times, Serif">"Times New Roman", Times, Serif</option>
-					<option value="'Courier New', Courier, Monospace">"Courier New", Courier, Monospace</option>
-					<option value="'Comic Sans MS'">"Comic Sans MS"</option>
+					<option value="'Times New Roman', Times, Serif">'Times New Roman', Times, Serif</option>
+					<option value="'Courier New', Courier, Monospace">'Courier New', Courier, Monospace</option>
+					<option value="'Comic Sans MS'">'Comic Sans MS'</option>
 					<option value="Georgia">Georgia</option>
 					<option value="Tahoma">Tahoma</option>
 					<option value="Monospace">Monospace</option>
 				</field>
-				<field name="ownFont" type="radio" default="0" class="btn-group" label="TPL_ALLROUNDER_OWN_FONT" description="TPL_ALLROUNDER_OWN_FONT_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="ownfontFamily" type="text" size="40" default="Georgia" label="TPL_ALLROUNDER_OWN_FONT_FAMILY" description="TPL_ALLROUNDER_OWN_FONT_FAMILY_DESC"></field>
 				<field name="baseLineHeight" type="text" size="10" default="1.3em" label="TPL_ALLROUNDER_LINE_HEIGHT" description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"></field>
 			</fieldset>
 			<fieldset name="logofields" description="" label="TPL_ALLROUNDER_LOGOCONFIG">
@@ -187,10 +187,10 @@
 			<fieldset name="ddcolors" description="" label="TPL_ALLROUNDER_DD_COLORS">
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS_DD" />
 				<field name="dropdownImage" class="btn-group" type="radio" default="smooth" label="TPL_ALLROUNDER_DROPDOWN_STYLE" description="TPL_ALLROUNDER_DROPDOWN_STYLE_DESC">
-					<option value="smooth">smooth</option>
-					<option value="aero">aero</option>
-					<option value="carbon">carbon</option>
-					<option value="leather">leather</option>
+					<option value="smooth" class="smooth">smooth</option>
+					<option value="aero" class="aero">aero</option>
+					<option value="carbon" class="carbon">carbon</option>
+					<option value="leather" class="leather">leather</option>
 				</field>
 				<field type="spacer" label="TPL_ALLROUNDER_LEVEL_ONE" description=""  />
 				<field name="ddBackground" class="" type="color" default="#222222" label="TPL_ALLROUNDER_UL_BG" description="TPL_ALLROUNDER_UL_BG_DESC"></field>
