@@ -71,3 +71,6 @@ label.carbon {
 label.leather {
 	background-image: url(../images/dropdown-leather.png) !important;
 }
+div.defaultvalue {
+	border-bottom: 1px dashed #666;
+}
