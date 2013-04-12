@@ -7384,16 +7384,17 @@ input.search-query {
 }
 .h3eckl {
 	left: 0;
+	border-left: 11px solid transparent;
 }
 .h3eckr {
 	right: 0;
+	border-right: 11px solid transparent;
 }
 .h3eckl,
 .h3eckr {
 	width: 0;
 	height: 0;
 	line-height: 0;
-	border-left: 11px solid transparent;
 	top: 100%;
 	border-top: 10px solid #222222;
 	position: absolute;
@@ -7623,13 +7624,13 @@ body {
 }
 #wrapper,
 #foot_container {
-	width: 950px;
+	max-width: 1180px;
 	margin: 0 auto;
 	background-color: #efefef;
 	border: 1px solid #ffffff;
 }
 #foot_container {
-	margin-bottom: 0;
+	margin-bottom: 0px;
 	padding: 0 0 7px 0;
 	overflow: visible;
 }
