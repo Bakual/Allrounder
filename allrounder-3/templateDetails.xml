@@ -258,7 +258,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="customCssCode" type="textarea" default="/* enter your CSS code here */" label="TPL_ALLROUNDER_OWN_CSS" description="TPL_ALLROUNDER_OWN_CSS_DESC" rows="40" cols="60"></field>
+				<field name="customCssCode" type="textarea" default="/* enter your CSS code here */" label="TPL_ALLROUNDER_OWN_CSS" description="TPL_ALLROUNDER_OWN_CSS_DESC" rows="10" cols="40"></field>
 			</fieldset>
 		</fields>
 	</config>
