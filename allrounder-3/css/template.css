@@ -7527,6 +7527,96 @@ p.counter {
 	float: right;
 	font-weight: bold;
 }
+.breadcrumbs {
+	text-shadow: 0 1px 0 #fff, 0 0 10px #bbb;
+}
+#leftcol h3.moduleh3,
+#rightcol h3.moduleh3 {
+	text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+}
+#topmenu ul.menu ul {
+	box-shadow: 0 0 10px #000;
+}
+#topmenu ul.menu li a {
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+#topmenu ul.menu li ul li a {
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+#subfoot {
+	box-shadow: 0 0 5px #aaa;
+}
+.copytext {
+	text-shadow: 0 1px 1px #000;
+}
+#footermodules,
+#footermodules a,
+#footermodules ul.menu {
+	text-shadow: 0 1px 1px #121212;
+}
+#footer a#gotop {
+	text-shadow: 1px 2px 1px #000;
+}
+span#copy a {
+	text-shadow: 0 1px 1px #000;
+}
+.input,
+.inputbox,
+input.button,
+button.button,
+button.validate,
+.pagenav,
+ul.pagenav li a,
+a.lvacc {
+	text-shadow: 0 1px 0 #fff, 0 0 10px #bbb;
+	border-radius: 3px;
+}
+.input,
+.inputbox {
+	box-shadow: inset 0 0 2px #ddd;
+}
+.contentheading,
+.contentheading a {
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 0 0 3px #aaa;
+}
+.easy-tooltip-wrapper {
+	box-shadow: 1px 1px 6px #ccc;
+}
+.easy-tooltip-default,
+.tip-white,
+.tip-black,
+.tip-blue,
+.tip-red,
+.tip-green,
+.tip-yellow {
+	border-radius: 4px;
+	box-shadow: 0 0 7px #ccc;
+}
+.easy-caption-wrapper {
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+	box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+	border-radius: 3px;
+}
+.easy-caption-close {
+	border-radius: 10px;
+}
+a.lvacc,
+.hideme {
+	border-radius: 4px;
+}
+pre {
+	box-shadow: 0 2px 3px #ccc;
+}
+img.featured,
+img.featured-dark {
+	box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+	border-radius: 3px;
+}
+div[class^="img-intro-"],
+div[class^="img-fulltext-"] {
+	box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+	border-radius: 3px;
+}
 body {
 	background-image: url(../images/background.png);
 	overflow-x: hidden;
