@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="3.0" type="template" client="site" method="upgrade">
-	<name>ALLROUNDER-3</name>
-	<creationDate>Feb 2013</creationDate>
-	<author>Juergen Koller</author>
-	<authorEmail>webmaster@lernvid.com</authorEmail>
-	<authorUrl>http://www.lernvid.com</authorUrl>
+<extension version="3.1" type="template" client="site" method="upgrade">
+	<name>LESS ALLROUNDER</name>
+	<creationDate>2013-07-03</creationDate>
+	<author>Thomas Hunziker</author>
+	<authorEmail>admin@sermonspeaker.net</authorEmail>
+	<authorUrl>http://www.sermonspeaker.net</authorUrl>
 	<copyright>LernVid.com</copyright>
-	<license>Creative Commons 3.0</license>
+	<license>http://www.lernvid.com/lizenz</license>
 	<version>1.0</version>
 	<description>TPL_ALLROUNDER_XML_DESCRIPTION</description>
 	<files>
@@ -29,7 +29,7 @@
 		<fields name="params">
 			<fieldset name="welcomefields" 
 				label="TPL_ALLROUNDER_WELCOME" description="" 
-				addfieldpath="/templates/allrounder-3/fields"
+				addfieldpath="/templates/lessallrounder/fields"
 				class="fieldset_header" >
 				<field name="useLESS" type="loadjscss" label="TPL_ALLROUNDER_WELCOMETEXT" />
 			</fieldset>
@@ -84,7 +84,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="imgLogo" type="imagelist" default="logo-transparent.png" label="TPL_ALLROUNDER_SELECT_IMG" description="TPL_ALLROUNDER_SELECT_IMG_DESC" directory="/templates/allrounder-3/images/logo" hide_default="no" exclude="" stripext="" />
+				<field name="imgLogo" type="imagelist" default="logo-transparent.png" label="TPL_ALLROUNDER_SELECT_IMG" description="TPL_ALLROUNDER_SELECT_IMG_DESC" directory="/templates/lessallrounder/images/logo" hide_default="no" exclude="" stripext="" />
 				<field type="spacer" label="TPL_ALLROUNDER_MEDIA_LOGO_INTRO" />
 				<field name="showMediaLogo" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_SHOW_MEDIA_LOGO" description="TPL_ALLROUNDER_SHOW_MEDIA_LOGO_DESC">
 					<option value="0">JNO</option>
