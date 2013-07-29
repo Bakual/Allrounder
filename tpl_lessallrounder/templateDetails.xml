@@ -29,7 +29,7 @@
 		<fields name="params">
 			<fieldset name="welcomefields" 
 				label="TPL_ALLROUNDER_WELCOME" description="" 
-				addfieldpath="/templates/lessallrounder/fields"
+				addfieldpath="/templates/tpl_lessallrounder/fields"
 				class="fieldset_header" >
 				<field name="useLESS" type="loadjscss" label="TPL_ALLROUNDER_WELCOMETEXT" />
 			</fieldset>
@@ -84,7 +84,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="imgLogo" type="imagelist" default="logo-transparent.png" label="TPL_ALLROUNDER_SELECT_IMG" description="TPL_ALLROUNDER_SELECT_IMG_DESC" directory="/templates/lessallrounder/images/logo" hide_default="no" exclude="" stripext="" />
+				<field name="imgLogo" type="imagelist" default="logo-transparent.png" label="TPL_ALLROUNDER_SELECT_IMG" description="TPL_ALLROUNDER_SELECT_IMG_DESC" directory="/templates/tpl_lessallrounder/images/logo" hide_default="no" exclude="" stripext="" />
 				<field type="spacer" label="TPL_ALLROUNDER_MEDIA_LOGO_INTRO" />
 				<field name="showMediaLogo" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_SHOW_MEDIA_LOGO" description="TPL_ALLROUNDER_SHOW_MEDIA_LOGO_DESC">
 					<option value="0">JNO</option>
@@ -95,6 +95,10 @@
 				<field name="showtextLogo" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_SHOW_TEXT_LOGO" description="TPL_ALLROUNDER_SHOW_TEXT_LOGO_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+				</field>
+				<field name="whichtextLogo" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_WHICH_TEXT_LOGO" description="TPL_ALLROUNDER_WHICH_TEXT_LOGO_DESC">
+					<option value="0">TPL_ALLROUNDER_TPL_LOGO</option>
+					<option value="1">TPL_ALLROUNDER_SITE_NAME</option>
 				</field>
 				<field name="textLogo" type="textarea" default="ALLROUNDER" label="TPL_ALLROUNDER_TEXT_LOGO_INPUT" description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC" rows="1" cols="40"></field>
 				<field name="logoColor" class="" type="color" default="#0299DC" label="TPL_ALLROUNDER_TEXT_LOGO_COLOR" description="TPL_ALLROUNDER_TEXT_LOGO_COLOR_DESC"></field>
