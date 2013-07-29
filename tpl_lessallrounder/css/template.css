@@ -7670,14 +7670,16 @@ body {
 	display: block;
 	margin: 0;
 	letter-spacing: -1px;
-	padding: 20px 40px 10px 60px;
+	padding: 10px 0 0 0;
 }
 a:active {
 	color: #0099FF !important;
 }
 a.imglogo,
 a.medialogo {
-	display: block;
+	*/display: block;*/
+	float: left;
+	padding:20px 20px 0 0;
 }
 a.logo:hover {
 	text-decoration: none;
@@ -8072,7 +8074,7 @@ h2.item-title {
 }
 div.slogan {
 	color: #ff2402;
-	line-height: normal;
+	/*line-height: normal;*/
 	font-size: 18px;
 	display: block;
 	margin: 0;
