@@ -7677,7 +7677,7 @@ a:active {
 }
 a.imglogo,
 a.medialogo {
-	*/display: block;*/
+	/*display: block;*/
 	float: left;
 	padding:20px 20px 0 0;
 }
