@@ -1,7 +1,8 @@
 <?php
 defined('_JEXEC') or die('Access to this location is RESTRICTED.');
 // Shortcuts
-$tpl	= JFactory::getApplication()->getTemplate(true);
+$app	= JFactory::getApplication();
+$tpl	= $app->getTemplate(true);
 $path	= $this->baseurl.'/templates/'.$tpl->template;
 $params	= $tpl->params;
 ?>
@@ -72,7 +73,7 @@ $params	= $tpl->params;
 							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
 						<?php endif;?>
 						<?php if ($params->get('showtextLogo')) : ?>
-							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo')); ?></a>
+							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->getCfg('sitename'))); ?></a>
 						<?php endif;?>
 						<?php if ($params->get('showSlogan')) : ?>
 							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>

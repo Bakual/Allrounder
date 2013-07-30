@@ -96,7 +96,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="textLogo" type="textarea" default="ALLROUNDER" label="TPL_ALLROUNDER_TEXT_LOGO_INPUT" description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC" rows="1" cols="40"></field>
+				<field name="textLogo" type="textarea" default="" label="TPL_ALLROUNDER_TEXT_LOGO_INPUT" description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC" rows="1" cols="40"></field>
 				<field name="logoColor" class="" type="color" default="#0299DC" label="TPL_ALLROUNDER_TEXT_LOGO_COLOR" description="TPL_ALLROUNDER_TEXT_LOGO_COLOR_DESC"></field>
 				<field type="spacer" label="TPL_ALLROUNDER_SLOGAN" />
 				<field name="showSlogan" type="radio" default="0" class="btn-group" label="TPL_ALLROUNDER_SHOW_SLOGAN" description="TPL_ALLROUNDER_SHOW_SLOGAN_DESC">

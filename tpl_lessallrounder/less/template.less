@@ -104,12 +104,6 @@
 body {
 	background-image: url(../images/background.png);
 	overflow-x: hidden;
-//	font-size: @fontSize; -> Bootstrap (scaffolding)
-//	margin: 0; -> Bootstrap (scaffolding)
-//	padding: 0; -> needed?
-//	line-height: @lineHeight; -> Bootstrap (scaffolding)
-//	background-color: @bodyBgColor; -> Bootstrap (scaffolding)
-//	color: @fontColor; -> Bootstrap (scaffolding)
 }
 
 /* whatWidth (Fixed or Dynamic) */
@@ -161,34 +155,16 @@ body {
 		display: block;
 		margin: 0;
 		letter-spacing: -1px;
-		padding: 20px 40px 10px 60px;
+		padding: 10px 0 0 0;
 	}
 }
 a {
-/* object, img, a {
-	outline:none; -> Needed for what?
-} */
-/*	&, &:link, &:visited, &:active, &:focus {
-		outline : none; -> Needed for what?
-		text-decoration : none; -> Bootstrap (scaffolding)
-		color: @linkColor; -> Bootstrap (scaffolding)
-	} */
-/*	&:hover {
-		text-decoration : underline; -> Bootstrap (scaffolding)
-	} */
 	&:active {
 		color: #0099FF !important;
 	}
 	&.imglogo, &.medialogo {
-		display: block; // -> Multiple pictures go below each. Removing would put them side by side.
-//		color: #ddd !important; -> why a color for an image link?
-//		line-height: normal;
-//		font-size:36px;
-//		margin:0;
-//		padding:0;
-/*		&:hover {
-			text-decoration:none; // -> No text link, so no text-deco anyway.
-		} */
+		float: left;
+		padding:20px 20px 0 0;
 	}
 	&.logo:hover {
 		text-decoration: none;
@@ -528,10 +504,6 @@ input[type="color"],
 	}
 }
 
-
-
-
-
 // guarded-background() is a conditional mixing. It will not be outputted in the CSS by itself.
 .guarded-background() when (@contentheadingImage = 0) {
 	background-image: none !important;
@@ -565,7 +537,6 @@ h2.item-title {
 div {
 	&.slogan {
 		color: @sloganColor;
-		line-height: normal;
 		font-size:18px;
 		display:block;
 		margin:0;
@@ -642,4 +613,3 @@ div {
 	border:1px solid #333;
 }
 /* easy caption end */
-
