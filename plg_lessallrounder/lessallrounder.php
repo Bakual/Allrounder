@@ -90,39 +90,28 @@ class plgSystemLessallrounder extends JPlugin
 
 			$less->setVariables($params_array);
 
-			if (is_readable($templatePath.'/less/custom.less') || is_readable($templatePath.'/css/custom.css'))
-			{
-				$less->setImportDir(array($templatePath.'/less/'));
-				jimport('joomla.filesystem.file');
-				$lessString	= JFile::read($lessFile);
-				if (is_readable($templatePath.'/less/custom.less'))
-				{
-					$lessString	.= JFile::read($templatePath.'/less/custom.less');
-				}
-				if (is_readable($templatePath.'/css/custom.css'))
-				{
-					$lessString	.= JFile::read($templatePath.'/css/custom.css');
-				}
+			$less->setImportDir(array($templatePath.'/less/'));
+			jimport('joomla.filesystem.file');
+			$lessString	= JFile::read($lessFile);
 
-				try {
-					$cssString = $less->compile($lessString);
-				} 
-				catch(Exception $e) 
-				{
-					JError::raiseWarning(100, 'lessphp error: '.$e->getMessage());
-				}
-				JFile::write($cssFile, $cssString);
-			}
-			else
+			// Check for custom files
+			if (is_readable($templatePath.'/less/custom.less'))
 			{
-				try {
-					$less->compileFile($lessFile, $cssFile);
-				} 
-				catch(Exception $e) 
-				{
-					JError::raiseWarning(100, 'lessphp error: '.$e->getMessage());
-				}
+				$lessString	.= JFile::read($templatePath.'/less/custom.less');
 			}
+			if (is_readable($templatePath.'/css/custom.css'))
+			{
+				$lessString	.= JFile::read($templatePath.'/css/custom.css');
+			}
+
+			try {
+				$cssString = $less->compile($lessString);
+			} 
+			catch(Exception $e) 
+			{
+				JError::raiseWarning(100, 'lessphp error: '.$e->getMessage());
+			}
+			JFile::write($cssFile, $cssString);
 
 			$this->loadLanguage();
 			JFactory::getApplication()->enqueueMessage(JText::sprintf('PLG_SYSTEM_LESSALLROUNDER_SUCCESS', $cssFile), 'message');
