@@ -27,13 +27,10 @@
 	</files>
 	<config>
 		<fields name="params">
-			<fieldset name="welcomefields" 
-				label="TPL_ALLROUNDER_WELCOME" description="" 
-				addfieldpath="/templates/lessallrounder/fields"
-				class="fieldset_header" >
+			<fieldset name="globtemplfields" 
+				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT" description=""
+				addfieldpath="/templates/lessallrounder/fields" >
 				<field name="useLESS" type="loadjscss" label="TPL_ALLROUNDER_WELCOMETEXT" />
-			</fieldset>
-			<fieldset name="globtemplfields" description="" label="TPL_ALLROUNDER_TEMPLATE_LAYOUT">
 				<field name="whatWidth" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_TEMPLATE_WIDTH" description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC">
 					<option value="0">FIXED</option>
 					<option value="1">DYNAMIC</option>
@@ -58,7 +55,8 @@
 				<field name="wrapperMarginTop" type="text" default="10px" label="TPL_ALLROUNDER_WRAPPER_MARGIN_TOP" description="TPL_ALLROUNDER_WRAPPER_MARGIN_TOP_DESC"></field>
 				<field name="footerMarginBottom" type="text" default="0px" label="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM" description="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM_DESC"></field>
 			</fieldset>
-			<fieldset name="fontfields" description="" label="TPL_ALLROUNDER_FONTS">
+			<fieldset name="fontfields"
+				label="TPL_ALLROUNDER_FONTS" description="" >
 				<field name="baseFontSize" type="text" size="10" default="13px" label="TPL_ALLROUNDER_FONT_SIZE" description="TPL_ALLROUNDER_FONT_SIZE_DESC"></field>
 				<field name="sansFontFamily" type="font"
 					label="TPL_ALLROUNDER_FONT_FAMILY" description="TPL_ALLROUNDER_FONT_FAMILY_DESC"
@@ -77,7 +75,8 @@
 				</field>
 				<field name="baseLineHeight" type="text" size="10" default="1.3em" label="TPL_ALLROUNDER_LINE_HEIGHT" description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"></field>
 			</fieldset>
-			<fieldset name="logofields" description="" label="TPL_ALLROUNDER_LOGOCONFIG">
+			<fieldset name="logofields"
+				label="TPL_ALLROUNDER_LOGOCONFIG" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_LOGOS" />
 				<field type="spacer" label="TPL_ALLROUNDER_IMAGE_LOGO" />
 				<field name="showimgLogo" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_SHOW_IMG_LOGO" description="TPL_ALLROUNDER_SHOW_IMG_LOGO_DESC">
@@ -106,7 +105,8 @@
 				<field name="slogan" type="textarea" default="my slogan goes here..." label="TPL_ALLROUNDER_SLOGANINPUT" description="TPL_ALLROUNDER_SLOGANINPUT_DESC" rows="1" cols="40"></field>
 				<field name="sloganColor" class="" type="color" default="#FF2402" label="TPL_ALLROUNDER_SLOGAN_COLOR" description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"></field>
 			</fieldset>
-			<fieldset name="templcolorfields" description="" label="TPL_ALLROUNDER_COLORS_TEMPLATE">
+			<fieldset name="templcolorfields"
+				label="TPL_ALLROUNDER_COLORS_TEMPLATE" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS" />
 				<field name="bodyBackground" class="" type="color" default="#a2cdfd" label="TPL_ALLROUNDER_BODY_BACKGROUND" description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"></field>
 				<field name="textColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_GLOBAL_FONT" description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"></field>
@@ -184,7 +184,8 @@
 				<field name="tooltipBg" class="" type="color" default="#F2F3F5" label="TPL_ALLROUNDER_TOOLTIP_BG" description="TPL_ALLROUNDER_TOOLTIP_BG_DESC"></field>
 				<field name="tooltipFont" class="" type="color" default="#800000" label="TPL_ALLROUNDER_TOOLTIP_FONT" description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC"></field>
 			</fieldset>
-			<fieldset name="ddcolors" description="" label="TPL_ALLROUNDER_DD_COLORS">
+			<fieldset name="ddcolors"
+				label="TPL_ALLROUNDER_DD_COLORS" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS_DD" />
 				<field name="dropdownImage" class="btn-group" type="radio" default="smooth" label="TPL_ALLROUNDER_DROPDOWN_STYLE" description="TPL_ALLROUNDER_DROPDOWN_STYLE_DESC">
 					<option value="smooth" class="smooth">smooth</option>
@@ -216,7 +217,8 @@
 				<field name="ulLiliBackground" class="" type="color" default="#171717" label="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND_DESC"></field>
 				<field name="ulLiliHoverBackground" class="" type="color" default="#212121" label="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND_DESC"></field>
 			</fieldset>
-			<fieldset name="advanced" label="TPL_ALLROUNDER_ADVANCED_OPTIONS">
+			<fieldset name="advanced"
+				label="TPL_ALLROUNDER_ADVANCED_OPTIONS" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE" />
 				<field name="contentheadingImage" class="btn-group" type="radio" default="1" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE" description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_DESC">
 					<option value="0">No image</option>
