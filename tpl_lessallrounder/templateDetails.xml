@@ -51,30 +51,54 @@
 					description="TPL_ALLROUNDER_WIDTH_DESC"
 					default="950px" />
 				<field hr="true" type="spacer" />
-				<field name="leftcolWidth" type="text" default="20" label="TPL_ALLROUNDER_LEFT_WIDTH" description="TPL_ALLROUNDER_LEFT_WIDTH_DESC"></field>
-				<field name="rightcolWidth" type="text" default="20" label="TPL_ALLROUNDER_RIGHT_WIDTH" description="TPL_ALLROUNDER_RIGHT_WIDTH_DESC"></field>
+				<field name="leftcolWidth" type="text"
+					label="TPL_ALLROUNDER_LEFT_WIDTH"
+					description="TPL_ALLROUNDER_LEFT_WIDTH_DESC"
+					default="20" />
+				<field name="rightcolWidth" type="text"
+					label="TPL_ALLROUNDER_RIGHT_WIDTH"
+					description="TPL_ALLROUNDER_RIGHT_WIDTH_DESC"
+					default="20" />
 				<field hr="true" type="spacer" />
-				<field name="showHeader" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_HEADER" description="TPL_ALLROUNDER_HEADER_DESC">
-					<option value="0">JNO</option>
+				<field name="showHeader" type="radio"
+					label="TPL_ALLROUNDER_HEADER"
+					description="TPL_ALLROUNDER_HEADER_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
-				<field name="showSubfoot" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_SUBFOOT" description="TPL_ALLROUNDER_SUBFOOT_DESC">
-					<option value="0">JNO</option>
+				<field name="showSubfoot" type="radio"
+					label="TPL_ALLROUNDER_SUBFOOT"
+					description="TPL_ALLROUNDER_SUBFOOT_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<field hr="true" type="spacer" />
-				<field name="wrapperMarginTop" type="text" default="10px" label="TPL_ALLROUNDER_WRAPPER_MARGIN_TOP" description="TPL_ALLROUNDER_WRAPPER_MARGIN_TOP_DESC"></field>
-				<field name="footerMarginBottom" type="text" default="0px" label="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM" description="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM_DESC"></field>
+				<field name="wrapperMarginTop" type="text"
+					label="TPL_ALLROUNDER_WRAPPER_MARGIN_TOP"
+					description="TPL_ALLROUNDER_WRAPPER_MARGIN_TOP_DESC"
+					default="10px" />
+				<field name="footerMarginBottom" type="text"
+					label="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM"
+					description="TPL_ALLROUNDER_FOOTER_MARGIN_BOTTOM_DESC"
+					default="0px" />
 			</fieldset>
 			<fieldset name="fontfields"
 				label="TPL_ALLROUNDER_FONTS" description="" >
-				<field name="baseFontSize" type="text" size="10" default="13px" label="TPL_ALLROUNDER_FONT_SIZE" description="TPL_ALLROUNDER_FONT_SIZE_DESC"></field>
+				<field name="baseFontSize" type="text"
+					label="TPL_ALLROUNDER_FONT_SIZE"
+					description="TPL_ALLROUNDER_FONT_SIZE_DESC"
+					size="10"
+					default="13px" />
 				<field name="sansFontFamily" type="font"
 					label="TPL_ALLROUNDER_FONT_FAMILY" description="TPL_ALLROUNDER_FONT_FAMILY_DESC"
 					default="Verdana, Helvetica, Sans-Serif"
 					disabled="true"
-					onchange="toggleElement('sansFontFamily', 1);"
-				>
+					class="input-xlarge"
+					onchange="toggleElement('sansFontFamily', 1);" >
 					<option value="Verdana, Helvetica, Sans-Serif">Verdana, Helvetica, Sans-Serif</option>
 					<option value="Arial, Helvetica, Sans-Serif">Arial, Helvetica, Sans-Serif</option>
 					<option value="'Times New Roman', Times, Serif">'Times New Roman', Times, Serif</option>
@@ -84,194 +108,306 @@
 					<option value="Tahoma">Tahoma</option>
 					<option value="Monospace">Monospace</option>
 				</field>
-				<field name="baseLineHeight" type="text" size="10" default="1.3em" label="TPL_ALLROUNDER_LINE_HEIGHT" description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"></field>
+				<field name="baseLineHeight" type="text"
+					label="TPL_ALLROUNDER_LINE_HEIGHT"
+					description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"
+					size="10"
+					default="1.3em" />
 			</fieldset>
 			<fieldset name="logofields"
 				label="TPL_ALLROUNDER_LOGOCONFIG" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_LOGOS" />
-				<field type="spacer" label="TPL_ALLROUNDER_IMAGE_LOGO" />
-				<field name="showimgLogo" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_SHOW_IMG_LOGO" description="TPL_ALLROUNDER_SHOW_IMG_LOGO_DESC">
-					<option value="0">JNO</option>
+				<field name="showimgLogo" type="radio"
+					label="TPL_ALLROUNDER_SHOW_IMG_LOGO"
+					description="TPL_ALLROUNDER_SHOW_IMG_LOGO_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
 					<option value="1">JYES</option>
-				</field>
-				<field name="imgLogo" type="imagelist" default="logo-transparent.png" label="TPL_ALLROUNDER_SELECT_IMG" description="TPL_ALLROUNDER_SELECT_IMG_DESC" directory="/templates/lessallrounder/images/logo" hide_default="no" exclude="" stripext="" />
-				<field type="spacer" label="TPL_ALLROUNDER_MEDIA_LOGO_INTRO" />
-				<field name="showMediaLogo" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_SHOW_MEDIA_LOGO" description="TPL_ALLROUNDER_SHOW_MEDIA_LOGO_DESC">
 					<option value="0">JNO</option>
-					<option value="1">JYES</option>
 				</field>
-				<field name="mediaLogo" type="media" size="40" hide_default="1" label="TPL_ALLROUNDER_MEDIA_LOGO" description="TPL_ALLROUNDER_MEDIA_LOGO_DESC" />
-				<field type="spacer" label="TPL_ALLROUNDER_TEXT_LOGO" />
-				<field name="showtextLogo" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_SHOW_TEXT_LOGO" description="TPL_ALLROUNDER_SHOW_TEXT_LOGO_DESC">
+				<field name="imgLogo" type="imagelist"
+					label="TPL_ALLROUNDER_SELECT_IMG"
+					description="TPL_ALLROUNDER_SELECT_IMG_DESC"
+					default="logo-transparent.png"
+					directory="/templates/lessallrounder/images/logo"
+					hide_default="no"
+					exclude=""
+					stripext="" />
+				<field hr="true" type="spacer" />
+				<field name="showMediaLogo" type="radio"
+					label="TPL_ALLROUNDER_SHOW_MEDIA_LOGO"
+					description="TPL_ALLROUNDER_SHOW_MEDIA_LOGO_DESC"
+					class="btn-group btn-group-yesno"
+					default="0" >
+					<option value="1">JYES</option>
 					<option value="0">JNO</option>
-					<option value="1">JYES</option>
 				</field>
-				<field name="textLogo" type="textarea" default="" label="TPL_ALLROUNDER_TEXT_LOGO_INPUT" description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC" rows="1" cols="40"></field>
-				<field name="logoColor" class="" type="color" default="#0299DC" label="TPL_ALLROUNDER_TEXT_LOGO_COLOR" description="TPL_ALLROUNDER_TEXT_LOGO_COLOR_DESC"></field>
-				<field type="spacer" label="TPL_ALLROUNDER_SLOGAN" />
-				<field name="showSlogan" type="radio" default="0" class="btn-group" label="TPL_ALLROUNDER_SHOW_SLOGAN" description="TPL_ALLROUNDER_SHOW_SLOGAN_DESC">
+				<field name="mediaLogo" type="media"
+					label="TPL_ALLROUNDER_MEDIA_LOGO"
+					description="TPL_ALLROUNDER_MEDIA_LOGO_DESC" 
+					size="40"
+					hide_default="1" />
+				<field hr="true" type="spacer" />
+				<field name="showtextLogo" type="radio"
+					label="TPL_ALLROUNDER_SHOW_TEXT_LOGO"
+					description="TPL_ALLROUNDER_SHOW_TEXT_LOGO_DESC"
+					class="btn-group btn-group-yesno"
+					default="0" >
+					<option value="1">JYES</option>
 					<option value="0">JNO</option>
-					<option value="1">JYES</option>
 				</field>
-				<field name="slogan" type="textarea" default="my slogan goes here..." label="TPL_ALLROUNDER_SLOGANINPUT" description="TPL_ALLROUNDER_SLOGANINPUT_DESC" rows="1" cols="40"></field>
-				<field name="sloganColor" class="" type="color" default="#FF2402" label="TPL_ALLROUNDER_SLOGAN_COLOR" description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"></field>
+				<field name="textLogo" type="textarea"
+					label="TPL_ALLROUNDER_TEXT_LOGO_INPUT"
+					description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC"
+					default=""
+					rows="1"
+					cols="40" />
+				<field name="logoColor" type="color"
+					label="TPL_ALLROUNDER_TEXT_LOGO_COLOR"
+					description="TPL_ALLROUNDER_TEXT_LOGO_COLOR_DESC"
+					default="#0299DC" />
+				<field hr="true" type="spacer" />
+				<field name="showSlogan" type="radio"
+					label="TPL_ALLROUNDER_SHOW_SLOGAN"
+					description="TPL_ALLROUNDER_SHOW_SLOGAN_DESC"
+					default="0"
+					class="btn-group btn-group-yesno" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="slogan" type="textarea"
+					label="TPL_ALLROUNDER_SLOGANINPUT"
+					description="TPL_ALLROUNDER_SLOGANINPUT_DESC"
+ 					default="my slogan goes here..."
+					rows="1"
+					cols="40" />
+				<field name="sloganColor" type="color"
+					label="TPL_ALLROUNDER_SLOGAN_COLOR"
+					description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"
+					default="#FF2402" />
 			</fieldset>
 			<fieldset name="templcolorfields"
 				label="TPL_ALLROUNDER_COLORS_TEMPLATE" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS" />
-				<field name="bodyBackground" class="" type="color" default="#a2cdfd" label="TPL_ALLROUNDER_BODY_BACKGROUND" description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"></field>
-				<field name="textColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_GLOBAL_FONT" description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"></field>
-				<field name="linkColor" class="" type="color" default="#a52a2a" label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT" description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"></field>
+				<field name="bodyBackground" type="color"
+					label="TPL_ALLROUNDER_BODY_BACKGROUND"
+					description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"
+					default="#a2cdfd" />
+				<field name="textColor" type="color"
+					label="TPL_ALLROUNDER_GLOBAL_FONT"
+					description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"
+					default="#555555" />
+				<field name="linkColor" type="color"
+					label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT"
+					description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"
+					default="#a52a2a" />
 				<field type="spacer" hr="true" />
-				<field name="wrapperBgColor" class="" type="color" default="#efefef" label="TPL_ALLROUNDER_WRAPPER_BACKGROUND" description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"></field>
-				<field name="wrapperBorderColor" class="" type="color" default="#FFFFFF" label="TPL_ALLROUNDER_WRAPPER_BORDER" description="TPL_ALLROUNDER_WRAPPER_BORDER_DESC"></field>
+				<field name="wrapperBgColor" type="color"
+					label="TPL_ALLROUNDER_WRAPPER_BACKGROUND"
+					description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"
+					default="#efefef" />
+				<field name="wrapperBorderColor" type="color"
+					label="TPL_ALLROUNDER_WRAPPER_BORDER"
+					description="TPL_ALLROUNDER_WRAPPER_BORDER_DESC"
+					default="#FFFFFF" />
 				<field type="spacer" hr="true" />
-				<field name="headBgColor" class="" type="color" default="#383838" label="TPL_ALLROUNDER_HEADER_BACKGROUND" description="TPL_ALLROUNDER_HEADER_BACKGROUND_DESC"></field>
-				<field name="headBorderColor" class="" type="color" default="#000000" label="TPL_ALLROUNDER_HEADER_BORDER" description="TPL_ALLROUNDER_HEADER_BORDER_DESC"></field>
-				<field name="headCornerColor" class="" type="color" default="#222222" label="TPL_ALLROUNDER_HEADER_CORNER" description="TPL_ALLROUNDER_HEADER_CORNER_DESC"></field>
+				<field name="headBgColor" type="color"
+					label="TPL_ALLROUNDER_HEADER_BACKGROUND"
+					description="TPL_ALLROUNDER_HEADER_BACKGROUND_DESC"
+					default="#383838" />
+				<field name="headBorderColor" type="color" default="#000000" label="TPL_ALLROUNDER_HEADER_BORDER" description="TPL_ALLROUNDER_HEADER_BORDER_DESC" />
+				<field name="headCornerColor" type="color" default="#222222" label="TPL_ALLROUNDER_HEADER_CORNER" description="TPL_ALLROUNDER_HEADER_CORNER_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="subheadBgColor" class="" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_SUBHEAD_BACKGROUND" description="TPL_ALLROUNDER_SUBHEAD_BACKGROUND_DESC"></field>
-				<field name="subheadBorderColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_SUBHEAD_BORDER" description="TPL_ALLROUNDER_SUBHEAD_BORDER_DESC"></field>
-				<field name="breadcrumbColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_BREADCRUMB_FONT" description="TPL_ALLROUNDER_BREADCRUMB_FONT_DESC"></field>
+				<field name="subheadBgColor" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_SUBHEAD_BACKGROUND" description="TPL_ALLROUNDER_SUBHEAD_BACKGROUND_DESC" />
+				<field name="subheadBorderColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_SUBHEAD_BORDER" description="TPL_ALLROUNDER_SUBHEAD_BORDER_DESC" />
+				<field name="breadcrumbColor" type="color" default="#555555" label="TPL_ALLROUNDER_BREADCRUMB_FONT" description="TPL_ALLROUNDER_BREADCRUMB_FONT_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="contentBgColor" class="" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_CONTENT_BACKGROUND" description="TPL_ALLROUNDER_CONTENT_BACKGROUND_DESC"></field>
-				<field name="contentBorderColor" class="" type="color" default="#E9E9E9" label="TPL_ALLROUNDER_CONTENT_BORDER" description="TPL_ALLROUNDER_CONTENT_BORDER_DESC"></field>
-				<field name="articleBgColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_ARTICLE_BG_COLOR" description="TPL_ALLROUNDER_ARTICLE_BG_COLOR_DESC"></field>
-				<field name="articleBorderColor" class="" type="color" default="#e9e9e9" label="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR" description="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR_DESC"></field>
-				<field name="articletitleColor" class="" type="color" default="#484848" label="TPL_ALLROUNDER_ARTICLE_TITLE_FONT" description="TPL_ALLROUNDER_ARTICLE_TITLE_FONT_DESC"></field>
+				<field name="contentBgColor" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_CONTENT_BACKGROUND" description="TPL_ALLROUNDER_CONTENT_BACKGROUND_DESC" />
+				<field name="contentBorderColor" type="color" default="#E9E9E9" label="TPL_ALLROUNDER_CONTENT_BORDER" description="TPL_ALLROUNDER_CONTENT_BORDER_DESC" />
+				<field name="articleBgColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_ARTICLE_BG_COLOR" description="TPL_ALLROUNDER_ARTICLE_BG_COLOR_DESC" />
+				<field name="articleBorderColor" type="color" default="#e9e9e9" label="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR" description="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR_DESC" />
+				<field name="articletitleColor" type="color" default="#484848" label="TPL_ALLROUNDER_ARTICLE_TITLE_FONT" description="TPL_ALLROUNDER_ARTICLE_TITLE_FONT_DESC" />
 				<field type="spacer" label="TPL_ALLROUNDER_SIDEBAR_MODULES" />
-				<field name="moduleh3BgColor" class="" type="color" default="#383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC"></field>
-				<field name="moduleh3BorderTopColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP_DESC"></field>
-				<field name="moduleh3BorderInnerColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER_DESC"></field>
-				<field name="moduleh3BorderOuterColor" class="" type="color" default="#999999" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER_DESC"></field>
-				<field name="moduleh3Color" class="" type="color" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_H3_FONT" description="TPL_ALLROUNDER_SIDEMODULE_H3_FONT_DESC"></field>
-				<field name="moduleh3CornerColor" class="" type="color" default="#222222" label="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER_DESC"></field>
-				<field name="moduleBgColor" class="" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND_DESC"></field>
-				<field name="moduleBorderInnerColor" class="" type="color" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER_DESC"></field>
-				<field name="moduleBorderOuterColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER_DESC"></field>
-				<field name="moduleColor" class="" type="color" default="#505050" label="TPL_ALLROUNDER_SIDEMODULE_FONT" description="TPL_ALLROUNDER_SIDEMODULE_FONT_DESC"></field>
+				<field name="moduleh3BgColor" type="color" default="#383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC" />
+				<field name="moduleh3BorderTopColor" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP_DESC" />
+				<field name="moduleh3BorderInnerColor" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER_DESC" />
+				<field name="moduleh3BorderOuterColor" type="color" default="#999999" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER_DESC" />
+				<field name="moduleh3Color" type="color" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_H3_FONT" description="TPL_ALLROUNDER_SIDEMODULE_H3_FONT_DESC" />
+				<field name="moduleh3CornerColor" type="color" default="#222222" label="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_CORNER_DESC" />
+				<field name="moduleBgColor" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND_DESC" />
+				<field name="moduleBorderInnerColor" type="color" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER_DESC" />
+				<field name="moduleBorderOuterColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER_DESC" />
+				<field name="moduleColor" type="color" default="#505050" label="TPL_ALLROUNDER_SIDEMODULE_FONT" description="TPL_ALLROUNDER_SIDEMODULE_FONT_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="footBgColor" class="" type="color" default="#222222" label="TPL_ALLROUNDER_FOOTER_BACKGROUND" description="TPL_ALLROUNDER_FOOTER_BACKGROUND_DESC"></field>
-				<field name="footColor" class="" type="color" default="#5B6C71" label="TPL_ALLROUNDER_FOOTER_FONT" description="TPL_ALLROUNDER_FOOTER_FONT_DESC"></field>
-				<field name="footBorderColor" class="" type="color" default="#444444" label="TPL_ALLROUNDER_FOOTER_BORDER" description="TPL_ALLROUNDER_FOOTER_BORDER_DESC"></field>
-				<field name="footCornerColor" class="" type="color" default="#222222" label="TPL_ALLROUNDER_FOOTER_CORNER" description="TPL_ALLROUNDER_FOOTER_CORNER_DESC"></field>
+				<field name="footBgColor" type="color" default="#222222" label="TPL_ALLROUNDER_FOOTER_BACKGROUND" description="TPL_ALLROUNDER_FOOTER_BACKGROUND_DESC" />
+				<field name="footColor" type="color" default="#5B6C71" label="TPL_ALLROUNDER_FOOTER_FONT" description="TPL_ALLROUNDER_FOOTER_FONT_DESC" />
+				<field name="footBorderColor" type="color" default="#444444" label="TPL_ALLROUNDER_FOOTER_BORDER" description="TPL_ALLROUNDER_FOOTER_BORDER_DESC" />
+				<field name="footCornerColor" type="color" default="#222222" label="TPL_ALLROUNDER_FOOTER_CORNER" description="TPL_ALLROUNDER_FOOTER_CORNER_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="gotopLinkColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_GOTOP_COLOR" description="TPL_ALLROUNDER_GOTOP_COLOR_DESC"></field>
-				<field name="subfootBgColor" class="" type="color" default="#313131" label="TPL_ALLROUNDER_SUBFOOT_BACKGROUND" description="TPL_ALLROUNDER_SUBFOOT_BACKGROUND_DESC"></field>
-				<field name="subfootColor" class="" type="color" default="#5b6c71" label="TPL_ALLROUNDER_SUBFOOT_FONT" description="TPL_ALLROUNDER_SUBFOOT_FONT_DESC"></field>
-				<field name="subfootBorderTopColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP" description="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP_DESC"></field>
-				<field name="subfootBorderBottomColor" class="" type="color" default="#222222" label="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM" description="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM_DESC"></field>
+				<field name="gotopLinkColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_GOTOP_COLOR" description="TPL_ALLROUNDER_GOTOP_COLOR_DESC" />
+				<field name="subfootBgColor" type="color" default="#313131" label="TPL_ALLROUNDER_SUBFOOT_BACKGROUND" description="TPL_ALLROUNDER_SUBFOOT_BACKGROUND_DESC" />
+				<field name="subfootColor" type="color" default="#5b6c71" label="TPL_ALLROUNDER_SUBFOOT_FONT" description="TPL_ALLROUNDER_SUBFOOT_FONT_DESC" />
+				<field name="subfootBorderTopColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP" description="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP_DESC" />
+				<field name="subfootBorderBottomColor" type="color" default="#222222" label="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM" description="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="mainMenuFont" class="" type="color" default="#333333" label="TPL_ALLROUNDER_MAIN_MENU_FONT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_DESC"></field>
-				<field name="mainMenuBorderBottom" class="" type="color" default="#cccccc" label="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM" description="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM_DESC"></field>
-				<field name="mainMenuFontHover" class="" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER" description="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER_DESC"></field>
-				<field name="mainMenuFontCurrent" class="" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT_DESC"></field>
-				<field name="mainMenuLiLiFont" class="" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT" description="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT_DESC"></field>
+				<field name="mainMenuFont" type="color" default="#333333" label="TPL_ALLROUNDER_MAIN_MENU_FONT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_DESC" />
+				<field name="mainMenuBorderBottom" type="color" default="#cccccc" label="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM" description="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM_DESC" />
+				<field name="mainMenuFontHover" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER" description="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER_DESC" />
+				<field name="mainMenuFontCurrent" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT_DESC" />
+				<field name="mainMenuLiLiFont" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT" description="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT_DESC" />
 				<field type="spacer" label="TPL_ALLROUNDER_GLOB_MODULES" />
-				<field name="moduletableFont" class="" type="color" default="#505050" label="TPL_ALLROUNDER_MODULE_FONT" description="TPL_ALLROUNDER_MODULE_FONT_DESC"></field>
-				<field name="moduletableBg" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_MODULE_BG" description="TPL_ALLROUNDER_MODULE_BG_DESC"></field>
-				<field name="moduletableBorder" class="" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_BORDER" description="TPL_ALLROUNDER_MODULE_BORDER_DESC"></field>
-				<field name="moduletableh3Bg" class="" type="color" default="#efefef" label="TPL_ALLROUNDER_MODULE_H3_BG" description="TPL_ALLROUNDER_MODULE_H3_BG_DESC"></field>
-				<field name="moduletableh3Border" class="" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_H3_BORDER" description="TPL_ALLROUNDER_MODULE_H3_BORDER_DESC"></field>				<field type="spacer" hr="true" />
-				<field name="inputFontColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_INPUT_FONT" description="TPL_ALLROUNDER_INPUT_FONT_DESC"></field>
-				<field name="inputBackground" class="" type="color" default="#efefef" label="TPL_ALLROUNDER_INPUT_BACKGROUND" description="TPL_ALLROUNDER_INPUT_BACKGROUND_DESC"></field>
-				<field name="inputHoverFontColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_INPUT_HOVER_FONT" description="TPL_ALLROUNDER_INPUT_HOVER_FONT_DESC"></field>
-				<field name="inputHoverBgColor" class="" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND" description="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND_DESC"></field>
-				<field name="inputBorderTopColor" class="" type="color" default="#cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_TOP" description="TPL_ALLROUNDER_INPUT_BORDER_TOP_DESC"></field>
-				<field name="inputBorderLeftColor" class="" type="color" default="#cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_LEFT" description="TPL_ALLROUNDER_INPUT_BORDER_LEFT_DESC"></field>
-				<field name="inputBorderRightColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_RIGHT" description="TPL_ALLROUNDER_INPUT_BORDER_RIGHT_DESC"></field>
-				<field name="inputBorderBottomColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM" description="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM_DESC"></field>
+				<field name="moduletableFont" type="color" default="#505050" label="TPL_ALLROUNDER_MODULE_FONT" description="TPL_ALLROUNDER_MODULE_FONT_DESC" />
+				<field name="moduletableBg" type="color" default="#ffffff" label="TPL_ALLROUNDER_MODULE_BG" description="TPL_ALLROUNDER_MODULE_BG_DESC" />
+				<field name="moduletableBorder" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_BORDER" description="TPL_ALLROUNDER_MODULE_BORDER_DESC" />
+				<field name="moduletableh3Bg" type="color" default="#efefef" label="TPL_ALLROUNDER_MODULE_H3_BG" description="TPL_ALLROUNDER_MODULE_H3_BG_DESC" />
+				<field name="moduletableh3Border" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_H3_BORDER" description="TPL_ALLROUNDER_MODULE_H3_BORDER_DESC" />				<field type="spacer" hr="true" />
+				<field name="inputFontColor" type="color" default="#555555" label="TPL_ALLROUNDER_INPUT_FONT" description="TPL_ALLROUNDER_INPUT_FONT_DESC" />
+				<field name="inputBackground" type="color" default="#efefef" label="TPL_ALLROUNDER_INPUT_BACKGROUND" description="TPL_ALLROUNDER_INPUT_BACKGROUND_DESC" />
+				<field name="inputHoverFontColor" type="color" default="#555555" label="TPL_ALLROUNDER_INPUT_HOVER_FONT" description="TPL_ALLROUNDER_INPUT_HOVER_FONT_DESC" />
+				<field name="inputHoverBgColor" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND" description="TPL_ALLROUNDER_INPUT_HOVER_BACKGROUND_DESC" />
+				<field name="inputBorderTopColor" type="color" default="#cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_TOP" description="TPL_ALLROUNDER_INPUT_BORDER_TOP_DESC" />
+				<field name="inputBorderLeftColor" type="color" default="#cccccc" label="TPL_ALLROUNDER_INPUT_BORDER_LEFT" description="TPL_ALLROUNDER_INPUT_BORDER_LEFT_DESC" />
+				<field name="inputBorderRightColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_RIGHT" description="TPL_ALLROUNDER_INPUT_BORDER_RIGHT_DESC" />
+				<field name="inputBorderBottomColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM" description="TPL_ALLROUNDER_INPUT_BORDER_BOTTOM_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="buttonColor" class="" type="color" default="#555555" label="TPL_ALLROUNDER_BUTTON_FONT" description="TPL_ALLROUNDER_BUTTON_FONT_DESC"></field>
-				<field name="buttonBgColor" class="" type="color" default="#efefef" label="TPL_ALLROUNDER_BUTTON_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_BACKGROUND_DESC"></field>
-				<field name="buttonHoverColor" class="" type="color" default="#000000" label="TPL_ALLROUNDER_BUTTON_HOVER_FONT" description="TPL_ALLROUNDER_BUTTON_HOVER_FONT_DESC"></field>
-				<field name="buttonBgHoverColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND_DESC"></field>
-				<field name="buttonBorderTop" class="" type="color" default="#cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_TOP" description="TPL_ALLROUNDER_BUTTON_BORDER_TOP_DESC"></field>
-				<field name="buttonBorderLeft" class="" type="color" default="#cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_LEFT" description="TPL_ALLROUNDER_BUTTON_BORDER_LEFT_DESC"></field>
-				<field name="buttonBorderRight" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT" description="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT_DESC"></field>
-				<field name="buttonBorderBottom" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM" description="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM_DESC"></field>
+				<field name="buttonColor" type="color" default="#555555" label="TPL_ALLROUNDER_BUTTON_FONT" description="TPL_ALLROUNDER_BUTTON_FONT_DESC" />
+				<field name="buttonBgColor" type="color" default="#efefef" label="TPL_ALLROUNDER_BUTTON_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_BACKGROUND_DESC" />
+				<field name="buttonHoverColor" type="color" default="#000000" label="TPL_ALLROUNDER_BUTTON_HOVER_FONT" description="TPL_ALLROUNDER_BUTTON_HOVER_FONT_DESC" />
+				<field name="buttonBgHoverColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND" description="TPL_ALLROUNDER_BUTTON_HOVER_BACKGROUND_DESC" />
+				<field name="buttonBorderTop" type="color" default="#cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_TOP" description="TPL_ALLROUNDER_BUTTON_BORDER_TOP_DESC" />
+				<field name="buttonBorderLeft" type="color" default="#cccccc" label="TPL_ALLROUNDER_BUTTON_BORDER_LEFT" description="TPL_ALLROUNDER_BUTTON_BORDER_LEFT_DESC" />
+				<field name="buttonBorderRight" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT" description="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT_DESC" />
+				<field name="buttonBorderBottom" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM" description="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="tooltipBorder" class="" type="color" default="#A6A7AB" label="TPL_ALLROUNDER_TOOLTIP_BORDER" description="TPL_ALLROUNDER_TOOLTIP_BORDER_DESC"></field>
-				<field name="tooltipBg" class="" type="color" default="#F2F3F5" label="TPL_ALLROUNDER_TOOLTIP_BG" description="TPL_ALLROUNDER_TOOLTIP_BG_DESC"></field>
-				<field name="tooltipFont" class="" type="color" default="#800000" label="TPL_ALLROUNDER_TOOLTIP_FONT" description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC"></field>
+				<field name="tooltipBorder" type="color" default="#A6A7AB" label="TPL_ALLROUNDER_TOOLTIP_BORDER" description="TPL_ALLROUNDER_TOOLTIP_BORDER_DESC" />
+				<field name="tooltipBg" type="color" default="#F2F3F5" label="TPL_ALLROUNDER_TOOLTIP_BG" description="TPL_ALLROUNDER_TOOLTIP_BG_DESC" />
+				<field name="tooltipFont" type="color" default="#800000" label="TPL_ALLROUNDER_TOOLTIP_FONT" description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC" />
 			</fieldset>
 			<fieldset name="ddcolors"
 				label="TPL_ALLROUNDER_DD_COLORS" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS_DD" />
-				<field name="dropdownImage" class="btn-group" type="radio" default="smooth" label="TPL_ALLROUNDER_DROPDOWN_STYLE" description="TPL_ALLROUNDER_DROPDOWN_STYLE_DESC">
+				<field name="dropdownImage" type="radio"
+					label="TPL_ALLROUNDER_DROPDOWN_STYLE"
+					description="TPL_ALLROUNDER_DROPDOWN_STYLE_DESC"
+					class="btn-group"
+					default="smooth" >
 					<option value="smooth" class="smooth">smooth</option>
 					<option value="aero" class="aero">aero</option>
 					<option value="carbon" class="carbon">carbon</option>
 					<option value="leather" class="leather">leather</option>
 				</field>
 				<field type="spacer" label="TPL_ALLROUNDER_LEVEL_ONE" description=""  />
-				<field name="ddBackground" class="" type="color" default="#222222" label="TPL_ALLROUNDER_UL_BG" description="TPL_ALLROUNDER_UL_BG_DESC"></field>
-				<field name="ddBorderTop" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_TOP" description="TPL_ALLROUNDER_UL_BORDER_TOP_DESC"></field>
-				<field name="ddBorderBottom" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_BORDER_BOTTOM_DESC"></field>
-				<field name="ulLiBorderRight" class="" type="color" default="#555555" label="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT_DESC"></field>
-				<field name="ulLiaBorderTop" class="" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_BORDER_TOP_DESC"></field>
-				<field name="ulLiaBorderRight" class="" type="color" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT_DESC"></field>
-				<field name="ulLiaBorderLeft" class="" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT_DESC"></field>
-				<field name="ulLiaBorderBottom" class="" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM_DESC"></field>
-				<field name="ulLiaColor" class="" type="color" default="#cccccc" label="TPL_ALLROUNDER_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_A_FONT_DESC"></field>
-				<field name="ulLiaBackground" class="" type="color" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_A_BACKGROUND_DESC"></field>
-				<field name="ulLiaHoverColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT_DESC"></field>
+				<field name="ddBackground" type="color" default="#222222" label="TPL_ALLROUNDER_UL_BG" description="TPL_ALLROUNDER_UL_BG_DESC" />
+				<field name="ddBorderTop" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_TOP" description="TPL_ALLROUNDER_UL_BORDER_TOP_DESC" />
+				<field name="ddBorderBottom" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_BORDER_BOTTOM_DESC" />
+				<field name="ulLiBorderRight" type="color" default="#555555" label="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT_DESC" />
+				<field name="ulLiaBorderTop" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_BORDER_TOP_DESC" />
+				<field name="ulLiaBorderRight" type="color" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT_DESC" />
+				<field name="ulLiaBorderLeft" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT_DESC" />
+				<field name="ulLiaBorderBottom" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM_DESC" />
+				<field name="ulLiaColor" type="color" default="#cccccc" label="TPL_ALLROUNDER_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_A_FONT_DESC" />
+				<field name="ulLiaBackground" type="color" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_A_BACKGROUND_DESC" />
+				<field name="ulLiaHoverColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT_DESC" />
 				<field type="spacer" label="TPL_ALLROUNDER_LEVEL_TWO" />
-				<field name="ululBackground" class="" type="color" default="#222222" label="TPL_ALLROUNDER_UL_UL_BACKGROUND" description="TPL_ALLROUNDER_UL_UL_BACKGROUND_DESC"></field>
-				<field name="ululBorder" class="" type="color" default="#000000" label="TPL_ALLROUNDER_UL_UL_BORDER" description="TPL_ALLROUNDER_UL_UL_BORDER_DESC"></field>
-				<field name="ulLiliaBorderTop" class="" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP_DESC"></field>
-				<field name="ulLiliaBorderRight" class="" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT_DESC"></field>
-				<field name="ulLiliaBorderLeft" class="" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT_DESC"></field>
-				<field name="ulLiliaBorderBottom" class="" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM_DESC"></field>
-				<field name="ulLiliaColor" class="" type="color" default="#999999" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT_DESC"></field>
-				<field name="ulLiliaHoverColor" class="" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT_DESC"></field>
-				<field name="ulLiliBackground" class="" type="color" default="#171717" label="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND_DESC"></field>
-				<field name="ulLiliHoverBackground" class="" type="color" default="#212121" label="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND_DESC"></field>
+				<field name="ululBackground" type="color" default="#222222" label="TPL_ALLROUNDER_UL_UL_BACKGROUND" description="TPL_ALLROUNDER_UL_UL_BACKGROUND_DESC" />
+				<field name="ululBorder" type="color" default="#000000" label="TPL_ALLROUNDER_UL_UL_BORDER" description="TPL_ALLROUNDER_UL_UL_BORDER_DESC" />
+				<field name="ulLiliaBorderTop" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP_DESC" />
+				<field name="ulLiliaBorderRight" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT_DESC" />
+				<field name="ulLiliaBorderLeft" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT_DESC" />
+				<field name="ulLiliaBorderBottom" type="color" default="#333333" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM_DESC" />
+				<field name="ulLiliaColor" type="color" default="#999999" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT_DESC" />
+				<field name="ulLiliaHoverColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT" description="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT_DESC" />
+				<field name="ulLiliBackground" type="color" default="#171717" label="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND_DESC" />
+				<field name="ulLiliHoverBackground" type="color" default="#212121" label="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND" description="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND_DESC" />
 			</fieldset>
 			<fieldset name="advanced"
 				label="TPL_ALLROUNDER_ADVANCED_OPTIONS" description="" >
-				<field type="spacer" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE" />
-				<field name="contentheadingImage" class="btn-group" type="radio" default="1" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE" description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_DESC">
-					<option value="0">No image</option>
+				<field name="contentheadingImage" type="radio"
+					label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE"
+					description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_DESC"
+					class="btn-group"
+					default="1" >
 					<option value="1">JDEFAULT</option>
-					<option value="2">Your own</option>
+					<option value="2">TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_OPTION_OWN</option>
+					<option value="0">JNONE</option>
 				</field>
-				<field name="contentheadingImageMedia" type="media" size="40" hide_default="1" label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA" description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA_DESC" />
-				<field type="spacer" label="TPL_ALLROUNDER_RIBBONS" />
-				<field name="ribbonsOnOff" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_RIBBONSONOFF" description="TPL_ALLROUNDER_RIBBONSONOFF_DESC">
-					<option value="0">JOFF</option>
-					<option value="1">JON</option>
-				</field>
-				<field name="css3effects" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_CSS3EFFECTS" description="TPL_ALLROUNDER_CSS3EFFECTS_DESC">
-					<option value="0">JOFF</option>
-					<option value="1">JON</option>
-				</field>
-				<field type="spacer" label="TPL_ALLROUNDER_COPYRIGHT_FOOTER" />
-				<field name="showCopy" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_SHOW_COPYRIGHT" description="TPL_ALLROUNDER_SHOW_COPYRIGHT_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="copyText" type="textarea" default="ALLROUNDER" label="TPL_ALLROUNDER_COPYRIGHT_TEXT" description="TPL_ALLROUNDER_COPYRIGHT_TEXT_DESC" rows="1" cols="40"></field>
+				<field name="contentheadingImageMedia" type="media"
+					label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA"
+					description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA_DESC"
+					hide_default="1" />
 				<field type="spacer" hr="true" />
-				<field name="showDate" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_SHOW_DATE" description="TPL_ALLROUNDER_SHOW_DATE_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
+				<field name="ribbonsOnOff" type="radio"
+					label="TPL_ALLROUNDER_RIBBONSONOFF"
+					description="TPL_ALLROUNDER_RIBBONSONOFF_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
 				</field>
-				<field type="spacer" label="TPL_ALLROUNDER_COMPRESSION" />
-				<field name="jsCompress" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_ENABLE_JS_COMPRESS" description="TPL_ALLROUNDER_ENABLE_JS_COMPRESS_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
+				<field name="css3effects" type="radio"
+					label="TPL_ALLROUNDER_CSS3EFFECTS"
+					description="TPL_ALLROUNDER_CSS3EFFECTS_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
 				</field>
-				<field name="cssCompress" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS" description="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS_DESC">
-					<option value="0">JNO</option>
+				<field type="spacer" hr="true" />
+				<field name="showCopy" type="radio"
+					label="TPL_ALLROUNDER_SHOW_COPYRIGHT"
+					description="TPL_ALLROUNDER_SHOW_COPYRIGHT_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
 					<option value="1">JYES</option>
-				</field>
-				<field type="spacer" label="TPL_ALLROUNDER_CUSTOM_CSS" />
-				<field name="customCss" type="radio" class="btn-group" default="0" label="TPL_ALLROUNDER_ENABLE_OWN_CSS" description="TPL_ALLROUNDER_ENABLE_OWN_CSS_DESC">
 					<option value="0">JNO</option>
-					<option value="1">JYES</option>
 				</field>
-				<field name="customCssCode" type="textarea" default="/* enter your CSS code here */" label="TPL_ALLROUNDER_OWN_CSS" description="TPL_ALLROUNDER_OWN_CSS_DESC" rows="10" cols="40"></field>
+				<field name="copyText" type="textarea"
+					label="TPL_ALLROUNDER_COPYRIGHT_TEXT"
+					description="TPL_ALLROUNDER_COPYRIGHT_TEXT_DESC" 
+					default="ALLROUNDER"
+					rows="1"
+					cols="40" />
+				<field type="spacer" hr="true" />
+				<field name="showDate" type="radio"
+					label="TPL_ALLROUNDER_SHOW_DATE"
+					description="TPL_ALLROUNDER_SHOW_DATE_DESC"
+					class="btn-group btn-group-yesno"
+					default="1" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" hr="true" />
+				<field name="jsCompress" type="radio"
+					label="TPL_ALLROUNDER_ENABLE_JS_COMPRESS"
+					description="TPL_ALLROUNDER_ENABLE_JS_COMPRESS_DESC"
+					class="btn-group btn-group-yesno"
+					default="0" >
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+				<field name="cssCompress" type="radio"
+					label="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS"
+					description="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS_DESC"
+					class="btn-group btn-group-yesno"
+					default="0" >
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+				<field type="spacer" hr="true" />
+				<field name="customCss" type="radio"
+					label="TPL_ALLROUNDER_ENABLE_OWN_CSS"
+					description="TPL_ALLROUNDER_ENABLE_OWN_CSS_DESC"
+					class="btn-group btn-group-yesno"
+					default="0" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="customCssCode" type="textarea"
+					label="TPL_ALLROUNDER_OWN_CSS"
+					description="TPL_ALLROUNDER_OWN_CSS_DESC"
+					default="/* enter your CSS code here */"
+					rows="10"
+					cols="40" />
 			</fieldset>
 		</fields>
 	</config>

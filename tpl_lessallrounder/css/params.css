@@ -5,12 +5,6 @@
 
 /****************** Joomla Backend Parameter Style Pimp ******************/
 
-b.ttip {
-	background-image: url('../images/xml/ttip.png');
-	background-repeat: no-repeat;
-	padding-left: 18px;
-	cursor: help;
-}
 fieldset.panelform label,
 fieldset.panelform div.paramrow label,
 fieldset.panelform span.faux-label {
