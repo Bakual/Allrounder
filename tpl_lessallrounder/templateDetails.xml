@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
-	<name>LESS ALLROUNDER</name>
+	<name>LESS Allrounder</name>
 	<creationDate>2013-07-03</creationDate>
 	<author>Thomas Hunziker</author>
 	<authorEmail>admin@sermonspeaker.net</authorEmail>
@@ -28,18 +28,29 @@
 	<config>
 		<fields name="params">
 			<fieldset name="globtemplfields" 
-				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT" description=""
+				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
+				description=""
 				addfieldpath="/templates/lessallrounder/fields" >
-				<field name="useLESS" type="loadjscss" label="TPL_ALLROUNDER_WELCOMETEXT" />
-				<field name="whatWidth" type="radio" class="btn-group" default="1" label="TPL_ALLROUNDER_TEMPLATE_WIDTH" description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC">
-					<option value="0">FIXED</option>
-					<option value="1">DYNAMIC</option>
+				<field name="useLESS" type="loadjscss"
+					label="TPL_ALLROUNDER_WELCOMETEXT" />
+				<field name="whatWidth"
+					label="TPL_ALLROUNDER_TEMPLATE_WIDTH"
+					description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1" >
+					<option value="1">TPL_ALLROUNDER_TEMPLATE_WIDTH_OPTION_DYNAMIC</option>
+					<option value="0">TPL_ALLROUNDER_TEMPLATE_WIDTH_OPTION_FIXED</option>
 				</field>
-				<field type="spacer" label="TPL_ALLROUNDER_IF_DYNAMIC" />
-				<field name="pageMaxWidth" type="text" default="1180px" label="TPL_ALLROUNDER_MAX_WIDTH" description="TPL_ALLROUNDER_MAX_WIDTH_DESC"></field>
-				<field type="spacer" label="TPL_ALLROUNDER_IF_FIXED" />
-				<field name="pageWidth" type="text" default="950px" label="TPL_ALLROUNDER_WIDTH" description="TPL_ALLROUNDER_WIDTH_DESC"></field>
-				<field type="spacer" label="TPL_ALLROUNDER_COLUMNS" />
+				<field name="pageMaxWidth" type="text"
+					label="TPL_ALLROUNDER_MAX_WIDTH"
+					description="TPL_ALLROUNDER_MAX_WIDTH_DESC"
+					default="1180px" />
+				<field name="pageWidth" type="text"
+					label="TPL_ALLROUNDER_WIDTH"
+					description="TPL_ALLROUNDER_WIDTH_DESC"
+					default="950px" />
+				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text" default="20" label="TPL_ALLROUNDER_LEFT_WIDTH" description="TPL_ALLROUNDER_LEFT_WIDTH_DESC"></field>
 				<field name="rightcolWidth" type="text" default="20" label="TPL_ALLROUNDER_RIGHT_WIDTH" description="TPL_ALLROUNDER_RIGHT_WIDTH_DESC"></field>
 				<field hr="true" type="spacer" />
