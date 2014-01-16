@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
-	<name>LESS Allrounder</name>
-	<creationDate>2013-07-03</creationDate>
+	<name>{LESS} Allrounder</name>
+	<creationDate>2014-01-16</creationDate>
 	<author>Thomas Hunziker</author>
-	<authorEmail>admin@sermonspeaker.net</authorEmail>
-	<authorUrl>http://www.sermonspeaker.net</authorUrl>
+	<authorEmail>bakual@bakual.net</authorEmail>
+	<authorUrl>http://www.bakual.net</authorUrl>
 	<copyright>LernVid.com</copyright>
 	<license>http://www.lernvid.com/lizenz</license>
 	<version>1.0</version>
@@ -25,6 +25,9 @@
 		<filename>index.php</filename>
 		<filename>template_thumbnail.png</filename>
 	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="Bakual.net">http://www.bakual.net/update/tpl_lessallrounder.xml</server>
+	</updateservers>
 	<config>
 		<fields name="params">
 			<fieldset name="globtemplfields" 

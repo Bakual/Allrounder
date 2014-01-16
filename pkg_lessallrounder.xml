@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="3.1" method="upgrade">
-	<name>LESS ALLROUNDER Package</name>
-	<creationDate>2013-07-03</creationDate>
+	<name>{LESS} Allrounder Package</name>
+	<creationDate>2014-01-16</creationDate>
 	<author>Thomas Hunziker</author>
-	<authorEmail>admin@sermonspeaker.net</authorEmail>
-	<authorUrl>http://www.sermonspeaker.net</authorUrl>
+	<authorEmail>bakual@bakual.net</authorEmail>
+	<authorUrl>http://www.bakual.net</authorUrl>
 	<copyright>LernVid.com</copyright>
 	<license>http://www.lernvid.com/lizenz</license>
 	<version>1.0</version>
 	<packagename>lessallrounder</packagename>
-	<description>LESS Allrounder Package</description>
+	<description>{LESS} Allrounder Package</description>
 	<files>
 		<file type="template" id="tpl_lessallrounder" >tpl_lessallrounder.zip</file>
 		<file type="plugin" id="plg_lessallrounder">plg_lessallrounder.zip</file>
 	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="Bakual.net">http://www.bakual.net/update/pkg_lessallrounder.xml</server>
+	</updateservers>
 </extension>

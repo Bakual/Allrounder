@@ -16,4 +16,7 @@
     	<filename>index.html</filename>
 		<folder>language</folder>
 	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="Bakual.net">http://www.bakual.net/update/plg_lessallrounder.xml</server>
+	</updateservers>
 </extension>
