@@ -49,6 +49,25 @@
 	border-top: 10px solid @moduleh3CornerColor;
 	position: absolute;  
 }
+/* Ribbons on */
+.guarded-ribbons() when (@ribbonsOnOff = 1) {
+	#wrapper {
+		#leftcol h3.moduleh3 {
+			margin: 10px 0 0 -20px;
+		}
+		#rightcol h3.moduleh3 {
+			margin: 10px -20px 0 0;
+		}
+	}
+	#footer {
+		margin: 0 -16px 0 -16px;
+	}
+	#header {
+		margin: 0 -21px 15px -21px;
+		padding: 0 0 0 21px;
+	}
+}
+
 /* Ribbons off */
 .guarded-ribbons() when not (@ribbonsOnOff = 1) {
 	#header, #footer, #wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3 {
