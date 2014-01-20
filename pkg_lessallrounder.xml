@@ -7,7 +7,7 @@
 	<authorUrl>http://www.bakual.net</authorUrl>
 	<copyright>LernVid.com</copyright>
 	<license>http://www.lernvid.com/lizenz</license>
-	<version>1.1</version>
+	<version>1.0.1</version>
 	<packagename>lessallrounder</packagename>
 	<description>{LESS} Allrounder Package</description>
 	<files>
