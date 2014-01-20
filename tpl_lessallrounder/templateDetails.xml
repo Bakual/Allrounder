@@ -116,6 +116,11 @@
 					description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"
 					size="10"
 					default="1.3em" />
+				<field name="inputHeight" type="text"
+					label="TPL_ALLROUNDER_INPUTHEIGHT_LABEL"
+					description="TPL_ALLROUNDER_INPUTHEIGHT_DESC"
+					size="10"
+					default="2em" />
 			</fieldset>
 			<fieldset name="logofields"
 				label="TPL_ALLROUNDER_LOGOCONFIG" description="" >
