@@ -31,6 +31,7 @@ class JFormFieldFont extends JFormFieldList
 	 * Method to get the field input markup.
 	 *
 	 * @return  string  The field input markup.
+	 *
 	 * @since   1.0
 	 */
 	protected function getInput()

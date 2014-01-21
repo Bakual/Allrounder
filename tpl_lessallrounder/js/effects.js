@@ -13,12 +13,12 @@ jQuery(document).ready(function($) {
 	});
 
 	// Searchbox animation
-	$("#search").hide().show({},"swing"); 
+	$("#search").hide().show({},"swing");
 
 	// Go to top link
 	$('a#gotop').click(function(){
-	$('html, body').animate({scrollTop:0}, 1200); 
-		return false; 
+	$('html, body').animate({scrollTop:0}, 1200);
+		return false;
 	});
 
 	// Tooltips
