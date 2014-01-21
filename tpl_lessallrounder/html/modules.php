@@ -91,7 +91,7 @@ function modChrome_lvround_right($module, &$params, &$attribs)
 function modChrome_lvround($module, &$params, &$attribs)
 { 
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
-	$moduleClass    = ($bootstrapSize) ? ' span'.$bootstrapSize : '';
+	$moduleClass    = ($bootstrapSize) ? ' span' . $bootstrapSize : '';
 ?>
 	<div class="module<?php echo $params->get('moduleclass_sfx'); ?><?php echo $moduleClass; ?>">
 		<div class="module-content">

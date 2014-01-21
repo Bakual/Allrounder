@@ -39,9 +39,9 @@ class JFormFieldFont extends JFormFieldList
 		$size	= $this->element['size'] ? ' size="' . (int) $this->element['size'] . '"' : '';
 		$class	= $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
 		$html	= '<div class="input-prepend">'
-				. '<div type="text" id="'.$this->fieldname . '_text_icon" class="btn add-on icon-checkmark" onclick="toggleElement(\'' . $this->fieldname . '\', 0);"> </div>'
+				. '<div type="text" id="' . $this->fieldname . '_text_icon" class="btn add-on icon-checkmark" onclick="toggleElement(\'' . $this->fieldname . '\', 0);"> </div>'
 				. '<input type="text" name="' . $this->name . '" id="' . $this->id . '_text" value="' . htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"'
-				. $class.$size.' /></div><br />'
+				. $class . $size . ' /></div><br />'
 				. '<div class="input-prepend">'
 				. '<div id="' . $this->fieldname . '_icon" class="btn add-on icon-cancel" onclick="toggleElement(\'' . $this->fieldname . '\', 1);"> </div>';
 		$html	.= parent::getInput();

@@ -8,6 +8,7 @@
 	<!-- Exclude 3rd party libraries. -->
 	<exclude-pattern>lessc.inc.php</exclude-pattern>
 	<exclude-pattern>*.js</exclude-pattern>
+	<exclude-pattern>*.css</exclude-pattern>
 
 	<rule ref="Joomla"/>
 	<rule ref="Generic.Files.LineLength">
