@@ -120,7 +120,7 @@
 					label="TPL_ALLROUNDER_INPUTHEIGHT_LABEL"
 					description="TPL_ALLROUNDER_INPUTHEIGHT_DESC"
 					size="10"
-					default="2em" />
+					default="2.2em" />
 			</fieldset>
 			<fieldset name="logofields"
 				label="TPL_ALLROUNDER_LOGOCONFIG" description="" >
