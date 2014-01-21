@@ -1,27 +1,36 @@
 <?php
-defined('_JEXEC') or die('Access to this location is RESTRICTED.');
+/**
+ * @package     Lessallrounder
+ * @subpackage  Template
+ * @author      Thomas Hunziker <bakual@bakual.net>
+ * @copyright   (C) 2014 - Thomas Hunziker
+ * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ **/
+
+defined('_JEXEC') or die();
+
 // Shortcuts
 $app	= JFactory::getApplication();
 $tpl	= $app->getTemplate(true);
-$path	= $this->baseurl.'/templates/'.$tpl->template;
+$path	= $this->baseurl . '/templates/' . $tpl->template;
 $params	= $tpl->params;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="designer" content="Juergen Koller - http://www.lernvid.com" />
-	<meta name="licence" content="Creative Commons 3.0" />
 	<link href="<?php echo $path; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<jdoc:include type="head" />
 	<link href="<?php echo $path; ?>/css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
-	<?php // Load optional rtl Bootstrap css and Bootstrap bugfixes
+	<?php 
+	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
-	// dynamic or fixed width
+
+	// Dynamic or fixed width
 	if ($params->get('whatWidth')) :
-		$style	= 'max-width:'.htmlspecialchars($params->get('pageMaxWidth'));
+		$style	= 'max-width:' . htmlspecialchars($params->get('pageMaxWidth'));
 	else :
-		$style	= 'width:'.htmlspecialchars($params->get('pageWidth'));
+		$style	= 'width:' . htmlspecialchars($params->get('pageWidth'));
 	endif; ?>
 	<style type="text/css">#wrapper, #foot_container {<?php echo $style; ?>;}</style>
 	<?php if ($params->get('customCss')) : ?>
@@ -31,7 +40,7 @@ $params	= $tpl->params;
 		<script type="text/javascript" src="<?php echo $path; ?>/js/js_compress.php"></script>
 	<?php else :
 		JHtml::_('jquery.framework');
-		// jq.easy-tooltip.min.js overrides the Bootstrap tooltip.
+		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip.
 		?>
 		<script src="<?php echo $path; ?>/js/lv-dropdown.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
@@ -39,16 +48,21 @@ $params	= $tpl->params;
 		<script src="<?php echo $path; ?>/js/reflection.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
 	<?php endif;
-	// check if the 3 columns are enabled
-	$contentwidth	= '';
-	if($this->countModules("position-7")&&!$this->countModules("position-8")){ $contentwidth="left"; }
-	if($this->countModules("position-8")&&!$this->countModules("position-7")){ $contentwidth="right"; }
-	if($this->countModules("position-7")&&$this->countModules("position-8")) { $contentwidth="middle"; } ?>
+	// Check if the 3 columns are enabled
+	$contentwidth = '';
+	if ($this->countModules('position-7') and !$this->countModules('position-8')) :
+		$contentwidth = 'left';
+	elseif ($this->countModules('position-8') and !$this->countModules('position-7')) :
+		$contentwidth = 'right';
+	elseif ($this->countModules('position-7') and $this->countModules('position-8')) :
+		$contentwidth = 'middle';
+	endif;
+	?>
 </head>
 <body>
 	<div id="wrapper">
-		<?php require('modules/toppanel.php'); ?>
-		<?php require('modules/beforehead.php'); ?>
+		<?php require 'modules/toppanel.php'; ?>
+		<?php require 'modules/beforehead.php'; ?>
 		<div id="header_container">
 			<?php if ($params->get('showHeader')) : ?>
 				<div id="header">
@@ -89,7 +103,7 @@ $params	= $tpl->params;
 					<span class="heckr">&nbsp;</span>
 				</div>
 			<?php endif; ?>
-			<?php require('modules/afterhead.php'); ?>
+			<?php require 'modules/afterhead.php'; ?>
 			<?php if ($this->countModules('position-1')) : ?>
 				<div id="topmenu_container">
 					<div id="topmenu">
@@ -122,14 +136,14 @@ $params	= $tpl->params;
 				</div>
 				<div class="clearfix"></div>
 			<?php endif; ?>
-			<?php require('modules/top.php'); ?>
+			<?php require 'modules/top.php'; ?>
 			<?php if ($this->countModules('position-7')) : ?>
 				<div id="leftcol">
 					<jdoc:include type="modules" name="position-7" style="lvround_left" />
 				</div>
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
-				<?php require('modules/advert_top.php'); ?>
+				<?php require 'modules/advert_top.php'; ?>
 				<div id="maincontent" class="row-fluid">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
@@ -137,7 +151,7 @@ $params	= $tpl->params;
 				<div class="clearfix"></div>
 				<span class="shadow-left">&nbsp;</span>
 				<span class="shadow-right">&nbsp;</span>
-				<?php require('modules/advert_btm.php'); ?>
+				<?php require 'modules/advert_btm.php'; ?>
 			</div>
 			<?php if ($this->countModules('position-8')) : ?>
 				<div id="rightcol">
@@ -146,11 +160,11 @@ $params	= $tpl->params;
 			<?php endif; ?>
 			<div class="clearfix"></div>
 		</div>
-		<?php require('modules/bottom.php'); ?>
+		<?php require 'modules/bottom.php'; ?>
 		<div class="clearfix"></div>
 	</div>
 	<div id="foot_container">
-		<?php require('modules/foot.php'); ?>
+		<?php require 'modules/foot.php'; ?>
 		<?php if($this->countModules('footer')) : ?>
 			<div id="footermodule">
 				<jdoc:include type="modules" name="footer" />
@@ -169,7 +183,7 @@ $params	= $tpl->params;
 				<span class="feckl">&nbsp;</span>
 				<span class="feckr">&nbsp;</span>
 				<div id="scroll_up"> <a href="#" class="lv-tooltip" id="gotop" title="Scroll to top">&uarr;&uarr;&uarr;</a></div>
-				<?php require('modules/footermodules.php'); ?>
+				<?php require 'modules/footermodules.php'; ?>
 			</div>
 			<div class="footer-bottom">
 				<?php if ($params->get('showDate')) : ?>
@@ -180,7 +194,7 @@ $params	= $tpl->params;
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<?php require('modules/sidepanel.php'); ?>
+	<?php require 'modules/sidepanel.php'; ?>
 	<jdoc:include type="modules" name="debug" />
 </body>
 </html>

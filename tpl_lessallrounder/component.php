@@ -1,9 +1,16 @@
 <?php
-// no direct access
-defined('_JEXEC') or die('Restricted access');
+/**
+ * @package     Lessallrounder
+ * @subpackage  Template
+ * @author      Thomas Hunziker <bakual@bakual.net>
+ * @copyright   (C) 2014 - Thomas Hunziker
+ * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ **/
+
+defined('_JEXEC') or die();
 
 $tpl	= JFactory::getApplication()->getTemplate(true);
-$path	= $this->baseurl.'/templates/'.$tpl->template;
+$path	= $this->baseurl . '/templates/' . $tpl->template;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">

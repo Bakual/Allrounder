@@ -9,7 +9,6 @@
  * Loosely based on https://github.com/ndeet/plg_system_less
  **/
 
-// No direct access
 defined('_JEXEC') or die();
 
 /**
