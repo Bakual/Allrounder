@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="LESSAllrounder">
+	<description>Custom coding standard for LESS Allrounder template.</description>
+
+	<!-- Exclude folders not containing production code -->
+	<exclude-pattern type="relative">build/*</exclude-pattern>
+
+	<!-- Exclude 3rd party libraries. -->
+	<exclude-pattern>lessc.inc.php</exclude-pattern>
+
+	<!-- These exceptions are permanent -->
+	<exclude-pattern type="relative">*/tmpl/*</exclude-pattern>
+
+	<rule ref="Joomla"/>
+</ruleset>
