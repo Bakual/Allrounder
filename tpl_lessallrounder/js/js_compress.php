@@ -7,7 +7,8 @@
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  **/
 
-defined('_JEXEC') or die();
+// Doesn't work since this file is called directly from browser.
+// defined('_JEXEC') or die();
 
 header('Content-Type: text/javascript');
 
