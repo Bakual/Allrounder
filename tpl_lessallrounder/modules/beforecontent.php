@@ -9,20 +9,41 @@
 
 defined('_JEXEC') or die();
 
+if ($this->countModules('beforecontent1 or beforecontent2 or beforecontent3')) : ?>
+	<div id="beforecontent">
+		<?php if ($this->countModules('beforecontent1')) : ?>
+			<div id="beforecontent1" class="row-fluid">
+				<jdoc:include type="modules" name="beforecontent1" style="lvround" />
+			</div>
+		<?php endif;
+		if ($this->countModules('beforecontent2')) : ?>
+			<div id="beforecontent2" class="row-fluid">
+				<jdoc:include type="modules" name="beforecontent2" style="lvround" />
+			</div>
+		<?php endif;
+		if ($this->countModules('beforecontent3')) : ?>
+			<div id="beforecontent3" class="row-fluid">
+				<jdoc:include type="modules" name="beforecontent3" style="lvround" />
+			</div>
+		<?php endif; ?>
+	</div>
+<?php endif;
+
+// Advert positions are deprecated. Will be removed with 2.0
 if ($this->countModules('advert1 or advert2 or advert3')) : ?>
-	<div id="advert-top">
+	<div id="beforecontent">
 		<?php if ($this->countModules('advert1')) : ?>
-			<div id="advert-top1" class="row-fluid">
+			<div id="beforecontent1" class="row-fluid">
 				<jdoc:include type="modules" name="advert1" style="lvround" />
 			</div>
 		<?php endif;
 		if ($this->countModules('advert2')) : ?>
-			<div id="advert-top2" class="row-fluid">
+			<div id="beforecontent2" class="row-fluid">
 				<jdoc:include type="modules" name="advert2" style="lvround" />
 			</div>
 		<?php endif;
 		if ($this->countModules('advert3')) : ?>
-			<div id="advert-top3" class="row-fluid">
+			<div id="beforecontent3" class="row-fluid">
 				<jdoc:include type="modules" name="advert3" style="lvround" />
 			</div>
 		<?php endif; ?>

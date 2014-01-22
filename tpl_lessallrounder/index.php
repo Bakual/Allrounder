@@ -143,7 +143,7 @@ $params	= $tpl->params;
 				</div>
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
-				<?php require 'modules/advert_top.php'; ?>
+				<?php require 'modules/beforecontent.php'; ?>
 				<div id="maincontent" class="row-fluid">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
@@ -151,7 +151,7 @@ $params	= $tpl->params;
 				<div class="clearfix"></div>
 				<span class="shadow-left">&nbsp;</span>
 				<span class="shadow-right">&nbsp;</span>
-				<?php require 'modules/advert_btm.php'; ?>
+				<?php require 'modules/aftercontent.php'; ?>
 			</div>
 			<?php if ($this->countModules('position-8')) : ?>
 				<div id="rightcol">

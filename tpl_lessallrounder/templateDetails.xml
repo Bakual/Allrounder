@@ -442,12 +442,12 @@
 		<position>top1</position>
 		<position>top2</position>
 		<position>top3</position>
-		<position>advert1</position>
-		<position>advert2</position>
-		<position>advert3</position>
-		<position>advert4</position>
-		<position>advert5</position>
-		<position>advert6</position>
+		<position>beforecontent1</position>
+		<position>beforecontent2</position>
+		<position>beforecontent3</position>
+		<position>aftercontent1</position>
+		<position>aftercontent2</position>
+		<position>aftercontent3</position>
 		<position>bottom1</position>
 		<position>bottom2</position>
 		<position>bottom3</position>
