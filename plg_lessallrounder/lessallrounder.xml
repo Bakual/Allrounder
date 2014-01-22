@@ -2,12 +2,12 @@
 <extension version="3.1" type="plugin" group="system" method="upgrade">
 	<name>plg_system_lessallrounder</name>
 	<author>Thomas Hunziker</author>
-	<creationDate>2014-01-20</creationDate>
+	<creationDate>2014-01-22</creationDate>
 	<copyright>(C) 2014 Thomas Hunziker</copyright>
 	<license>http://www.gnu.org/licenses/gpl.html</license>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>http://www.bakual.net</authorUrl>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<description>PLG_SYSTEM_LESSALLROUNDER_XML_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<files>
