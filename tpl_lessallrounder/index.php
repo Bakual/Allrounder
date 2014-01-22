@@ -139,7 +139,7 @@ $params	= $tpl->params;
 			<?php require 'modules/top.php'; ?>
 			<?php if ($this->countModules('position-7')) : ?>
 				<div id="leftcol">
-					<jdoc:include type="modules" name="position-7" style="lvround_left" />
+					<jdoc:include type="modules" name="position-7" style="lvroundleft" />
 				</div>
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
@@ -155,7 +155,7 @@ $params	= $tpl->params;
 			</div>
 			<?php if ($this->countModules('position-8')) : ?>
 				<div id="rightcol">
-					<jdoc:include type="modules" name="position-8" style="lvround_right" />
+					<jdoc:include type="modules" name="position-8" style="lvroundright" />
 				</div>
 			<?php endif; ?>
 			<div class="clearfix"></div>

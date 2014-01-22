@@ -20,7 +20,7 @@ defined('_JEXEC') or die();
  *
  * @since   1.0
  */
-function modChrome_lvround_left($module, &$params, &$attribs)
+function ModChrome_lvRoundLeft($module, &$params, &$attribs)
 { ?>
 	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
 		<?php if ($module->showtitle != 0) : ?>
@@ -54,7 +54,7 @@ function modChrome_lvround_left($module, &$params, &$attribs)
  *
  * @since   1.0
  */
-function modChrome_lvround_right($module, &$params, &$attribs)
+function ModChrome_lvRoundRight($module, &$params, &$attribs)
 { ?>
 	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
 		<?php if ($module->showtitle != 0) : ?>
@@ -88,8 +88,8 @@ function modChrome_lvround_right($module, &$params, &$attribs)
  *
  * @since   1.0
  */
-function modChrome_lvround($module, &$params, &$attribs)
-{ 
+function ModChrome_lvRound($module, &$params, &$attribs)
+{
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
 	$moduleClass    = ($bootstrapSize) ? ' span' . $bootstrapSize : '';
 ?>
