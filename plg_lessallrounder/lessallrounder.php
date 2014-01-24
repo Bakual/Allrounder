@@ -88,6 +88,9 @@ class PlgSystemLessallrounder extends JPlugin
 			// Sanityzing params for LESS
 			foreach ($params_array as &$value)
 			{
+				// Trim whitespaces
+				$value	= trim($value);
+
 				// Adding quotes around variable so it's threated as string if a slash is in it.
 				if (strpos($value, '/') !== false)
 				{
