@@ -1,62 +1,33 @@
-/*********************************************
-*** Designed by Juergen Koller			   ***
-*** Designers Home: http://www.LernVid.com ***
-**********************************************/
-
-/* ACCORDION */
-.lvacc-all {
-	cursor:pointer;
-	font-weight:bold;
-	letter-spacing:1px;
-	font-size:1.2em;
-	display:block;
+/* Pimp Bootstrap Accordion */
+.accordion-group {
+	margin-top: 10px;
+	/* Special support for Sliders from NoNumber */
+	&.panel.active .accordion-heading .accordion-toggle {
+		color: #0099FF;
+		background-position: left -60px;
+		&:hover {
+			color: #000;
+		}
+	}
 }
-.lvacc {
-	cursor:pointer;
+.accordion-heading .accordion-toggle {
 	color: #555;
-	height:31px;
-	line-height:30px;
-	font-weight:bold;
-	display:block;
-	padding:0 35px;
-	margin:10px 0 0 0;
-	background-color:#eee;
-	background-image : url(../images/lvacc.jpg);
-	background-repeat : no-repeat;
-	border:1px solid #aaa;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 35px;
+	background-color: #eee;
+	background-image: url(../images/accordion.jpg);
+	background-repeat: no-repeat;
+	border: 1px solid #aaa;
 	border-bottom-color:#bbb;
+	.border-radius(@baseBorderRadius);
 	&:hover {
 		color: #000;
-		display: block;
 		background-color: #fff;
 		background-position: left -30px;
 		text-decoration: none;
 	}
-	&:active {
-		color: #0099FF !important;
-	}
-}
-.lvacc_active {
-	color: #0099FF;
-	background-position: left -60px;
-	&:hover {
-		color: #000;
-		background-position: left -60px;
-	}
-}
-.hideme {
-	margin-bottom:30px;
-	padding: 5px 30px 20px 30px;
-}
-/* ACCORDION end */
-
-/* Bootstrap Accordion */
-.accordion-heading {
-	font-size: 150%;
-	margin: 10px 0 10px 0;
-}
-.accordion-body {
-	padding:0 10px 0px 10px;
 }
 
 hr {
