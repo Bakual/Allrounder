@@ -393,6 +393,14 @@
 					<option value="1">JENABLED</option>
 					<option value="0">JDISABLED</option>
 				</field>
+				<field name="js_deprecated" type="radio"
+					label="TPL_ALLROUNDER_ENABLE_JS_DEPRECATED"
+					description="TPL_ALLROUNDER_ENABLE_JS_DEPRECATED_DESC"
+					class="btn-group btn-group-yesno"
+					default="0" >
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
 				<field name="cssCompress" type="radio"
 					label="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS"
 					description="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS_DESC"
