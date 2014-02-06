@@ -200,7 +200,25 @@
 				<field name="bodyBackground" type="color"
 					label="TPL_ALLROUNDER_BODY_BACKGROUND"
 					description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"
-					default="#a2cdfd" />
+					default="#a2cdfd"
+				/>
+				<field
+					name="bodyBackgroundImage"
+					type="media"
+					label="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_LABEL"
+					description="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_DESC"
+				/>
+				<field
+					name="bodyBackgroundImageRepeat"
+					type="radio"
+					label="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_REPEAT_LABEL"
+					description="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_REPEAT_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<field name="textColor" type="color"
 					label="TPL_ALLROUNDER_GLOBAL_FONT"
 					description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"
@@ -210,6 +228,16 @@
 					description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"
 					default="#a52a2a" />
 				<field type="spacer" hr="true" />
+				<field
+					name="wrapperBgTransparency"
+					type="range"
+					label="TPL_ALLROUNDER_WRAPPER_BACKGROUND_TRANSPARENCY_LABEL"
+					description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_TRANSPARENCY_DESC"
+					default="100"
+					min="0"
+					max="100"
+					step="1"
+				/>
 				<field name="wrapperBgColor" type="color"
 					label="TPL_ALLROUNDER_WRAPPER_BACKGROUND"
 					description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"

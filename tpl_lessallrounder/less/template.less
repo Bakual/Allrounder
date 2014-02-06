@@ -104,8 +104,22 @@
 
 /****************** LAYOUT ******************/
 
-body {
+/* Guard for background image */
+.quarded-bgImage() when (@bodyBackgroundImage = "") {
 	background-image: url(../images/background.png);
+}
+.quarded-bgImage() when not (@bodyBackgroundImage = "") {
+	background-image: url(../../../@{bodyBackgroundImage});
+}
+.quarded-bgImageRepeat() when (@bodyBackgroundImageRepeat = 1) {
+	repeat: url(../images/background.png);
+}
+.quarded-bgImageRepeat() when not (@bodyBackgroundImageRepeat = 1) {
+	background-repeat: no-repeat;
+}
+body {
+	.quarded-bgImage();
+	.quarded-bgImageRepeat();
 	overflow-x: hidden;
 }
 
@@ -358,6 +372,7 @@ a {
 #wrapper {
 	margin-top: @wrapperMarginTop;
 	padding: 0 0 10px 0;
+	.opacity(@wrapperBgTransparency);
 	#leftcol, #rightcol {
 		h3.moduleh3 {
 			background-color: @moduleh3BgColor;
