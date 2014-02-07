@@ -43,8 +43,7 @@ jQuery(document).ready(function($) {
 	// Article Details
 	$('.article-info dd').hide();
 	$('.article-info-term').click(function(){
-		$(this).stop();
-		$('.article-info dd').slideToggle("fast");
+		$(this).siblings('.article-info dd').slideToggle("fast");
 	});
 
 	// Toppanel
