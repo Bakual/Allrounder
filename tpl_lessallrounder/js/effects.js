@@ -21,14 +21,6 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-	// Tooltips
-	$('.lv-tooltip').tooltip({separator:'::',delay:200});
-	$('.lv-tooltip-white').tooltip({className:'tip-white',separator:'::',delay:200});
-	$('.lv-tooltip-black').tooltip({className:'tip-black',separator:'::',delay:200});
-	$('.lv-tooltip-blue').tooltip({className:'tip-blue',separator:'::',delay:200});
-	$('.lv-tooltip-red').tooltip({className:'tip-red',separator:'::',delay:200});
-	$('.lv-tooltip-green').tooltip({className:'tip-green',separator:'::',delay:200});
-	$('.lv-tooltip-yellow').tooltip({className:'tip-yellow',separator:'::',delay:200});
 
 	// Captions
 	$('.lv-caption').caption({opacity:0.6,animation:'fade',separator: '::',button:true});

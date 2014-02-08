@@ -43,12 +43,12 @@ $params	= $tpl->params;
 		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip.
 		?>
 		<script src="<?php echo $path; ?>/js/lv-dropdown.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/jq.easy-caption.min.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/reflection.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
 		<?php if ($params->get('js_deprecated')) : ?>
 			<script src="<?php echo $path; ?>/js/deprecated.js" type="text/javascript"></script>
+			<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
 		<?php endif;
 	endif;
 	// Check if the 3 columns are enabled
