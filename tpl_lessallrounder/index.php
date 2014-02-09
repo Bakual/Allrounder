@@ -14,6 +14,8 @@ $app	= JFactory::getApplication();
 $tpl	= $app->getTemplate(true);
 $path	= $this->baseurl . '/templates/' . $tpl->template;
 $params	= $tpl->params;
+
+JHtmlJquery::framework();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -35,22 +37,16 @@ $params	= $tpl->params;
 	<style type="text/css">#wrapper, #foot_container {<?php echo $style; ?>;}</style>
 	<?php if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
-	<?php endif;
-	if ($params->get('jsCompress')) : ?>
-		<script type="text/javascript" src="<?php echo $path; ?>/js/js_compress.php"></script>
-	<?php else :
-		JHtml::_('jquery.framework');
-		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip.
-		?>
-		<script src="<?php echo $path; ?>/js/lv-dropdown.js" type="text/javascript"></script>
+	<?php endif; ?>
+	<script src="<?php echo $path; ?>/js/lv-dropdown.js" type="text/javascript"></script>
+	<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
+	<?php if ($params->get('js_deprecated')) :
+		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip. ?>
+		<script src="<?php echo $path; ?>/js/deprecated.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/jq.easy-caption.min.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/reflection.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
-		<?php if ($params->get('js_deprecated')) : ?>
-			<script src="<?php echo $path; ?>/js/deprecated.js" type="text/javascript"></script>
-			<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
-		<?php endif;
-	endif;
+	<?php endif;
 	// Check if the 3 columns are enabled
 	$contentwidth = '';
 	if ($this->countModules('position-7') and !$this->countModules('position-8')) :

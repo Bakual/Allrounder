@@ -26,4 +26,14 @@ jQuery(document).ready(function($) {
 	$('.lv-tooltip-red').tooltip({className:'tip-red',separator:'::',delay:200});
 	$('.lv-tooltip-green').tooltip({className:'tip-green',separator:'::',delay:200});
 	$('.lv-tooltip-yellow').tooltip({className:'tip-yellow',separator:'::',delay:200});
+	// Captions
+	$('.lv-caption').caption({opacity:0.6,animation:'fade',separator: '::',button:true});
+	$('.lv-caption-fade').caption({opacity:0.6,fixed:false,animation:'fade',separator: '::'});
+	$('.lv-caption-slide').caption({opacity:0.6,fixed:false,animation:'slide',separator: '::'});
+	$('.lv-caption-bounce').caption({opacity:0.6,fixed:false,animation:'bounce',separator: '::'});
+	$('.lv-caption-gravity').caption({opacity:0.6,fixed:false,animation:'gravity',separator: '::'});
+	$('.lv-caption-zoom').caption({opacity:0.6,fixed:false,animation:'zoom',separator: '::'});
+	$('.lv-caption-racer').caption({opacity:0.6,fixed:false,animation:'racer',separator: '::'});
+	$('.lv-caption-move').caption({opacity:0.6,fixed:false,animation:'move',separator: '::'});
+
 });

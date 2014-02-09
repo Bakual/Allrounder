@@ -1,59 +1,66 @@
 jQuery(document).ready(function($) {
+	// Dropdown menu
+	$('#topmenu ul.menu ul').css({display:'none'}); // Opera Fix
+	$('#topmenu ul.menu li').hover(
+		function(){
+			$(this).find('ul:first').css({visibility:'visible', display:'none'}).show('fast');
+		},
+		function(){
+			$(this).find('ul:first').css({visibility:'hidden'});
+		}
+	);
+
 	// Mainmenu with suffix _menu
-	$('.module_menu ul.menu li a').hover(function(){
-		$(this).stop().animate({'padding-left':'20px'},{
-			queue:false,
-			duration:'fast'
-		});
-	}, function(){
-		$(this).stop().animate({'padding-left':'0'},{
-			queue:false,
-			duration:'middle'
-		});
-	});
+	$('.module_menu ul.menu li a').hover(
+		function(){
+			$(this).animate(
+				{'padding-left':'20px'},
+				{
+					queue:false,
+					duration:'fast'
+				}
+			);
+		},
+		function(){
+			$(this).animate(
+				{'padding-left':'0'},
+				{
+					queue:false,
+					duration:'middle'
+				}
+			);
+		}
+	);
 
 	// Searchbox animation
-	$("#search").hide().show({},"swing");
+	$('#search').hide().show(400, 'swing');
 
 	// Go to top link
 	$('a#gotop').click(function(){
-	$('html, body').animate({scrollTop:0}, 1200);
+		$('html, body').animate({scrollTop:0}, 1200);
 		return false;
 	});
-
-
-	// Captions
-	$('.lv-caption').caption({opacity:0.6,animation:'fade',separator: '::',button:true});
-	$('.lv-caption-fade').caption({opacity:0.6,fixed:false,animation:'fade',separator: '::'});
-	$('.lv-caption-slide').caption({opacity:0.6,fixed:false,animation:'slide',separator: '::'});
-	$('.lv-caption-bounce').caption({opacity:0.6,fixed:false,animation:'bounce',separator: '::'});
-	$('.lv-caption-gravity').caption({opacity:0.6,fixed:false,animation:'gravity',separator: '::'});
-	$('.lv-caption-zoom').caption({opacity:0.6,fixed:false,animation:'zoom',separator: '::'});
-	$('.lv-caption-racer').caption({opacity:0.6,fixed:false,animation:'racer',separator: '::'});
-	$('.lv-caption-move').caption({opacity:0.6,fixed:false,animation:'move',separator: '::'});
 
 	// Article Details
 	$('.article-info dd').hide();
 	$('.article-info-term').click(function(){
-		$(this).siblings('.article-info dd').slideToggle("fast");
+		$(this).siblings('.article-info dd').slideToggle('fast');
 	});
 
 	// Toppanel
-//	$('#toppanel').hide();
 	$('a#toppanel-toggle').click(function(){
-		$('#toppanel').slideToggle("middle");
+		$('#toppanel').slideToggle('middle');
 		return true;
 	});
 
 	// Sidepanel
-//	$('#sidepanel').hide();
 	$('a#sidepanel-toggle').click(function(){
-		$('#sidepanel').toggle("middle");
+		$('#sidepanel').toggle('middle');
 		return false;
 	});
 
 	// System Messages
-	$("div#system-message div").fadeOut({
+	$('div#system-message div').fadeOut({
 		duration: 15000
 	});
 });
