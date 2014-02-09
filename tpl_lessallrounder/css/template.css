@@ -6779,56 +6779,36 @@ p.img_caption {
 	font-style: italic;
 	width: 100%;
 }
-.lvacc-all {
-	cursor: pointer;
-	font-weight: bold;
-	letter-spacing: 1px;
-	font-size: 1.2em;
-	display: block;
+.accordion-group {
+	margin-top: 10px;
 }
-.lvacc {
-	cursor: pointer;
-	color: #555;
-	height: 31px;
-	line-height: 30px;
-	font-weight: bold;
-	display: block;
-	padding: 0 35px;
-	margin: 10px 0 0 0;
-	background-color: #eee;
-	background-image: url(../images/lvacc.jpg);
-	background-repeat: no-repeat;
-	border: 1px solid #aaa;
-	border-bottom-color: #bbb;
-}
-.lvacc:hover {
-	color: #000;
-	display: block;
-	background-color: #fff;
-	background-position: left -30px;
-	text-decoration: none;
-}
-.lvacc:active {
-	color: #0099FF !important;
-}
-.lvacc_active {
+.accordion-group.panel.active .accordion-heading .accordion-toggle {
 	color: #0099FF;
 	background-position: left -60px;
 }
-.lvacc_active:hover {
+.accordion-group.panel.active .accordion-heading .accordion-toggle:hover {
 	color: #000;
-	background-position: left -60px;
 }
-.hideme {
-	margin-bottom: 30px;
-	padding: 5px 30px 20px 30px;
+.accordion-heading .accordion-toggle {
+	color: #555;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 35px;
+	background-color: #eee;
+	background-image: url(../images/accordion.jpg);
+	background-repeat: no-repeat;
+	border: 1px solid #aaa;
+	border-bottom-color: #bbb;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
-.accordion-heading {
-	font-size: 150%;
-	margin: 10px 0 10px 0;
-}
-.accordion-body {
-	padding: 0 10px 0px 10px;
+.accordion-heading .accordion-toggle:hover {
+	color: #000;
+	background-color: #fff;
+	background-position: left -30px;
+	text-decoration: none;
 }
 hr {
 	border: none;
@@ -8116,8 +8096,53 @@ div[class^="img-fulltext-"] {
 	box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
 	border-radius: 3px;
 }
+.lvacc-all {
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 1.2em;
+	display: block;
+}
+.lvacc {
+	cursor: pointer;
+	color: #555;
+	height: 31px;
+	line-height: 30px;
+	font-weight: bold;
+	display: block;
+	padding: 0 35px;
+	margin: 10px 0 0 0;
+	background-color: #eee;
+	background-image: url(../images/lvacc.jpg);
+	background-repeat: no-repeat;
+	border: 1px solid #aaa;
+	border-bottom-color: #bbb;
+}
+.lvacc:hover {
+	color: #000;
+	display: block;
+	background-color: #fff;
+	background-position: left -30px;
+	text-decoration: none;
+}
+.lvacc:active {
+	color: #0099FF !important;
+}
+.lvacc_active {
+	color: #0099FF;
+	background-position: left -60px;
+}
+.lvacc_active:hover {
+	color: #000;
+	background-position: left -60px;
+}
+.hideme {
+	margin-bottom: 30px;
+	padding: 5px 30px 20px 30px;
+}
 body {
 	background-image: url(../images/background.png);
+	repeat: url(../images/background.png);
 	overflow-x: hidden;
 }
 #wrapper,
@@ -8389,6 +8414,8 @@ a.logo:hover {
 #wrapper {
 	margin-top: 10px;
 	padding: 0 0 10px 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
 }
 #wrapper #leftcol h3.moduleh3,
 #wrapper #rightcol h3.moduleh3 {
