@@ -16,8 +16,6 @@ $path	= $this->baseurl . '/templates/' . $tpl->template;
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="designer" content="Juergen Koller - http://www.lernvid.com" />
-	<meta name="licence" content="Creative Commons 3.0" />
 	<link href="<?php echo $path; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<jdoc:include type="head" />
 	<link href="<?php echo $path; ?>/css/template<?php echo $this->params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />

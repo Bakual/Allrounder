@@ -189,13 +189,13 @@ p.hot, p.new, p.top {
 	background-repeat:no-repeat;
 }
 p.hot {
-	background-image : url(../images/icons/hot.gif);
+	background-image: url(../images/icons/hot.gif);
 }
 p.new {
-	background-image : url(../images/icons/new.gif);
+	background-image: url(../images/icons/new.gif);
 }
 p.top {
-	background-image : url(../images/icons/top.gif);
+	background-image: url(../images/icons/top.gif);
 }
 
 ul {
@@ -207,43 +207,34 @@ ul {
 		}
 	}
 	&.arrow, &.folder, &.ok, &.star, &.cross {
-		padding-left:10px;
+		padding-left: 10px;
 		ul {
-			padding-left:10px;
+			padding-left: 10px;
 		}
-		li, li li {
-			margin:0; padding:0;
-			background-repeat : no-repeat;
-			background-position:0 4px;
-			padding-left: 16px !important;
-			list-style:none;
-			line-height:1.6em !important;
-		}
-	}
-	&.arrow {
-		li, li li {
-			background-image : url(../images/icons/arrow.gif);
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			line-height: 1.6em !important;
+			&:before {
+				padding-right: 3px;
+			}
 		}
 	}
-	&.folder {
-		li, li li {
-			background-image : url(../images/icons/folder.gif);
-		}
+	&.arrow li:before {
+		content: url(../images/icons/arrow.gif);
 	}
-	&.ok {
-		li, li li {
-			background-image : url(../images/icons/ok.gif);
-		}
+	&.folder li:before {
+		content: url(../images/icons/folder.gif);
 	}
-	&.star {
-		li, li li {
-			background-image : url(../images/icons/star.gif);
-		}
+	&.ok li:before {
+		content: url(../images/icons/ok.gif);
 	}
-	&.cross {
-		li, li li {
-			background-image : url(../images/icons/cross.png);
-		}
+	&.star li:before {
+		content: url(../images/icons/star.gif);
+	}
+	&.cross li:before {
+		content: url(../images/icons/cross.png);
 	}
 }
 
