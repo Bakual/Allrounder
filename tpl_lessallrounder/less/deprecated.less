@@ -1,46 +1,170 @@
-/* ACCORDION */
-.lvacc-all {
-	cursor:pointer;
-	font-weight:bold;
-	letter-spacing:1px;
-	font-size:1.2em;
-	display:block;
-}
-.lvacc {
-	cursor:pointer;
-	color: #555;
-	height:31px;
-	line-height:30px;
-	font-weight:bold;
-	display:block;
-	padding:0 35px;
-	margin:10px 0 0 0;
-	background-color:#eee;
-	background-image : url(../images/lvacc.jpg);
-	background-repeat : no-repeat;
-	border:1px solid #aaa;
-	border-bottom-color:#bbb;
-	&:hover {
-		color: #000;
-		display: block;
-		background-color: #fff;
-		background-position: left -30px;
-		text-decoration: none;
+/* CSS rules related to deprecated features */
+.guarded-deprecated() when (@js_deprecated = 1) {
+	/* Accordion */
+	.lvacc-all {
+		cursor:pointer;
+		font-weight:bold;
+		letter-spacing:1px;
+		font-size:1.2em;
+		display:block;
 	}
-	&:active {
-		color: #0099FF !important;
+	.lvacc {
+		cursor:pointer;
+		color: #555;
+		height:31px;
+		line-height:30px;
+		font-weight:bold;
+		display:block;
+		padding:0 35px;
+		margin:10px 0 0 0;
+		background-color:#eee;
+		background-image : url(../images/lvacc.jpg);
+		background-repeat : no-repeat;
+		border:1px solid #aaa;
+		border-bottom-color:#bbb;
+		&:hover {
+			color: #000;
+			display: block;
+			background-color: #fff;
+			background-position: left -30px;
+			text-decoration: none;
+		}
+		&:active {
+			color: #0099FF !important;
+		}
 	}
-}
-.lvacc_active {
-	color: #0099FF;
-	background-position: left -60px;
-	&:hover {
-		color: #000;
+	.lvacc_active {
+		color: #0099FF;
 		background-position: left -60px;
+		&:hover {
+			color: #000;
+			background-position: left -60px;
+		}
+	}
+	.hideme {
+		margin-bottom:30px;
+		padding: 5px 30px 20px 30px;
+	}
+	/* easy tooltips */
+	.easy-tooltip-default, .tip-white, .tip-black, .tip-blue, .tip-red, .tip-green, .tip-yellow {
+		padding:3px 5px;
+		max-width:300px;
+		z-index:9999;
+		font-size:11px;
+		line-height:normal;
+	}
+	.easy-tooltip-default {
+		border: 1px solid @tooltipBorder;
+		background-color: @tooltipBg;
+		color: @tooltipFont;
+	}
+	.easy-tooltip-title {
+		display:block;
+		text-align:center;
+		border-bottom:1px dotted;
+		font-weight:bold;
+	}
+	.tip-white {
+		color: #505050;
+		background-color:#fff;
+		border: 1px solid #ddd;
+	}
+	.tip-black {
+		color:#fcfcfc;
+		background-color:#333;
+		border:1px solid #111;
+	}
+	.tip-blue {
+		color:#1b475a;
+		background-color:#d9f1fb;
+		border:1px solid #7fcdee;
+	}
+	.tip-red {
+		color:#fcfcfc;
+		background-color:#bb3b1d;
+		border:1px solid #8f2a0f;
+	}
+	.tip-green {
+		color:#558221;
+		background-color:#f2fdf1;
+		border:1px solid #b6e184;
+	}
+	.tip-yellow {
+		color: #5b5316;
+		background-color:#f9f2ba;
+		border: 1px solid #e9d315;
+	}
+	/* easy caption */
+	.easy-caption {
+		clear:both;
+		&-foreground {
+			line-height:normal;
+		}
+		&-title {
+			padding:2px 5px;
+			display:block;
+			font-weight:bold;
+			font-size:12px;
+		}
+		&-text {
+			font-size:11px;
+			padding:4px 5px;
+			display:block;
+		}
+		&-wrapper {
+			display:inline-block;
+			margin: 5px 10px 10px 0;
+			padding:9px;
+		}
+		&-close {
+			padding:0px 4px;
+			text-align:right;
+			font-size:10px;
+		}
+	}
+	.easy-caption-background {
+		background-color:#000000;
+		border-top:1px solid #555;
+	}
+	.easy-caption-foreground {
+		color:#bbb;
+	}
+	.easy-caption-title {
+		border-bottom:1px dotted #bbb;
+		color: #fff;
+	}
+	.easy-caption-wrapper {
+		background:#eee;
+		border:1px solid #ccc;
+	}
+	.easy-caption-close {
+		color:#fff;
+		background:#000;
+		border:1px solid #333;
 	}
 }
-.hideme {
-	margin-bottom:30px;
-	padding: 5px 30px 20px 30px;
+.guarded-deprecated();
+
+/* Load CSS3 effects for deprecated features */
+.guarded-deprecated-effects() when (@js_deprecated = 1) and (@css3effects = 1) {
+	a.lvacc, .hideme {
+		border-radius: 4px;
+	}
+	.easy-tooltip-wrapper {
+		box-shadow: 1px 1px 6px #ccc;
+	}
+	.easy-tooltip-default, .tip-white, .tip-black, .tip-blue, .tip-red, .tip-green, .tip-yellow {
+		border-radius: 4px;
+		box-shadow: 0 0 7px #ccc;
+	}
+
+	.easy-caption-wrapper {
+		text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+		box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+		border-radius:3px;
+	}
+	.easy-caption-close {
+		border-radius:10px;
+	}
 }
-/* ACCORDION end */
+.guarded-deprecated-effects();

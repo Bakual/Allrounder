@@ -1,8 +1,4 @@
-/*********************************************
-*** Designed by Juergen Koller			   ***
-*** Designers Home: http://www.LernVid.com ***
-**********************************************/
-
+/* Main file */
 // CSS Reset
 // @import "../../../media/jui/less/reset.less";
 @import "reset.less"; // Local copy, fixing a bug with IE
@@ -94,7 +90,7 @@
 @import "joomla.less";
 @import "typo.less";
 @import "breadcrumbs.less";
-@import "lvdropdown.less";
+@import "dropdown.less";
 @import "modules.less";
 @import "ribbons.less";
 @import "pagination.less";
@@ -560,70 +556,3 @@ div {
 		border-bottom: 3px double @itemSeparatorColor !important;
 	}
 }
-
-/* easy tooltips start */
-.easy-tooltip-default {
-	border: 1px solid @tooltipBorder;
-	background-color: @tooltipBg;
-	color: @tooltipFont;
-}
-.easy-tooltip-title {
-	display:block;
-	text-align:center;
-	border-bottom:1px dotted;
-	font-weight:bold;
-}
-.tip-white {
-	color: #505050;
-	background-color:#fff;
-	border: 1px solid #ddd;
-}
-.tip-black {
-	color:#fcfcfc;
-	background-color:#333;
-	border:1px solid #111;
-}
-.tip-blue {
-	color:#1b475a;
-	background-color:#d9f1fb;
-	border:1px solid #7fcdee;
-}
-.tip-red {
-	color:#fcfcfc;
-	background-color:#bb3b1d;
-	border:1px solid #8f2a0f;
-}
-.tip-green {
-	color:#558221;
-	background-color:#f2fdf1;
-	border:1px solid #b6e184;
-}
-.tip-yellow {
-	color: #5b5316;
-	background-color:#f9f2ba;
-	border: 1px solid #e9d315;
-}
-/* easy tooltips end */
-
-/* easy caption start */
-.easy-caption-background {
-	background-color:#000000;
-	border-top:1px solid #555;
-}
-.easy-caption-foreground {
-	color:#bbb;
-}
-.easy-caption-title {
-	border-bottom:1px dotted #bbb;
-	color: #fff;
-}
-.easy-caption-wrapper {
-	background:#eee;
-	border:1px solid #ccc;
-}
-.easy-caption-close {
-	color:#fff;
-	background:#000;
-	border:1px solid #333;
-}
-/* easy caption end */

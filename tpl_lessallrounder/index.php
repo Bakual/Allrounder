@@ -38,7 +38,6 @@ JHtmlJquery::framework();
 	<?php if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
-	<script src="<?php echo $path; ?>/js/lv-dropdown.js" type="text/javascript"></script>
 	<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
 	<?php if ($params->get('js_deprecated')) :
 		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip. ?>
