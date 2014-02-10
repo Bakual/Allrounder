@@ -1,5 +1,5 @@
 /* CSS rules related to deprecated features */
-.guarded-deprecated() when (@js_deprecated = 1) {
+.guarded-deprecated() when (@deprecated = 1) {
 	/* Accordion */
 	.lvacc-all {
 		cursor:pointer;
@@ -142,11 +142,46 @@
 		background:#000;
 		border:1px solid #333;
 	}
+	/* columns for content, use "row-fluid" and "spanx" instead */
+	.lv-cols {
+		overflow:hidden;
+		width:auto;
+		display:inline-block;
+		margin:10px 0;
+		p {
+			margin:7px 0;
+		}
+	}
+	.lv-cols2 {
+		float:left;
+		width: 48%;	
+		padding:0 1%;
+	}
+	.lv-cols3 {
+		float:left;
+		width: 31.33%;	
+		padding:0 1%;
+	}
+	.lv-cols4 {
+		float:left;
+		width: 23%;	
+		padding:0 1%;
+	}
+	.lv-cols5 {
+		float:left;
+		width: 18%;	
+		padding:0 1%;
+	}
+	.lv-cols6 {
+		float:left;
+		width: 14.66%;	
+		padding:0 1%;
+	}
 }
 .guarded-deprecated();
 
 /* Load CSS3 effects for deprecated features */
-.guarded-deprecated-effects() when (@js_deprecated = 1) and (@css3effects = 1) {
+.guarded-deprecated-effects() when (@deprecated = 1) and (@css3effects = 1) {
 	a.lvacc, .hideme {
 		border-radius: 4px;
 	}

@@ -413,9 +413,9 @@
 					<option value="0">JNO</option>
 				</field>
 				<field type="spacer" hr="true" />
-				<field name="js_deprecated" type="radio"
-					label="TPL_ALLROUNDER_ENABLE_JS_DEPRECATED"
-					description="TPL_ALLROUNDER_ENABLE_JS_DEPRECATED_DESC"
+				<field name="deprecated" type="radio"
+					label="TPL_ALLROUNDER_ENABLE_DEPRECATED"
+					description="TPL_ALLROUNDER_ENABLE_DEPRECATED_DESC"
 					class="btn-group btn-group-yesno"
 					default="0" >
 					<option value="1">JENABLED</option>

@@ -39,7 +39,7 @@ JHtmlJquery::framework();
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
 	<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
-	<?php if ($params->get('js_deprecated')) :
+	<?php if ($params->get('deprecated')) :
 		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip. ?>
 		<script src="<?php echo $path; ?>/js/deprecated.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
