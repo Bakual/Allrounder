@@ -91,8 +91,7 @@ h6 {
 	color: #333;
 	padding: 15px;
 	display: inline-block;
-	width: 90%;
-	margin: 20px 0;
+	margin: 20px 5%;
 }
 .contenthead {
 	&-dark {
@@ -160,8 +159,8 @@ h6 {
 	display: inline-block;
 	margin: 20px 0;
 	padding: 15px 50px 15px 15px;
-	background-position:right top;
-	background-repeat:no-repeat;
+	background-position: right top;
+	background-repeat: no-repeat;
 }
 .hot {
 	background-image: url(../images/icons/hot.gif);
@@ -256,10 +255,10 @@ table {
 			border-color: #62b0ff;
 		}
 		th {
-			background-color:#bbddff;
+			#gradient > .vertical(#fff, #bbddff);
 		}
 		td {
-			background-color:#88c4ff;
+			#gradient > .vertical(#fff, #88c4ff);
 		}
 	}
 	&.red {
@@ -270,10 +269,10 @@ table {
 			border-color: #FF9999;
 		}
 		th {
-			background-color:#ffd9d9;
+			#gradient > .vertical(#fff, #ffd9d9);
 		}
 		td {
-			background-color:#ffb5b5;
+			#gradient > .vertical(#fff, #ffb5b5);
 		}
 	}
 	&.yellow {
@@ -284,12 +283,10 @@ table {
 			border-color: #e8e800;
 		}
 		th {
-			border:3px solid #e8e800;
-			background-color:#ffff6c;
+			#gradient > .vertical(#fff, #ffff6c);
 		}
 		td {
-			border:3px solid #e8e800;
-			background-color:#ffff6c;
+			#gradient > .vertical(#fff, #ffff6c);
 		}
 	}
 	&.white {
@@ -300,25 +297,20 @@ table {
 			border-color: #ddd;
 		}
 		th {
-			background-color:#f5f5f5;
+			#gradient > .vertical(#fff, #f5f5f5);
 		}
 		td {
 			background-color:#fff;
 		}
 	}
 }
-
-/* special Links */
-
-a.extern {
-	background-image: url(../images/icons/extern.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+/* Links */
+a.extern:before {
+	content: url(../images/icons/extern.gif);
+	padding-right: 1px;
 }
-a.www {
-	background-image: url(../images/icons/www.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.www:before {
+	content: url(../images/icons/www.gif);
 }
 a.download {
 	background-image: url(../images/icons/download.gif);
@@ -365,7 +357,7 @@ a.video {
 	background-repeat: no-repeat;
 	padding-left: 18px;
 }
-a.info {
+a.information {
 	background-image: url(../images/icons/info.gif);
 	background-repeat: no-repeat;
 	padding-left: 18px;
