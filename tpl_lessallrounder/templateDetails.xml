@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>{LESS} Allrounder</name>
 	<creationDate>2014-01-25</creationDate>
@@ -315,9 +315,27 @@
 				<field name="buttonBorderRight" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT" description="TPL_ALLROUNDER_BUTTON_BORDER_RIGHT_DESC" />
 				<field name="buttonBorderBottom" type="color" default="#ffffff" label="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM" description="TPL_ALLROUNDER_BUTTON_BORDER_BOTTOM_DESC" />
 				<field type="spacer" hr="true" />
-				<field name="tooltipBorder" type="color" default="#A6A7AB" label="TPL_ALLROUNDER_TOOLTIP_BORDER" description="TPL_ALLROUNDER_TOOLTIP_BORDER_DESC" />
-				<field name="tooltipBg" type="color" default="#F2F3F5" label="TPL_ALLROUNDER_TOOLTIP_BG" description="TPL_ALLROUNDER_TOOLTIP_BG_DESC" />
-				<field name="tooltipFont" type="color" default="#800000" label="TPL_ALLROUNDER_TOOLTIP_FONT" description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC" />
+				<field
+					name="tooltipBorder"
+					type="color"
+					label="TPL_ALLROUNDER_TOOLTIP_BORDER"
+					description="TPL_ALLROUNDER_TOOLTIP_BORDER_DESC"
+					default="#A6A7AB"
+					/>
+				<field
+					name="tooltipBg"
+					type="color"
+					label="TPL_ALLROUNDER_TOOLTIP_BG"
+					description="TPL_ALLROUNDER_TOOLTIP_BG_DESC"
+					default="#F2F3F5"
+					/>
+				<field
+					name="tooltipFont"
+					type="color"
+					label="TPL_ALLROUNDER_TOOLTIP_FONT"
+					description="TPL_ALLROUNDER_TOOLTIP_FONT_DESC"
+					default="#800000"
+					/>
 			</fieldset>
 			<fieldset name="ddcolors"
 				label="TPL_ALLROUNDER_DD_COLORS" description="" >

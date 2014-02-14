@@ -15,7 +15,7 @@ $tpl	= $app->getTemplate(true);
 $path	= $this->baseurl . '/templates/' . $tpl->template;
 $params	= $tpl->params;
 
-JHtmlJquery::framework();
+JHtmlBootstrap::tooltip();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -180,7 +180,11 @@ JHtmlJquery::framework();
 			<div class="footer-inner">
 				<span class="feckl">&nbsp;</span>
 				<span class="feckr">&nbsp;</span>
-				<div id="scroll_up"> <a href="#" class="lv-tooltip" id="gotop" title="Scroll to top">&uarr;&uarr;&uarr;</a></div>
+				<div id="scroll_up">
+					<a href="#" class="hasTooltip" id="gotop" title="<?php echo JText::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
+						&uarr;&uarr;&uarr;
+					</a>
+				</div>
 				<?php require 'modules/footermodules.php'; ?>
 			</div>
 			<div class="footer-bottom">

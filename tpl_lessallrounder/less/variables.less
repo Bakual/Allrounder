@@ -266,14 +266,14 @@
 
 // Tooltips and popovers
 // -------------------------
-@tooltipColor:            #fff;
-@tooltipBackground:       #000;
+@tooltipColor:            @tooltipFont; // Taken from template parameters (orig: #fff)
+@tooltipBackground:       @tooltipBg; // Taken from template parameters (orig: #000)
 @tooltipArrowWidth:       5px;
-@tooltipArrowColor:       @tooltipBackground;
+@tooltipArrowColor:       @tooltipBorder; // Taken from template parameters (orig: @tooltipBackground);
 
-@popoverBackground:       #fff;
+@popoverBackground:       @tooltipBackground; // Same as Tooltip (orig: #fff)
 @popoverArrowWidth:       10px;
-@popoverArrowColor:       #fff;
+@popoverArrowColor:       @tooltipArrowColor; // Same as Tooltip (orig: #fff)
 @popoverTitleBackground:  darken(@popoverBackground, 3%);
 
 // Special enhancement for popovers

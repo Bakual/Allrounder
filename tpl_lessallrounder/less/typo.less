@@ -154,22 +154,24 @@ h6 {
 .question {
 	background-image: url(../images/icons/question.png);
 }
-.hot, .new, .top {
-	border: 1px solid #ccc;
-	display: inline-block;
-	margin: 20px 0;
-	padding: 15px 50px 15px 15px;
-	background-position: right top;
-	background-repeat: no-repeat;
-}
-.hot {
-	background-image: url(../images/icons/hot.gif);
-}
-.new {
-	background-image: url(../images/icons/new.gif);
-}
-.top {
-	background-image: url(../images/icons/top.gif);
+:not(.tooltip) {
+	&.hot, &.new, &.top {
+		border: 1px solid #ccc;
+		display: inline-block;
+		margin: 20px 0;
+		padding: 15px 50px 15px 15px;
+		background-position: right top;
+		background-repeat: no-repeat;
+	}
+	&.hot {
+		background-image: url(../images/icons/hot.gif);
+	}
+	&.new {
+		background-image: url(../images/icons/new.gif);
+	}
+	&.top {
+		background-image: url(../images/icons/top.gif);
+	}
 }
 /* Lists */
 ul {
