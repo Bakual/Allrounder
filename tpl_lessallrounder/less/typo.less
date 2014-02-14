@@ -379,6 +379,34 @@ img {
 		border: 1px solid #000;
 	}
 }
+/* Responsive Content Columns */
+.col-2 {
+	.content-columns(2);
+}
+.col-3 {
+	.content-columns(3);
+}
+.col-4 {
+	.content-columns(4);
+}
+.col-5 {
+	.content-columns(5);
+}
+.col-6 {
+	.content-columns(6);
+}
+.col- {
+	&4, &5, &6 {
+		@media (min-width: 768px) and (max-width: 979px) {
+			.content-columns(3);
+		}
+	}
+	&2, &3, &4, &5, &6 {
+		@media (max-width: 767px) {
+			.content-columns(1);
+		}
+	}
+}
 /* Special */
 blockquote {
 	padding: 20px 30px 20px 40px;
