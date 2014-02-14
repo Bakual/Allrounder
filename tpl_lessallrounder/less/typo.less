@@ -239,7 +239,6 @@ table {
 			border-color: #ccc;
 		}
 		th {
-//			#gradient > .vertical-three-colors(#fff, #eee, 30%, #aaa);
 			#gradient > .vertical(#ddd, #333);
 			color: #000;
 		}
@@ -305,123 +304,112 @@ table {
 	}
 }
 /* Links */
+a {
+	&.extern, &.www, &.download, &.run, &.image, &.user, &.pdf, &.zip, &.text, &.sound, &.video, &.information {
+		&:before {
+			padding-right: 0.2em;
+			vertical-align: middle;
+		}
+	}
+}
 a.extern:before {
 	content: url(../images/icons/extern.gif);
-	padding-right: 1px;
 }
 a.www:before {
 	content: url(../images/icons/www.gif);
 }
-a.download {
-	background-image: url(../images/icons/download.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.download:before {
+	content: url(../images/icons/download.gif);
 }
-a.run {
-	background-image: url(../images/icons/run.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.run:before {
+	content: url(../images/icons/run.gif);
 }
-a.image {
-	background-image: url(../images/icons/image.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.image:before {
+	content: url(../images/icons/image.gif);
 }
-a.user {
-	background-image: url(../images/icons/user.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.user:before {
+	content: url(../images/icons/user.gif);
 }
-a.pdf {
-	background-image: url(../images/icons/pdf.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.pdf:before {
+	content: url(../images/icons/pdf.gif);
 }
-a.zip {
-	background-image: url(../images/icons/zip.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.zip:before {
+	content: url(../images/icons/zip.gif);
 }
-a.text {
-	background-image: url(../images/icons/text.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.text:before {
+	content: url(../images/icons/text.gif);
 }
-a.sound {
-	background-image: url(../images/icons/sound.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.sound:before {
+	content: url(../images/icons/sound.gif);
 }
-a.video {
-	background-image: url(../images/icons/video.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.video:before {
+	content: url(../images/icons/video.gif);
 }
-a.information {
-	background-image: url(../images/icons/info.gif);
-	background-repeat: no-repeat;
-	padding-left: 18px;
+a.information:before {
+	content: url(../images/icons/info.gif);
 }
+/* Image Styles */
 img {
-	border:0;
 	&.border-dark {
 		border: 1px solid #555;
-		padding:2px;
-		background:#000;
+		padding: 2px;
+		background: #000;
 	}
 	&.border-light {
 		border: 1px solid #ccc;
-		padding:2px;
-		background:#fff;
-		
+		padding: 2px;
+		background: #fff;
+	}
+	&.featured, &.featured-dark {
+		padding: 9px;
+		margin: 10px;
+		&.pull-left {
+			margin-left: 0;
+		}
+		&.pull-right {
+			margin-right: 0;
+		}
 	}
 	&.featured {
-		float:left;
-		padding: 9px;
-		background:#eee;
-		margin: 5px 10px 10px 0;
-		border:1px solid #ccc;
+		background: #eee;
+		border: 1px solid #ccc;
 	}
 	&.featured-dark {
-		float:left;
-		padding: 9px;
-		border:1px solid #000;
-		background:#333;
-		margin: 5px 10px 10px 0;
+		background: #333;
+		border: 1px solid #000;
 	}
 }
+/* Special */
 blockquote {
-	margin:0;
 	padding: 20px 30px 20px 40px;
-	font-style:italic;
-	font-size: 18px;
+	font-size: @baseFontSize * 1.4;
+	font-style: italic;
 	font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 	color: #333;
-	background:#fefefe;
+	background: #fefefe;
 	border: 1px dotted #ccc;
-	text-align:justify;
+	text-align: justify;
 	background-image : url(../images/icons/quote.png);
 	background-position: 4px 8px;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 pre {
-	border:1px solid #f3f3f3;
-	border-left: 1px solid lime;
-	background:#fff;
-	padding-left:12px;
-	font-size:11px;
-	font-family: @monoFontFamily !important; // -> Bootstrap (monospace, ...)
-	color: #000;
+	border-color: #f3f3f3;
+	border-left-color: lime;
+	background: #fff;
+	padding-left: 10px;
 	background-image : url(../images/icons/pre.png);
 	background-position: right top;
 	background-repeat: no-repeat;
-	overflow:auto;
 }
 span.dropcap {
+	display: block;
+}
+*.dropcap:first-letter {
 	font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 	float: left;
 	font-size: 3em;
 	line-height: 0.9em;
 	margin-right: 0.03em;
-	margin-bottom:-0.25em;	
+	margin-bottom:-0.25em;
 }
