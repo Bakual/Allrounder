@@ -85,7 +85,7 @@ h6 {
 	&.section {font-size:1.2em;}
 }
 /* Special Paragraphs */
-.contenthead, [class^="contenthead-"] {
+.contenthead, [class^="contenthead-"], [class*=" contenthead-"] {
 	background: #fff;
 	border: 10px solid #e9e9e9;
 	color: #333;
@@ -115,63 +115,63 @@ h6 {
 		color: #348525;
 	}
 }
-.tip, .alerts, .info, .right, .alarm, .tell, .note, .content, .question {
-	padding: 12px 30px 12px 50px;
-	margin: 10px 0;
-	background-repeat : no-repeat;
-	background-position: 10px center;
-}
-.tip {
-	border-top: 2px solid #ffea51;
-	border-bottom: 2px solid #ffea51;
-	background-color: #ffffb0;
-	background-image: url(../images/icons/tip.png);
-}
-.alerts {
-	border-top: 1px solid #FF5050;
-	border-bottom: 1px solid #FF5050;
-	background-color: #ffe1e1;
-	background-image: url(../images/icons/alerts.png);
-}
-.info {
-	background-image: url(../images/icons/info.png);
-}
-.right {
-	background-image: url(../images/icons/right.png);
-}
-.alarm {
-	background-image: url(../images/icons/alarm.png);
-}
-.tell {
-	background-image: url(../images/icons/tell.png);
-}
-.content {
-	background-image: url(../images/icons/content.png);
-}
-.note {
-	background-image: url(../images/icons/note.png);
-}
-.question {
-	background-image: url(../images/icons/question.png);
-}
-:not(.tooltip) {
-	&.hot, &.new, &.top {
-		border: 1px solid #ccc;
-		display: inline-block;
-		margin: 20px 0;
-		padding: 15px 50px 15px 15px;
-		background-position: right top;
-		background-repeat: no-repeat;
+p, div {
+	&.tip, &.alerts, &.info, &.right, &.alarm, &.tell, &.note, &.content, &.question {
+		padding: 12px 30px 12px 50px;
+		margin: 10px 0;
+		background-repeat : no-repeat;
+		background-position: 10px center;
 	}
-	&.hot {
-		background-image: url(../images/icons/hot.gif);
+	&.tip {
+		border-top: 2px solid #ffea51;
+		border-bottom: 2px solid #ffea51;
+		background-color: #ffffb0;
+		background-image: url(../images/icons/tip.png);
 	}
-	&.new {
-		background-image: url(../images/icons/new.gif);
+	&.alerts {
+		border-top: 1px solid #FF5050;
+		border-bottom: 1px solid #FF5050;
+		background-color: #ffe1e1;
+		background-image: url(../images/icons/alerts.png);
 	}
-	&.top {
-		background-image: url(../images/icons/top.gif);
+	&.info {
+		background-image: url(../images/icons/info.png);
 	}
+	&.right {
+		background-image: url(../images/icons/right.png);
+	}
+	&.alarm {
+		background-image: url(../images/icons/alarm.png);
+	}
+	&.tell {
+		background-image: url(../images/icons/tell.png);
+	}
+	&.content {
+		background-image: url(../images/icons/content.png);
+	}
+	&.note {
+		background-image: url(../images/icons/note.png);
+	}
+	&.question {
+		background-image: url(../images/icons/question.png);
+	}
+}
+.hot, .new, .top:not(.tooltip) {
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin: 20px 0;
+	padding: 15px 50px 15px 15px;
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.hot {
+	background-image: url(../images/icons/hot.gif);
+}
+.new {
+	background-image: url(../images/icons/new.gif);
+}
+.top:not(.tooltip) {
+	background-image: url(../images/icons/top.gif);
 }
 /* Lists */
 ul {
@@ -409,6 +409,14 @@ img {
 		}
 	}
 }
+.items-row {
+	.col- {
+		&2, &3, &4, &5, &6 {
+			.content-columns(1);
+		}
+	}
+}
+
 /* Special */
 blockquote {
 	padding: 20px 30px 20px 40px;
@@ -435,7 +443,7 @@ pre {
 span.dropcap {
 	display: block;
 }
-*.dropcap:first-letter {
+.dropcap::first-letter {
 	font-family: @serifFontFamily; // -> Bootstrap (Georgia, ...)
 	float: left;
 	font-size: 3em;
