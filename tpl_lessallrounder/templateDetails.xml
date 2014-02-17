@@ -48,10 +48,12 @@
 				<field name="pageMaxWidth" type="text"
 					label="TPL_ALLROUNDER_MAX_WIDTH"
 					description="TPL_ALLROUNDER_MAX_WIDTH_DESC"
+					showon="whatWidth:1"
 					default="1180px" />
 				<field name="pageWidth" type="text"
 					label="TPL_ALLROUNDER_WIDTH"
 					description="TPL_ALLROUNDER_WIDTH_DESC"
+					showon="whatWidth:0"
 					default="950px" />
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
