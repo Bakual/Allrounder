@@ -1,112 +1,94 @@
-.items-leading, .items-row {
-	overflow:hidden;
+/* "Rows" containing articles */
+.items-leading > div, .items-row {
+	margin-bottom: 25px;
 }
-.items-row, [class|="leading"] {
-	margin-bottom:25px !important;
-}
-[class|="leading"], .item-page, .item, .contact {
+/* The article itself */
+.items-leading > div, .item-page, .item, .contact {
 	background-color: @articleBgColor;
 	border: 1px solid @articleBorderColor;
 	overflow: hidden;
 	padding: 2%;
 }
-
-.items-more {
-	padding:10px 5px
-}
-
 /* System Tooltips (MooTools based) */
 .tip-wrap {
-	float : left;
-	background-color : #202020;
-	border:3px double #555;
-	padding : 7px 9px;
+	float: left;
+	background-color: @tooltipBg;
+	border: 3px double @tooltipBorder;
+	padding: 7px 9px;
 	z-index: 13000;
-	max-width:300px;
+	max-width: 300px;
 	.border-radius(5px);
 }
 .tip-title {
 	color: #fff;
-	font-weight:bold;
-	font-size:12px;
+	font-weight: bold;
+	font-size: 12px;
 }
 .tip-text {
-	color: #999;
-	font-size:11px;
+	color: @tooltipFont;
+	font-size: 11px;
 	font-weight: normal;
-	margin : 0;
+	margin: 0;
 }
-
-/* PRINT-EMAIL */
-
-/* Not needed when using Bootstrap + Icomoon */
+/* JLayout joomla.content.icons */
 #maincontent {
 	ul.actions {
-		margin: 0;
-		padding: 0;
 		li {
-			display: inline;
 			font-size: 11px;
-			&.hide-text {
-				font-size: 0;
-			}
-			a {
-				border-left: 1px solid;
-				padding-left: 5px;
-				padding-right: 3px;
+			border-left: 1px solid;
+			padding-right: 0;
+			padding-left: 10px;
+			&:first-child  {
+				border-left: 0;
 			}
 			.icon-print:before {
 				content: url(../images/system/printButton.png);
+				vertical-align: middle;
 			}
 			.icon-envelope:before {
 				content: url(../images/system/emailButton.png);
+				vertical-align: middle;
 			}
 			.icon-edit:before {
 				content: url(../images/system/editButton.png);
+				vertical-align: middle;
 			}
 		}
 	}
 }
-
-/* vote */
-.content_rating, .content_vote {
-	display:inline-block;
-}
+/* Voting */
 .content_rating img {
 	padding:0 4px 10px 4px;
 }
-
+/* Page Header */
 .page-header {
 	h1 {
-		text-align:right;
-		margin:0 0 25px 0;
-		padding:0 10px;
-		font-size:1em;
-		font-variant:small-caps;
-		border-bottom:1px dashed;
+		text-align: right;
+		margin: 0 0 25px 0;
+		padding: 0 10px;
+		font-size: 1em;
+		font-variant: small-caps;
+		border-bottom: 1px dashed;
 	}
 }
-
 /* Article Infos */
 dl.article-info {
-	margin: 0 0 10px 0px;
-	font-size: @baseFontSize -2;
-	padding: 0 0 0 20px;
+	font-size: @baseFontSize - 2;
+	padding-left: 20px;
 }
 .article-info-term {
 	color: @linkColor;
-	font-weight: bold;
 	cursor: pointer;
 	margin-left: -5px;
 	margin-bottom: 1px;
 	letter-spacing: 2px;
 	display: inline-block;
 	&:hover {
-		margin-bottom: 0;
 		border-bottom: 1px solid @linkColor;
+		margin-bottom: 0;
 	}
 	&:before {
-		content: url('../images/article-detailer-plus.png')' ';
+		content: url('../images/article-detailer-plus.png');
 		padding-right: 5px;
 	}
 }

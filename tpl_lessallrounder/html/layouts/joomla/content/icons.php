@@ -13,8 +13,8 @@ $canEdit = $displayData['params']->get('access-edit');
 ?>
 <?php if (empty($displayData['print'])) :
 	if ($canEdit || $displayData['params']->get('show_print_icon') || $displayData['params']->get('show_email_icon')) : ?>
-		<div class="btn-group pull-right">
-			<ul class="actions">
+		<div class="pull-right">
+			<ul class="actions inline">
 				<?php if ($displayData['params']->get('show_print_icon')) : ?>
 					<li class="print-icon"> <?php echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?> </li>
 				<?php endif; ?>
