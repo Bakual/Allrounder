@@ -16,13 +16,19 @@ $canEdit = $displayData['params']->get('access-edit');
 		<div class="pull-right">
 			<ul class="actions inline">
 				<?php if ($displayData['params']->get('show_print_icon')) : ?>
-					<li class="print-icon"> <?php echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?> </li>
-				<?php endif; ?>
-				<?php if ($displayData['params']->get('show_email_icon')) : ?>
-					<li class="email-icon"> <?php echo JHtml::_('icon.email', $displayData['item'], $displayData['params']); ?> </li>
-				<?php endif; ?>
-				<?php if ($canEdit) : ?>
-					<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $displayData['item'], $displayData['params']); ?> </li>
+					<li class="print-icon">
+						<?php echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?>
+					</li>
+				<?php endif;
+				if ($displayData['params']->get('show_email_icon')) : ?>
+					<li class="email-icon">
+						<?php echo JHtml::_('icon.email', $displayData['item'], $displayData['params']); ?>
+					</li>
+				<?php endif;
+				if ($canEdit) : ?>
+					<li class="edit-icon">
+						<?php echo JHtml::_('icon.edit', $displayData['item'], $displayData['params']); ?>
+					</li>
 				<?php endif; ?>
 			</ul>
 		</div>
