@@ -148,8 +148,7 @@ body {
 #header {
 	min-height: 120px;
 	position: relative;
-	background-image: url('../images/header.png');
-	background-repeat: repeat-x;
+	#gradient > .vertical-three-colors(lighten(@headBgColor, 10%), lighten(@headBgColor, 15%), 25%, @headBgColor);
 	background-color: @headBgColor;
 	.border-top-radius(5px);
 	border-top: 1px solid @headBorderColor;
@@ -172,11 +171,11 @@ body {
 }
 a {
 	&:active {
-		color: #0099FF !important;
+		color: #0099FF;
 	}
 	&.imglogo, &.medialogo {
 		float: left;
-		padding:20px 20px 0 0;
+		padding: 20px 20px 0 0;
 	}
 	&.logo:hover {
 		text-decoration: none;
@@ -190,14 +189,15 @@ a {
 	min-height: 30px;
 }
 #subhead {
-	height: 33px;
-	width: 99.5%;
+	.clearfix();
+	min-height: 35px;
 	margin: 10px .2% 0 .2%;
-	overflow: hidden;
-	background-image: url('../images/subhead.png');
-	background-repeat: repeat-x;
+	#gradient > .vertical-three-colors(@subheadBgColor, darken(@subheadBgColor, 1%), 33%, darken(@subheadBgColor, 11%));
 	background-color: @subheadBgColor;
 	border: 1px solid @subheadBorderColor;
+	form {
+		margin: 0;
+	}
 }
 #search {
 	position: relative;
