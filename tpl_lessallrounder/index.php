@@ -28,14 +28,7 @@ JHtmlBootstrap::tooltip();
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 
-	// Dynamic or fixed width
-	if ($params->get('whatWidth')) :
-		$style	= 'max-width:' . htmlspecialchars($params->get('pageMaxWidth'));
-	else :
-		$style	= 'width:' . htmlspecialchars($params->get('pageWidth'));
-	endif; ?>
-	<style type="text/css">#wrapper, #foot_container {<?php echo $style; ?>;}</style>
-	<?php if ($params->get('customCss')) : ?>
+	if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
 	<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
@@ -48,14 +41,13 @@ JHtmlBootstrap::tooltip();
 	<?php endif;
 	// Check if the 3 columns are enabled
 	$contentwidth = '';
-	if ($this->countModules('position-7') and !$this->countModules('position-8')) :
-		$contentwidth = 'left';
-	elseif ($this->countModules('position-8') and !$this->countModules('position-7')) :
-		$contentwidth = 'right';
-	elseif ($this->countModules('position-7') and $this->countModules('position-8')) :
+	if ($this->countModules('position-7') and $this->countModules('position-8')) :
 		$contentwidth = 'middle';
-	endif;
-	?>
+	elseif ($this->countModules('position-7')) :
+		$contentwidth = 'left';
+	elseif ($this->countModules('position-8')) :
+		$contentwidth = 'right';
+	endif; ?>
 </head>
 <body>
 	<div id="wrapper">
@@ -137,7 +129,7 @@ JHtmlBootstrap::tooltip();
 			<?php require 'modules/top.php'; ?>
 			<?php if ($this->countModules('position-7')) : ?>
 				<div id="leftcol">
-					<jdoc:include type="modules" name="position-7" style="lvroundleft" />
+					<jdoc:include type="modules" name="position-7" style="roundsidebar" />
 				</div>
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
@@ -146,14 +138,13 @@ JHtmlBootstrap::tooltip();
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>
-				<div class="clearfix"></div>
 				<span class="shadow-left">&nbsp;</span>
 				<span class="shadow-right">&nbsp;</span>
 				<?php require 'modules/aftercontent.php'; ?>
 			</div>
 			<?php if ($this->countModules('position-8')) : ?>
 				<div id="rightcol">
-					<jdoc:include type="modules" name="position-8" style="lvroundright" />
+					<jdoc:include type="modules" name="position-8" style="roundsidebar" />
 				</div>
 			<?php endif; ?>
 			<div class="clearfix"></div>

@@ -2,12 +2,16 @@
 .items-leading > div, .items-row {
 	margin-bottom: 25px;
 }
-/* The article itself */
-.items-leading > div, .item-page, .item, .contact {
-	background-color: @articleBgColor;
-	border: 1px solid @articleBorderColor;
-	overflow: hidden;
-	padding: 2%;
+/* Article Box */
+#maincontent {
+	> div:not([class*="-featured"]):not(#system-message-container),
+	.items-leading > div,
+	.item {
+		background-color: @articleBgColor;
+		border: 1px solid @articleBorderColor;
+		overflow: hidden;
+		padding: 2%;
+	}
 }
 /* System Tooltips (MooTools based) */
 .tip-wrap {
