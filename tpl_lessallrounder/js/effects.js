@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 	$('.module_menu ul.menu li a').hover(
 		function(){
 			$(this).animate(
-				{'padding-left':'20px'},
+				{'padding-left':'35px'},
 				{
 					queue:false,
 					duration:'fast'
@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 		},
 		function(){
 			$(this).animate(
-				{'padding-left':'0'},
+				{'padding-left':'15px'},
 				{
 					queue:false,
 					duration:'middle'

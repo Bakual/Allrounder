@@ -328,7 +328,7 @@ a {
 	}
 }
 #leftcol, #rightcol {
-	h3.moduleh3 {
+	.moduleh3 {
 		min-height: 35px;
 		line-height: 35px;
 		font-size: 120%;
@@ -339,7 +339,7 @@ a {
 		position:relative;
 		.border-top-radius(5px);
 	}
-	> div > div {
+	.module-outer > div {
 		border: 1px solid @moduleBorderOuterColor;
 		.lvround-inner {
 			padding: 10px 3%;
@@ -349,56 +349,38 @@ a {
 		}
 	}
 }
-#leftcol h3.moduleh3 {
+#leftcol .moduleh3 {
 	padding: 0 10px 0 30px;
 	border-left: 1px solid @moduleh3BorderOuterColor;
 	border-right: 1px solid @moduleh3BorderInnerColor;
 }
-#rightcol h3.moduleh3 {
+#rightcol .moduleh3 {
 	padding: 0 30px 0 10px;
 	text-align: right;
 	border-right: 1px solid @moduleh3BorderOuterColor;
 	border-left: 1px solid @moduleh3BorderInnerColor;
 }
-
-.moduletable h3 {
-	margin: 10px 0;
-}
-/****************** MENUES ******************/
-
-/**** Mainmenu with suffix: _menu START ****/
-.module_menu ul.menu {
-	margin: 0;
-	padding: 0;
-	background: none;
-	list-style: none;
+/* Mainmenu with suffix: _menu */
+.module_menu ul {
+	margin-left: 5px;
 	li {
-		margin: 0;
-		padding: 0 0 0 20px;
-		background: none;
-		list-style: none;
-		margin: 0;
-		line-height: 22px;
-		background-image: url('../images/menu-li.png');
-		background-repeat: no-repeat;
-		background-position: 0 8px;
+		line-height: 30px;
+		&:before {
+			float: left;
+			font-family: 'IcoMoon';
+			speak: none;
+			content: '\e010';
+		}
 		a, span.separator {
-			display: block;
-			vertical-align: middle;
-			text-align: left;
-			text-decoration: none;
-			padding: 3px 0;
-			margin: 4px 0 0 0;
-			border-bottom: 1px dotted #ccc;
-			clear: both;
+			padding-left: 15px;
 			overflow: visible;
 			color: @mainMenuFont;
 			border-bottom:1px dotted @mainMenuBorderBottom;
 		}
 		a {
 			&:hover, &:active, &:focus {
-				color: @mainMenuFontHover!important;
-				font-weight:bold;
+				font-weight: bold;
+				color: @mainMenuFontHover;
 			}
 			img {
 				vertical-align: middle;
@@ -417,36 +399,14 @@ a {
 			color: @mainMenuLiLiFont;
 		}
 		ul {
-			margin: 0 0 0 10px;
-			padding: 0px;
-		}
-		li {
-			list-style: none !important;
-			margin: 0;
-			padding: 0;
-			min-height: 22px;
-			line-height: 22px;
-			background: none;
+			margin-left: 10px;
+			font-size: 90%;
+			li {
+				line-height: 18px;
+			}
 		}
 	}
-	ul li a {
-		background: none;
-		font-size:90%;
-		min-height:18px;
-		line-height:18px;
-	}
 }
-/**** Mainmenu with suffix: _menu END ****/
-
-/* Mainmenu normal */
-ul.menu {
-	line-height: 22px;
-	li a span {
-		clear: both;
-		vertical-align: middle;
-	}
-}
-/* Mainmenu normal END */
 
 /* Input styling, type declarations to override bootstrap (forms.less) */
 select,

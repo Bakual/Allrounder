@@ -51,13 +51,11 @@
 }
 /* Ribbons on */
 .guarded-ribbons() when (@ribbonsOnOff = 1) {
-	#wrapper {
-		#leftcol h3.moduleh3 {
-			margin: 10px 0 0 -20px;
-		}
-		#rightcol h3.moduleh3 {
-			margin: 10px -20px 0 0;
-		}
+	#leftcol .moduleh3 {
+		margin: 10px 0 0 -20px;
+	}
+	#rightcol .moduleh3 {
+		margin: 10px -20px 0 0;
 	}
 	#footer {
 		margin: 0 -16px 0 -16px;
@@ -70,14 +68,12 @@
 
 /* Ribbons off */
 .guarded-ribbons() when not (@ribbonsOnOff = 1) {
-	#header, #footer, #wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3 {
+	#header, #footer, #leftcol .moduleh3, #rightcol .moduleh3 {
 		margin: 0;
 	}
-	#wrapper {
-		#leftcol, #rightcol {
-			h3.moduleh3 {
-				margin-top: 10px;
-			}
+	#leftcol, #rightcol {
+		h3.moduleh3 {
+			margin-top: 10px;
 		}
 	}
 	#header {

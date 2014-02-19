@@ -21,22 +21,27 @@ defined('_JEXEC') or die();
  * @since   1.1
  */
 function ModChrome_RoundSidebar($module, &$params, &$attribs)
-{ ?>
-	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
-		<?php if ($module->showtitle != 0) : ?>
-			<h3 class="moduleh3">
+{
+	$moduleTag      = $params->get('module_tag', 'div');
+	$moduleSuffix   = htmlspecialchars($params->get('moduleclass_sfx'));
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$bootstrapClass = $bootstrapSize ? ' span' . $bootstrapSize : ''; ?>
+	<<?php echo $moduleTag; ?> class="module-outer<?php echo $moduleSuffix . $bootstrapClass; ?>">
+		<?php if ($module->showtitle) : ?>
+			<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>">
 				<strong><?php echo $module->title; ?></strong>
 				<span class="h3eck">&nbsp;</span>
-			</h3>
+			</<?php echo $headerTag; ?>>
 		<?php endif; ?>
-		<div class="module<?php echo $params->get('moduleclass_sfx'); ?>">
+		<div class="module<?php echo $moduleSuffix; ?>">
 			<div class="lvround-inner">
 				<?php echo $module->content; ?>
 			</div>
 		</div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
-	</div>
+	</<?php echo $moduleTag; ?>>
 <?php }
 
 /**
@@ -52,10 +57,11 @@ function ModChrome_RoundSidebar($module, &$params, &$attribs)
  */
 function ModChrome_lvRound($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
-	$moduleClass    = ($bootstrapSize) ? ' span' . $bootstrapSize : '';
-?>
-	<div class="module<?php echo $params->get('moduleclass_sfx'); ?><?php echo $moduleClass; ?>">
+	$bootstrapClass = $bootstrapSize ? ' span' . $bootstrapSize : ''; ?>
+	<<?php echo $moduleTag; ?> class="module<?php echo $params->get('moduleclass_sfx'); ?><?php echo $bootstrapClass; ?>">
 		<div class="module-content">
 			<div>
 				<div>
