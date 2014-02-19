@@ -10,7 +10,7 @@
 defined('_JEXEC') or die();
 
 /**
- * Module Chrome used in left sidebar
+ * Module Chrome used in sidebars
  *
  * @param   object  $module    The module object
  * @param   object  &$params   JRegistry object containing module parameters
@@ -18,60 +18,22 @@ defined('_JEXEC') or die();
  *
  * @return  void
  *
- * @since   1.0
+ * @since   1.1
  */
-function ModChrome_lvRoundLeft($module, &$params, &$attribs)
+function ModChrome_RoundSidebar($module, &$params, &$attribs)
 { ?>
 	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
 		<?php if ($module->showtitle != 0) : ?>
-			<h3 class="moduleh3"><strong><?php echo $module->title; ?></strong>
-				<span class="h3eckl">&nbsp;</span>
+			<h3 class="moduleh3">
+				<strong><?php echo $module->title; ?></strong>
+				<span class="h3eck">&nbsp;</span>
 			</h3>
 		<?php endif; ?>
 		<div class="module<?php echo $params->get('moduleclass_sfx'); ?>">
-			<div>
-				<div>
-					<div class="lvround-inner">
-						<?php echo $module->content; ?>
-					</div>
-				</div>
+			<div class="lvround-inner">
+				<?php echo $module->content; ?>
 			</div>
 		</div>
-		<div class="clearfix"></div>
-		<span class="shadow-left">&nbsp;</span>
-		<span class="shadow-right">&nbsp;</span>
-	</div>
-<?php }
-
-/**
- * Module Chrome used in right sidebar
- *
- * @param   object  $module    The module object
- * @param   object  &$params   JRegistry object containing module parameters
- * @param   object  &$attribs  Additional attributes
- *
- * @return  void
- *
- * @since   1.0
- */
-function ModChrome_lvRoundRight($module, &$params, &$attribs)
-{ ?>
-	<div class="module-outer<?php echo $params->get('moduleclass_sfx'); ?>">
-		<?php if ($module->showtitle != 0) : ?>
-			<h3 class="moduleh3"><strong><?php echo $module->title; ?></strong>
-				<span class="h3eckr">&nbsp;</span>
-			</h3>
-		<?php endif; ?>
-		<div class="module<?php echo $params->get('moduleclass_sfx'); ?>">
-			<div>
-				<div>
-					<div class="lvround-inner">
-						<?php echo $module->content; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
