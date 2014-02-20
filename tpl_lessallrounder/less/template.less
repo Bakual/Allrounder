@@ -407,7 +407,6 @@ a {
 		}
 	}
 }
-
 /* Input styling, type declarations to override bootstrap (forms.less) */
 select,
 textarea,
@@ -437,46 +436,34 @@ input[type="color"],
 		background-color: @inputHoverBgColor;
 	}
 }
-
-// guarded-background() is a conditional mixing. It will not be outputted in the CSS by itself.
-.guarded-background() when (@contentheadingImage = 0) {
-	background-image: none !important;
-	padding-left: 0px !important;
-	line-height: normal !important;
-}
-.guarded-background() when (@contentheadingImage = 1) {
+// guarded-headingImage() is a conditional mixing. It will not be outputted in the CSS by itself.
+.guarded-headingImage() when (@contentheadingImage = 1) {
 	background-image: url(../images/balloon.png);
+	background-repeat: no-repeat;
 	padding-left: 40px;
-	line-height: 32px;
 }
-.guarded-background() when (@contentheadingImage = 2) {
+.guarded-headingImage() when (@contentheadingImage = 2) {
 	background-image: url(@{basePath}@{contentheadingImageMedia});
+	background-repeat: no-repeat;
 	padding-left: 40px;
-	line-height: 32px;
 }
 .page-header h2, h2.item-title {
-	.guarded-background();
-	background-repeat: no-repeat;
+	.guarded-headingImage();
+	line-height: 32px;
 	min-height: 32px;
 	margin: 10px 0;
 	&, a {
-		color: @articletitleColor !important;
+		color: @articletitleColor;
 	}
 }
 h2.item-title {
 	border-bottom: 1px solid @grayLighter;
 	padding-bottom: 15px;
 }
-
 div {
 	&.slogan {
 		color: @sloganColor;
 		font-size:18px;
-		display:block;
-		margin:0;
 		padding: 0 40px 10px 100px;
-	}
-	&.item-separator {
-		border-bottom: 3px double @itemSeparatorColor !important;
 	}
 }
