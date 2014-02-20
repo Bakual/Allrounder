@@ -1,15 +1,10 @@
 /* CSS Rules related to modules */
 /* Basic Styling */
 /* Corner Images could be done with border-image, but isn't supported by < IE11 */
-div.module-content {
+.module-content {
 	margin-top: 10px;
-	div div div {
+	.module-inner {
 		padding: 10px;
-		div {
-			border: 0;
-			padding: 0;
-			background-image: none;
-		}
 	}
 	.moduleh3 {
 		font-size: 120%;
@@ -21,39 +16,40 @@ div.module-content {
 	}
 }
 /* Default Style */
-div.module {
-	div.module-content {
+.module {
+	.module-content {
 		color: @moduletableFont;
 		border: 1px solid @moduletableBorder;
 		background-color: @moduletableBg;
-		background-image : url(../images/modules/module-lb.png);
+	}
+	.chrome-border {
 		background-repeat: no-repeat;
+	}
+	.chrome-border.left-top {
+		background-image : url(../images/modules/module-lt.png);
+		background-position: left top;
+	}
+	.chrome-border.right-top {
+		background-image : url(../images/modules/module-rt.png);
+		background-position: right top;
+	}
+	.chrome-border.right-bottom {
+		background-image : url(../images/modules/module-rb.png);
+		background-position: right bottom;
+	}
+	.chrome-border.left-bottom {
+		background-image : url(../images/modules/module-lb.png);
 		background-position: left bottom;
-		div {
-			background-image : url(../images/modules/module-rb.png);
-			background-repeat: no-repeat;
-			background-position: right bottom;
-			div {
-				background-image : url(../images/modules/module-rt.png);
-				background-repeat: no-repeat;
-				background-position: right top;
-				div {
-					background-image : url(../images/modules/module-lt.png);
-					background-repeat: no-repeat;
-					background-position: left top;
-				}
-			}
-		}
-		.moduleh3 {
-			border: 1px solid @moduletableh3Border;
-			background-color: @moduletableh3Bg;
-			background-image: url(../images/module-h3.png);
-			background-repeat: repeat-x;
-		}
+	}
+	.moduleh3 {
+		border: 1px solid @moduletableh3Border;
+		background-color: @moduletableh3Bg;
+		background-image: url(../images/module-h3.png);
+		background-repeat: repeat-x;
 	}
 }
 /* Special Styles */
-div.module-style1 {
+.module-style1 {
 	div.module-content {
 		color: #505050;
 		border: 1px solid #ddd;
@@ -78,7 +74,7 @@ div.module-style1 {
 		}
 	}
 }
-div.module-style2 {
+.module-style2 {
 	div.module-content {
 		background-color: #FFFF99;
 		border: 1px solid #dddd00;
@@ -89,7 +85,7 @@ div.module-style2 {
 		background-position: left bottom;
 	}
 }
-div.module-style3 {
+.module-style3 {
 	div.module-content {
 		background-color: #000;
 		border: 5px solid #333;
@@ -97,7 +93,7 @@ div.module-style3 {
 		background-image: url(../images/modules/carbon.jpg);
 	}
 }
-div.module-style4 {
+.module-style4 {
 	div.module-content {
 		background-color: #333;
 		border: 5px solid #444;
@@ -105,7 +101,7 @@ div.module-style4 {
 		background-image: url(../images/modules/rausch.jpg);
 	}
 }
-div.module-style5 {
+.module-style5 {
 	div.module-content {
 		background-color: #222;
 		border: 5px solid #333;
@@ -113,7 +109,7 @@ div.module-style5 {
 		background-image: url(../images/modules/scan.jpg);
 	}
 }
-div.module-style6 {
+.module-style6 {
 	div.module-content {
 		color: #000;
 		font-weight: bold;
