@@ -12,7 +12,7 @@ defined('_JEXEC') or die();
 if ($this->countModules('sidepanel')) : ?>
 	<div id="sidepanel-outer">
 		<div id="sidepanel">
-			<jdoc:include type="modules" name="sidepanel" style="lvround" />
+			<jdoc:include type="modules" name="sidepanel" style="allrounder" />
 		</div>
 		<a href="#" title="Toggle in / out" id="sidepanel-toggle"></a>
 	</div>

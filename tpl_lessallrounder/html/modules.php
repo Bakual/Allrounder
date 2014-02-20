@@ -10,7 +10,7 @@
 defined('_JEXEC') or die();
 
 /**
- * Module Chrome used in sidebars
+ * Module Chrome "allroundersidebar" used in sidebars
  *
  * @param   object  $module    The module object
  * @param   object  &$params   JRegistry object containing module parameters
@@ -20,7 +20,7 @@ defined('_JEXEC') or die();
  *
  * @since   1.1
  */
-function ModChrome_RoundSidebar($module, &$params, &$attribs)
+function ModChrome_AllrounderSidebar($module, &$params, &$attribs)
 {
 	$moduleTag      = $params->get('module_tag', 'div');
 	$moduleSuffix   = htmlspecialchars($params->get('moduleclass_sfx'));
@@ -45,7 +45,7 @@ function ModChrome_RoundSidebar($module, &$params, &$attribs)
 <?php }
 
 /**
- * Module Chrome "lvround"
+ * Module Chrome "allrounder"
  *
  * @param   object  $module    The module object
  * @param   object  &$params   JRegistry object containing module parameters
@@ -55,7 +55,7 @@ function ModChrome_RoundSidebar($module, &$params, &$attribs)
  *
  * @since   1.0
  */
-function ModChrome_lvRound($module, &$params, &$attribs)
+function ModChrome_Allrounder($module, &$params, &$attribs)
 {
 	$moduleTag      = $params->get('module_tag', 'div');
 	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
