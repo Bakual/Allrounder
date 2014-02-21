@@ -91,16 +91,22 @@ dl.article-info {
 		}
 	}
 	.createdby:before {
-		content: url('../images/createdby.png');
+		content: url('../images/article-info/createdby.png');
 		vertical-align: middle;
 	}
 	.category-name:before {
-		content: url('../images/category.png');
+		content: url('../images/article-info/category.png');
 		vertical-align: middle;
 	}
 	.parent-category-name:before {
-		content: url('../images/parent-category.png');
+		content: url('../images/article-info/parent-category.png');
 		vertical-align: middle;
+	}
+	.modified {
+		.icon-calendar:before {
+			content: url('../images/article-info/modified.png');
+			vertical-align: middle;
+		}
 	}
 }
 .article-info-term {
@@ -115,7 +121,7 @@ dl.article-info {
 		margin-bottom: 0;
 	}
 	&:before {
-		content: url('../images/article-detailer-plus.png');
+		content: url('../images/article-info/article-detailer-plus.png');
 		padding-right: 5px;
 	}
 }
