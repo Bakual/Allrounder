@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
 	// Toppanel
 	$('a#toppanel-toggle').click(function(){
 		$('#toppanel').slideToggle('middle');
-		return true;
+		return false;
 	});
 
 	// Sidepanel
