@@ -10,7 +10,7 @@
 defined('_JEXEC') or die();
 
 if ($this->countModules('toppanel')) : ?>
-	<div id="toppanel" class="clearfix">
+	<div id="toppanel">
 		<jdoc:include type="modules" name="toppanel" style="allrounder" />
 	</div>
 	<a href="#" title="Toggle in / out" id="toppanel-toggle"></a>
