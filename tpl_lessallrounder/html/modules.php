@@ -70,12 +70,10 @@ function ModChrome_Allrounder($module, &$params, &$attribs)
 							<h3 class="moduleh3"><strong><?php echo $module->title; ?></strong></h3>
 						<?php endif; ?>
 						<?php echo $module->content; ?>
-						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="clearfix"></div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
 	</div>
