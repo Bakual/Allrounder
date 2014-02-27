@@ -339,13 +339,15 @@ a {
 		position:relative;
 		.border-top-radius(5px);
 	}
-	.module-outer > div {
-		border: 1px solid @moduleBorderOuterColor;
-		.module-inner {
-			padding: 10px 3%;
-			background-color: @moduleBgColor;
-			border: 1px solid @moduleBorderInnerColor;
-			color: @moduleColor;
+	.module-outer, .module-outer_menu {
+		> div {
+			border: 1px solid @moduleBorderOuterColor;
+			.module-inner {
+				padding: 10px 3%;
+				background-color: @moduleBgColor;
+				border: 1px solid @moduleBorderInnerColor;
+				color: @moduleColor;
+			}
 		}
 	}
 }
@@ -372,6 +374,7 @@ a {
 			content: '\e010';
 		}
 		a, span.separator {
+			display: block;
 			padding-left: 15px;
 			overflow: visible;
 			color: @mainMenuFont;
@@ -380,6 +383,7 @@ a {
 		a {
 			&:hover, &:active, &:focus {
 				font-weight: bold;
+				background-color: @mainMenuBorderBottom;
 				color: @mainMenuFontHover;
 			}
 			img {
