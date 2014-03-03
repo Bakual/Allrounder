@@ -29,8 +29,8 @@ function ModChrome_AllrounderSidebar($module, &$params, &$attribs)
 	$bootstrapClass = $bootstrapSize ? ' span' . $bootstrapSize : ''; ?>
 	<<?php echo $moduleTag; ?> class="module-outer<?php echo $moduleSuffix . $bootstrapClass; ?>">
 		<?php if ($module->showtitle) : ?>
-			<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>">
-				<strong><?php echo $module->title; ?></strong>
+			<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3-sidebar'); ?>">
+				<?php echo $module->title; ?>
 				<span class="h3eck">&nbsp;</span>
 			</<?php echo $headerTag; ?>>
 		<?php endif; ?>
@@ -67,7 +67,7 @@ function ModChrome_Allrounder($module, &$params, &$attribs)
 				<div class="chrome-border right-bottom">
 					<div class="module-inner chrome-border left-bottom">
 						<?php if ($module->showtitle != 0) : ?>
-							<h3 class="moduleh3"><strong><?php echo $module->title; ?></strong></h3>
+							<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>"><?php echo $module->title; ?></<?php echo $headerTag; ?>>
 						<?php endif; ?>
 						<?php echo $module->content; ?>
 					</div>

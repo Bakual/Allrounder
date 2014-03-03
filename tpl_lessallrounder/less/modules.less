@@ -1,5 +1,5 @@
 /* CSS Rules related to modules */
-/* Basic Styling */
+/* Allrounder Chrome */
 /* Corner Images could be done with border-image, but isn't supported by < IE11 */
 .module-content {
 	margin-top: 10px;
@@ -128,6 +128,40 @@
 			background-repeat: repeat-x;
 		}
 	}
+}
+/* AllrounderSidebar Chrome */
+.moduleh3-sidebar {
+	min-height: 35px;
+	line-height: 35px;
+	font-size: 120%;
+	#gradient > .vertical-three-colors(lighten(@moduleh3BgColor, 1%), lighten(@moduleh3BgColor, 7%), 33%, @moduleh3BgColor);
+	background-color: @moduleh3BgColor;
+	border-top: 1px solid @moduleh3BorderTopColor;
+	color: @moduleh3Color;
+	position:relative;
+	.border-top-radius(5px);
+}
+.module-outer, .module-outer_menu {
+	> div {
+		border: 1px solid @moduleBorderOuterColor;
+		.module-inner {
+			padding: 10px 3%;
+			background-color: @moduleBgColor;
+			border: 1px solid @moduleBorderInnerColor;
+			color: @moduleColor;
+		}
+	}
+}
+#leftcol .moduleh3-sidebar {
+	padding: 0 10px 0 30px;
+	border-left: 1px solid @moduleh3BorderOuterColor;
+	border-right: 1px solid @moduleh3BorderInnerColor;
+}
+#rightcol .moduleh3-sidebar {
+	padding: 0 30px 0 10px;
+	text-align: right;
+	border-right: 1px solid @moduleh3BorderOuterColor;
+	border-left: 1px solid @moduleh3BorderInnerColor;
 }
 /* Module shadow */
 .shadow-left, .shadow-right {
