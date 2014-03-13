@@ -29,7 +29,7 @@ $params	= $tpl->params;
 	<?php endif; ?>
 </head>
 <body class="modal">
-	<div id="wrapper" class="row-fluid">
+	<div id="maincontent" class="row-fluid">
 		<jdoc:include type="message" />
 		<jdoc:include type="component" />
 	</div>
