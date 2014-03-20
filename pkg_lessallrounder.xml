@@ -9,7 +9,7 @@
 	<license>http://www.lernvid.com/lizenz</license>
 	<version>1.0.3</version>
 	<packagename>lessallrounder</packagename>
-	<description>{LESS} Allrounder Package</description>
+	<description>{LESS} Allrounder Package. Make sure to open and save the template style(s)!</description>
 	<files>
 		<file type="template" id="tpl_lessallrounder" >tpl_lessallrounder.zip</file>
 		<file type="plugin" id="plg_lessallrounder">plg_lessallrounder.zip</file>
