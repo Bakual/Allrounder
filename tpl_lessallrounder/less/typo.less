@@ -115,48 +115,46 @@ h6 {
 		color: #348525;
 	}
 }
-p, div {
-	&.tip, &.alerts, &.info, &.right, &.alarm, &.tell, &.note, &.content:not(.pane-slider), &.question {
-		padding: 12px 30px 12px 50px;
-		margin: 10px 0;
-		background-repeat : no-repeat;
-		background-position: 10px center;
-	}
-	&.tip {
-		border-top: 2px solid #ffea51;
-		border-bottom: 2px solid #ffea51;
-		background-color: #ffffb0;
-		background-image: url(../images/icons/tip.png);
-	}
-	&.alerts {
-		border-top: 1px solid #FF5050;
-		border-bottom: 1px solid #FF5050;
-		background-color: #ffe1e1;
-		background-image: url(../images/icons/alerts.png);
-	}
-	&.info {
-		background-image: url(../images/icons/info.png);
-	}
-	&.right {
-		background-image: url(../images/icons/right.png);
-	}
-	&.alarm {
-		background-image: url(../images/icons/alarm.png);
-	}
-	&.tell {
-		background-image: url(../images/icons/tell.png);
-	}
-	&.content:not(.pane-slider) {
-		background-image: url(../images/icons/content.png);
-	}
-	&.note {
-		background-image: url(../images/icons/note.png);
-	}
-	&.question {
-		background-image: url(../images/icons/question.png);
-	}
+&.typo-tip, &.typo-alerts, &.typo-info, &.typo-right, &.typo-alarm, &.typo-tell, &.typo-note, &.typo-content, &.typo-question {
+	padding: 12px 30px 12px 50px;
+	margin: 10px 0;
+	background-repeat : no-repeat;
+	background-position: 10px center;
 }
-.hot, .new, .top:not(.tooltip) {
+&.typo-tip {
+	border-top: 2px solid #ffea51;
+	border-bottom: 2px solid #ffea51;
+	background-color: #ffffb0;
+	background-image: url(../images/icons/tip.png);
+}
+&.typo-alerts {
+	border-top: 1px solid #FF5050;
+	border-bottom: 1px solid #FF5050;
+	background-color: #ffe1e1;
+	background-image: url(../images/icons/alerts.png);
+}
+&.typo-info {
+	background-image: url(../images/icons/info.png);
+}
+&.typo-right {
+	background-image: url(../images/icons/right.png);
+}
+&.typo-alarm {
+	background-image: url(../images/icons/alarm.png);
+}
+&.typo-tell {
+	background-image: url(../images/icons/tell.png);
+}
+&.typo-content {
+	background-image: url(../images/icons/content.png);
+}
+&.typo-note {
+	background-image: url(../images/icons/note.png);
+}
+&.typo-question {
+	background-image: url(../images/icons/question.png);
+}
+.typo-hot, .typo-new, .typo-top {
 	border: 1px solid #ccc;
 	display: inline-block;
 	margin: 20px 0;
@@ -164,13 +162,13 @@ p, div {
 	background-position: right top;
 	background-repeat: no-repeat;
 }
-.hot {
+.typo-hot {
 	background-image: url(../images/icons/hot.gif);
 }
-.new {
+.typo-new {
 	background-image: url(../images/icons/new.gif);
 }
-.top:not(.tooltip) {
+.typo-top {
 	background-image: url(../images/icons/top.gif);
 }
 /* Lists */
