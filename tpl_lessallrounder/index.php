@@ -12,32 +12,34 @@ defined('_JEXEC') or die();
 // Shortcuts
 $app	= JFactory::getApplication();
 $tpl	= $app->getTemplate(true);
-$path	= $this->baseurl . '/templates/' . $tpl->template;
+$path	= $this->baseurl . '/templates/' . $tpl->template . '/';
+
+/** @var $params Joomla\Registry\Registry */
 $params	= $tpl->params;
 
 JHtmlJquery::framework();
 JHtmlBootstrap::tooltip();
 ?>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<jdoc:include type="head" />
-	<link href="<?php echo $path; ?>/css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
-	<?php 
+	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<?php
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 
 	if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
-	<script src="<?php echo $path; ?>/js/effects.js" type="text/javascript"></script>
+	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
 	<?php if ($params->get('deprecated')) :
 		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip. ?>
-		<script src="<?php echo $path; ?>/js/deprecated.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>/js/jq.easy-tooltip.min.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>/js/jq.easy-caption.min.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>/js/reflection.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>js/deprecated.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>js/jq.easy-tooltip.min.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>js/jq.easy-caption.min.js" type="text/javascript"></script>
+		<script src="<?php echo $path; ?>js/reflection.js" type="text/javascript"></script>
 	<?php endif;
 	// Check if the 3 columns are enabled
 	$contentwidth = '';
@@ -71,7 +73,7 @@ JHtmlBootstrap::tooltip();
 					<?php endif; ?>
 					<div id="logo">
 						<?php if ($params->get('showimgLogo')) : ?>
-							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>/images/logo/<?php echo htmlspecialchars($params->get('imgLogo')); ?>"/></a>
+							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>images/logo/<?php echo htmlspecialchars($params->get('imgLogo')); ?>"/></a>
 						<?php endif;?>
 						<?php if ($params->get('showMediaLogo')) : ?>
 							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
