@@ -11,8 +11,8 @@ jQuery(document).ready(function($) {
 			$('.lvacc_active').removeClass('lvacc_active');
 			trig.next('.hideme').slideToggle('slow');
 			trig.addClass('lvacc_active');
-		};
-	return false;
+		}
+		return false;
 	});
 	$('.lvacc-all').click(function(){
 		$('.hideme').stop().toggle();

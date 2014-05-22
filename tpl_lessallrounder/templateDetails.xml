@@ -29,7 +29,7 @@
 	</updateservers>
 	<config>
 		<fields name="params">
-			<fieldset name="globtemplfields" 
+			<fieldset name="globtemplfields"
 				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
 				description=""
 				addfieldpath="/templates/lessallrounder/fields" >
@@ -153,7 +153,7 @@
 				</field>
 				<field name="mediaLogo" type="media"
 					label="TPL_ALLROUNDER_MEDIA_LOGO"
-					description="TPL_ALLROUNDER_MEDIA_LOGO_DESC" 
+					description="TPL_ALLROUNDER_MEDIA_LOGO_DESC"
 					size="40"
 					hide_default="1" />
 				<field hr="true" type="spacer" />
@@ -418,7 +418,7 @@
 				</field>
 				<field name="copyText" type="textarea"
 					label="TPL_ALLROUNDER_COPYRIGHT_TEXT"
-					description="TPL_ALLROUNDER_COPYRIGHT_TEXT_DESC" 
+					description="TPL_ALLROUNDER_COPYRIGHT_TEXT_DESC"
 					default="ALLROUNDER"
 					rows="1"
 					cols="40" />
