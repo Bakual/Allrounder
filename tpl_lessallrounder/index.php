@@ -10,17 +10,19 @@
 defined('_JEXEC') or die();
 
 // Shortcuts
-$app	= JFactory::getApplication();
-$tpl	= $app->getTemplate(true);
-$path	= $this->baseurl . '/templates/' . $tpl->template . '/';
+$app     = JFactory::getApplication();
+$tpl     = $app->getTemplate(true);
+$path    = $this->baseurl . '/templates/' . $tpl->template . '/';
+$modules = JPATH_ROOT . '/templates/' . $tpl->template . '/modules/';
 
 /** @var $params Joomla\Registry\Registry */
-$params	= $tpl->params;
+$params = $tpl->params;
 
 JHtmlJquery::framework();
 JHtmlBootstrap::tooltip();
 ?>
 <!DOCTYPE html>
+<!--suppress XmlUnboundNsPrefix -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -53,8 +55,8 @@ JHtmlBootstrap::tooltip();
 </head>
 <body>
 	<div id="wrapper">
-		<?php require 'modules/toppanel.php'; ?>
-		<?php require 'modules/beforehead.php'; ?>
+		<?php require $modules . 'toppanel.php'; ?>
+		<?php require $modules . 'beforehead.php'; ?>
 		<div id="header_container">
 			<?php if ($params->get('showHeader')) : ?>
 				<div id="header">
@@ -79,7 +81,7 @@ JHtmlBootstrap::tooltip();
 							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
 						<?php endif;?>
 						<?php if ($params->get('showtextLogo')) : ?>
-							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->getCfg('sitename'))); ?></a>
+							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->get('sitename'))); ?></a>
 						<?php endif;?>
 						<?php if ($params->get('showSlogan')) : ?>
 							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>
@@ -95,7 +97,7 @@ JHtmlBootstrap::tooltip();
 					<span class="heckr">&nbsp;</span>
 				</div>
 			<?php endif; ?>
-			<?php require 'modules/afterhead.php'; ?>
+			<?php require $modules . 'afterhead.php'; ?>
 			<?php if ($this->countModules('position-1')) : ?>
 				<div id="topmenu_container">
 					<div id="topmenu">
@@ -128,21 +130,21 @@ JHtmlBootstrap::tooltip();
 				</div>
 				<div class="clearfix"></div>
 			<?php endif; ?>
-			<?php require 'modules/top.php'; ?>
+			<?php require $modules . 'top.php'; ?>
 			<?php if ($this->countModules('position-7')) : ?>
 				<div id="leftcol">
 					<jdoc:include type="modules" name="position-7" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
-				<?php require 'modules/beforecontent.php'; ?>
+				<?php require $modules . 'beforecontent.php'; ?>
 				<div id="maincontent" class="row-fluid">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>
 				<span class="shadow-left">&nbsp;</span>
 				<span class="shadow-right">&nbsp;</span>
-				<?php require 'modules/aftercontent.php'; ?>
+				<?php require $modules . 'aftercontent.php'; ?>
 			</div>
 			<?php if ($this->countModules('position-8')) : ?>
 				<div id="rightcol">
@@ -151,11 +153,11 @@ JHtmlBootstrap::tooltip();
 			<?php endif; ?>
 			<div class="clearfix"></div>
 		</div>
-		<?php require 'modules/bottom.php'; ?>
+		<?php require $modules . 'bottom.php'; ?>
 		<div class="clearfix"></div>
 	</div>
 	<div id="foot_container">
-		<?php require 'modules/foot.php'; ?>
+		<?php require $modules . 'foot.php'; ?>
 		<?php if($this->countModules('footer')) : ?>
 			<div id="footermodule">
 				<jdoc:include type="modules" name="footer" />
@@ -178,7 +180,7 @@ JHtmlBootstrap::tooltip();
 						&uarr;&uarr;&uarr;
 					</a>
 				</div>
-				<?php require 'modules/footermodules.php'; ?>
+				<?php require $modules . 'footermodules.php'; ?>
 			</div>
 			<div class="footer-bottom">
 				<?php if ($params->get('showDate')) : ?>
@@ -189,7 +191,7 @@ JHtmlBootstrap::tooltip();
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<?php require 'modules/sidepanel.php'; ?>
+	<?php require $modules . 'sidepanel.php'; ?>
 	<jdoc:include type="modules" name="debug" />
 </body>
 </html>

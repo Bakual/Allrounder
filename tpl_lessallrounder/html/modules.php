@@ -67,7 +67,9 @@ function ModChrome_Allrounder($module, &$params, &$attribs)
 				<div class="chrome-border right-bottom">
 					<div class="module-inner chrome-border left-bottom">
 						<?php if ($module->showtitle != 0) : ?>
-							<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>"><?php echo $module->title; ?></<?php echo $headerTag; ?>>
+							<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>">
+								<?php echo $module->title; ?>
+							<<?php echo '/' . $headerTag; ?>>
 						<?php endif; ?>
 						<?php echo $module->content; ?>
 					</div>
@@ -76,5 +78,5 @@ function ModChrome_Allrounder($module, &$params, &$attribs)
 		</div>
 		<span class="shadow-left">&nbsp;</span>
 		<span class="shadow-right">&nbsp;</span>
-	</div>
+	<<?php echo '/' . $moduleTag; ?>>
 <?php }
