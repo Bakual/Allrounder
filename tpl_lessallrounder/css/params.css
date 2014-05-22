@@ -1,8 +1,3 @@
-/*********************************************
-*** Designed by Juergen Koller			   ***
-*** Designers Home: http://www.LernVid.com ***
-**********************************************/
-
 /****************** Joomla Backend Parameter Style Pimp ******************/
 
 fieldset.panelform label,
@@ -15,13 +10,11 @@ span.spacer hr {
 }
 label.smooth, label.aero, laebl.carbon, label.leather {
 	color: #cccccc;
-	background-color: #222222;
-	background-position: center;
+	background: #222222 center;
 }
 label.smooth:hover, label.aero:hover, laebl.carbon:hover, label.leather:hover {
 	color: #ffffff;
-	background-color: #222222;
-	background-position: center;
+	background: #222222 center;
 }
 label.smooth {
 	background-image: url(../images/dropdown-smooth.png) !important;

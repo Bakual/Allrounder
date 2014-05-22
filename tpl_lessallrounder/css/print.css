@@ -1,26 +1,20 @@
-/*********************************************
-*** Designed by Juergen Koller			   ***
-*** Designers Home: http://www.LernVid.com ***
-**********************************************/
-
 body {
-	background-color:#fff !important;
-	background-image:none !important;
-	color:#000 !important;
+	background : #fff none;
+	color:#000;
 	padding:10px;
-	font-family:Verdana;
+	font-family:Verdana,sans-serif;
 	font-size:14px;
 }
 
 p, ul li, ol li, address, .category-desc,
 table, label, dt, dd {
-  font-size:11pt
+  font-size:11pt;
 }
 address {
-	font-style:normal
+	font-style:normal;
 }
 .contact-address address span {
-	display:block
+	display:block;
 }
 a {
 	font-weight: bold;
