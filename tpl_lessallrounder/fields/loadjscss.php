@@ -1,7 +1,7 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2010 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @copyright  Copyright (C) 2005 - 2010 Open Source Matters, Inc. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -9,8 +9,8 @@ defined('_JEXEC') or die;
 /**
  * LoadJsCSS Field class for the Allrounder Template to load custom Javascript and CSS
  *
- * @package		Allroudner
- * @since		4.0
+ * @package  Allroudner
+ * @since    4.0
  */
 class JFormFieldLoadjscss extends JFormField
 {
@@ -50,7 +50,7 @@ class JFormFieldLoadjscss extends JFormField
 	{
 		JHtml::Script('templates/lessallrounder/js/params.js');
 		JHtml::Stylesheet('templates/lessallrounder/css/params.css');
-		$html	= '<input type="hidden" name="'.$this->name.'" id="'.$this->id.'" value="1" />';
-		return $html;
+
+		return '<input type="hidden" name="' . $this->name . '" id="' . $this->id . '" value="1" />';
 	}
 }
