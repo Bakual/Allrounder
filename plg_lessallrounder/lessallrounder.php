@@ -23,7 +23,7 @@ class PlgSystemLessallrounder extends JPlugin
 	 * Application object.
 	 *
 	 * @var    JApplicationCms
-	 * @since  2.0.2
+	 * @since  2.1
 	 */
 	protected $app;
 
