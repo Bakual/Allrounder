@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	// Dropdown menu
-	$('#topmenu ul.menu li').hover(
+	$('#topmenu').find('ul.menu li').hover(
 		function(){
 			$(this).find('ul:first').show('fast');
 		},
