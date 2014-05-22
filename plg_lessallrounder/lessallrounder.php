@@ -20,6 +20,14 @@ defined('_JEXEC') or die();
 class PlgSystemLessallrounder extends JPlugin
 {
 	/**
+	 * Application object.
+	 *
+	 * @var    JApplicationCms
+	 * @since  2.0.2
+	 */
+	protected $app;
+
+	/**
 	 * Compile .less files on template style change
 	 *
 	 * @param   string  $context  Context of the data
@@ -40,7 +48,7 @@ class PlgSystemLessallrounder extends JPlugin
 		// Convert the params to an object.
 		if (is_string($table->params))
 		{
-			$registry = new JRegistry;
+			$registry = new \Joomla\Registry\Registry;
 			$registry->loadString($table->params);
 			$table->params = $registry;
 		}
@@ -87,13 +95,13 @@ class PlgSystemLessallrounder extends JPlugin
 				unset($params_array['customCssCode']);
 			}
 
-			// Sanityzing params for LESS
+			// Sanitising params for LESS
 			foreach ($params_array as &$value)
 			{
 				// Trim whitespaces
 				$value = trim($value);
 
-				// Adding quotes around variable so it's threated as string if a slash is in it.
+				// Adding quotes around variable so it's threaten as string if a slash is in it.
 				if (strpos($value, '/') !== false)
 				{
 					$value = '"' . $value . '"';
@@ -106,24 +114,24 @@ class PlgSystemLessallrounder extends JPlugin
 				}
 			}
 
-			// Adding templatepath to params
+			// Adding template path to params
 			$basePath                 = ($table->client_id) ? JURI::base(true) : JURI::root(true);
 			$params_array['basePath'] = '"' . $basePath . '/"';
 
 			$less->setVariables($params_array);
 
 			$less->setImportDir(array($templatePath . '/less/'));
-			$lessString = JFile::read($lessFile);
+			$lessString = file_get_contents($lessFile);
 
 			// Check for custom files
 			if (is_readable($templatePath . '/less/custom.less'))
 			{
-				$lessString .= JFile::read($templatePath . '/less/custom.less');
+				$lessString .= file_get_contents($templatePath . '/less/custom.less');
 			}
 
 			if (is_readable($templatePath . '/css/custom.css'))
 			{
-				$lessString .= JFile::read($templatePath . '/css/custom.css');
+				$lessString .= file_get_contents($templatePath . '/css/custom.css');
 			}
 
 			try
@@ -132,13 +140,13 @@ class PlgSystemLessallrounder extends JPlugin
 			}
 			catch (Exception $e)
 			{
-				JError::raiseWarning(100, 'lessphp error: ' . $e->getMessage());
+				$this->app->enqueueMessage('lessphp error: ' . $e->getMessage(), 'warning');
 			}
 
 			JFile::write($cssFile, $cssString);
 
 			$this->loadLanguage();
-			JFactory::getApplication()->enqueueMessage(JText::sprintf('PLG_SYSTEM_LESSALLROUNDER_SUCCESS', $cssFile), 'message');
+			$this->app->enqueueMessage(JText::sprintf('PLG_SYSTEM_LESSALLROUNDER_SUCCESS', $cssFile), 'message');
 		}
 	}
 }

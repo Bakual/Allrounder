@@ -8,7 +8,7 @@ It comes together with a plugin which will create a template.css after the templ
 Installation
 ------------
 
-1. Create zipfiles of the two folders _plg_lessallrounder_ and _tpl_lessallrounder_
-2. Install both zipfiles using the Joomla installer OR
-3. Create a zipfile containing the previous created two zipfiles _plg_lessallrounder.zip_ and _tpl_lessallrounder.zip_ plus the file _pkg_lessallrounder.xml_
-4. Install the package zipfile using the Joomla installer
+1. Create zip files of the two folders _plg_lessallrounder_ and _tpl_lessallrounder_
+2. Install both zip files using the Joomla installer OR
+3. Create a zip file containing the previous created two zip files _plg_lessallrounder.zip_ and _tpl_lessallrounder.zip_ plus the file _pkg_lessallrounder.xml_
+4. Install the package zip file using the Joomla installer
