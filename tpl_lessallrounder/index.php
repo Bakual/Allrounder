@@ -12,8 +12,8 @@ defined('_JEXEC') or die();
 // Shortcuts
 $app     = JFactory::getApplication();
 $tpl     = $app->getTemplate(true);
-$path    = $this->baseurl . '/templates/' . $tpl->template . '/';
-$modules = JPATH_ROOT . '/templates/' . $tpl->template . '/modules/';
+$path    = $this->baseurl . '/templates/' . $this->template . '/';
+$modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
 
 /** @var $params Joomla\Registry\Registry */
 $params = $tpl->params;
@@ -27,7 +27,8 @@ JHtmlBootstrap::tooltip();
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<jdoc:include type="head" />
-	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
+	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);

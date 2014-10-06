@@ -32,6 +32,11 @@
 				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
 				description=""
 				addfieldpath="/templates/lessallrounder/fields" >
+				<field
+					name="styleId"
+					type="styleid"
+					hidden="true"
+					/>
 				<field name="useLESS" type="loadjscss"
 					label="TPL_ALLROUNDER_WELCOMETEXT" />
 				<field name="whatWidth"
