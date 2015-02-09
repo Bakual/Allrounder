@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.3" type="template" client="site" method="upgrade">
 	<name>{LESS} Allrounder</name>
-	<creationDate>2014-05-19</creationDate>
+	<creationDate>2015-02-09</creationDate>
 	<author>Thomas Hunziker</author>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>http://www.bakual.net</authorUrl>
