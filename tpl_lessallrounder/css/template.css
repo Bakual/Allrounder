@@ -7986,9 +7986,6 @@ p.counter {
 #footer a#gotop {
 	text-shadow: 1px 2px 1px #000;
 }
-span#copy a {
-	text-shadow: 0 1px 1px #000;
-}
 .input,
 .inputbox,
 input.button,
@@ -8231,17 +8228,6 @@ a.logo:hover {
 	font-size: 10px;
 	float: left;
 	padding-left: 20px;
-}
-.footer-bottom span#copy {
-	font-size: 10px;
-	float: right;
-	padding-right: 20px;
-}
-.footer-bottom span#copy a {
-	color: ;
-}
-.footer-bottom span#copy a:hover {
-	text-decoration: none;
 }
 .module_menu ul {
 	margin-left: 5px;
