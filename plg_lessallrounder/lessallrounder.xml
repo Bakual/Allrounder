@@ -3,11 +3,11 @@
 	<name>plg_system_lessallrounder</name>
 	<author>Thomas Hunziker</author>
 	<creationDate>2014-05-19</creationDate>
-	<copyright>(C) 2014 Thomas Hunziker</copyright>
+	<copyright>(C) 2015</copyright>
 	<license>http://www.gnu.org/licenses/gpl.html</license>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>http://www.bakual.net</authorUrl>
-	<version>2.0.1</version>
+	<version>2.1.0</version>
 	<description>PLG_SYSTEM_LESSALLROUNDER_XML_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<files>

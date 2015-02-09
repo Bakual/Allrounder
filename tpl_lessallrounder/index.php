@@ -187,7 +187,6 @@ JHtmlBootstrap::tooltip();
 				<?php if ($params->get('showDate')) : ?>
 					<span id="date"><?php echo JHTML::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
 				<?php endif; ?>
-				<span id="copy"><a href="http://www.lernvid.com" title="Joomla Templates" target="_blank">Template designed by LernVid.com</a></span>
 			</div>
 		</div>
 		<div class="clearfix"></div>

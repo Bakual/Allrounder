@@ -5,9 +5,9 @@
 	<author>Thomas Hunziker</author>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>http://www.bakual.net</authorUrl>
-	<copyright>LernVid.com</copyright>
-	<license>http://www.lernvid.com/lizenz</license>
-	<version>2.0.1</version>
+	<copyright>(C) 2015</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<version>2.1.0</version>
 	<description>TPL_ALLROUNDER_XML_DESCRIPTION</description>
 	<files>
 		<folder>css</folder>
