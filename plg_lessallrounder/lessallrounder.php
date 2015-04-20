@@ -95,6 +95,18 @@ class PlgSystemLessallrounder extends JPlugin
 				unset($params_array['customCssCode']);
 			}
 
+			// Same for textLogo
+			if (array_key_exists('textLogo', $params_array))
+			{
+				unset($params_array['textLogo']);
+			}
+
+			// Same for Slogan
+			if (array_key_exists('slogan', $params_array))
+			{
+				unset($params_array['slogan']);
+			}
+
 			// Sanitising params for LESS
 			foreach ($params_array as &$value)
 			{
