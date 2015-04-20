@@ -13,7 +13,7 @@ defined('_JEXEC') or die();
 
 /**
  * Plugin compiles .less files on template style save.
- * Less compiler lessphp; see http://leafo.net/lessphp/
+ * JLess compiler uses lessphp; see http://leafo.net/lessphp/
  *
  * @since  1.0
  */
@@ -68,8 +68,7 @@ class PlgSystemLessallrounder extends JPlugin
 		// Check if .less file exists and is readable
 		if (is_readable($lessFile))
 		{
-			require_once 'lessc.inc.php';
-			$less = new lessc;
+			$less = new JLess;
 
 			if ($table->params->get('cssCompress', 0))
 			{
@@ -78,12 +77,7 @@ class PlgSystemLessallrounder extends JPlugin
 			else
 			{
 				// Joomla way
-				$formatter = new lessc_formatter_classic;
-				$formatter->disableSingle = true;
-				$formatter->breakSelectors = true;
-				$formatter->assignSeparator = ": ";
-				$formatter->selectorSeparator = ",";
-				$formatter->indentChar = "\t";
+				$formatter = new JLessFormatterJoomla;
 				$less->setFormatter($formatter);
 			}
 

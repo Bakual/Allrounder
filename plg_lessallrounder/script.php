@@ -17,6 +17,28 @@ defined('_JEXEC') or die('Restricted access');
 class PlgSystemLessallrounderInstallerScript
 {
 	/**
+	 * method to run before an install/update/uninstall method
+	 *
+	 * @param   string                      $type    'install', 'update' or 'discover_install'
+	 * @param   JInstallerAdapterComponent  $parent  Installerobject
+	 *
+	 * @return  boolean  false will terminate the installation
+	 */
+	public function preflight($type, $parent)
+	{
+		$min_version = (string) $parent->get('manifest')->attributes()->version;
+
+		$jversion = new JVersion;
+
+		if (!$jversion->isCompatible($min_version))
+		{
+			JFactory::getApplication()->enqueueMessage('Needs at least Joomla ' . $min_version . '!', 'error');
+
+			return false;
+		}
+	}
+
+	/**
 	 * Method to update the plugin
 	 *
 	 * @param   object  $parent  JInstallerAdapterPlugin class calling this method
