@@ -83,22 +83,20 @@ class PlgSystemLessallrounder extends JPlugin
 
 			$params_array = $table->params->toArray();
 
-			// Unset the customCssCode parameter as it breaks the compiler if it starts with a dot (.) or hash (#).
-			if (array_key_exists('customCssCode', $params_array))
-			{
-				unset($params_array['customCssCode']);
-			}
+			// Unset the some parameter as it breaks the compiler if it starts with a dot (.) or hash (#).
+			$unsets = array(
+						'customCssCode',
+						'textLogo',
+						'slogan',
+						'copyText',
+					);
 
-			// Same for textLogo
-			if (array_key_exists('textLogo', $params_array))
+			foreach ($unsets as $unset)
 			{
-				unset($params_array['textLogo']);
-			}
-
-			// Same for Slogan
-			if (array_key_exists('slogan', $params_array))
-			{
-				unset($params_array['slogan']);
+				if (array_key_exists($unset, $params_array))
+				{
+					unset($params_array[$unset]);
+				}
 			}
 
 			// Sanitising params for LESS
