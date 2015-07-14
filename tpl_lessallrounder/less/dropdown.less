@@ -99,8 +99,12 @@
 					border-bottom-color: @ulLiliaBorderBottom;
 					color: @ulLiliaColor;
 					&:hover {
-						background-color: @ulLiliHoverBackground;
 						color: @ulLiliaHoverColor;
+					}
+				}
+				&:hover > {
+					a, span.separator {
+						background-color: @ulLiliHoverBackground;
 					}
 				}
 				&.parent > {
