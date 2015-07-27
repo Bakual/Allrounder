@@ -352,19 +352,19 @@ a {
 				vertical-align: middle;
 			}
 		}
-		&.current a {
+		&.current > a {
 			font-weight: bold;
 			color: @mainMenuFontCurrent;
-		}
-		&.current ul li a {
-			font-weight: normal;
-			color: @mainMenuLiLiFont;
 		}
 		ul {
 			margin-left: 10px;
 			font-size: 90%;
 			li {
 				line-height: 18px;
+				a {
+					font-weight: normal;
+					color: @mainMenuLiLiFont;
+				}
 			}
 		}
 	}
