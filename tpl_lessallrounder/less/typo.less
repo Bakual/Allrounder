@@ -180,35 +180,20 @@ ul {
 			list-style: circle;
 		}
 	}
-	&.arrow, &.folder, &.ok, &.star, &.cross {
-		padding-left: 10px;
-		ul {
-			padding-left: 10px;
-		}
-		li {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			line-height: 1.6em !important;
-			&:before {
-				padding-right: 3px;
-			}
-		}
+	&.arrow {
+		list-style-image: url(../images/icons/arrow.gif);
 	}
-	&.arrow li:before {
-		content: url(../images/icons/arrow.gif);
+	&.folder {
+		list-style-image: url(../images/icons/folder.gif);
 	}
-	&.folder li:before {
-		content: url(../images/icons/folder.gif);
+	&.ok {
+		list-style-image: url(../images/icons/ok.gif);
 	}
-	&.ok li:before {
-		content: url(../images/icons/ok.gif);
+	&.star {
+		list-style-image: url(../images/icons/star.gif);
 	}
-	&.star li:before {
-		content: url(../images/icons/star.gif);
-	}
-	&.cross li:before {
-		content: url(../images/icons/cross.png);
+	&.cross {
+		list-style-image: url(../images/icons/cross.png);
 	}
 }
 /* Tables */
