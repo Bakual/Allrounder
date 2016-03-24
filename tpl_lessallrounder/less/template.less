@@ -409,6 +409,8 @@ input[type="color"],
 	background-repeat: no-repeat;
 	padding-left: 40px;
 }
+.guarded-headingImage() when (@contentheadingImage = 0) {
+}
 .page-header h2, h2.item-title {
 	.guarded-headingImage();
 	line-height: 32px;

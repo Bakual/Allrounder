@@ -178,6 +178,8 @@
 		padding:0 1%;
 	}
 }
+.guarded-deprecated() when not (@deprecated = 1) {
+}
 .guarded-deprecated();
 
 /* Load CSS3 effects for deprecated features */
@@ -201,5 +203,7 @@
 	.easy-caption-close {
 		border-radius:10px;
 	}
+}
+.guarded-deprecated-effects() when (@deprecated = 0), (@css3effects = 0) {
 }
 .guarded-deprecated-effects();
