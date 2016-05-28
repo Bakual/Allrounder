@@ -137,6 +137,11 @@ JHtmlBootstrap::tooltip();
 					<jdoc:include type="modules" name="position-7" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
+			<?php if ($this->countModules('position-8')) : ?>
+				<div id="rightcol">
+					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
+				</div>
+			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
 				<?php require $modules . 'beforecontent.php'; ?>
 				<div id="maincontent" class="row-fluid">
@@ -147,11 +152,6 @@ JHtmlBootstrap::tooltip();
 				<span class="shadow-right">&nbsp;</span>
 				<?php require $modules . 'aftercontent.php'; ?>
 			</div>
-			<?php if ($this->countModules('position-8')) : ?>
-				<div id="rightcol">
-					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
-				</div>
-			<?php endif; ?>
 			<div class="clearfix"></div>
 		</div>
 		<?php require $modules . 'bottom.php'; ?>
