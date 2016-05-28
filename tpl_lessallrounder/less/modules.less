@@ -136,8 +136,10 @@
 	background-color: @moduleh3BgColor;
 	border-top: 1px solid @moduleh3BorderTopColor;
 	color: @moduleh3Color;
-	position:relative;
-	.border-top-radius(5px);
+	position: relative;
+	@media (min-width: @maxMobileWidth + 1;) {
+		.border-top-radius(5px);
+	}
 }
 .module-outer, .module-outer_menu {
 	> div {
