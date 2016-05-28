@@ -57,6 +57,10 @@
 					description="TPL_ALLROUNDER_WIDTH_DESC"
 					showon="whatWidth:0"
 					default="950px" />
+				<field name="maxMobileWidth" type="text"
+					label="TPL_ALLROUNDER_MAXMOBILEWIDTH"
+					description="TPL_ALLROUNDER_MAXMOBILEWIDTH"
+					default="600px" />
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
 					label="TPL_ALLROUNDER_LEFT_WIDTH"
