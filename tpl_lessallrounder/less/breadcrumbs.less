@@ -1,10 +1,17 @@
 ul.breadcrumb {
-	float: left;
+	@media (max-width: @maxMobileWidth + 1;) {
+		float: left;
+		margin: 8px 0 0 26px;
+		max-width: 650px;
+	}
+	@media (max-width: @maxMobileWidth;) {
+		text-align: center;
+		width: 100%;
+		margin: 8px 0 0 0;
+	}
 	font-size: 11px;
 	height: 16px;
 	line-height: 16px;
-	margin: 8px 0 0 26px;
-	max-width: 650px;
 	overflow: hidden;
 	padding: 0 7px;
 	li {
