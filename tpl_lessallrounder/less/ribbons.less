@@ -1,73 +1,75 @@
-/* ribbons in header */
-.heckl {
-	border-left: 19px solid transparent;
-	left: 0;
-}
-.heckr {  
-	border-right: 19px solid transparent;  
-	right: 0;  
-}
-.heckl, .heckr {  
-	top: 100%;  
-	width: 0px;
-	height: 0px;
-	line-height: 0px;
-	border-top: 10px solid @headCornerColor;
-	position: absolute;
-}
-/* ribbons in footer */
-.feckl {  
-	border-left: 14px solid transparent;  
-	left: 0;  
-}
-.feckr {  
-	border-right: 14px solid transparent;  
-	right: 0;  
-}
-.feckl, .feckr {  
-	top: -11px;  
-	width: 0;
-	height: 0;  
-	line-height: 0;  
-	border-bottom: 10px solid @footCornerColor;
-	position: absolute;  
-}
-/* ribbons in module h3 */
-#leftcol .h3eck {
-	left: 0;  
-	border-left: 11px solid transparent;  
-}
-#rightcol .h3eck {
-	right: 0;  
-	border-right: 11px solid transparent;  
-}
-.h3eck {
-	width: 0;
-	height: 0;  
-	line-height: 0;  
-	top: 100%;  
-	border-top: 10px solid @moduleh3CornerColor;
-	position: absolute;  
-}
-/* Ribbons on */
-.guarded-ribbons() when (@ribbonsOnOff = 1) {
-	#leftcol .moduleh3-sidebar {
-		margin: 10px 0 0 -20px;
+/* Ribbons only for Desktops */
+@media (min-width: @maxMobileWidth + 1;) {
+	/* ribbons in header */
+	.heckl {
+		border-left: 19px solid transparent;
+		left: 0;
 	}
-	#rightcol .moduleh3-sidebar {
-		margin: 10px -20px 0 0;
+	.heckr {  
+		border-right: 19px solid transparent;  
+		right: 0;  
 	}
-	#footer {
-		margin: 0 -16px 0 -16px;
+	.heckl, .heckr {  
+		top: 100%;  
+		width: 0px;
+		height: 0px;
+		line-height: 0px;
+		border-top: 10px solid @headCornerColor;
+		position: absolute;
 	}
-	#header {
-		margin: 0 -21px 15px -21px;
-		padding: 0 21px;
+	/* ribbons in footer */
+	.feckl {  
+		border-left: 14px solid transparent;  
+		left: 0;  
 	}
-}
+	.feckr {  
+		border-right: 14px solid transparent;  
+		right: 0;  
+	}
+	.feckl, .feckr {  
+		top: -11px;  
+		width: 0;
+		height: 0;  
+		line-height: 0;  
+		border-bottom: 10px solid @footCornerColor;
+		position: absolute;  
+	}
+	/* ribbons in module h3 */
+	#leftcol .h3eck {
+		left: 0;  
+		border-left: 11px solid transparent;  
+	}
+	#rightcol .h3eck {
+		right: 0;  
+		border-right: 11px solid transparent;  
+	}
+	.h3eck {
+		width: 0;
+		height: 0;  
+		line-height: 0;  
+		top: 100%;  
+		border-top: 10px solid @moduleh3CornerColor;
+		position: absolute;  
+	}
+	/* Ribbons on */
+	.guarded-ribbons() when (@ribbonsOnOff = 1) {
+		#leftcol .moduleh3-sidebar {
+			margin: 10px 0 0 -20px;
+		}
+		#rightcol .moduleh3-sidebar {
+			margin: 10px -20px 0 0;
+		}
+		#footer {
+			margin: 0 -16px 0 -16px;
+		}
+		#header {
+			margin: 0 -21px 15px -21px;
+			padding: 0 21px;
+		}
+	}
 
 /* Ribbons off */
-.guarded-ribbons() when not (@ribbonsOnOff = 1) {
+.guarded-ribbons() when not (@ribbonsOnOff = 1), @media (max-width: @maxMobileWidth;) {
 	#header, #footer, .moduleh3-sidebar {
 		margin: 0;
 	}
