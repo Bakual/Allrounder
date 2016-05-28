@@ -1,1 +1,97 @@
+/* Its the technic in the background */
+input.hackbox {
+        display: none;
+}
 
+.mobile_fold, mobile_menu {
+        label {
+                margin: 0;
+        }
+}
+
+/* Desktop */
+@media (min-width: @maxMobileWidth;) {
+	/* don't show labes */
+	ul.mobile_menu label {
+		display: none;
+	}
+
+	/* don't show mobile Module */
+	.no_desktop {
+		display: none;
+	}
+	
+	/* mobile Menu, which should be folded for Desktop use */
+	ul.mobile_menu.desktop_fold li:not(.active) ul {
+		display: none;
+	}
+}
+
+/* Mobile */
+@media (max-width: @maxMobileWidth;) {
+        /* Mobile Menu */
+        ul.mobile_menu {
+                ul {
+        		max-height: 0px;
+        		overflow: hidden;
+        		transition: max-height 0.5s;
+        		padding: 0 0 0 1.5em;
+        		left: 0px;
+        		top: 0px;
+        	}
+        	a, label {
+        	        display: inline-block;
+        	}
+        	label {
+        	        width: 1.5em;
+        	}
+        	a {
+        	        width: 100%;
+        	}
+        	li, ul {
+        	        width: 100%;
+        	        display: block;
+        	}
+        	&, * {
+        		position: relative;
+        		margin: 0px;
+        		box-shadow: none;
+        		line-height: 35px;
+        		font-size: 20px;
+        	}
+        	&, li, a {
+        	        padding: 0;
+        	}
+        	&, li, ul {
+        	        border: none;
+        	        .rounded(0);
+        	}
+        	input.hackbox:checked ~ ul {
+        	        max-height: none;
+        	}
+        	li.parent>a>label::before {
+        		content: @mobileMenuOpen;
+        		position: relative;
+        		left: 0.5ex;
+        		font-size: 20px;
+        	}
+        	li.parent>input.hackbox:checked~a>label::before {
+        		content: @mobileMenuClose;
+        	}
+        }
+        
+        /* fold modules */
+        .mobile_fold {
+                input.hackbox {
+                        ~ div, ~ .shadow-left, ~ .shadow-right {
+                                display: none;
+                        }
+                        &:checked {
+                                 ~ div, ~ .shadow-left, ~ .shadow-right {
+                                        display: block;
+                                }
+                        }
+                }
+                
+        }
+}
