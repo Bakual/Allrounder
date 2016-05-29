@@ -1,5 +1,5 @@
 /* Drop-Down-Menu only for Desktop */
-@media (min-width: @maxMoileWith + 1;) {
+@media (min-width: @minDesktopWidth) {
 	/* Rules regarding topmenu dropdown */
 	#topmenu {
 		ul.menu {
@@ -124,6 +124,26 @@
 				ul {
 					left: 200px;
 					top: 1.1em;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: @maxMobileWidth) {
+	#topmenu {
+		ul.mobile_menu {
+			&, * {
+				background-color: @ddBackground;
+			}
+			a {
+				border: 1px solid @ulLiBorderRight;
+				.border-radius(0 0 0 0) !important;
+			}
+			label::before, a {
+				color: @ulLiaColor;
+				&:hover {
+					color: @ulLiaHoverColor;
 				}
 			}
 		}
