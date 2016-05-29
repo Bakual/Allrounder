@@ -9,8 +9,10 @@
 	/* Dropdown Menu*/
 	#topmenu {
 		ul.menu {
-			ul {
-				box-shadow: 0 0 10px #000;
+			@media (min-width: @minDesktopWidth) {
+				ul {
+					box-shadow: 0 0 10px #000;
+				}
 			}
 			li {
 				a {
