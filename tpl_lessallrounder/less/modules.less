@@ -159,11 +159,11 @@
 }
 #rightcol .moduleh3-sidebar {
 	/* mobile: display like #leftcol */
-	@media (min-width: @maxMobileWidth + 1;) {
+	@media (min-width: @minDesktopWidth) {
 		padding: 0 30px 0 10px;
 		text-align: right;
 	}
-	@media (max-width: @maxMobileWidth;) {
+	@media (max-width: @maxMobileWidth) {
 		padding: 0 10px 0 30px;
 	}
 	border-right: 1px solid @moduleh3BorderOuterColor;
@@ -185,12 +185,13 @@
 	margin-top: -8px;
 }
 /* if mobile and folded module, remove Shadow */
-@media (max-width: @maxMobileWidth;) {
+@media (max-width: @maxMobileWidth) {
 	.mobile_fold .input.hackbox {
-		.shadow-left, .shadow-right {
+		~ .shadow-left, ~ .shadow-right {
 			display: none;
 		}
-		&:checked {.shadow-left, .shadow-right {
+		&:checked ~ {
+			.shadow-left, .shadow-right {
 			display: block;
 		}
 	}
