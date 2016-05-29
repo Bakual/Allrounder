@@ -1,5 +1,5 @@
 /* Ribbons only for Desktops */
-@media (min-width: @maxMobileWidth + 1;) {
+@media (min-width: @minDesktopWidth) {
 	/* ribbons in header */
 	.heckl {
 		border-left: 19px solid transparent;
@@ -51,8 +51,11 @@
 		border-top: 10px solid @moduleh3CornerColor;
 		position: absolute;  
 	}
-	/* Ribbons on */
-	.guarded-ribbons() when (@ribbonsOnOff = 1) {
+}
+
+/* Ribbons on */
+.guarded-ribbons() when (@ribbonsOnOff = 1) {
+	@media (min-width: @minDesktopWidth) {
 		#leftcol .moduleh3-sidebar {
 			margin: 10px 0 0 -20px;
 		}
@@ -67,9 +70,17 @@
 			padding: 0 21px;
 		}
 	}
+	@media (max-width: @maxMobileWidth) {
+		.ribbons-off();
+	}
+}
 
 /* Ribbons off */
-.guarded-ribbons() when not (@ribbonsOnOff = 1), @media (max-width: @maxMobileWidth;) {
+.guarded-ribbons() when not (@ribbonsOnOff = 1) {
+	.ribbons-off();
+}
+
+.ribbons-off() {
 	#header, #footer, .moduleh3-sidebar {
 		margin: 0;
 	}
