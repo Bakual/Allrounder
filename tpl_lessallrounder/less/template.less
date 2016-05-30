@@ -408,6 +408,10 @@ a {
 		}
 	}
 }
+/* Don't display submenu of no_child-menu-items */
+ul.menu li a.no_child ~ ul {
+	display: none !important;
+}
 /* Input styling, type declarations to override bootstrap (forms.less) */
 select,
 textarea,
