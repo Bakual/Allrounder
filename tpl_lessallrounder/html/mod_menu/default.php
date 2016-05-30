@@ -21,7 +21,19 @@ defined('_JEXEC') or die;
 		echo ' id="' . $tag . '"';
 	}
 ?>>
-<?php
+<?php if ((strpos($class_sfx,'nav-bar') !== false) and ($tag == true)) : ?>
+<input class="hackbox nav-bar" id="hackbox_nav-bar_<?php echo $tag; ?>" type="checkbox">
+<li class="no_desktop nav-bar">
+	<label for="hackbox_nav-bar_<?php echo $tag; ?>">
+		<a>
+			<div>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</div>
+		</a>
+</li>
+<?php endif;
 foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id;
