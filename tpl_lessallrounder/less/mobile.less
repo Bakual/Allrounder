@@ -1,12 +1,12 @@
 /* It's the technic in the background */
 input.hackbox {
-        display: none;
+	display: none;
 }
 
 .mobile_fold, .mobile_menu {
-        label {
-                margin: 0;
-        }
+	label {
+		margin: 0;
+	}
 }
 
 /* Desktop */
@@ -29,56 +29,61 @@ input.hackbox {
 
 /* Mobile */
 @media (max-width: @maxMobileWidth) {
-        /* Mobile Menu */
-        ul.mobile_menu {
-                ul {
-        		max-height: 0px;
-        		overflow: hidden;
-        		padding: 0 0 0 1.5em;
-        	}
-        	a, label {
-        	        display: inline-block;
-        	}
-        	label {
-        	        width: 1.5em;
-        	        text-align: center;
-        	}
-        	a {
-        	        width: 100%;
-			padding: 0px !important;
-        	}
-        	li, ul {
-        	        width: 100%;
-        	        display: block;
-        	}
-        	&, * {
-        		position: relative;
-        		margin: 0px;
-        		box-shadow: none;
-        		line-height: 35px;
-        		font-size: 20px;
-        	}
-        	&, li {
-        	        padding: 0;
-        	}
-        	&, li, ul {
-        	        border: none;
-        	}
-        	input.hackbox:checked ~ ul {
-        	        max-height: none;
-        	}
-        	li.parent>a>label::before {
-        		content: "+";
+	/* Mobile Menu */
+	ul.mobile_menu {
+		ul {
+			max-height: 0px;
+			overflow: hidden;
+			padding: 0 0 0 1.5em;
+			display: block !important;
+		}
+		a, label {
+			display: inline-block;
+		}
+		label {
+			width: 1.5em;
+			text-align: center;
+		}
+		a {
+			width: 100%;
+			padding: 0px;
+			line-height: 35px;
+			margin: 0px;
+		}
+		li, ul {
+			width: 100%;
+		}
+		li {
+			display: block;
+		}
+		&, * {
+			position: relative;
+			margin: 0px;
+			box-shadow: none;
+			line-height: 35px;
+			font-size: 20px;
+		}
+		&, li {
+			padding: 0;
+		}
+		&, li, ul {
+			border: none;
+		}
+		input.hackbox:checked ~ ul {
+			max-height: none;
+		}
+		li.parent>a>label::before {
+			content: "+";
 			color: green;
-        		position: relative;
-        		left: 0.5ex;
-        		font-size: 20px;
+			position: relative;
+			left: 0.5ex;
+			font-size: 20px;
 			padding-right: 0.5em;
-        	}
-        	li.parent>input.hackbox:checked~a>label::before {
-        		content: "\2013";
+		}
+		li.parent>input.hackbox:checked~a>label::before {
+			content: "\2013";
 			color: red;
-        	}
+		}
 		/* nav-bar */
 		&.nav-bar {
 			li.nav-bar label {
@@ -107,27 +112,27 @@ input.hackbox {
 			}
 		}
 	}
-        
-        /* fold modules */
-        .mobile_fold {
-                input.hackbox {
-                        ~ div, ~ .shadow-left, ~ .shadow-right {
-                                display: none;
-                        }
-                        &:checked {
-                                 ~ div, ~ .shadow-left, ~ .shadow-right {
-                                        display: block;
-                                }
-                        }
-                }
-                
-        }
-        
-        /* don't show Desktop Modules */
-        .no_mobile {
-        	display: none;
-        }
-        
+	
+	/* fold modules */
+	.mobile_fold {
+		input.hackbox {
+			~ div, ~ .shadow-left, ~ .shadow-right {
+				display: none;
+			}
+			&:checked {
+				 ~ div, ~ .shadow-left, ~ .shadow-right {
+					display: block;
+				}
+			}
+		}
+		
+	}
+	
+	/* don't show Desktop Modules */
+	.no_mobile {
+		display: none;
+	}
+	
 	/* correct sizing */
 	* {
 		box-sizing: border-box;
