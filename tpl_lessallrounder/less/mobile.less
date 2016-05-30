@@ -34,16 +34,14 @@ input.hackbox {
                 ul {
         		max-height: 0px;
         		overflow: hidden;
-        		transition: max-height 0.5s;
         		padding: 0 0 0 1.5em;
-        		left: 0px;
-        		top: 0px;
         	}
         	a, label {
         	        display: inline-block;
         	}
         	label {
         	        width: 1.5em;
+        	        text-align: center;
         	}
         	a {
         	        width: 100%;
@@ -70,15 +68,45 @@ input.hackbox {
         	        max-height: none;
         	}
         	li.parent>a>label::before {
-        		content: @mobileMenuOpen;
+        		content: "+";
+			color: green;
         		position: relative;
         		left: 0.5ex;
         		font-size: 20px;
+			padding-right: 0.5em;
         	}
         	li.parent>input.hackbox:checked~a>label::before {
-        		content: @mobileMenuClose;
+        		content: "\2013";
+			color: red;
         	}
-        }
+		/* nav-bar */
+		&.nav-bar {
+			li.nav-bar label {
+				width: 100%;
+				text-align: left;
+				a {
+					width: 100%;
+					div {
+						display: inline-block;
+						padding-left: 1.5em; // width of the other labels
+						.icon-bar {
+							display: block;
+							margin-top: 4px;
+							width: 1em;
+							height: 2px;
+							background-color: @ulLiaColor;
+						}
+					}
+				}
+			}
+			input.hackbox.nav-bar ~ li:not(.nav-bar) {
+				display: none;
+			}
+			input.hackbox.nav-bar:checked ~ li {
+				display: block;
+			}
+		}
+	}
         
         /* fold modules */
         .mobile_fold {
