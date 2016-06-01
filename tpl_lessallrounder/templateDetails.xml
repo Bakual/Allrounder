@@ -63,8 +63,8 @@
 					class="btn-group"
 					default="767" >
 					<option value="0">JNONE</option>
-					<option value="767">TPL_ALLROUNDER_MAXMOBILEWIDTH_OPTION_PHONES</option>
-					<option value="979">TPL_ALLROUNDER_MAXMOBILEWIDTH_OPTION_TABLETS</option>
+					<option value="767">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_PHONES</option>
+					<option value="979">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_TABLETS</option>
 				</field>
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
