@@ -1,3 +1,15 @@
+.css3-effects_less() when (@maxMobileWidth > 0) {
+	@media (min-width: @minDesktopWidth) {
+		ul {
+			box-shadow: 0 0 10px #000;
+		}
+	}
+}
+.css3-effects_less() when not (@maxMobileWidth > 0) {
+	ul {
+		box-shadow: 0 0 10px #000;
+	}
+}
 /* CSS3 Effects (text-shadow, box-shadow, border-radius) */
 .guarded-effects() when (@css3effects = 1) {
 	.breadcrumbs {
@@ -9,11 +21,7 @@
 	/* Dropdown Menu*/
 	#topmenu {
 		ul.menu {
-			@media (min-width: @minDesktopWidth) {
-				ul {
-					box-shadow: 0 0 10px #000;
-				}
-			}
+			.css3-effects_less();
 			li {
 				a {
 					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
