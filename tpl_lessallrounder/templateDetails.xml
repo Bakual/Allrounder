@@ -57,10 +57,15 @@
 					description="TPL_ALLROUNDER_WIDTH_DESC"
 					showon="whatWidth:0"
 					default="950px" />
-				<field name="maxMobileWidth" type="text"
+				<field name="mobileWidth" type="radio"
 					label="TPL_ALLROUNDER_MAXMOBILEWIDTH"
-					description="TPL_ALLROUNDER_MAXMOBILEWIDTH"
-					default="767px" />
+					description="TPL_ALLROUNDER_MAXMOBILEWIDTH_DESC"
+					class="btn-group"
+					default="767" >
+					<option value="0">JNONE</option>
+					<option value="767">TPL_ALLROUNDER_MAXMOBILEWIDTH_OPTION_PHONES</option>
+					<option value="979">TPL_ALLROUNDER_MAXMOBILEWIDTH_OPTION_TABLETS</option>
+				</field>
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
 					label="TPL_ALLROUNDER_LEFT_WIDTH"
