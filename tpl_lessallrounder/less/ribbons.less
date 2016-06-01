@@ -1,5 +1,6 @@
 /* Ribbons only for Desktops */
-@media (min-width: @minDesktopWidth) {
+
+.ribbons-on() {
 	/* ribbons in header */
 	.heckl {
 		border-left: 19px solid transparent;
@@ -51,24 +52,25 @@
 		border-top: 10px solid @moduleh3CornerColor;
 		position: absolute;  
 	}
+	#leftcol .moduleh3-sidebar {
+		margin: 10px 0 0 -20px;
+	}
+	#rightcol .moduleh3-sidebar {
+		margin: 10px -20px 0 0;
+	}
+	#footer {
+		margin: 0 -16px 0 -16px;
+	}
+	#header {
+		margin: 0 -21px 15px -21px;
+		padding: 0 21px;
+	}
 }
 
 /* Ribbons on */
-.guarded-ribbons() when (@ribbonsOnOff = 1) {
+.guarded-ribbons_media() when (@maxMobileWidth > 0) {
 	@media (min-width: @minDesktopWidth) {
-		#leftcol .moduleh3-sidebar {
-			margin: 10px 0 0 -20px;
-		}
-		#rightcol .moduleh3-sidebar {
-			margin: 10px -20px 0 0;
-		}
-		#footer {
-			margin: 0 -16px 0 -16px;
-		}
-		#header {
-			margin: 0 -21px 15px -21px;
-			padding: 0 21px;
-		}
+		.ribbons-on();
 	}
 	@media (max-width: @maxMobileWidth) {
 		.ribbons-off();
@@ -76,6 +78,13 @@
 			margin: 0 0 15px 0;
 		}
 	}
+}
+.guarded-ribbons_media() when not (@maxMobileWidth > 0) {
+	.ribbons-on();
+}
+
+.guarded-ribbons() when (@ribbonsOnOff = 1) {
+	.guarded-ribbons_media();
 }
 
 /* Ribbons off */
@@ -92,6 +101,7 @@
 	}
 	#header {
 		padding: 0;
+		margin-bottom: 15px;
 	}
 	.heckl, .heckr, .feckl, .feckr, .h3eck {  
 		display: none;
