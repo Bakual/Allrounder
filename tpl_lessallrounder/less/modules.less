@@ -137,9 +137,15 @@
 	border-top: 1px solid @moduleh3BorderTopColor;
 	color: @moduleh3Color;
 	position: relative;
-	@media (min-width: @minDesktopWidth) {
+	.modules_less_sidebar() when (@maxMobileWidth > 0) {
+		@media (min-width: @minDesktopWidth) {
+			.border-top-radius(5px);
+		}
+	}	
+	.modules_less_sidebar() when (@maxMobileWidth > 0) {
 		.border-top-radius(5px);
 	}
+	.modules_less_sidebar();
 }
 .module-outer, .module-outer_menu {
 	> div {
@@ -159,13 +165,20 @@
 }
 #rightcol .moduleh3-sidebar {
 	/* mobile: display like #leftcol */
-	@media (min-width: @minDesktopWidth) {
-		padding: 0 30px 0 10px;
-		text-align: right;
+	.modules_less_rightcol() when (@maxMobileWidth > 0) {
+		@media (min-width: @minDesktopWidth) {
+			padding: 0 30px 0 10px;
+			text-align: right;
+		}
+		@media (max-width: @maxMobileWidth) {
+			padding: 0 10px 0 30px;
+		}
 	}
-	@media (max-width: @maxMobileWidth) {
-		padding: 0 10px 0 30px;
+	.modules_less_rightcol() when not (@maxMobileWidth > 0) {
+			padding: 0 30px 0 10px;
+			text-align: right;
 	}
+	.modules_less_rightcol();
 	border-right: 1px solid @moduleh3BorderOuterColor;
 	border-left: 1px solid @moduleh3BorderInnerColor;
 }
@@ -184,19 +197,24 @@
 	background-position: right;
 	margin-top: -8px;
 }
-/* if mobile and folded module, remove Shadow */
-@media (max-width: @maxMobileWidth) {
-	.mobile_fold .input.hackbox {
-		~ .shadow-left, ~ .shadow-right {
-			display: none;
-		}
-		&:checked ~ {
-			.shadow-left, .shadow-right {
-				display: block;
+.modules_less() when (@maxMobileWidth > 0) {
+	/* if mobile and folded module, remove Shadow */
+	@media (max-width: @maxMobileWidth) {
+		.mobile_fold .input.hackbox {
+			~ .shadow-left, ~ .shadow-right {
+				display: none;
+			}
+			&:checked ~ {
+				.shadow-left, .shadow-right {
+					display: block;
+				}
 			}
 		}
 	}
 }
+.mobile_less() when not (@maxMobileWidth > 0) {
+}
+.mobile_less();
 /* To disable the shadows in modules use suffix " shadows-off" */
 .shadows-off {
 	.shadow-left, .shadow-right {
