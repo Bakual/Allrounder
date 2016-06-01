@@ -142,7 +142,7 @@
 			.border-top-radius(5px);
 		}
 	}	
-	.modules_less_sidebar() when (@maxMobileWidth > 0) {
+	.modules_less_sidebar() when not (@maxMobileWidth > 0) {
 		.border-top-radius(5px);
 	}
 	.modules_less_sidebar();
