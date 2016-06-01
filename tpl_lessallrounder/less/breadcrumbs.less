@@ -1,14 +1,23 @@
-ul.breadcrumb {
+.breadcrumb_less_desktop () {
+	float: left;
+	margin: 8px 0 0 26px;
+	max-width: 650px;
+}
+.breadcrumb_less() when (@maxMobileWidth > 0) {
 	@media (min-width: @minDesktopWidth) {
-		float: left;
-		margin: 8px 0 0 26px;
-		max-width: 650px;
+		.breadcrumb_less_desktop();
 	}
 	@media (max-width: @maxMobileWidth) {
 		text-align: center;
 		width: 100%;
 		margin: 8px 0 0 0;
 	}
+}
+.breadcrumb_less() when not (@maxMobileWidth > 0) {
+	.breadcrumb_less_desktop();
+}
+ul.breadcrumb {
+	.breadcrumb_less();
 	font-size: 11px;
 	height: 16px;
 	line-height: 16px;
