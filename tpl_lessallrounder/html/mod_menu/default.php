@@ -23,7 +23,7 @@ defined('_JEXEC') or die;
 ?>>
 <?php if ((strpos($class_sfx,'nav-bar') !== false) and ($tag == true)) : ?>
 <input class="hackbox nav-bar" id="hackbox_nav-bar_<?php echo $tag; ?>" type="checkbox">
-<li class="no_desktop nav-bar">
+<li class="nav-bar">
 	<label for="hackbox_nav-bar_<?php echo $tag; ?>">
 		<a>
 			<div>
