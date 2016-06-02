@@ -42,14 +42,20 @@ input.hackbox {
 				padding: 0 0 0 1.5em;
 				display: block !important;
 			}
-			a, label {
-				display: inline-block;
-			}
 			label {
 				width: 1.5em;
 				text-align: center;
 			}
+			li>a>label {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			li>a>div {
+				margin-left: 1.5em;
+				display: table-cell;
+			}
 			a {
+				display: table;
 				width: 100%;
 				padding: 0px !important;
 				line-height: 35px;
