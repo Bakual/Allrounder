@@ -8122,114 +8122,14 @@ ul.breadcrumb li span.divider {
 	background-position: right;
 	margin-top: -8px;
 }
-@media (min-width: 768px) {
-	ul.mobile_menu label {
-		display: none;
-	}
-	ul.nav-bar li.nav-bar {
-		display: none !important;
-	}
-	ul.mobile_menu.desktop_fold li:not(.active) ul {
-		display: none;
-	}
-}
 @media (max-width: 767px) {
-	ul.mobile_menu ul {
-		max-height: 0px;
-		overflow: hidden;
-		padding: 0 0 0 1.5em;
-		display: block !important;
-	}
-	ul.mobile_menu a,
-	ul.mobile_menu label {
-		display: inline-block;
-	}
-	ul.mobile_menu label {
-		width: 1.5em;
-		text-align: center;
-	}
-	ul.mobile_menu a {
-		width: 100%;
-		padding: 0px !important;
-		line-height: 35px;
-		margin: 0px;
-	}
-	ul.mobile_menu li,
-	ul.mobile_menu ul {
-		width: 100%;
-	}
-	ul.mobile_menu li {
-		display: block;
-	}
-	ul.mobile_menu,
-	ul.mobile_menu * {
-		position: relative;
-		margin: 0px;
-		box-shadow: none;
-		line-height: 35px;
-		font-size: 20px;
-	}
-	ul.mobile_menu,
-	ul.mobile_menu li {
-		padding: 0;
-	}
-	ul.mobile_menu,
-	ul.mobile_menu li,
-	ul.mobile_menu ul {
-		border: none;
-	}
-	ul.mobile_menu input.hackbox:checked ~ ul {
-		max-height: none;
-	}
-	ul.mobile_menu li.parent>a>label::before {
-		content: "+";
-		color: green;
-		position: relative;
-		left: 0.5ex;
-		font-size: 20px;
-		padding-right: 0.5em;
-		font-weight: bold;
-	}
-	ul.mobile_menu li.parent>input.hackbox:checked~a>label::before {
-		content: "\2013";
-		color: red;
-	}
-	ul.mobile_menu.nav-bar li.nav-bar label {
-		width: 100%;
-		text-align: left;
-	}
-	ul.mobile_menu.nav-bar li.nav-bar label a {
-		width: 100%;
-	}
-	ul.mobile_menu.nav-bar li.nav-bar label a div {
-		display: inline-block;
-		padding-left: 1.5em;
-	}
-	ul.mobile_menu.nav-bar li.nav-bar label a div .icon-bar {
-		display: block;
-		margin-top: 4px;
-		width: 1em;
-		height: 2px;
-		background-color: #cccccc;
-	}
-	ul.mobile_menu.nav-bar input.hackbox.nav-bar ~ li:not(.nav-bar) {
+	.mobile_fold .input.hackbox ~ .shadow-left,
+	.mobile_fold .input.hackbox ~ .shadow-right {
 		display: none;
 	}
-	ul.mobile_menu.nav-bar input.hackbox.nav-bar:checked ~ li {
+	.mobile_fold .input.hackbox:checked ~ .shadow-left,
+	.mobile_fold .input.hackbox:checked ~ .shadow-right {
 		display: block;
-	}
-	.mobile_fold input.hackbox ~ div,
-	.mobile_fold input.hackbox ~ .shadow-left,
-	.mobile_fold input.hackbox ~ .shadow-right {
-		display: none;
-	}
-	.mobile_fold input.hackbox:checked ~ div,
-	.mobile_fold input.hackbox:checked ~ .shadow-left,
-	.mobile_fold input.hackbox:checked ~ .shadow-right {
-		display: block;
-	}
-	* {
-		box-sizing: border-box;
 	}
 }
 .shadows-off .shadow-left,
@@ -8636,15 +8536,20 @@ input.hackbox {
 		padding: 0 0 0 1.5em;
 		display: block !important;
 	}
-	ul.mobile_menu a,
-	ul.mobile_menu label {
-		display: inline-block;
-	}
 	ul.mobile_menu label {
 		width: 1.5em;
 		text-align: center;
 	}
+	ul.mobile_menu li>a>label {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	ul.mobile_menu li>a>div {
+		margin-left: 1.5em;
+		display: table-cell;
+	}
 	ul.mobile_menu a {
+		display: table;
 		width: 100%;
 		padding: 0px !important;
 		line-height: 35px;
