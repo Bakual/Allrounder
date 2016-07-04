@@ -31,3 +31,33 @@ label.leather {
 div.defaultvalue {
 	border-bottom: 1px dashed #666;
 }
+a[href="#attrib-globtemplfields"]:before {
+	content: url('../images/xml/sitemap.png');
+	margin-right: 5px;
+	vertical-align: sub;
+}
+a[href="#attrib-fontfields"]:before {
+	content: url('../images/xml/fonts.png');
+	margin-right: 5px;
+	vertical-align: sub;
+}
+a[href="#attrib-logofields"]:before {
+	content: url('../images/xml/logo.png');
+	margin-right: 5px;
+	vertical-align: sub;
+}
+a[href="#attrib-templcolorfields"]:before {
+	content: url('../images/xml/tempcolors.png');
+	margin-right: 5px;
+	vertical-align: sub;
+}
+a[href="#attrib-ddcolors"]:before {
+	content: url('../images/xml/ddcolors.png');
+	margin-right: 5px;
+	vertical-align: sub;
+}
+a[href="#attrib-advanced"]:before {
+	content: url('../images/xml/advanced.png');
+	margin-right: 5px;
+	vertical-align: sub;
+}
