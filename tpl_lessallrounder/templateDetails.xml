@@ -75,6 +75,14 @@
 					label="TPL_ALLROUNDER_RIGHT_WIDTH"
 					description="TPL_ALLROUNDER_RIGHT_WIDTH_DESC"
 					default="20" />
+				<field name="rightSBtoBottom" type="radio"
+					label="TPL_ALLROUNDER_RIGHTSBTOBOTTOM"
+					description="TPL_ALLROUNDER_RIGHTSBTOBOTTOM_DESC"
+					class="btn-group"
+					default="1" >
+					<option value="1">TPL_ALLROUNDER_RIGHTSBTOBOTTOM_OPTION_YES</option>
+					<option value="0">TPL_ALLROUNDER_RIGHTSBTOBOTTOM_OPTION_NO</option>
+				</field>
 				<field hr="true" type="spacer" />
 				<field name="showHeader" type="radio"
 					label="TPL_ALLROUNDER_HEADER"
