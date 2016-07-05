@@ -79,6 +79,7 @@
 					label="TPL_ALLROUNDER_RIGHTSBTOBOTTOM"
 					description="TPL_ALLROUNDER_RIGHTSBTOBOTTOM_DESC"
 					class="btn-group"
+					showon="mobileWidth:767[OR]mobileWidth:979"
 					default="1" >
 					<option value="1">TPL_ALLROUNDER_RIGHTSBTOBOTTOM_OPTION_YES</option>
 					<option value="0">TPL_ALLROUNDER_RIGHTSBTOBOTTOM_OPTION_NO</option>
