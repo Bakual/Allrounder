@@ -138,7 +138,7 @@ JHtmlBootstrap::tooltip();
 					<jdoc:include type="modules" name="position-7" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
-			<?php if (($this->countModules('position-8')) and ($params->get('rightSBtoBottom') == false) ) : ?>
+			<?php if ($this->countModules('position-8') and !$params->get('rightSBtoBottom')) : ?>
 				<div id="rightcol">
 					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
 				</div>
@@ -153,7 +153,7 @@ JHtmlBootstrap::tooltip();
 				<span class="shadow-right">&nbsp;</span>
 				<?php require $modules . 'aftercontent.php'; ?>
 			</div>
-			<?php if (($this->countModules('position-8')) and ($params->get('rightSBtoBottom')) ) : ?>
+			<?php if ($this->countModules('position-8') and $params->get('rightSBtoBottom')) : ?>
 				<div id="rightcol">
 					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
 				</div>
