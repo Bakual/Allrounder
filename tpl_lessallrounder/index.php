@@ -29,7 +29,7 @@ JHtmlBootstrap::tooltip();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<jdoc:include type="head" />
 	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
-	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS',1) ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
@@ -60,7 +60,7 @@ JHtmlBootstrap::tooltip();
 		<?php require $modules . 'toppanel.php'; ?>
 		<?php require $modules . 'beforehead.php'; ?>
 		<div id="header_container">
-			<?php if ($params->get('showHeader')) : ?>
+			<?php if ($params->get('showHeader',1)) : ?>
 				<div id="header">
 					<?php if ($this->countModules('headermodule1')) : ?>
 						<div id="headermodule1">
@@ -76,8 +76,8 @@ JHtmlBootstrap::tooltip();
 						</div>
 					<?php endif; ?>
 					<div id="logo">
-						<?php if ($params->get('showimgLogo')) : ?>
-							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>images/logo/<?php echo htmlspecialchars($params->get('imgLogo')); ?>"/></a>
+						<?php if ($params->get('showimgLogo',1)) : ?>
+							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>images/logo/<?php echo htmlspecialchars($params->get('imgLogo','logo-transparent.png')); ?>"/></a>
 						<?php endif;?>
 						<?php if ($params->get('showMediaLogo')) : ?>
 							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
@@ -86,7 +86,7 @@ JHtmlBootstrap::tooltip();
 							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->get('sitename'))); ?></a>
 						<?php endif;?>
 						<?php if ($params->get('showSlogan')) : ?>
-							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>
+							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan','my slogan goes here...')); ?></div>
 						<?php endif;?>
 					</div>
 					<?php if ($this->countModules('headermodule2')) : ?>
@@ -153,7 +153,7 @@ JHtmlBootstrap::tooltip();
 				<span class="shadow-right">&nbsp;</span>
 				<?php require $modules . 'aftercontent.php'; ?>
 			</div>
-			<?php if ($this->countModules('position-8') and $params->get('rightSBtoBottom')) : ?>
+			<?php if ($this->countModules('position-8') and $params->get('rightSBtoBottom',1)) : ?>
 				<div id="rightcol">
 					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
 				</div>
@@ -170,10 +170,10 @@ JHtmlBootstrap::tooltip();
 				<jdoc:include type="modules" name="footer" />
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showSubfoot')) : ?>
+		<?php if ($params->get('showSubfoot',1)) : ?>
 			<div id="subfoot">
-				<?php if ($params->get('showCopy')) : ?>
-					<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText')); ?></div>
+				<?php if ($params->get('showCopy',1)) : ?>
+					<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText','ALLROUNDER')); ?></div>
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
@@ -190,7 +190,7 @@ JHtmlBootstrap::tooltip();
 				<?php require $modules . 'footermodules.php'; ?>
 			</div>
 			<div class="footer-bottom">
-				<?php if ($params->get('showDate')) : ?>
+				<?php if ($params->get('showDate',1)) : ?>
 					<span id="date"><?php echo JHTML::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
 				<?php endif; ?>
 			</div>
