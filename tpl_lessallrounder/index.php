@@ -29,7 +29,7 @@ JHtmlBootstrap::tooltip();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<jdoc:include type="head" />
 	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
-	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS',1) ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
 	<?php
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
