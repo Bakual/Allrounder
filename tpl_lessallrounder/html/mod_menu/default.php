@@ -66,25 +66,24 @@ foreach ($list as $i => &$item)
 		$class .= ' divider';
 	}
 
-	if (strpos($item->anchor_css,'no_child') === false) {
-		if ($item->deeper)
-		{
-			$class .= ' deeper';
-		}
-
-		if ($item->parent)
-		{
-			$class .= ' parent';
-		}
+	if ($item->deeper)
+	{
+		$class .= ' deeper';
 	}
 
-		if (!empty($class))
-		{
-			$class = ' class="' . trim($class) . '"';
-		}
+	if ($item->parent)
+	{
+		$class .= ' parent';
+	}
+
+	if (!empty($class))
+	{
+		$class = ' class="' . trim($class) . '"';
+	}
 
 	echo '<li' . $class . '>';
-		$hackmenu = '';
+	
+	$hackmenu = '';
 	
 	// If mobile menu requested
 	if ((strpos($class_sfx,'mobile_menu') !== false) and ($tag != '')) {

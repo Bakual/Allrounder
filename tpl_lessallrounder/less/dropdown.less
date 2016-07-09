@@ -24,6 +24,9 @@
 				background-position: center right;
 				padding-right: 30px;
 			}
+			a.no_child {
+				padding-right: 15px;
+			}
 		}
 		a {
 			/* Images */
@@ -62,10 +65,16 @@
 					background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
 				}
 			}
+			a.no_child, a.no_child:hover {
+				background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
+			}
 		}
 		&.active.parent > {
 			a, span.separator {
 				background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
+			}
+			a.no_child {
+				background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
 			}
 		}
 	}
@@ -111,6 +120,9 @@
 					&:hover {
 						background-image: url(../images/menu/menulili_parent_hover.gif);
 					}
+				}
+				a.no_child {
+					background-image: none;
 				}
 			}
 		}
