@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav menu<?php echo $class_sfx;?>"<?php
+<ul class="nav menu mobile_menu<?php echo $class_sfx;?>"<?php
 	$tag = '';
 
 	if ($params->get('tag_id') != null)
@@ -21,10 +21,10 @@ defined('_JEXEC') or die;
 		echo ' id="' . $tag . '"';
 	}
 ?>>
-<?php if ((strpos($class_sfx,'nav-bar') !== false) and ($tag == true)) : ?>
-<input class="hackbox nav-bar" id="hackbox_nav-bar_<?php echo $tag; ?>" type="checkbox">
+<?php if (strpos($class_sfx,'nav-bar') !== false) : ?>
+<input class="hackbox nav-bar" id="hb_nav-bar_<?php echo $$module->id; ?>" type="checkbox">
 <li class="nav-bar">
-	<label for="hackbox_nav-bar_<?php echo $tag; ?>">
+	<label for="hb_nav-bar_<?php echo $$module->id; ?>">
 		<a>
 			<div>
 				<span class="icon-bar"></span>
@@ -83,29 +83,28 @@ foreach ($list as $i => &$item)
 
 	echo '<li' . $class . '>';
 	
-	$hackmenu = '';
-	
 	// If mobile menu requested
-	if ((strpos($class_sfx,'mobile_menu') !== false) and ($tag != '')) {
-		if (strpos($class,'parent') !== false) {
-			echo '<input type="checkbox" class="hackbox" id="hackbox_menu_' . $tag . '_' . $item->id . '">';
-			$hackmenu = '<label for="hackbox_menu_' . $tag . '_' . $item->id . '"></label>';
-		} else {
-			$hackmenu = '<label></label>';
-		}
+	if ($item->deeper) {
+		echo '<input type="checkbox" class="hackbox" id="hbm_' . $module->id . '_' . $item->id . '">';
+		$hackmenu = '<label for="hbm_' . $module->id . '_' . $item->id . '"></label>';
+	} else {
+		$hackmenu = '<label></label>';
 	}
 
 	// Render the menu item.
 	switch ($item->type) :
 		case 'separator':
-		case 'url':
-		case 'component':
 		case 'heading':
 			require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
 			break;
+			
+		case 'url':
+		case 'component':
+			require JModuleHelper::getLayoutPath('mod_menu', 'mobile_' . $item->type);
+			break;
 
 		default:
-			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+			require JModuleHelper::getLayoutPath('mod_menu', 'mobile_url');
 			break;
 	endswitch;
 
