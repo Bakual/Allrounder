@@ -46,13 +46,15 @@ input.hackbox {
 				width: 1.5em;
 				text-align: center;
 			}
-			li>a>label {
-				display: table-cell;
-				vertical-align: middle;
-			}
-			li>a>div {
-				margin-left: 1.5em;
-				display: table-cell;
+			li > a > {
+				label {
+					display: table-cell;
+					vertical-align: middle;
+				}
+				div {
+					margin-left: 1.5em;
+					display: table-cell;
+				}
 			}
 			a {
 				display: table;
@@ -84,19 +86,25 @@ input.hackbox {
 			input.hackbox:checked ~ ul {
 				max-height: none;
 			}
-			li.parent>a>label::before {
-				content: "+";
-				color: green;
-				position: relative;
-				left: 0.5ex;
-				font-size: 20px;
-				padding-right: 0.5em;
-				font-weight: bold;
+			li.parent > {
+				a > label::before {
+					content: "+";
+					color: green;
+					position: relative;
+					left: 0.5ex;
+					font-size: 20px;
+					padding-right: 0.5em;
+					font-weight: bold;
+				}
+				input.hackbox:checked ~ a > label::before {
+					content: "\2013";
+					color: red;
+				}
+				a.no_child > label::before {
+					content: none;
+				}
 			}
-			li.parent>input.hackbox:checked~a>label::before {
-				content: "\2013";
-				color: red;
-			}
+			
 			/* nav-bar */
 			&.nav-bar {
 				li.nav-bar label {
