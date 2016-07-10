@@ -30,8 +30,8 @@ function ModChrome_AllrounderSidebar($module, &$params, &$attribs)
 	<<?php echo $moduleTag; ?> class="module-outer<?php echo $moduleSuffix . $bootstrapClass; ?>">
 		<?php if ($module->showtitle) : ?>
 			<?php if (strpos($moduleSuffix,'mobile_fold') !== false) : ?>
-				<input class="hackbox" id="<?php echo 'hackbox_mod_' . str_replace(' ','-',$moduleSuffix); ?>" type="checkbox">
-				<label for="<?php echo 'hackbox_mod_' . str_replace(' ','-',$moduleSuffix); ?>">
+				<input class="hackbox" id="<?php echo 'hackbox_mod' . $module->id; ?>" type="checkbox">
+				<label for="<?php echo 'hackbox_mod' . $module->id; ?>">
 			<?php endif; ?>
 			<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3-sidebar'); ?>">
 				<?php echo $module->title; ?>
@@ -75,8 +75,8 @@ function ModChrome_Allrounder($module, &$params, &$attribs)
 					<div class="module-inner chrome-border left-bottom">
 						<?php if ($module->showtitle != 0) : ?>
 							<?php if (strpos($moduleSuffix,'mobile_fold') !== false) : ?>
-								<input class="hackbox" id="<?php echo 'hackbox_mod_' . str_replace(' ','-',$moduleSuffix); ?>" type="checkbox">
-								<label for="<?php echo 'hackbox_mod_' . str_replace(' ','-',$moduleSuffix); ?>">
+								<input class="hackbox" id="<?php echo 'hackbox_mod' . $module->id; ?>" type="checkbox">
+								<label for="<?php echo 'hackbox_mod' . $module->id; ?>">
 							<?php endif; ?>
 							<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>">
 								<?php echo $module->title; ?>
