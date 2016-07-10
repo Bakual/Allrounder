@@ -22,9 +22,9 @@ defined('_JEXEC') or die;
 	}
 ?>>
 <?php if (strpos($class_sfx,'nav-bar') !== false) : ?>
-<input class="hackbox nav-bar" id="hb_nav-bar_<?php echo $$module->id; ?>" type="checkbox">
+<input class="hackbox nav-bar" id="hb_nav-bar_<?php echo $module->id; ?>" type="checkbox">
 <li class="nav-bar">
-	<label for="hb_nav-bar_<?php echo $$module->id; ?>">
+	<label for="hb_nav-bar_<?php echo $module->id; ?>">
 		<a>
 			<div>
 				<span class="icon-bar"></span>
