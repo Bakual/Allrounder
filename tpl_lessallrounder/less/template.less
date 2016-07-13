@@ -376,70 +376,77 @@ a {
 }
 /* Mainmenu with suffix: _menu */
 .template_less_modulemenu_desktop() {
-	&:before {
-		float: left;
-		font-family: 'IcoMoon';
-		speak: none;
-		content: '\e010';
-	}
-	a, span.separator {
-		padding-left: 15px;
-	}
-	ul {
-		font-size: 90%;
-		margin-left: 10px;
-		li {
-			line-height: 18px;
-			a {
-				font-weight: normal;
-				color: @mainMenuLiLiFont;
+	li {
+		&:before {
+			float: left;
+			font-family: 'IcoMoon';
+			speak: none;
+			content: '\e010';
+		}
+		a, span.separator {
+			padding-left: 15px;
+		}
+		ul {
+			font-size: 90%;
+			margin-left: 10px;
+			li {
+				line-height: 18px;
+				a {
+					font-weight: normal;
+					color: @mainMenuLiLiFont;
+				}
 			}
 		}
 	}
 }
 .template_less_modulemenu() when (@maxMobileWidth > 0) {
 	@media (min-width: @minDesktopWidth) {
-		.template_less_modulemenu_desktop();
+		ul {
+			.template_less_modulemenu_desktop();
+		}
 	}
 	@media (max-width: @maxMobileWidth) {
-		ul {
-			padding-left: 1.5em;
-			width: 100%;
+		ul.menu:not(.mobile_menu) {
+			.template_less_modulemenu_desktop();
 		}
 	}
 }
 .template_less_modulemenu() when not (@maxMobileWidth > 0) {
-	.template_less_modulemenu_desktop();
+	ul {
+		.template_less_modulemenu_desktop();
+	}
 }
-.module_menu ul {
-	margin-left: 5px;
-	li {
-		line-height: 30px;
-		a, span.separator {
-			display: block;
-			overflow: visible;
-			color: @mainMenuFont;
-			border-bottom:1px dotted @mainMenuBorderBottom;
-		}
-		a {
-			&:hover, &:active, &:focus {
+.module_menu {
+	.template_less_modulemenu();
+	ul {
+		margin-left: 5px;
+		li {
+			line-height: 30px;
+			a, span.separator {
+				display: block;
+				overflow: visible;
+				color: @mainMenuFont;
+				border-bottom:1px dotted @mainMenuBorderBottom;
+			}
+			a {
+				&:hover, &:active, &:focus {
+					font-weight: bold;
+					background-color: @mainMenuBorderBottom;
+					color: @mainMenuFontHover;
+				}
+				img {
+					vertical-align: middle;
+					padding-right: 5px;
+				}
+				span {
+					vertical-align: middle;
+				}
+			}
+			&.current > a {
 				font-weight: bold;
-				background-color: @mainMenuBorderBottom;
-				color: @mainMenuFontHover;
-			}
-			img {
-				vertical-align: middle;
-				padding-right: 5px;
-			}
-			span {
-				vertical-align: middle;
+				color: @mainMenuFontCurrent;
 			}
 		}
-		&.current > a {
-			font-weight: bold;
-			color: @mainMenuFontCurrent;
-		}
-		.template_less_modulemenu();
 	}
 }
 /* Don't display submenu of no_child-menu-items */

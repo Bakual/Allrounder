@@ -149,10 +149,10 @@
 	@media (max-width: @maxMobileWidth) {
 		#topmenu {
 			ul.mobile_menu {
-				&, li, ul, a {
+				&, li, ul, a, span.separator {
 					background-color: @ddBackground;
 				}
-				a {
+				a, span.separator {
 					border: 1px solid @ulLiBorderRight;
 					.border-radius(0 0 0 0) !important;
 					color: @ulLiaColor;
@@ -163,6 +163,9 @@
 			}
 			ul.menu:not(.mobile_menu) {
 				.dropdown_less_desktop();
+				* {
+					box-sizing: content-box;
+				}
 			}
 		}
 	}
