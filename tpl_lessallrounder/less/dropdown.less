@@ -16,16 +16,11 @@
 		position: relative;
 		a, span.separator {
 			min-height: 24px;
-			padding: 10px 15px;
 		}
 		&.parent > {
 			a, span.separator {
 				background-repeat: no-repeat;
 				background-position: center right;
-				padding-right: 30px;
-			}
-			a.no_child {
-				padding-right: 15px;
 			}
 		}
 		a {
@@ -60,6 +55,7 @@
 		}
 		&.parent > {
 			a, span.separator {
+				padding-right: 30px;
 				background-image: url(../images/menu/menu-parent-@{dropdownImage}.png);
 				&:hover {
 					background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
@@ -67,6 +63,9 @@
 			}
 			a.no_child, a.no_child:hover {
 				background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
+			}
+			a.no_child {
+				padding-right: 15px;
 			}
 		}
 		&.active.parent > {
