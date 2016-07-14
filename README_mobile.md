@@ -9,13 +9,18 @@ How to use
    **Phones** is translated to a maximum width of 767px;  
    **Tablets** is translated to a maximum width of 979px;
 
-2. Add the needed classes to the modules
+2. Choose the position of the right collumn in mobie view
+
+   **Above Content**: right collumn is shown in mobile view under the left collumn and above the content;  
+   **Under Content**: right collumn is shown in mobile view under the content;
+
+3. Add the needed classes / choose the needed alternative layouts
 
 New Classes
 -----------
 - `.no_child`: hides submenu-items in same menu (assigned to Menu-Item as Class)
 - `.mobile_fold`: folds the modules in Mobile-View (assaigned to Module Class Suffix)
-- `.mobile_menu`: makes the menu-module mobile-friendly (asseigned to Menu Class Suffix or choose mobile as alternative layout)
+- `.mobile_menu`: makes the menu-module mobile-friendly (Choose "Mobile" as alternative layout)
   - `.desktop_fold`: if a sidebar-menu should behave for Mobile-View like topmenu and for Desktop-View like sidebar-menu (asseigned to Menu Class Suffix; Show Sub-menu Items must be set to "Yes")
   - `.nav-bar`: if the menu shold be hidden behind an navbar-button in Mobile-View (button is displayed like an menu-item; asseigned to Menu Class Suffix)
 
