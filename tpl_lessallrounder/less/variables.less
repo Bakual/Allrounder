@@ -150,6 +150,14 @@
 
 
 
+// Mobile
+// -------------------------
+@maxMobileWidth: @mobileWidth + 0px;
+@minDesktopWidth: @maxMobileWidth + 1;
+@navbarCollapseWidth: @maxMobileWidth;
+
+
+
 // COMPONENT VARIABLES
 // --------------------------------------------------
 
@@ -194,7 +202,7 @@
 
 // Navbar
 // -------------------------
-@navbarCollapseWidth:             979px;
+// @navbarCollapseWidth:             979px; defined in "Mobile"
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;

@@ -1,128 +1,181 @@
-/* Rules regarding topmenu dropdown */
-#topmenu {
-	ul.menu {
-		background-repeat: repeat-x;
-		background-color: @ddBackground;
-		border-top: 3px double @ddBorderTop;
-		border-bottom: 3px double @ddBorderBottom;
-		/* All Levels */
-		&, ul {
-			margin: 0;
-			z-index: 999;
-			width: 100%;
+.dropdown_less_desktop() {
+	background-repeat: repeat-x;
+	background-color: @ddBackground;
+	border-top: 3px double @ddBorderTop;
+	border-bottom: 3px double @ddBorderBottom;
+	/* All Levels */
+	&, ul {
+		margin: 0;
+		z-index: 999;
+		width: 100%;
+	}
+	li {
+		line-height: 1.5em; 
+		border-right: 1px solid @ulLiBorderRight;
+		display: inline-block;
+		position: relative;
+		a, span.separator {
+			min-height: 24px;
 		}
-		li {
-			line-height: 1.5em; 
-			border-right: 1px solid @ulLiBorderRight;
-			display: inline-block;
-			position: relative;
+		&.parent > {
 			a, span.separator {
-				min-height: 24px;
-				padding: 10px 15px;
-			}
-			&.parent > {
-				a, span.separator {
-					background-repeat: no-repeat;
-					background-position: center right;
-					padding-right: 30px;
-				}
-			}
-			a {
-				/* Images */
-				img {
-					vertical-align: middle;
-					padding-right: 5px;
-				}
-				span {
-					vertical-align: middle;
-				}
+				background-repeat: no-repeat;
+				background-position: center right;
 			}
 		}
-		/* Level 1 */
-		&, > li > a, > li > span.separator {
-			background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
+		a {
+			/* Images */
+			img {
+				vertical-align: middle;
+				padding-right: 5px;
+			}
+			span {
+				vertical-align: middle;
+			}
 		}
-		> li {
+	}
+	/* Level 1 */
+	&, > li > a, > li > span.separator {
+		background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
+	}
+	> li {
+		a, span.separator {
+			display: block;
+			font-size: 14px;
+			padding: 10px 15px;
+			background-color: @ulLiaBackground;
+			border-top: 1px solid @ulLiaBorderTop;
+			border-right: 1px solid @ulLiaBorderRight;
+			border-left: 1px solid @ulLiaBorderLeft;
+			border-bottom: 1px solid @ulLiaBorderBottom;
+			color: @ulLiaColor;
+			&:hover {
+				color: @ulLiaHoverColor;
+			}
+		}
+		&.parent > {
 			a, span.separator {
-				display: block;
-				font-size: 14px;
-				padding: 10px 15px;
-				background-color: @ulLiaBackground;
-				border-top: 1px solid @ulLiaBorderTop;
-				border-right: 1px solid @ulLiaBorderRight;
-				border-left: 1px solid @ulLiaBorderLeft;
-				border-bottom: 1px solid @ulLiaBorderBottom;
-				color: @ulLiaColor;
+				padding-right: 30px;
+				background-image: url(../images/menu/menu-parent-@{dropdownImage}.png);
 				&:hover {
-					color: @ulLiaHoverColor;
-				}
-			}
-			&.parent > {
-				a, span.separator {
-					background-image: url(../images/menu/menu-parent-@{dropdownImage}.png);
-					&:hover {
-						background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
-					}
-				}
-			}
-			&.active.parent > {
-				a, span.separator {
 					background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
 				}
 			}
-		}
-		/* Level 2 */
-		ul.nav-child {
-			background-color: @ululBackground;
-			position: absolute;
-			top: 3em;
-			padding: 5px;
-			width: 214px;
-			border: 2px solid @ululBorder;
-			display: none;
-			.border-radius(4px);
-			a:hover, a:focus {
-				text-decoration: none;
+			a.no_child, a.no_child:hover {
+				background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
 			}
-			li {
-				margin: 2px;
+			a.no_child {
+				padding-right: 15px;
+			}
+		}
+		&.active.parent > {
+			a, span.separator {
+				background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
+			}
+			a.no_child {
+				background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
+			}
+		}
+	}
+	/* Level 2 */
+	ul.nav-child {
+		background-color: @ululBackground;
+		position: absolute;
+		top: 3em;
+		padding: 5px;
+		width: 214px;
+		border: 2px solid @ululBorder;
+		display: none;
+		.border-radius(4px);
+		a:hover, a:focus {
+			text-decoration: none;
+		}
+		li {
+			margin: 2px;
+			a, span.separator {
+				background-color: @ulLiliBackground;
+				font-size: 12px;
+				display: inline-block;
+				padding: 4px 8px;
+				width: 194px;
+				border: 1px solid;
+				border-top-color: @ulLiliaBorderTop;
+				border-right-color: @ulLiliaBorderRight;
+				border-left-color: @ulLiliaBorderLeft;
+				border-bottom-color: @ulLiliaBorderBottom;
+				color: @ulLiliaColor;
+				&:hover {
+					color: @ulLiliaHoverColor;
+				}
+			}
+			&:hover > {
 				a, span.separator {
-					background-color: @ulLiliBackground;
-					font-size: 12px;
-					display: inline-block;
-					padding: 4px 8px;
-					width: 194px;
-					border: 1px solid;
-					border-top-color: @ulLiliaBorderTop;
-					border-right-color: @ulLiliaBorderRight;
-					border-left-color: @ulLiliaBorderLeft;
-					border-bottom-color: @ulLiliaBorderBottom;
-					color: @ulLiliaColor;
+					background-color: @ulLiliHoverBackground;
+				}
+			}
+			&.parent > {
+				a, span.separator {
+					background-image: url(../images/menu/menulili_parent.gif);
 					&:hover {
-						color: @ulLiliaHoverColor;
+						background-image: url(../images/menu/menulili_parent_hover.gif);
 					}
 				}
-				&:hover > {
-					a, span.separator {
-						background-color: @ulLiliHoverBackground;
-					}
-				}
-				&.parent > {
-					a, span.separator {
-						background-image: url(../images/menu/menulili_parent.gif);
-						&:hover {
-							background-image: url(../images/menu/menulili_parent_hover.gif);
-						}
-					}
+				a.no_child {
+					background-image: none;
 				}
 			}
 		}
-		/* LEVEL 3 */
-		ul.nav-child {
-			ul {
-				left: 200px;
-				top: 1.1em;
+	}
+	/* LEVEL 3 */
+	ul.nav-child {
+		ul {
+			left: 200px;
+			top: 1.1em;
+		}
+	}
+}
+
+.dropdown_less() when (@maxMobileWidth > 0) {
+	/* Drop-Down-Menu only for Desktop */
+	@media (min-width: @minDesktopWidth) {
+		/* Rules regarding topmenu dropdown */
+		#topmenu {
+			ul.menu {
+				.dropdown_less_desktop();
+			}
+		}
+	}
+
+	@media (max-width: @maxMobileWidth) {
+		#topmenu {
+			ul.mobile_menu {
+				&, li, ul, a, span.separator {
+					background-color: @ddBackground;
+				}
+				a, span.separator {
+					border: 1px solid @ulLiBorderRight;
+					.border-radius(0 0 0 0) !important;
+					color: @ulLiaColor;
+					&:hover {
+						color: @ulLiaHoverColor;
+					}
+				}
+			}
+			ul.menu:not(.mobile_menu) {
+				.dropdown_less_desktop();
+				* {
+					box-sizing: content-box;
+				}
 			}
 		}
 	}
 }
+.dropdown_less() when not (@maxMobileWidth > 0) {
+	/* Rules regarding topmenu dropdown */
+	#topmenu {
+		ul.menu {
+			.dropdown_less_desktop();
+		}
+	}
+}
+.dropdown_less();

@@ -1,0 +1,163 @@
+/* It's the technic in the background */
+input.hackbox {
+	display: none;
+}
+
+.mobile_fold, .mobile_menu {
+	label {
+		margin: 0;
+	}
+}
+
+.mobile_less_desktop() {
+	/* don't show labes */
+	ul.mobile_menu label {
+		display: none;
+	}
+
+	/* don't show nav-bar */
+	ul.nav-bar li.nav-bar {
+		display: none !important;
+	}
+	
+	/* mobile Menu, which should be folded for Desktop use */
+	ul.mobile_menu.desktop_fold li:not(.active) ul {
+		display: none;
+	}
+}
+
+.mobile_less() when (@maxMobileWidth > 0) {
+	/* Desktop */
+	@media (min-width: @minDesktopWidth) {
+		.mobile_less_desktop();
+	}
+
+	/* Mobile */
+	@media (max-width: @maxMobileWidth) {
+		/* Mobile Menu */
+		ul.mobile_menu {
+			ul {
+				max-height: 0px;
+				overflow: hidden;
+				padding: 0 0 0 1.5em;
+				display: block !important;
+			}
+			label {
+				width: 1.5em;
+				text-align: center;
+			}
+			li > a > {
+				label {
+					display: table-cell;
+					vertical-align: middle;
+				}
+				div {
+					margin-left: 1.5em;
+					display: table-cell;
+				}
+			}
+			a {
+				display: table;
+				width: 100%;
+				padding: 0px !important;
+				line-height: 35px;
+				margin: 0px;
+				text-decoration: none;
+			}
+			li, ul {
+				width: 100%;
+			}
+			li {
+				display: block;
+			}
+			&, * {
+				position: relative;
+				margin: 0px;
+				box-shadow: none;
+				line-height: 35px;
+				font-size: 20px;
+			}
+			&, li {
+				padding: 0;
+			}
+			&, li, ul {
+				border: none;
+			}
+			input.hackbox:checked ~ ul {
+				max-height: none;
+			}
+			li.parent > {
+				a > label::before {
+					content: "+";
+					color: green;
+					position: relative;
+					left: 0.5ex;
+					font-size: 20px;
+					padding-right: 0.5em;
+					font-weight: bold;
+				}
+				input.hackbox:checked ~ a > label::before {
+					content: "\2013";
+					color: red;
+				}
+				a.no_child > label::before {
+					content: none;
+				}
+			}
+			
+			/* nav-bar */
+			&.nav-bar {
+				li.nav-bar label {
+					width: 100%;
+					text-align: left;
+					a {
+						width: 100%;
+						div {
+							display: inline-block;
+							padding-left: 1.5em; // width of the other labels
+							.icon-bar {
+								display: block;
+								margin-top: 4px;
+								width: 1em;
+								height: 2px;
+								background-color: @ulLiaColor;
+							}
+						}
+					}
+				}
+				input.hackbox.nav-bar ~ li:not(.nav-bar) {
+					display: none;
+				}
+				input.hackbox.nav-bar:checked ~ li {
+					display: block;
+				}
+			}
+		}
+		
+		/* fold modules */
+		.mobile_fold {
+			input.hackbox {
+				~ div, ~ .shadow-left, ~ .shadow-right {
+					display: none;
+				}
+				&:checked {
+					 ~ div, ~ .shadow-left, ~ .shadow-right {
+						display: block;
+					}
+				}
+			}
+			
+		}
+		
+		/* correct sizing */
+		* {
+			box-sizing: border-box;
+		}
+	}
+}
+
+.mobile_less() when not (@maxMobileWidth > 0) {
+	.mobile_less_desktop();
+}
+
+.mobile_less();

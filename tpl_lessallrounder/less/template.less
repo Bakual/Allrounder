@@ -98,6 +98,7 @@
 @import "ribbons.less";
 @import "pagination.less";
 @import "css3-effects.less";
+@import "mobile.less";
 
 // Deprecated stuff
 @import "deprecated.less";
@@ -155,12 +156,20 @@ body {
 	margin: auto;
 	padding: 14px 0 0 0;
 }
+.template_less_header() when (@maxMobileWidth > 0) {
+	@media (min-width: @minDesktopWidth) {
+		.border-top-radius(5px);
+	}
+}
+.template_less_header() when not (@maxMobileWidth > 0) {
+	.border-top-radius(5px);
+}
 #header {
 	min-height: 120px;
 	position: relative;
 	#gradient > .vertical-three-colors(lighten(@headBgColor, 10%), lighten(@headBgColor, 15%), 25%, @headBgColor);
 	background-color: @headBgColor;
-	.border-top-radius(5px);
+	.template_less_header();
 	border-top: 1px solid @headBorderColor;
 	border-left: 1px solid @headBorderColor;
 	border-right: 1px solid @headBorderColor;
@@ -208,9 +217,24 @@ a {
 		margin: 0;
 	}
 }
-#search {
+.template_less_search() when (@maxMobileWidth > 0) {
+	/* mobile: display Search under breadcrumb */
+	@media (min-width: @minDesktopWidth) {
+		float: right;
+		margin: 4px 4px 4px 0;
+	}
+	@media (max-width: @maxMobileWidth) {
+		text-align: center;
+		width: 100%;
+		margin: 1em 0 4px 0;
+	}
+}
+.template_less_search() when not (@maxMobileWidth > 0) {
 	float: right;
 	margin: 4px 4px 4px 0;
+}
+#search {
+	.template_less_search();
 	.search form,
 	#mod-finder-searchform div {
 		&:before {
@@ -222,45 +246,75 @@ a {
 		display: none;
 	}
 }
+.template_less_container() when (@maxMobileWidth > 0) {
+	@media (min-width: @minDesktopWidth) {
+		padding: 10px 7px 0 7px;
+	}
+	@media (max-width: @maxMobileWidth) {
+		padding: 10px 0 0 0;
+	}
+}
+.template_less_container() when not (@maxMobileWidth > 0) {
+	padding: 10px 7px 0 7px;
+}
 #container {
 	text-align: left;
-	padding: 10px 7px 0 7px;
+	.template_less_container();
 	margin: auto;
 }
-#leftcol {
-	float: left;
+#leftcol, #rightcol {
 	margin: 0;
 	padding: 0 0 10px 0;
-	width: e(@leftcolWidth + '%');
 }
-#rightcol {
-	float: right;
-	margin: 0;
-	padding: 0 0 10px 0;
-	width: e(@rightcolWidth + '%');
+.template_less_cols_desktop() {
+	/* cols */
+	#leftcol {
+		width: e(@leftcolWidth + '%');
+		float: left;
+	}
+	#rightcol {
+		width: e(@rightcolWidth + '%');
+		float: right;
+	}
+	/* left and right NOT loaded */
+	#content_out {
+		margin: 0 0 0 0.2%;
+	}
+	/* just left loaded */
+	#content_outleft {
+		float: right;
+		width: e((99 - @leftcolWidth) + '%');
+	}
+	/* left and right loaded */
+	#content_outmiddle {
+		float: left;
+		margin: 0 1%;
+		width: e((98 - @rightcolWidth - @leftcolWidth) + '%');
+	}
+	/* just right loaded */
+	#content_outright {
+		float: left;
+		width: e((99 - @rightcolWidth) + '%');
+	}
+	#maincontent {
+		width: 93.6%;
+	}
 }
-/* left and right NOT loaded */
-#content_out {
-	margin: 0 0 0 0.2%;
+.template_less_cols() when (@maxMobileWidth > 0) {
+	@media (min-width: @minDesktopWidth) {
+		.template_less_cols_desktop();
+	}
+	@media (max-width: @maxMobileWidth) {
+		#leftcol, #content_out, #content_outleft, #content_outmiddle, #content_outright, #maincontent, #rightcol {
+			width: 100%;
+		}
+	}
 }
-/* just left loaded */
-#content_outleft {
-	float: right;
-	width: e((99 - @leftcolWidth) + '%');
+.template_less_cols() when not (@maxMobileWidth > 0) {
+	.template_less_cols_desktop();
 }
-/* left and right loaded */
-#content_outmiddle {
-	float: left;
-	margin: 0 1%;
-	width: e((98 - @rightcolWidth - @leftcolWidth) + '%');
-}
-/* just right loaded */
-#content_outright {
-	float: left;
-	width: e((99 - @rightcolWidth) + '%');
-}
+.template_less_cols();
 #maincontent {
-	width: 93.6%;
 	padding: 20px 3% 20px 3%;
 	margin: 10px 0 0 0;
 	min-height: 200px;
@@ -321,10 +375,8 @@ a {
 	}
 }
 /* Mainmenu with suffix: _menu */
-.module_menu ul {
-	margin-left: 5px;
+.template_less_modulemenu_desktop() {
 	li {
-		line-height: 30px;
 		&:before {
 			float: left;
 			font-family: 'IcoMoon';
@@ -332,33 +384,11 @@ a {
 			content: '\e010';
 		}
 		a, span.separator {
-			display: block;
 			padding-left: 15px;
-			overflow: visible;
-			color: @mainMenuFont;
-			border-bottom:1px dotted @mainMenuBorderBottom;
-		}
-		a {
-			&:hover, &:active, &:focus {
-				font-weight: bold;
-				background-color: @mainMenuBorderBottom;
-				color: @mainMenuFontHover;
-			}
-			img {
-				vertical-align: middle;
-				padding-right: 5px;
-			}
-			span {
-				vertical-align: middle;
-			}
-		}
-		&.current > a {
-			font-weight: bold;
-			color: @mainMenuFontCurrent;
 		}
 		ul {
-			margin-left: 10px;
 			font-size: 90%;
+			margin-left: 10px;
 			li {
 				line-height: 18px;
 				a {
@@ -368,6 +398,60 @@ a {
 			}
 		}
 	}
+}
+.template_less_modulemenu() when (@maxMobileWidth > 0) {
+	@media (min-width: @minDesktopWidth) {
+		ul {
+			.template_less_modulemenu_desktop();
+		}
+	}
+	@media (max-width: @maxMobileWidth) {
+		ul.menu:not(.mobile_menu) {
+			.template_less_modulemenu_desktop();
+		}
+	}
+}
+.template_less_modulemenu() when not (@maxMobileWidth > 0) {
+	ul {
+		.template_less_modulemenu_desktop();
+	}
+}
+.module_menu {
+	.template_less_modulemenu();
+	ul {
+		margin-left: 5px;
+		li {
+			line-height: 30px;
+			a, span.separator {
+				display: block;
+				overflow: visible;
+				color: @mainMenuFont;
+				border-bottom:1px dotted @mainMenuBorderBottom;
+			}
+			a {
+				&:hover, &:active, &:focus {
+					font-weight: bold;
+					background-color: @mainMenuBorderBottom;
+					color: @mainMenuFontHover;
+				}
+				img {
+					vertical-align: middle;
+					padding-right: 5px;
+				}
+				span {
+					vertical-align: middle;
+				}
+			}
+			&.current > a {
+				font-weight: bold;
+				color: @mainMenuFontCurrent;
+			}
+		}
+	}
+}
+/* Don't display submenu of no_child-menu-items */
+ul.menu li a.no_child ~ ul {
+	display: none !important;
 }
 /* Input styling, type declarations to override bootstrap (forms.less) */
 select,
@@ -388,6 +472,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
+	height: auto;
 	color: @inputFontColor;
 	border-top-color: @inputBorderTopColor;
 	border-left-color: @inputBorderLeftColor;
@@ -396,6 +481,13 @@ input[type="color"],
 	&:hover {
 		color: @inputHoverFontColor;
 		background-color: @inputHoverBgColor;
+	}
+}
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-append,
+.input-prepend {	
+	.add-on {
+		height: auto;
 	}
 }
 // guarded-headingImage() is a conditional mixing. It will not be outputted in the CSS by itself.
