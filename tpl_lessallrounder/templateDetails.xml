@@ -57,6 +57,15 @@
 					description="TPL_ALLROUNDER_WIDTH_DESC"
 					showon="whatWidth:0"
 					default="950px" />
+				<field name="mobileWidth" type="radio"
+					label="TPL_ALLROUNDER_MOBILEWIDTH"
+					description="TPL_ALLROUNDER_MOBILEWIDTH_DESC"
+					class="btn-group"
+					default="767" >
+					<option value="0">JNONE</option>
+					<option value="767">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_PHONES</option>
+					<option value="979">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_TABLETS</option>
+				</field>
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
 					label="TPL_ALLROUNDER_LEFT_WIDTH"
@@ -66,6 +75,15 @@
 					label="TPL_ALLROUNDER_RIGHT_WIDTH"
 					description="TPL_ALLROUNDER_RIGHT_WIDTH_DESC"
 					default="20" />
+				<field name="rightSidebarPosition" type="radio"
+					label="TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_LABEL"
+					description="TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_DESC"
+					class="btn-group"
+					showon="mobileWidth:767[OR]mobileWidth:979"
+					default="1" >
+					<option value="1">TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_OPTION_BELOW</option>
+					<option value="0">TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_OPTION_ABOVE</option>
+				</field>
 				<field hr="true" type="spacer" />
 				<field name="showHeader" type="radio"
 					label="TPL_ALLROUNDER_HEADER"

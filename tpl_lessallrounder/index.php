@@ -26,6 +26,7 @@ JHtmlBootstrap::tooltip();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<jdoc:include type="head" />
 	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
 	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
@@ -59,7 +60,7 @@ JHtmlBootstrap::tooltip();
 		<?php require $modules . 'toppanel.php'; ?>
 		<?php require $modules . 'beforehead.php'; ?>
 		<div id="header_container">
-			<?php if ($params->get('showHeader')) : ?>
+			<?php if ($params->get('showHeader', 1)) : ?>
 				<div id="header">
 					<?php if ($this->countModules('headermodule1')) : ?>
 						<div id="headermodule1">
@@ -75,8 +76,8 @@ JHtmlBootstrap::tooltip();
 						</div>
 					<?php endif; ?>
 					<div id="logo">
-						<?php if ($params->get('showimgLogo')) : ?>
-							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>images/logo/<?php echo htmlspecialchars($params->get('imgLogo')); ?>"/></a>
+						<?php if ($params->get('showimgLogo', 1)) : ?>
+							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>images/logo/<?php echo htmlspecialchars($params->get('imgLogo', 'logo-transparent.png')); ?>"/></a>
 						<?php endif;?>
 						<?php if ($params->get('showMediaLogo')) : ?>
 							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
@@ -137,6 +138,11 @@ JHtmlBootstrap::tooltip();
 					<jdoc:include type="modules" name="position-7" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
+			<?php if ($this->countModules('position-8') and !$params->get('rightSidebarPosition', 1)) : ?>
+				<div id="rightcol">
+					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
+				</div>
+			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
 				<?php require $modules . 'beforecontent.php'; ?>
 				<div id="maincontent" class="row-fluid">
@@ -147,7 +153,7 @@ JHtmlBootstrap::tooltip();
 				<span class="shadow-right">&nbsp;</span>
 				<?php require $modules . 'aftercontent.php'; ?>
 			</div>
-			<?php if ($this->countModules('position-8')) : ?>
+			<?php if ($this->countModules('position-8') and $params->get('rightSidebarPosition', 1)) : ?>
 				<div id="rightcol">
 					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
 				</div>
@@ -164,10 +170,10 @@ JHtmlBootstrap::tooltip();
 				<jdoc:include type="modules" name="footer" />
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showSubfoot')) : ?>
+		<?php if ($params->get('showSubfoot', 1)) : ?>
 			<div id="subfoot">
-				<?php if ($params->get('showCopy')) : ?>
-					<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText')); ?></div>
+				<?php if ($params->get('showCopy', 1)) : ?>
+					<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText', 'ALLROUNDER')); ?></div>
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
@@ -184,7 +190,7 @@ JHtmlBootstrap::tooltip();
 				<?php require $modules . 'footermodules.php'; ?>
 			</div>
 			<div class="footer-bottom">
-				<?php if ($params->get('showDate')) : ?>
+				<?php if ($params->get('showDate', 1)) : ?>
 					<span id="date"><?php echo JHTML::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
 				<?php endif; ?>
 			</div>
