@@ -7782,13 +7782,11 @@ ul.breadcrumb li span.divider {
 	#topmenu ul.menu li a,
 	#topmenu ul.menu li span.separator {
 		min-height: 24px;
-		padding: 10px 15px;
 	}
 	#topmenu ul.menu li.parent > a,
 	#topmenu ul.menu li.parent > span.separator {
 		background-repeat: no-repeat;
 		background-position: center right;
-		padding-right: 30px;
 	}
 	#topmenu ul.menu li a img {
 		vertical-align: middle;
@@ -7820,15 +7818,26 @@ ul.breadcrumb li span.divider {
 	}
 	#topmenu ul.menu > li.parent > a,
 	#topmenu ul.menu > li.parent > span.separator {
+		padding-right: 30px;
 		background-image: url(../images/menu/menu-parent-smooth.png);
 	}
 	#topmenu ul.menu > li.parent > a:hover,
 	#topmenu ul.menu > li.parent > span.separator:hover {
 		background-image: url(../images/menu/menu-parent-hover-smooth.png);
 	}
+	#topmenu ul.menu > li.parent > a.no_child,
+	#topmenu ul.menu > li.parent > a.no_child:hover {
+		background-image: url(../images/menu/dropdown-smooth.png);
+	}
+	#topmenu ul.menu > li.parent > a.no_child {
+		padding-right: 15px;
+	}
 	#topmenu ul.menu > li.active.parent > a,
 	#topmenu ul.menu > li.active.parent > span.separator {
 		background-image: url(../images/menu/menu-parent-hover-smooth.png);
+	}
+	#topmenu ul.menu > li.active.parent > a.no_child {
+		background-image: url(../images/menu/dropdown-smooth.png);
 	}
 	#topmenu ul.menu ul.nav-child {
 		background-color: #222222;
@@ -7879,6 +7888,9 @@ ul.breadcrumb li span.divider {
 	#topmenu ul.menu ul.nav-child li.parent > span.separator:hover {
 		background-image: url(../images/menu/menulili_parent_hover.gif);
 	}
+	#topmenu ul.menu ul.nav-child li.parent > a.no_child {
+		background-image: none;
+	}
 	#topmenu ul.menu ul.nav-child ul {
 		left: 200px;
 		top: 1.1em;
@@ -7888,17 +7900,20 @@ ul.breadcrumb li span.divider {
 	#topmenu ul.mobile_menu,
 	#topmenu ul.mobile_menu li,
 	#topmenu ul.mobile_menu ul,
-	#topmenu ul.mobile_menu a {
+	#topmenu ul.mobile_menu a,
+	#topmenu ul.mobile_menu span.separator {
 		background-color: #222222;
 	}
-	#topmenu ul.mobile_menu a {
+	#topmenu ul.mobile_menu a,
+	#topmenu ul.mobile_menu span.separator {
 		border: 1px solid #555555;
 		-webkit-border-radius: 0 0 0 0 !important;
 		-moz-border-radius: 0 0 0 0 !important;
 		border-radius: 0 0 0 0 !important;
 		color: #cccccc;
 	}
-	#topmenu ul.mobile_menu a:hover {
+	#topmenu ul.mobile_menu a:hover,
+	#topmenu ul.mobile_menu span.separator:hover {
 		color: #ffffff;
 	}
 	#topmenu ul.menu:not(.mobile_menu) {
@@ -7922,13 +7937,11 @@ ul.breadcrumb li span.divider {
 	#topmenu ul.menu:not(.mobile_menu) li a,
 	#topmenu ul.menu:not(.mobile_menu) li span.separator {
 		min-height: 24px;
-		padding: 10px 15px;
 	}
 	#topmenu ul.menu:not(.mobile_menu) li.parent > a,
 	#topmenu ul.menu:not(.mobile_menu) li.parent > span.separator {
 		background-repeat: no-repeat;
 		background-position: center right;
-		padding-right: 30px;
 	}
 	#topmenu ul.menu:not(.mobile_menu) li a img {
 		vertical-align: middle;
@@ -7960,15 +7973,26 @@ ul.breadcrumb li span.divider {
 	}
 	#topmenu ul.menu:not(.mobile_menu) > li.parent > a,
 	#topmenu ul.menu:not(.mobile_menu) > li.parent > span.separator {
+		padding-right: 30px;
 		background-image: url(../images/menu/menu-parent-smooth.png);
 	}
 	#topmenu ul.menu:not(.mobile_menu) > li.parent > a:hover,
 	#topmenu ul.menu:not(.mobile_menu) > li.parent > span.separator:hover {
 		background-image: url(../images/menu/menu-parent-hover-smooth.png);
 	}
+	#topmenu ul.menu:not(.mobile_menu) > li.parent > a.no_child,
+	#topmenu ul.menu:not(.mobile_menu) > li.parent > a.no_child:hover {
+		background-image: url(../images/menu/dropdown-smooth.png);
+	}
+	#topmenu ul.menu:not(.mobile_menu) > li.parent > a.no_child {
+		padding-right: 15px;
+	}
 	#topmenu ul.menu:not(.mobile_menu) > li.active.parent > a,
 	#topmenu ul.menu:not(.mobile_menu) > li.active.parent > span.separator {
 		background-image: url(../images/menu/menu-parent-hover-smooth.png);
+	}
+	#topmenu ul.menu:not(.mobile_menu) > li.active.parent > a.no_child {
+		background-image: url(../images/menu/dropdown-smooth.png);
 	}
 	#topmenu ul.menu:not(.mobile_menu) ul.nav-child {
 		background-color: #222222;
@@ -8019,12 +8043,15 @@ ul.breadcrumb li span.divider {
 	#topmenu ul.menu:not(.mobile_menu) ul.nav-child li.parent > span.separator:hover {
 		background-image: url(../images/menu/menulili_parent_hover.gif);
 	}
+	#topmenu ul.menu:not(.mobile_menu) ul.nav-child li.parent > a.no_child {
+		background-image: none;
+	}
 	#topmenu ul.menu:not(.mobile_menu) ul.nav-child ul {
 		left: 200px;
 		top: 1.1em;
 	}
-	#topmenu ul.menu:not(.mobile_menu) li.nav-bar {
-		display: none;
+	#topmenu ul.menu:not(.mobile_menu) * {
+		box-sizing: content-box;
 	}
 }
 .module-content {
@@ -8636,11 +8663,11 @@ input.hackbox {
 		width: 1.5em;
 		text-align: center;
 	}
-	ul.mobile_menu li>a>label {
+	ul.mobile_menu li > a > label {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	ul.mobile_menu li>a>div {
+	ul.mobile_menu li > a > div {
 		margin-left: 1.5em;
 		display: table-cell;
 	}
@@ -8650,6 +8677,7 @@ input.hackbox {
 		padding: 0px !important;
 		line-height: 35px;
 		margin: 0px;
+		text-decoration: none;
 	}
 	ul.mobile_menu li,
 	ul.mobile_menu ul {
@@ -8678,7 +8706,7 @@ input.hackbox {
 	ul.mobile_menu input.hackbox:checked ~ ul {
 		max-height: none;
 	}
-	ul.mobile_menu li.parent>a>label::before {
+	ul.mobile_menu li.parent > a > label::before {
 		content: "+";
 		color: green;
 		position: relative;
@@ -8687,9 +8715,12 @@ input.hackbox {
 		padding-right: 0.5em;
 		font-weight: bold;
 	}
-	ul.mobile_menu li.parent>input.hackbox:checked~a>label::before {
+	ul.mobile_menu li.parent > input.hackbox:checked ~ a > label::before {
 		content: "\2013";
 		color: red;
+	}
+	ul.mobile_menu li.parent > a.no_child > label::before {
+		content: none;
 	}
 	ul.mobile_menu.nav-bar li.nav-bar label {
 		width: 100%;
@@ -8988,6 +9019,68 @@ a.logo:hover {
 	float: left;
 	padding-left: 20px;
 }
+@media (min-width: 768px) {
+	.module_menu ul li:before {
+		float: left;
+		font-family: 'IcoMoon';
+		speak: none;
+		content: '\e010';
+	}
+	.module_menu ul li a,
+	.module_menu ul li span.separator {
+		padding-left: 15px;
+	}
+	.module_menu ul li a {
+		transition-property: padding-left;
+		transition-duration: 0.4s;
+	}
+	.module_menu ul li a:hover {
+		padding-left: 35px;
+		transition-duration: 0.2s;
+	}
+	.module_menu ul li ul {
+		font-size: 90%;
+		margin-left: 10px;
+	}
+	.module_menu ul li ul li {
+		line-height: 18px;
+	}
+	.module_menu ul li ul li a {
+		font-weight: normal;
+		color: #000000;
+	}
+}
+@media (max-width: 767px) {
+	.module_menu ul.menu:not(.mobile_menu) li:before {
+		float: left;
+		font-family: 'IcoMoon';
+		speak: none;
+		content: '\e010';
+	}
+	.module_menu ul.menu:not(.mobile_menu) li a,
+	.module_menu ul.menu:not(.mobile_menu) li span.separator {
+		padding-left: 15px;
+	}
+	.module_menu ul.menu:not(.mobile_menu) li a {
+		transition-property: padding-left;
+		transition-duration: 0.4s;
+	}
+	.module_menu ul.menu:not(.mobile_menu) li a:hover {
+		padding-left: 35px;
+		transition-duration: 0.2s;
+	}
+	.module_menu ul.menu:not(.mobile_menu) li ul {
+		font-size: 90%;
+		margin-left: 10px;
+	}
+	.module_menu ul.menu:not(.mobile_menu) li ul li {
+		line-height: 18px;
+	}
+	.module_menu ul.menu:not(.mobile_menu) li ul li a {
+		font-weight: normal;
+		color: #000000;
+	}
+}
 .module_menu ul {
 	margin-left: 5px;
 }
@@ -9018,35 +9111,6 @@ a.logo:hover {
 .module_menu ul li.current > a {
 	font-weight: bold;
 	color: #000000;
-}
-@media (min-width: 768px) {
-	.module_menu ul li:before {
-		float: left;
-		font-family: 'IcoMoon';
-		speak: none;
-		content: '\e010';
-	}
-	.module_menu ul li a,
-	.module_menu ul li span.separator {
-		padding-left: 15px;
-	}
-	.module_menu ul li ul {
-		font-size: 90%;
-		margin-left: 10px;
-	}
-	.module_menu ul li ul li {
-		line-height: 18px;
-	}
-	.module_menu ul li ul li a {
-		font-weight: normal;
-		color: #000000;
-	}
-}
-@media (max-width: 767px) {
-	.module_menu ul li ul {
-		padding-left: 1.5em;
-		width: 100%;
-	}
 }
 ul.menu li a.no_child ~ ul {
 	display: none !important;
@@ -9124,4 +9188,13 @@ div.slogan {
 	color: #ff2402;
 	font-size: 18px;
 	padding: 0 40px 10px 100px;
+}
+.module_menu ul.menu li a {
+	padding-left: 15px;
+	transition-property: padding-left;
+	transition-duration: 0.4s;
+}
+.module_menu ul.menu li a:hover {
+	padding-left: 35px;
+	transition-duration: 0.2s;
 }
