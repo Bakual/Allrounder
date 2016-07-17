@@ -409,6 +409,14 @@ a {
 			font-weight: bold;
 			color: @mainMenuFontCurrent;
 		}
+		a {
+			transition-property: padding-left;
+			transition-duration: 0.4s;
+			&:hover {
+				padding-left: 35px;
+				transition-duration: 0.2s;
+			}
+		}
 		ul {
 			margin-left: 10px;
 			font-size: 90%;
