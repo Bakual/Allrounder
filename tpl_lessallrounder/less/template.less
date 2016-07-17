@@ -386,6 +386,14 @@ a {
 		a, span.separator {
 			padding-left: 15px;
 		}
+		a {
+			transition-property: padding-left;
+			transition-duration: 0.4s;
+			&:hover {
+				padding-left: 35px;
+				transition-duration: 0.2s;
+			}
+		}
 		ul {
 			font-size: 90%;
 			margin-left: 10px;

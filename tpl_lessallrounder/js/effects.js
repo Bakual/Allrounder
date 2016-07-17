@@ -9,28 +9,6 @@ jQuery(document).ready(function($) {
 		}
 	);
 
-	// Mainmenu with suffix _menu
-	$('.module_menu ul.menu li a').hover(
-		function(){
-			$(this).animate(
-				{'padding-left':'35px'},
-				{
-					queue:false,
-					duration:'fast'
-				}
-			);
-		},
-		function(){
-			$(this).animate(
-				{'padding-left':'15px'},
-				{
-					queue:false,
-					duration:'middle'
-				}
-			);
-		}
-	);
-
 	// Searchbox animation
 	$('#search').hide().show(400, 'swing');
 
