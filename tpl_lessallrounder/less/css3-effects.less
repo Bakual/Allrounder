@@ -19,20 +19,22 @@
 		text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
 	}
 	/* Dropdown Menu*/
-	#topmenu {
-		ul.menu {
-			.css3-effects_less();
-			li {
-				a {
-					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+	@media (min-width: 768px) {
+		#topmenu {
+			ul.menu {
+				.css3-effects_less();
+				li {
+					a {
+						text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+					}
+					/** LEVEL 2 **/
+					ul li a {
+						text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+					}
 				}
-				/** LEVEL 2 **/
-				ul li a {
-					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+				&.nav-bar .icon-bar {
+					box-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 				}
-			}
-			&.nav-bar .icon-bar {
-				box-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 			}
 		}
 	}
