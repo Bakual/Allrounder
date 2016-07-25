@@ -101,16 +101,24 @@ JHtmlBootstrap::tooltip();
 			<?php endif; ?>
 			<?php require $modules . 'afterhead.php'; ?>
 			<?php if ($this->countModules('position-1')) : ?>
-				<div id="topmenu_container">
-					<div id="topmenu">
+				<nav id="topmenu_container" class="navigation" role="navigation">
+					<div class="navbar">
+						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<div>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</div>
+						</a>
+					</div>
+					<div id="topmenu" class="nav-collapse collapse">
 						<jdoc:include type="modules" name="position-1" />
 					</div>
 					<div class="clearfix"></div>
-				</div>
+				</nav>
 			<?php endif; ?>
 			<?php if ($this->countModules('position-1-1')) : ?>
 				<jdoc:include type="modules" name="position-1-1" />
-				<div class="clearfix"></div>
 			<?php endif; ?>
 		</div>
 		<?php if ($this->countModules('position-2 or position-0')) : ?>

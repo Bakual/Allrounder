@@ -1,51 +1,110 @@
 /* Rules regarding topmenu dropdown */
+@media (min-width: @navbarCollapseDesktopWidth) {
+	#topmenu {
+		ul.menu {
+			background-repeat: repeat-x;
+			border-top: 3px double @ddBorderTop;
+			border-bottom: 3px double @ddBorderBottom;
+			/* All Levels */
+			&, ul {
+				margin: 0;
+				z-index: 999;
+				width: 100%;
+			}
+			li {
+				display: inline-block;
+				position: relative;
+				&.parent > {
+					a, span.separator {
+						background-repeat: no-repeat;
+						background-position: center right;
+						padding-right: 30px;
+					}
+				}
+				a {
+					/* Images */
+					img {
+						vertical-align: middle;
+						padding-right: 5px;
+					}
+					span {
+						vertical-align: middle;
+					}
+				}
+			}
+			/* Level 1 */
+			&, > li > a, > li > span.separator {
+				background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
+			}
+			> li {
+				a, span.separator {
+					font-size: 14px;
+				}
+				&.parent > {
+					a, span.separator {
+						background-image: url(../images/menu/menu-parent-@{dropdownImage}.png);
+						&:hover {
+							background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
+						}
+					}
+				}
+				&.active.parent > {
+					a, span.separator {
+						background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
+					}
+				}
+			}
+			/* Level 2 */
+			ul.nav-child {
+				position: absolute;
+				top: 3em;
+				width: 214px;
+				.border-radius(4px);
+				li {
+					a, span.separator {
+						display: inline-block;
+						width: 194px;
+						font-size: 12px;
+					}
+					&:hover > {
+						a, span.separator {
+							background-color: @ulLiliHoverBackground;
+						}
+					}
+					&.parent > {
+						a, span.separator {
+							background-image: url(../images/menu/menulili_parent.gif);
+							&:hover {
+								background-image: url(../images/menu/menulili_parent_hover.gif);
+							}
+						}
+					}
+				}
+			}
+			/* LEVEL 3 */
+			ul.nav-child {
+				ul {
+					left: 200px;
+					top: 1.1em;
+				}
+			}
+		}
+	}
+}
 #topmenu {
 	ul.menu {
-		background-repeat: repeat-x;
 		background-color: @ddBackground;
-		border-top: 3px double @ddBorderTop;
-		border-bottom: 3px double @ddBorderBottom;
-		/* All Levels */
-		&, ul {
-			margin: 0;
-			z-index: 999;
-			width: 100%;
-		}
 		li {
-			line-height: 1.5em; 
+			line-height: 1.5em;
 			border-right: 1px solid @ulLiBorderRight;
-			display: inline-block;
-			position: relative;
 			a, span.separator {
 				min-height: 24px;
 				padding: 10px 15px;
 			}
-			&.parent > {
-				a, span.separator {
-					background-repeat: no-repeat;
-					background-position: center right;
-					padding-right: 30px;
-				}
-			}
-			a {
-				/* Images */
-				img {
-					vertical-align: middle;
-					padding-right: 5px;
-				}
-				span {
-					vertical-align: middle;
-				}
-			}
-		}
-		/* Level 1 */
-		&, > li > a, > li > span.separator {
-			background-image: url(../images/menu/dropdown-@{dropdownImage}.png)
 		}
 		> li {
 			a, span.separator {
 				display: block;
-				font-size: 14px;
 				padding: 10px 15px;
 				background-color: @ulLiaBackground;
 				border-top: 1px solid @ulLiaBorderTop;
@@ -57,30 +116,13 @@
 					color: @ulLiaHoverColor;
 				}
 			}
-			&.parent > {
-				a, span.separator {
-					background-image: url(../images/menu/menu-parent-@{dropdownImage}.png);
-					&:hover {
-						background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
-					}
-				}
-			}
-			&.active.parent > {
-				a, span.separator {
-					background-image: url(../images/menu/menu-parent-hover-@{dropdownImage}.png);
-				}
-			}
 		}
 		/* Level 2 */
 		ul.nav-child {
 			background-color: @ululBackground;
-			position: absolute;
-			top: 3em;
 			padding: 5px;
-			width: 214px;
 			border: 2px solid @ululBorder;
 			display: none;
-			.border-radius(4px);
 			a:hover, a:focus {
 				text-decoration: none;
 			}
@@ -88,10 +130,7 @@
 				margin: 2px;
 				a, span.separator {
 					background-color: @ulLiliBackground;
-					font-size: 12px;
-					display: inline-block;
 					padding: 4px 8px;
-					width: 194px;
 					border: 1px solid;
 					border-top-color: @ulLiliaBorderTop;
 					border-right-color: @ulLiliaBorderRight;
@@ -102,26 +141,77 @@
 						color: @ulLiliaHoverColor;
 					}
 				}
-				&:hover > {
+			}
+		}
+	}
+}
+@media (max-width: @navbarCollapseWidth) {
+	nav {
+		background-color: @ddBackground;
+		border-top: 3px double @ddBorderTop;
+		border-bottom: 3px double @ddBorderBottom;
+		#topmenu {
+			li.deeper > a:after {
+				font-family: 'IcoMoon';
+				font-style: normal;
+				speak: none;
+				content: " \e007";
+			}
+			ul.nav-child {
+				display: none;
+			}
+			.nav > li:hover > .nav-child,
+			.nav > li > a:focus + .nav-child,
+			.nav li li:hover > .nav-child,
+			.nav li li > a:focus + .nav-child {
+				display: block;
+			}
+			ul.menu {
+				margin: 0px;
+				> li {
 					a, span.separator {
-						background-color: @ulLiliHoverBackground;
+						font-size: 18px;
 					}
 				}
-				&.parent > {
-					a, span.separator {
-						background-image: url(../images/menu/menulili_parent.gif);
-						&:hover {
-							background-image: url(../images/menu/menulili_parent_hover.gif);
+				ul.nav-child {
+					li {
+						a, span.separator {
+							font-size: 16px;
 						}
 					}
 				}
 			}
 		}
-		/* LEVEL 3 */
-		ul.nav-child {
-			ul {
-				left: 200px;
-				top: 1.1em;
+		.navbar {
+			margin: 2px 0px;
+			line-height: 1.5em;
+			border-right: 1px solid @ulLiBorderRight;
+			.btn-navbar, .btn-navbar:hover {
+				margin: 0px;
+				background: @ulLiaBackground;
+				float: none;
+				box-shadow: none;
+				border-radius: 3px;
+				border-top: 1px solid @ulLiaBorderTop;
+				border-right: 1px solid @ulLiaBorderRight;
+				border-left: 1px solid @ulLiaBorderLeft;
+				border-bottom: 1px solid @ulLiaBorderBottom;
+				min-height: 24px;
+				padding: 10px 15px;
+				font-size: 18px;
+				text-align: left;
+				div {
+					display: inline-block;
+				}
+			}
+			.btn-navbar .icon-bar {
+				background-color: @ulLiaColor;
+				height: 3px;
+				width: 22px;
+			}
+			
+			.btn-navbar:hover .icon-bar {
+				background-color: @ulLiaHoverColor;
 			}
 		}
 	}
