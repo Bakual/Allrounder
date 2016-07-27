@@ -8735,20 +8735,6 @@ a.logo:hover {
 		float: left;
 		width: 79%;
 	}
-	#maincontent {
-		width: 93.6%;
-	}
-}
-@media (max-width: 767px) {
-	#leftcol,
-	#content_out,
-	#content_outleft,
-	#content_outmiddle,
-	#content_outright,
-	#maincontent,
-	#rightcol {
-		width: 93%;
-	}
 }
 #maincontent {
 	padding: 20px 3% 20px 3%;
@@ -8757,6 +8743,7 @@ a.logo:hover {
 	background-image: url('../images/background.png');
 	background-color: #f9f9f9;
 	border: 3px double #e9e9e9;
+	width: auto;
 }
 #subfoot {
 	min-height: 15px;
