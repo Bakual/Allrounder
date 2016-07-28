@@ -208,7 +208,7 @@
 				<field name="slogan" type="textarea"
 					label="TPL_ALLROUNDER_SLOGANINPUT"
 					description="TPL_ALLROUNDER_SLOGANINPUT_DESC"
- 					default="my slogan goes here..."
+ 					hint="my slogan goes here..."
 					rows="1"
 					cols="40" />
 				<field name="sloganColor" type="color"
@@ -440,7 +440,7 @@
 				<field name="copyText" type="textarea"
 					label="TPL_ALLROUNDER_COPYRIGHT_TEXT"
 					description="TPL_ALLROUNDER_COPYRIGHT_TEXT_DESC"
-					default="ALLROUNDER"
+					hint="ALLROUNDER"
 					rows="1"
 					cols="40" />
 				<field type="spacer" hr="true" />
@@ -481,7 +481,7 @@
 				<field name="customCssCode" type="textarea"
 					label="TPL_ALLROUNDER_OWN_CSS"
 					description="TPL_ALLROUNDER_OWN_CSS_DESC"
-					default="/* enter your CSS code here */"
+					hint="/* enter your CSS code here */"
 					rows="10"
 					cols="40" />
 			</fieldset>
