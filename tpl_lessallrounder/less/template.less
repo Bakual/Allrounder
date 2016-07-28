@@ -150,10 +150,7 @@ body {
 	overflow: visible;
 }
 #header_container {
-	height: auto;
-	width: 100%;
-	margin: auto;
-	padding: 14px 0 0 0;
+	padding-top: 14px;
 }
 .template_less_header() when (@maxMobileWidth > 0) {
 	@media (min-width: @minDesktopWidth) {
@@ -174,17 +171,14 @@ body {
 	border-right: 1px solid @headBorderColor;
 }
 #logo {
-	color: #ddd;
-	width: auto;
 	overflow: hidden;
 	a.logo {
 		color: @logoColor;
 		line-height: normal;
 		font-size: 46px;
 		display: block;
-		margin: 0;
 		letter-spacing: -1px;
-		padding: 10px 0 0 0;
+		padding-top: 10px;
 	}
 }
 a {
@@ -200,9 +194,6 @@ a {
 	}
 }
 #topmenu_container {
-	width: 100%;
-	margin: 0;
-	height: auto;
 	min-height: 30px;
 }
 #subhead {
@@ -224,7 +215,6 @@ a {
 	}
 	@media (max-width: @maxMobileWidth) {
 		text-align: center;
-		width: 100%;
 		margin: 1em 0 4px 0;
 	}
 }
