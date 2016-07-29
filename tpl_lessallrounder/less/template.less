@@ -113,7 +113,6 @@
 	background-image: url(../../../@{bodyBackgroundImage});
 }
 .quarded-bgImageRepeat() when (@bodyBackgroundImageRepeat = 1) {
-	repeat: url(../images/background.png);
 }
 .quarded-bgImageRepeat() when not (@bodyBackgroundImageRepeat = 1) {
 	background-repeat: no-repeat;
@@ -136,25 +135,23 @@ body {
 }
 #wrapper, #foot_container {
 	.quarded-whatWidth();
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: @wrapperBgColor;
 	border: 1px solid @wrapperBorderColor;
 }
 #wrapper {
 	margin-top: @wrapperMarginTop;
-	padding: 0 0 10px 0;
+	padding-bottom: 10px;
 	.opacity(@wrapperBgTransparency);
 }
 #foot_container {
 	margin-bottom: @footerMarginBottom;
-	padding: 0 0 7px 0;
+	padding-bottom: 7px;
 	overflow: visible;
 }
 #header_container {
-	height: auto;
-	width: 100%;
-	margin: auto;
-	padding: 14px 0 0 0;
+	padding-top: 14px;
 }
 .template_less_header() when (@maxMobileWidth > 0) {
 	@media (min-width: @minDesktopWidth) {
@@ -175,17 +172,14 @@ body {
 	border-right: 1px solid @headBorderColor;
 }
 #logo {
-	color: #ddd;
-	width: auto;
 	overflow: hidden;
 	a.logo {
 		color: @logoColor;
 		line-height: normal;
 		font-size: 46px;
 		display: block;
-		margin: 0;
 		letter-spacing: -1px;
-		padding: 10px 0 0 0;
+		padding-top: 10px;
 	}
 }
 a {
@@ -201,9 +195,6 @@ a {
 	}
 }
 #topmenu_container {
-	width: 100%;
-	margin: 0;
-	height: auto;
 	min-height: 30px;
 }
 #subhead {
@@ -225,7 +216,6 @@ a {
 	}
 	@media (max-width: @maxMobileWidth) {
 		text-align: center;
-		width: 100%;
 		margin: 1em 0 4px 0;
 	}
 }
@@ -337,7 +327,6 @@ a {
 }
 #footer {
 	min-height: 80px;
-	padding: 0;
 	position: relative;
 	overflow: visible;
 	#gradient > .vertical-three-colors(lighten(@footBgColor, 10%), lighten(@footBgColor, 15%), 25%, @footBgColor);

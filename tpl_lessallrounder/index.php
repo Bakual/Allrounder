@@ -86,7 +86,7 @@ JHtmlBootstrap::tooltip();
 							<a class="logo" href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->get('sitename'))); ?></a>
 						<?php endif;?>
 						<?php if ($params->get('showSlogan')) : ?>
-							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan','my slogan goes here...')); ?></div>
+							<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>
 						<?php endif;?>
 					</div>
 					<?php if ($this->countModules('headermodule2')) : ?>
