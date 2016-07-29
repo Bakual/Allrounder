@@ -286,18 +286,10 @@ a {
 		float: left;
 		width: e((99 - @rightcolWidth) + '%');
 	}
-	#maincontent {
-		width: 93.6%;
-	}
 }
 .template_less_cols() when (@maxMobileWidth > 0) {
 	@media (min-width: @minDesktopWidth) {
 		.template_less_cols_desktop();
-	}
-	@media (max-width: @maxMobileWidth) {
-		#leftcol, #content_out, #content_outleft, #content_outmiddle, #content_outright, #maincontent, #rightcol {
-			width: 100%;
-		}
 	}
 }
 .template_less_cols() when not (@maxMobileWidth > 0) {
@@ -311,6 +303,9 @@ a {
 	background-image: url('../images/background.png');
 	background-color: @contentBgColor;
 	border: 3px double @contentBorderColor;
+}
+.row-fluid {
+	width: auto;
 }
 #subfoot {
 	min-height: 15px;

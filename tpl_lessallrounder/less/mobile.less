@@ -137,21 +137,16 @@ input.hackbox {
 		/* fold modules */
 		.mobile_fold {
 			input.hackbox {
-				~ div, ~ .shadow-left, ~ .shadow-right {
+				~:not(label) {
 					display: none;
 				}
 				&:checked {
-					 ~ div, ~ .shadow-left, ~ .shadow-right {
+					 ~:not(label) {
 						display: block;
 					}
 				}
 			}
 			
-		}
-		
-		/* correct sizing */
-		* {
-			box-sizing: border-box;
 		}
 	}
 }

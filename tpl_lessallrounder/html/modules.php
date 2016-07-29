@@ -65,10 +65,11 @@ function ModChrome_AllrounderSidebar($module, &$params, &$attribs)
 function ModChrome_Allrounder($module, &$params, &$attribs)
 {
 	$moduleTag      = $params->get('module_tag', 'div');
+	$moduleSuffix   = htmlspecialchars($params->get('moduleclass_sfx'));
 	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
 	$bootstrapClass = $bootstrapSize ? ' span' . $bootstrapSize : ''; ?>
-	<<?php echo $moduleTag; ?> class="module<?php echo $params->get('moduleclass_sfx'); ?><?php echo $bootstrapClass; ?>">
+	<<?php echo $moduleTag; ?> class="module<?php echo $moduleSuffix; ?><?php echo $bootstrapClass; ?>">
 		<div class="module-content chrome-border left-top">
 			<div class="chrome-border right-top">
 				<div class="chrome-border right-bottom">
