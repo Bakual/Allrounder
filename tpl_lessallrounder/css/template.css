@@ -2580,6 +2580,10 @@ input[type="submit"].btn.btn-mini {
 	text-decoration: underline;
 	background-color: transparent;
 }
+.controls .btn-group.btn-group-yesno > .btn {
+	min-width: 84px;
+	padding: 2px 12px;
+}
 .btn-group {
 	position: relative;
 	display: inline-block;
@@ -8908,4 +8912,8 @@ div.slogan {
 	color: #ff2402;
 	font-size: 18px;
 	padding: 0 40px 10px 100px;
+}
+.form-search .input-append .btn,
+.form-search .input-prepend .btn {
+	vertical-align: middle;
 }
