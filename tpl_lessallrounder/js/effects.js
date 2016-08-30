@@ -79,4 +79,7 @@ jQuery(document).ready(function($) {
 			$("label[for=" + $(this).attr('id') + "]").addClass('active btn-success');
 		}
 	});
+
+	// add collapsed to collapsed accordions heading (Joomla adds this class on first collapse)
+	$('.accordion-body.collapse:not(.in)').parent().find('.accordion-toggle').addClass('collapsed');
 });

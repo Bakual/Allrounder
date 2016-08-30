@@ -18,6 +18,7 @@
 	padding: 0 0 0 35px;
 	background-color: #eee;
 	background-image: url(../images/accordion.jpg);
+	background-position: left 60px;
 	background-repeat: no-repeat;
 	border: 1px solid #aaa;
 	border-bottom-color:#bbb;
@@ -25,8 +26,13 @@
 	&:hover {
 		color: #000;
 		background-color: #fff;
-		background-position: left -30px;
 		text-decoration: none;
+	}
+	&.collapsed {		
+		background-position: left 0px;
+		&:hover {
+			background-position: left -30px;
+		}
 	}
 }
 /* Horizontal Rules */

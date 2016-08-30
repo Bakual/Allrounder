@@ -7164,6 +7164,7 @@ p.img_caption {
 	padding: 0 0 0 35px;
 	background-color: #eee;
 	background-image: url(../images/accordion.jpg);
+	background-position: left -60px;
 	background-repeat: no-repeat;
 	border: 1px solid #aaa;
 	border-bottom-color: #bbb;
@@ -7174,8 +7175,13 @@ p.img_caption {
 .accordion-heading .accordion-toggle:hover {
 	color: #000;
 	background-color: #fff;
-	background-position: left -30px;
 	text-decoration: none;
+}
+.accordion-heading .accordion-toggle.collapsed {
+	background-position: left  0px;
+}
+.accordion-heading .accordion-toggle.collapsed:hover {
+	background-position: left  -30px;
 }
 hr {
 	border: none;
