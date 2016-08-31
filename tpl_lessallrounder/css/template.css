@@ -7162,12 +7162,12 @@ p.img_caption {
 	margin-top: 10px;
 }
 .accordion-group.panel.active .accordion-heading .accordion-toggle,
-.accordion-group .accordion-heading .accordion-toggle.collapsed {
+.accordion-group .accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle) {
 	color: #0099FF;
 	background-position: left -60px;
 }
 .accordion-group.panel.active .accordion-heading .accordion-toggle:hover,
-.accordion-group .accordion-heading .accordion-toggle.collapsed:hover {
+.accordion-group .accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle):hover {
 	color: #000;
 }
 .accordion-heading .accordion-toggle {
