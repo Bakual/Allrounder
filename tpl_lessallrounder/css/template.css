@@ -7161,17 +7161,8 @@ p.img_caption {
 .accordion-group {
 	margin-top: 10px;
 }
-.accordion-group.panel.active .accordion-heading .accordion-toggle,
-.accordion-group .accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle) {
-	color: #0099FF;
-	background-position: left -60px;
-}
-.accordion-group.panel.active .accordion-heading .accordion-toggle:hover,
-.accordion-group .accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle):hover {
-	color: #000;
-}
 .accordion-heading .accordion-toggle {
-	color: #555;
+	color: #0099FF;
 	font-weight: bold;
 	height: 30px;
 	line-height: 30px;
@@ -7192,6 +7183,7 @@ p.img_caption {
 	text-decoration: none;
 }
 .accordion-heading .accordion-toggle.collapsed {
+	color: #555;
 	background-position: left  0px;
 }
 .accordion-heading .accordion-toggle.collapsed:hover {

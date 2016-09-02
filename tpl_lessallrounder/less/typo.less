@@ -1,18 +1,9 @@
 /* Pimp Bootstrap Accordion */
 .accordion-group {
 	margin-top: 10px;
-	/* Special support for Sliders from NoNumber */
-	&.panel.active .accordion-heading .accordion-toggle,
-	.accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle) {
-		color: #0099FF;
-		background-position: left -60px;
-		&:hover {
-			color: #000;
-		}
-	}
 }
 .accordion-heading .accordion-toggle {
-	color: #555;
+	color: #0099FF;
 	font-weight: bold;
 	height: 30px;
 	line-height: 30px;
@@ -29,7 +20,8 @@
 		background-color: #fff;
 		text-decoration: none;
 	}
-	&.collapsed {		
+	&.collapsed {
+		color: #555;
 		background-position: left 0px;
 		&:hover {
 			background-position: left -30px;
