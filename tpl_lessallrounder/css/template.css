@@ -7184,10 +7184,10 @@ p.img_caption {
 }
 .accordion-heading .accordion-toggle.collapsed {
 	color: #555;
-	background-position: left  0px;
+	background-position: left 0px;
 }
 .accordion-heading .accordion-toggle.collapsed:hover {
-	background-position: left  -30px;
+	background-position: left -30px;
 }
 hr {
 	border: none;
