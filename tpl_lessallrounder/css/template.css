@@ -7161,23 +7161,15 @@ p.img_caption {
 .accordion-group {
 	margin-top: 10px;
 }
-.accordion-group.panel.active .accordion-heading .accordion-toggle,
-.accordion-group .accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle) {
-	color: #0099FF;
-	background-position: left -60px;
-}
-.accordion-group.panel.active .accordion-heading .accordion-toggle:hover,
-.accordion-group .accordion-heading .accordion-toggle:not(.collapsed):not(.rl_sliders-toggle):hover {
-	color: #000;
-}
 .accordion-heading .accordion-toggle {
-	color: #555;
+	color: #0099FF;
 	font-weight: bold;
 	height: 30px;
 	line-height: 30px;
 	padding: 0 0 0 35px;
 	background-color: #eee;
 	background-image: url(../images/accordion.jpg);
+	background-position: left -60px;
 	background-repeat: no-repeat;
 	border: 1px solid #aaa;
 	border-bottom-color: #bbb;
@@ -7188,8 +7180,14 @@ p.img_caption {
 .accordion-heading .accordion-toggle:hover {
 	color: #000;
 	background-color: #fff;
-	background-position: left -30px;
 	text-decoration: none;
+}
+.accordion-heading .accordion-toggle.collapsed {
+	color: #555;
+	background-position: left  0px;
+}
+.accordion-heading .accordion-toggle.collapsed:hover {
+	background-position: left  -30px;
 }
 hr {
 	border: none;
