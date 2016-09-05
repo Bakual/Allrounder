@@ -7110,7 +7110,7 @@ legend {
 fieldset.filters {
 	margin-bottom: 10px;
 }
-.edit #adminForm fieldset {
+.edit #adminForm > fieldset {
 	border: solid 1px #ddd;
 	padding: 20px 15px;
 	margin-top: 10px;
