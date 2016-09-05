@@ -67,6 +67,7 @@ jQuery(document).ready(function($) {
 				label.addClass('active btn-success');
 			}
 			input.prop('checked', true);
+			input.trigger('change');
 		}
 	});
 	$(".btn-group input[checked=checked]").each(function()
