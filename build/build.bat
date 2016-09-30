@@ -15,3 +15,4 @@ cd ../build/packages/
 copy ..\..\pkg_lessallrounder.xml
 zip pkg_lessallrounder.zip *
 del pkg_lessallrounder.xml
+exit
