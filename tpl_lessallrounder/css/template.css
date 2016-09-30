@@ -2584,6 +2584,20 @@ input[type="submit"].btn.btn-mini {
 	min-width: 84px;
 	padding: 2px 12px;
 }
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+	padding-top: 0px;
+}
+.form-horizontal .controls > .radio:first-child,
+.form-horizontal .controls > .checkbox:first-child {
+	padding-top: 5px;
+}
+.form-horizontal .controls > .radio.btn-group:first-child {
+	padding-top: 0px;
+}
+.form-horizontal .controls > .radio.btn-group-yesno:first-child {
+	padding-top: 2px;
+}
 .btn-group {
 	position: relative;
 	display: inline-block;
