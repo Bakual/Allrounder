@@ -1,11 +1,27 @@
 jQuery(document).ready(function($) {
+	// Mobile dropdown menu
+	$('#topmenu ul.menu li a').prepend('<span class="mobile-icon"></span>');
+	$('#topmenu ul.menu li a .mobile-icon').click(
+		function(e){
+			e.preventDefault();
+			$(this).closest('li').toggleClass('opened').find('ul:first');
+			$('#topmenu ul.menu ul').hide();
+			$('#topmenu ul.menu li.opened > ul').show();
+			
+		}
+	);
+
 	// Dropdown menu
 	$('#topmenu').find('ul.menu li').hover(
 		function(){
-			$(this).find('ul:first').show('fast');
+			if ($('.navbar .btn-navbar').css('display') == 'none') {
+				$(this).find('ul:first').show('fast');
+			}
 		},
 		function(){
-			$(this).find('ul:first').hide();
+			if ($('.navbar .btn-navbar').css('display') == 'none') {
+				$(this).find('ul:first').hide();
+			}
 		}
 	);
 

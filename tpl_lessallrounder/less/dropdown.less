@@ -30,6 +30,9 @@
 						vertical-align: middle;
 					}
 				}
+				.mobile-icon {
+					display: none;
+				}
 			}
 			/* Level 1 */
 			&, > li > a, > li > span.separator {
@@ -150,23 +153,31 @@
 		border-top: 3px double @ddBorderTop;
 		border-bottom: 3px double @ddBorderBottom;
 		#topmenu {
-			li.deeper > a:after {
-				font-family: 'IcoMoon';
-				font-style: normal;
-				speak: none;
-				content: " \e007";
-			}
 			ul.nav-child {
 				display: none;
 			}
-			.nav > li:hover > .nav-child,
-			.nav > li > a:focus + .nav-child,
-			.nav li li:hover > .nav-child,
-			.nav li li > a:focus + .nav-child {
-				display: block;
-			}
 			ul.menu {
 				margin: 0px;
+				li .mobile-icon {
+					display: inline-block;
+					width: 1.5em;
+				}
+				li.parent > a >.mobile-icon {
+					&:before {
+						text-align: center;
+						content: "+";
+						color: green;
+					}
+				}
+				li.parent.opened > {
+					a >.mobile-icon:before {
+						content: "\2013";
+						color: red;
+					}
+					ul.nav-child {
+						display: block;
+					}
+				}
 				> li {
 					a, span.separator {
 						font-size: 18px;

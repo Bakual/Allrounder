@@ -7828,6 +7828,9 @@ ul.breadcrumb li span.divider {
 	#topmenu ul.menu li a span {
 		vertical-align: middle;
 	}
+	#topmenu ul.menu li .mobile-icon {
+		display: none;
+	}
 	#topmenu ul.menu,
 	#topmenu ul.menu > li > a,
 	#topmenu ul.menu > li > span.separator {
@@ -7941,23 +7944,27 @@ ul.breadcrumb li span.divider {
 		border-top: 3px double #ffffff;
 		border-bottom: 3px double #ffffff;
 	}
-	nav #topmenu li.deeper > a:after {
-		font-family: 'IcoMoon';
-		font-style: normal;
-		speak: none;
-		content: " \e007";
-	}
 	nav #topmenu ul.nav-child {
 		display: none;
 	}
-	nav #topmenu .nav > li:hover > .nav-child,
-	nav #topmenu .nav > li > a:focus + .nav-child,
-	nav #topmenu .nav li li:hover > .nav-child,
-	nav #topmenu .nav li li > a:focus + .nav-child {
-		display: block;
-	}
 	nav #topmenu ul.menu {
 		margin: 0px;
+	}
+	nav #topmenu ul.menu li .mobile-icon {
+		display: inline-block;
+		width: 1.5em;
+	}
+	nav #topmenu ul.menu li.parent > a >.mobile-icon:before {
+		text-align: center;
+		content: "+";
+		color: green;
+	}
+	nav #topmenu ul.menu li.parent.opened > a >.mobile-icon:before {
+		content: "\2013";
+		color: red;
+	}
+	nav #topmenu ul.menu li.parent.opened > ul.nav-child {
+		display: block;
 	}
 	nav #topmenu ul.menu > li a,
 	nav #topmenu ul.menu > li span.separator {
