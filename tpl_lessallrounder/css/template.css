@@ -7953,13 +7953,14 @@ ul.breadcrumb li span.divider {
 	nav #topmenu ul.menu li .mobile-icon {
 		display: inline-block;
 		width: 1.5em;
+		font-size: 1.1em;
 	}
-	nav #topmenu ul.menu li.parent > a >.mobile-icon:before {
+	nav #topmenu ul.menu li.parent > a > .mobile-icon:before {
 		text-align: center;
 		content: "+";
 		color: green;
 	}
-	nav #topmenu ul.menu li.parent.opened > a >.mobile-icon:before {
+	nav #topmenu ul.menu li.parent.opened > a > .mobile-icon:before {
 		content: "\2013";
 		color: red;
 	}

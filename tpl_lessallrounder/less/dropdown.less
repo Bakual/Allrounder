@@ -161,8 +161,9 @@
 				li .mobile-icon {
 					display: inline-block;
 					width: 1.5em;
+					font-size: 1.1em;
 				}
-				li.parent > a >.mobile-icon {
+				li.parent > a > .mobile-icon {
 					&:before {
 						text-align: center;
 						content: "+";
@@ -170,7 +171,7 @@
 					}
 				}
 				li.parent.opened > {
-					a >.mobile-icon:before {
+					a > .mobile-icon:before {
 						content: "\2013";
 						color: red;
 					}
