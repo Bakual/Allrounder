@@ -5,8 +5,8 @@ jQuery(document).ready(function($) {
 		function(e){
 			e.preventDefault();
 			$(this).closest('li').toggleClass('opened').find('ul:first');
-			$('#topmenu ul.menu ul').hide();
-			$('#topmenu ul.menu li.opened > ul').show();
+			$('#topmenu ul.menu li').not('.opened').find('ul').hide();
+			$('#topmenu ul.menu li.opened > ul').show('fast');
 			
 		}
 	);
