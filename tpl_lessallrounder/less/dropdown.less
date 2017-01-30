@@ -163,17 +163,21 @@
 					width: 1.5em;
 					font-size: 1.1em;
 				}
-				li.parent > a > .mobile-icon {
-					&:before {
-						text-align: center;
-						content: "+";
-						color: green;
+				li.parent > {
+					a, span.separator {
+						> .mobile-icon:before {
+							text-align: center;
+							content: "+";
+							color: green;
+						}
 					}
 				}
 				li.parent.opened > {
-					a > .mobile-icon:before {
-						content: "\2013";
-						color: red;
+					a, span.separator {
+						> .mobile-icon:before {
+							content: "\2013";
+							color: red;
+						}
 					}
 					ul.nav-child {
 						display: block;

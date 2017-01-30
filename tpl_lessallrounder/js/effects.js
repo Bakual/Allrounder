@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 	// Mobile dropdown menu
 	$('#topmenu ul.menu li a').prepend('<span class="mobile-icon"></span>');
+	$('#topmenu ul.menu li span.separator').prepend('<span class="mobile-icon"></span>');
 	$('#topmenu ul.menu li a .mobile-icon').click(
 		function(e){
 			e.preventDefault();
