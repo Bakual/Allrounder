@@ -152,12 +152,12 @@ body {
 #header_container {
 	padding-top: 14px;
 }
-.template_less_header() when (@maxMobileWidth > 0) {
-	@media (min-width: @minDesktopWidth) {
+.template_less_header() when (@navbarCollapseWidth > 0) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
 		.border-top-radius(5px);
 	}
 }
-.template_less_header() when not (@maxMobileWidth > 0) {
+.template_less_header() when not (@navbarCollapseWidth > 0) {
 	.border-top-radius(5px);
 }
 #header {
@@ -207,18 +207,18 @@ a {
 		margin: 0;
 	}
 }
-.template_less_search() when (@maxMobileWidth > 0) {
+.template_less_search() when (@navbarCollapseWidth > 0) {
 	/* mobile: display Search under breadcrumb */
-	@media (min-width: @minDesktopWidth) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
 		float: right;
 		margin: 4px 4px 4px 0;
 	}
-	@media (max-width: @maxMobileWidth) {
+	@media (max-width: @navbarCollapseWidth) {
 		text-align: center;
 		margin: 1em 0 4px 0;
 	}
 }
-.template_less_search() when not (@maxMobileWidth > 0) {
+.template_less_search() when not (@navbarCollapseWidth > 0) {
 	float: right;
 	margin: 4px 4px 4px 0;
 }
@@ -235,15 +235,15 @@ a {
 		display: none;
 	}
 }
-.template_less_container() when (@maxMobileWidth > 0) {
-	@media (min-width: @minDesktopWidth) {
+.template_less_container() when (@navbarCollapseWidth > 0) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
 		padding: 10px 7px 0 7px;
 	}
-	@media (max-width: @maxMobileWidth) {
+	@media (max-width: @navbarCollapseWidth) {
 		padding: 10px 0 0 0;
 	}
 }
-.template_less_container() when not (@maxMobileWidth > 0) {
+.template_less_container() when not (@navbarCollapseWidth > 0) {
 	padding: 10px 7px 0 7px;
 }
 #container {
@@ -286,12 +286,12 @@ a {
 		width: e((99 - @rightcolWidth) + '%');
 	}
 }
-.template_less_cols() when (@maxMobileWidth > 0) {
-	@media (min-width: @minDesktopWidth) {
+.template_less_cols() when (@navbarCollapseWidth > 0) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
 		.template_less_cols_desktop();
 	}
 }
-.template_less_cols() when not (@maxMobileWidth > 0) {
+.template_less_cols() when not (@navbarCollapseWidth > 0) {
 	.template_less_cols_desktop();
 }
 .template_less_cols();

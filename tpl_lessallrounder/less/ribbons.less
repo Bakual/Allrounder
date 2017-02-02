@@ -68,18 +68,18 @@
 }
 
 /* Ribbons on */
-.guarded-ribbons() when (@maxMobileWidth > 0) and (@ribbonsOnOff = 1) {
-	@media (min-width: @minDesktopWidth) {
+.guarded-ribbons() when (@navbarCollapseWidth > 0) and (@ribbonsOnOff = 1) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
 		.ribbons-on();
 	}
-	@media (max-width: @maxMobileWidth) {
+	@media (max-width: @navbarCollapseWidth) {
 		.ribbons-off();
 		#header {
 			margin: 0 0 15px 0;
 		}
 	}
 }
-.guarded-ribbons() when not (@maxMobileWidth > 0) and (@ribbonsOnOff = 1) {
+.guarded-ribbons() when not (@navbarCollapseWidth > 0) and (@ribbonsOnOff = 1) {
 	.ribbons-on();
 }
 /* Ribbons off */

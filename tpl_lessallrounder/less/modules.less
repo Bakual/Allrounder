@@ -137,12 +137,12 @@
 	border-top: 1px solid @moduleh3BorderTopColor;
 	color: @moduleh3Color;
 	position: relative;
-	.modules_less_sidebar() when (@maxMobileWidth > 0) {
-		@media (min-width: @minDesktopWidth) {
+	.modules_less_sidebar() when (@navbarCollapseWidth > 0) {
+		@media (min-width: @navbarCollapseDesktopWidth) {
 			.border-top-radius(5px);
 		}
 	}	
-	.modules_less_sidebar() when not (@maxMobileWidth > 0) {
+	.modules_less_sidebar() when not (@navbarCollapseWidth > 0) {
 		.border-top-radius(5px);
 	}
 	.modules_less_sidebar();
@@ -165,16 +165,16 @@
 }
 #rightcol .moduleh3-sidebar {
 	/* mobile: display like #leftcol */
-	.modules_less_rightcol() when (@maxMobileWidth > 0) {
-		@media (min-width: @minDesktopWidth) {
+	.modules_less_rightcol() when (@navbarCollapseWidth > 0) {
+		@media (min-width: @navbarCollapseDesktopWidth) {
 			padding: 0 30px 0 10px;
 			text-align: right;
 		}
-		@media (max-width: @maxMobileWidth) {
+		@media (max-width: @navbarCollapseWidth) {
 			padding: 0 10px 0 30px;
 		}
 	}
-	.modules_less_rightcol() when not (@maxMobileWidth > 0) {
+	.modules_less_rightcol() when not (@navbarCollapseWidth > 0) {
 			padding: 0 30px 0 10px;
 			text-align: right;
 	}

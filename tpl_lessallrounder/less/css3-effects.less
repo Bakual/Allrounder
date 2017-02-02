@@ -16,12 +16,12 @@
 		}
 	}
 }
-.css3-effects_less() when (@maxMobileWidth > 0) {
+.css3-effects_less() when (@navbarCollapseWidth > 0) {
 	@media (min-width: @navbarCollapseDesktopWidth) {
 		.css3-effects_less_content();
 	}
 }
-.css3-effects_less() when not (@maxMobileWidth > 0) {
+.css3-effects_less() when not (@navbarCollapseWidth > 0) {
 	.css3-effects_less_content();
 }
 /* CSS3 Effects (text-shadow, box-shadow, border-radius) */
