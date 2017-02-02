@@ -68,7 +68,7 @@
 }
 
 /* Ribbons on */
-.guarded-ribbons_media() when (@maxMobileWidth > 0) {
+.guarded-ribbons() when (@maxMobileWidth > 0) and (@ribbonsOnOff = 1) {
 	@media (min-width: @minDesktopWidth) {
 		.ribbons-on();
 	}
@@ -79,14 +79,9 @@
 		}
 	}
 }
-.guarded-ribbons_media() when not (@maxMobileWidth > 0) {
+.guarded-ribbons() when not (@maxMobileWidth > 0) and (@ribbonsOnOff = 1) {
 	.ribbons-on();
 }
-
-.guarded-ribbons() when (@ribbonsOnOff = 1) {
-	.guarded-ribbons_media();
-}
-
 /* Ribbons off */
 .guarded-ribbons() when not (@ribbonsOnOff = 1) {
 	.ribbons-off();

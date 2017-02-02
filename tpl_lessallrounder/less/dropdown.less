@@ -1,5 +1,5 @@
 /* Rules regarding topmenu dropdown */
-@media (min-width: @navbarCollapseDesktopWidth) {
+.dropdown_less_Desktop() {
 	#topmenu {
 		ul.menu {
 			background-repeat: repeat-x;
@@ -147,7 +147,7 @@
 		}
 	}
 }
-@media (max-width: @navbarCollapseWidth) {
+.dropdown_less_Mobile() {
 	nav {
 		background-color: @ddBackground;
 		border-top: 3px double @ddBorderTop;
@@ -231,3 +231,15 @@
 		}
 	}
 }
+.dropdown_less() when (@navbarCollapseWidth > 0) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
+		.dropdown_less_Desktop();
+	}
+	@media (max-width: @navbarCollapseWidth) {
+		.dropdown_less_Mobile();
+	}
+}
+.dropdown_less() when not (@navbarCollapseWidth > 0) {
+	.dropdown_less_Desktop();
+}
+.dropdown_less();

@@ -1,14 +1,28 @@
-.css3-effects_less() when (@maxMobileWidth > 0) {
-	@media (min-width: @minDesktopWidth) {
-		ul {
-			box-shadow: 0 0 10px #000;
+.css3-effects_less_content() {
+	#topmenu {
+		ul.menu {
+			ul {
+				box-shadow: 0 0 10px #000;
+			}
+			li {
+				a {
+					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+				}
+				/** LEVEL 2 **/
+				ul li a {
+					text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+				}
+			}
 		}
 	}
 }
-.css3-effects_less() when not (@maxMobileWidth > 0) {
-	ul {
-		box-shadow: 0 0 10px #000;
+.css3-effects_less() when (@maxMobileWidth > 0) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
+		.css3-effects_less_content();
 	}
+}
+.css3-effects_less() when not (@maxMobileWidth > 0) {
+	.css3-effects_less_content();
 }
 /* CSS3 Effects (text-shadow, box-shadow, border-radius) */
 .guarded-effects() when (@css3effects = 1) {
@@ -19,25 +33,7 @@
 		text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
 	}
 	/* Dropdown Menu*/
-	@media (min-width: @navbarCollapseDesktopWidth) {
-		#topmenu {
-			ul.menu {
-				.css3-effects_less();
-				li {
-					a {
-						text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-					}
-					/** LEVEL 2 **/
-					ul li a {
-						text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-					}
-				}
-				&.nav-bar .icon-bar {
-					box-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-				}
-			}
-		}
-	}
+	.css3-effects_less();
 	#subfoot {
 		box-shadow: 0 0 5px #aaa;
 	}
