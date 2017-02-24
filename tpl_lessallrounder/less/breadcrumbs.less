@@ -1,5 +1,4 @@
 .breadcrumb_less_desktop () {
-	float: left;
 	margin: 8px 0 0 26px;
 	max-width: 650px;
 }
@@ -15,7 +14,7 @@
 .breadcrumb_less() when not (@maxMobileWidth > 0) {
 	.breadcrumb_less_desktop();
 }
-ul.breadcrumb {
+.breadcrumb {
 	.breadcrumb_less();
 	font-size: 11px;
 	line-height: 16px;
