@@ -60,11 +60,20 @@
 				<field name="mobileWidth" type="radio"
 					label="TPL_ALLROUNDER_MOBILEWIDTH"
 					description="TPL_ALLROUNDER_MOBILEWIDTH_DESC"
-					class="btn-group"
+					class="btn-group btn-group-yesno"
 					default="767" >
 					<option value="0">JNONE</option>
 					<option value="767">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_PHONES</option>
 					<option value="979">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_TABLETS</option>
+				</field>
+				<field name="viewport" type="radio"
+					label="TPL_ALLROUNDER_VIEWPORT"
+					description="TPL_ALLROUNDER_VIEWPORT_DESC"
+					class="btn-group btn-group-yesno"
+					showon="mobileWidth:0"
+					default="1" >
+					<option value="1">JGLOBAL_AUTO</option>
+					<option value="0">TPL_ALLROUNDER_VIEWPORT_OPTION_DESKTOP</option>
 				</field>
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
@@ -78,7 +87,7 @@
 				<field name="rightSidebarPosition" type="radio"
 					label="TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_LABEL"
 					description="TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_DESC"
-					class="btn-group"
+					class="btn-group btn-group-yesno"
 					showon="mobileWidth:767[OR]mobileWidth:979"
 					default="1" >
 					<option value="1">TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_OPTION_BELOW</option>

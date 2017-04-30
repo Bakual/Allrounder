@@ -26,7 +26,9 @@ JHtmlBootstrap::tooltip();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<? if ($params->get('mobileWidth', 767) || $params->get('viewport', 1)) : ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<? endif; ?>
 	<jdoc:include type="head" />
 	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
 	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
