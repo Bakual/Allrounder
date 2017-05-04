@@ -1,13 +1,13 @@
 jQuery(document).ready(function($) {
 	// Mobile dropdown menu
-	$('#topmenu ul.menu li a').prepend('<span class="mobile-icon"></span>');
-	$('#topmenu ul.menu li a .mobile-icon').click(
+	$('#topmenu ul.menu li').find('a, span.separator').prepend('<span class="mobile-icon"></span>');
+	$('#topmenu ul.menu li').find('.mobile-icon, span.separator').click(
 		function(e){
-			e.preventDefault();
-			$(this).closest('li').toggleClass('opened').find('ul:first');
+			$(this).closest('li').toggleClass('opened');
+			$('#topmenu ul.menu li').not('.opened').find('li.opened').removeClass('opened');
 			$('#topmenu ul.menu li').not('.opened').find('ul').hide();
 			$('#topmenu ul.menu li.opened > ul').show('fast');
-			
+			return false;
 		}
 	);
 

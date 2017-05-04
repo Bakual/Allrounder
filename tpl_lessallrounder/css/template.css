@@ -7794,6 +7794,61 @@ span.dropcap {
 .breadcrumb span {
 	color: #555555;
 }
+#topmenu ul.menu {
+	background-color: #222222;
+}
+#topmenu ul.menu li {
+	line-height: 1.5em;
+	border-right: 1px solid #555555;
+}
+#topmenu ul.menu li a,
+#topmenu ul.menu li span.separator {
+	min-height: 24px;
+	padding: 10px 15px;
+}
+#topmenu ul.menu > li a,
+#topmenu ul.menu > li span.separator {
+	display: block;
+	padding: 10px 15px;
+	background-color: #222222;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #222222;
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #333333;
+	color: #cccccc;
+}
+#topmenu ul.menu > li a:hover,
+#topmenu ul.menu > li span.separator:hover {
+	color: #ffffff;
+}
+#topmenu ul.menu ul.nav-child {
+	background-color: #222222;
+	padding: 5px;
+	border: 2px solid #000000;
+	display: none;
+}
+#topmenu ul.menu ul.nav-child a:hover,
+#topmenu ul.menu ul.nav-child a:focus {
+	text-decoration: none;
+}
+#topmenu ul.menu ul.nav-child li {
+	margin: 2px;
+}
+#topmenu ul.menu ul.nav-child li a,
+#topmenu ul.menu ul.nav-child li span.separator {
+	background-color: #171717;
+	padding: 4px 8px;
+	border: 1px solid;
+	border-top-color: #000000;
+	border-right-color: #333333;
+	border-left-color: #333333;
+	border-bottom-color: #333333;
+	color: #999999;
+}
+#topmenu ul.menu ul.nav-child li a:hover,
+#topmenu ul.menu ul.nav-child li span.separator:hover {
+	color: #ffffff;
+}
 @media (min-width: 768px) {
 	#topmenu ul.menu {
 		background-repeat: repeat-x;
@@ -7877,61 +7932,6 @@ span.dropcap {
 		top: 1.1em;
 	}
 }
-#topmenu ul.menu {
-	background-color: #222222;
-}
-#topmenu ul.menu li {
-	line-height: 1.5em;
-	border-right: 1px solid #555555;
-}
-#topmenu ul.menu li a,
-#topmenu ul.menu li span.separator {
-	min-height: 24px;
-	padding: 10px 15px;
-}
-#topmenu ul.menu > li a,
-#topmenu ul.menu > li span.separator {
-	display: block;
-	padding: 10px 15px;
-	background-color: #222222;
-	border-top: 1px solid #000000;
-	border-right: 1px solid #222222;
-	border-left: 1px solid #000000;
-	border-bottom: 1px solid #333333;
-	color: #cccccc;
-}
-#topmenu ul.menu > li a:hover,
-#topmenu ul.menu > li span.separator:hover {
-	color: #ffffff;
-}
-#topmenu ul.menu ul.nav-child {
-	background-color: #222222;
-	padding: 5px;
-	border: 2px solid #000000;
-	display: none;
-}
-#topmenu ul.menu ul.nav-child a:hover,
-#topmenu ul.menu ul.nav-child a:focus {
-	text-decoration: none;
-}
-#topmenu ul.menu ul.nav-child li {
-	margin: 2px;
-}
-#topmenu ul.menu ul.nav-child li a,
-#topmenu ul.menu ul.nav-child li span.separator {
-	background-color: #171717;
-	padding: 4px 8px;
-	border: 1px solid;
-	border-top-color: #000000;
-	border-right-color: #333333;
-	border-left-color: #333333;
-	border-bottom-color: #333333;
-	color: #999999;
-}
-#topmenu ul.menu ul.nav-child li a:hover,
-#topmenu ul.menu ul.nav-child li span.separator:hover {
-	color: #ffffff;
-}
 @media (max-width: 767px) {
 	nav {
 		background-color: #222222;
@@ -7949,12 +7949,14 @@ span.dropcap {
 		width: 1.5em;
 		font-size: 1.1em;
 	}
-	nav #topmenu ul.menu li.parent > a > .mobile-icon:before {
+	nav #topmenu ul.menu li.parent > a > .mobile-icon:before,
+	nav #topmenu ul.menu li.parent > span.separator > .mobile-icon:before {
 		text-align: center;
 		content: "+";
 		color: green;
 	}
-	nav #topmenu ul.menu li.parent.opened > a > .mobile-icon:before {
+	nav #topmenu ul.menu li.parent.opened > a > .mobile-icon:before,
+	nav #topmenu ul.menu li.parent.opened > span.separator > .mobile-icon:before {
 		content: "\2013";
 		color: red;
 	}
@@ -8522,19 +8524,14 @@ p.counter {
 	text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
 }
 @media (min-width: 768px) {
+	#topmenu ul.menu ul {
+		box-shadow: 0 0 10px #000;
+	}
 	#topmenu ul.menu li a {
 		text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 	}
 	#topmenu ul.menu li ul li a {
 		text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-	}
-	#topmenu ul.menu.nav-bar .icon-bar {
-		box-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-	}
-}
-@media (min-width: 768px) and (min-width: 768px) {
-	#topmenu ul.menu ul {
-		box-shadow: 0 0 10px #000;
 	}
 }
 #subfoot {

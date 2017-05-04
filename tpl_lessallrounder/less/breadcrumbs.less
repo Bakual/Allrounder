@@ -2,16 +2,16 @@
 	margin: 8px 0 0 26px;
 	max-width: 650px;
 }
-.breadcrumb_less() when (@maxMobileWidth > 0) {
-	@media (min-width: @minDesktopWidth) {
+.breadcrumb_less() when (@navbarCollapseWidth > 0) {
+	@media (min-width: @navbarCollapseDesktopWidth) {
 		.breadcrumb_less_desktop();
 	}
-	@media (max-width: @maxMobileWidth) {
+	@media (max-width: @navbarCollapseWidth) {
 		text-align: center;
 		margin: 8px 0 0 0;
 	}
 }
-.breadcrumb_less() when not (@maxMobileWidth > 0) {
+.breadcrumb_less() when not (@navbarCollapseWidth > 0) {
 	.breadcrumb_less_desktop();
 }
 .breadcrumb {
