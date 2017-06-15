@@ -6011,6 +6011,7 @@ fieldset.radio.btn-group {
 }
 input.invalid {
 	border: 1px solid #9d261d;
+	background: #f2dede;
 }
 select.chzn-done.invalid + .chzn-container.chzn-container-single > a.chzn-single,
 select.chzn-done.invalid + .chzn-container.chzn-container-multi > ul.chzn-choices {
@@ -6947,7 +6948,7 @@ div.modal.jviewport-width100 {
 .items-row > div {
 	margin-bottom: 25px;
 }
-#maincontent > div:not([class*="-featured"]):not(#system-message-container),
+#maincontent > div:not([class^="blog"]):not(#system-message-container),
 #maincontent .items-leading > div,
 #maincontent .item {
 	background-color: #ffffff;
