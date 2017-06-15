@@ -7789,6 +7789,9 @@ span.dropcap {
 		margin: 8px 0 0 26px;
 		max-width: 650px;
 	}
+	#subhead .breadcrumb {
+		float: left;
+	}
 }
 @media (max-width: 767px) {
 	.breadcrumb {

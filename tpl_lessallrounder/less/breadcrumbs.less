@@ -1,6 +1,9 @@
 .breadcrumb_less_desktop () {
 	margin: 8px 0 0 26px;
 	max-width: 650px;
+	#subhead & {
+		float: left;
+	}
 }
 .breadcrumb_less() when (@navbarCollapseWidth > 0) {
 	@media (min-width: @navbarCollapseDesktopWidth) {
