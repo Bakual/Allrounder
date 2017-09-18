@@ -4,10 +4,10 @@
 	<author>Thomas Hunziker</author>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>http://www.bakual.net</authorUrl>
-	<creationDate>2017-01-27</creationDate>
+	<creationDate>2017-09-18</creationDate>
 	<copyright>(C) 2017</copyright>
 	<license>http://www.gnu.org/licenses/gpl.html</license>
-	<version>2.4.0</version>
+	<version>2.5.0</version>
 	<packagename>lessallrounder</packagename>
 	<description>{LESS} Allrounder Package. Make sure to open and save the template style(s)!</description>
 	<files>
