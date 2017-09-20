@@ -46,7 +46,7 @@ JHtmlBootstrap::tooltip();
 		<script src="<?php echo $path; ?>js/jq.easy-tooltip.min.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>js/jq.easy-caption.min.js" type="text/javascript"></script>
 		<script src="<?php echo $path; ?>js/reflection.js" type="text/javascript"></script>
-		<?php if (!$params->get('deprecatedNoConflict', 1)) : ?>
+		<?php if (!$params->get('deprecatedNoConflict')) : ?>
 			<script type="text/javascript">
 				(function($){$.fn.tooltip=function(o){$(this).easyTooltip(o)}})(jQuery)
 			</script>

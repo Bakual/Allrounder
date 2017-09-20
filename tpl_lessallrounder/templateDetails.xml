@@ -475,7 +475,7 @@
 					description="TPL_ALLROUNDER_DEPRECATED_NO_CONFLICT_DESC"
 					class="btn-group btn-group-yesno"
 					showon="deprecated:1"
-					default="1" >
+					default="0" >
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
