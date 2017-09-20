@@ -470,6 +470,15 @@
 					<option value="1">JENABLED</option>
 					<option value="0">JDISABLED</option>
 				</field>
+				<field name="deprecatedNoConflict" type="radio"
+					label="TPL_ALLROUNDER_DEPRECATED_NO_CONFLICT"
+					description="TPL_ALLROUNDER_DEPRECATED_NO_CONFLICT_DESC"
+					class="btn-group btn-group-yesno"
+					showon="deprecated:1"
+					default="1" >
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
 				<field name="cssCompress" type="radio"
 					label="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS"
 					description="TPL_ALLROUNDER_ENABLE_CSS_COMPRESS_DESC"
