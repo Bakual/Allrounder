@@ -22,14 +22,14 @@ defined('_JEXEC') or die();
  */
 function ModChrome_AllrounderSidebar($module, &$params, &$attribs)
 {
-	$moduleTag      = $params->get('module_tag', 'div');
-	$moduleSuffix   = htmlspecialchars($params->get('moduleclass_sfx'));
-	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$moduleTag      = htmlspecialchars($params->get('module_tag', 'div'), ENT_QUOTES, 'UTF-8');
+	$moduleSuffix   = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'), ENT_QUOTES, 'UTF-8');
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
 	$bootstrapClass = $bootstrapSize ? ' span' . $bootstrapSize : ''; ?>
 	<<?php echo $moduleTag; ?> class="module-outer<?php echo $moduleSuffix . $bootstrapClass; ?>">
 		<?php if ($module->showtitle) : ?>
-			<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3-sidebar'); ?>">
+			<<?php echo $headerTag; ?> class="<?php echo htmlspecialchars($params->get('header_class', 'moduleh3-sidebar'), ENT_COMPAT, 'UTF-8'); ?>">
 				<?php echo $module->title; ?>
 				<span class="h3eck">&nbsp;</span>
 			</<?php echo $headerTag; ?>>
@@ -57,17 +57,17 @@ function ModChrome_AllrounderSidebar($module, &$params, &$attribs)
  */
 function ModChrome_Allrounder($module, &$params, &$attribs)
 {
-	$moduleTag      = $params->get('module_tag', 'div');
-	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$moduleTag      = htmlspecialchars($params->get('module_tag', 'div'), ENT_QUOTES, 'UTF-8');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'), ENT_QUOTES, 'UTF-8');
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
 	$bootstrapClass = $bootstrapSize ? ' span' . $bootstrapSize : ''; ?>
-	<<?php echo $moduleTag; ?> class="module<?php echo $params->get('moduleclass_sfx'); ?><?php echo $bootstrapClass; ?>">
+	<<?php echo $moduleTag; ?> class="module<?php echo htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8'); ?><?php echo $bootstrapClass; ?>">
 		<div class="module-content chrome-border left-top">
 			<div class="chrome-border right-top">
 				<div class="chrome-border right-bottom">
 					<div class="module-inner chrome-border left-bottom">
 						<?php if ($module->showtitle != 0) : ?>
-							<<?php echo $headerTag; ?> class="<?php echo $params->get('header_class', 'moduleh3'); ?>">
+							<<?php echo $headerTag; ?> class="<?php echo htmlspecialchars($params->get('header_class', 'moduleh3'), ENT_COMPAT, 'UTF-8'); ?>">
 								<?php echo $module->title; ?>
 							<<?php echo '/' . $headerTag; ?>>
 						<?php endif; ?>
