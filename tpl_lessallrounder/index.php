@@ -35,10 +35,8 @@ JHtmlBootstrap::tooltip();
 	<?php
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
 	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
-
-	if ($params->get('customCss')) : ?>
-		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
-	<?php endif; ?>
+	?>
+	
 	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
 	<?php if ($params->get('deprecated')) :
 		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip. ?>

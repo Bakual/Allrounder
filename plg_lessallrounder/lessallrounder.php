@@ -83,6 +83,30 @@ class PlgSystemLessallrounder extends JPlugin
 
 			$params_array = $table->params->toArray();
 
+			// Adding template path to params
+			$basePath                 = ($table->client_id) ? JURI::base(true) : JURI::root(true);
+			$params_array['basePath'] = '"' . $basePath . '/"';
+
+			$less->setImportDir(array($templatePath . '/less/'));
+			$lessString = file_get_contents($lessFile);
+
+			// Check for custom files
+			if (is_readable($templatePath . '/less/custom.less'))
+			{
+				$lessString .= file_get_contents($templatePath . '/less/custom.less');
+			}
+
+			if (is_readable($templatePath . '/css/custom.css'))
+			{
+				$lessString .= file_get_contents($templatePath . '/css/custom.css');
+			}
+			
+			// Check for custom less code in template style
+			if ($table->params->get('customCss', 0) && array_key_exists('customCssCode', $params_array))
+			{
+				$lessString .= $params_array['customCssCode'];
+			}
+
 			// Unset the some parameter as it breaks the compiler if it starts with a dot (.) or hash (#).
 			$unsets = array(
 						'customCssCode',
@@ -118,25 +142,7 @@ class PlgSystemLessallrounder extends JPlugin
 				}
 			}
 
-			// Adding template path to params
-			$basePath                 = ($table->client_id) ? JURI::base(true) : JURI::root(true);
-			$params_array['basePath'] = '"' . $basePath . '/"';
-
 			$less->setVariables($params_array);
-
-			$less->setImportDir(array($templatePath . '/less/'));
-			$lessString = file_get_contents($lessFile);
-
-			// Check for custom files
-			if (is_readable($templatePath . '/less/custom.less'))
-			{
-				$lessString .= file_get_contents($templatePath . '/less/custom.less');
-			}
-
-			if (is_readable($templatePath . '/css/custom.css'))
-			{
-				$lessString .= file_get_contents($templatePath . '/css/custom.css');
-			}
 
 			try
 			{

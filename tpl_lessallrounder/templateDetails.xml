@@ -499,12 +499,12 @@
 				<field name="customCssCode" type="editor"
 					label="TPL_ALLROUNDER_OWN_CSS"
 					description="TPL_ALLROUNDER_OWN_CSS_DESC"
-					hint="/* enter your CSS code here */"
+					default="/* enter your CSS/LESS code here */"
 					editor="codemirror|none"
 					buttons="no"
 					rows="10"
 					cols="40"
-					syntax="css"
+					syntax="less"
 					filter="raw" />
 			</fieldset>
 		</fields>
