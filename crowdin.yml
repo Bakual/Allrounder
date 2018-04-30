@@ -1,11 +1,11 @@
 files:
-  - source: plg_lessallrounder/language/en-GB/en-GB.plg_system_lessallrounder.sys.ini
+  - source: /plg_lessallrounder/language/en-GB/en-GB.plg_system_lessallrounder.sys.ini
     translation: >-
-      plg_lessallrounder/language/%locale%/%locale%.plg_system_lessallrounder.sys.ini
-  - source: plg_lessallrounder/language/en-GB/en-GB.plg_system_lessallrounder.ini
+      /plg_lessallrounder/language/%locale%/%locale%.plg_system_lessallrounder.sys.ini
+  - source: /plg_lessallrounder/language/en-GB/en-GB.plg_system_lessallrounder.ini
     translation: >-
-      plg_lessallrounder/language/%locale%/%locale%.plg_system_lessallrounder.ini
-  - source: tpl_lessallrounder/language/en-GB/en-GB.tpl_lessallrounder.sys.ini
-    translation: tpl_lessallrounder/language/%locale%/%locale%.tpl_lessallrounder.sys.ini
-  - source: tpl_lessallrounder/language/en-GB/en-GB.tpl_lessallrounder.ini
-    translation: tpl_lessallrounder/language/%locale%/%locale%.tpl_lessallrounder.ini
+      /plg_lessallrounder/language/%locale%/%locale%.plg_system_lessallrounder.ini
+  - source: /tpl_lessallrounder/language/en-GB/en-GB.tpl_lessallrounder.sys.ini
+    translation: /tpl_lessallrounder/language/%locale%/%locale%.tpl_lessallrounder.sys.ini
+  - source: /tpl_lessallrounder/language/en-GB/en-GB.tpl_lessallrounder.ini
+    translation: /tpl_lessallrounder/language/%locale%/%locale%.tpl_lessallrounder.ini
