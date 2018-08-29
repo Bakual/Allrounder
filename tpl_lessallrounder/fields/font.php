@@ -45,6 +45,10 @@ class JFormFieldFont extends JFormFieldList
 				. $class . $size . ' /></div><br />'
 				. '<div class="input-prepend">'
 				. '<div id="' . $this->fieldname . '_icon" class="btn add-on icon-cancel" onclick="toggleElement(\'' . $this->fieldname . '\', 1);"> </div>';
+
+		// This needs to be disabled here and not in the XML due to a security fix in J3.8.12
+		$this->disabled = true;
+
 		$html	.= parent::getInput();
 		$html	.= '</div>';
 

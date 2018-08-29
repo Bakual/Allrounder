@@ -130,7 +130,6 @@
 				<field name="sansFontFamily" type="font"
 					label="TPL_ALLROUNDER_FONT_FAMILY" description="TPL_ALLROUNDER_FONT_FAMILY_DESC"
 					default="Verdana, Helvetica, Sans-Serif"
-					disabled="true"
 					class="input-xlarge"
 					onchange="toggleElement('sansFontFamily', 1);" >
 					<option value="Verdana, Helvetica, Sans-Serif">Verdana, Helvetica, Sans-Serif</option>
