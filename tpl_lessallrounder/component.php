@@ -9,7 +9,9 @@
 
 defined('_JEXEC') or die();
 
-$tpl	= JFactory::getApplication()->getTemplate(true);
+use Joomla\CMS\Factory;
+
+$tpl	= Factory::getApplication()->getTemplate(true);
 $path	= $this->baseurl . '/templates/' . $tpl->template;
 $params	= $tpl->params;
 ?>
