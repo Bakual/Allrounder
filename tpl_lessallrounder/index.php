@@ -9,8 +9,16 @@
 
 defined('_JEXEC') or die();
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\Helpers\Bootstrap;
+use Joomla\CMS\HTML\Helpers\Jquery;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Language\Text;
+
+HTMLHelper::_('stylesheet', 'system/joomla-fontawesome.css', ['relative' => true]);
+
 // Shortcuts
-$app     = JFactory::getApplication();
+$app     = Factory::getApplication();
 $tpl     = $app->getTemplate(true);
 $path    = $this->baseurl . '/templates/' . $this->template . '/';
 $modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
@@ -18,11 +26,9 @@ $modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
 /** @var $params Joomla\Registry\Registry */
 $params = $tpl->params;
 
-JHtmlJquery::framework();
-JHtmlBootstrap::tooltip();
+Jquery::framework();
 ?>
 <!DOCTYPE html>
-<!--suppress XmlUnboundNsPrefix -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -32,33 +38,19 @@ JHtmlBootstrap::tooltip();
 	<jdoc:include type="head" />
 	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
 	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
-	<?php
-	// Load optional rtl Bootstrap css and Bootstrap bugfixes
-	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
+	<?php Bootstrap::loadCss(true, $this->direction); ?>
 
-	if ($params->get('customCss')) : ?>
+	<?php if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
 	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
-	<?php if ($params->get('deprecated')) :
-		// Note: jq.easy-tooltip.min.js overrides the Bootstrap tooltip. ?>
-		<script src="<?php echo $path; ?>js/deprecated.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>js/jq.easy-tooltip.min.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>js/jq.easy-caption.min.js" type="text/javascript"></script>
-		<script src="<?php echo $path; ?>js/reflection.js" type="text/javascript"></script>
-		<?php if (!$params->get('deprecatedNoConflict')) : ?>
-			<script type="text/javascript">
-				(function($){$.fn.tooltip=function(o){$(this).easyTooltip(o)}})(jQuery)
-			</script>
-		<?php endif; ?>
-	<?php endif;
-	// Check if the 3 columns are enabled
+	<?php // Check if the 3 columns are enabled
 	$contentwidth = '';
-	if ($this->countModules('position-7') and $this->countModules('position-8')) :
+	if ($this->countModules('sidebar-left') and $this->countModules('sidebar-right')) :
 		$contentwidth = 'middle';
-	elseif ($this->countModules('position-7')) :
+	elseif ($this->countModules('sidebar-left')) :
 		$contentwidth = 'left';
-	elseif ($this->countModules('position-8')) :
+	elseif ($this->countModules('sidebar-right')) :
 		$contentwidth = 'right';
 	endif; ?>
 </head>
@@ -128,10 +120,10 @@ JHtmlBootstrap::tooltip();
 				<jdoc:include type="modules" name="position-1-1" />
 			<?php endif; ?>
 		</div>
-		<?php if ($this->countModules('position-2 or position-0')) : ?>
+		<?php if ($this->countModules('breadcrumbs') or $this->countModules('position-0')) : ?>
 			<div id="subhead">
-				<?php if ($this->countModules('position-2')) : ?>
-					<jdoc:include type="modules" name="position-2" />
+				<?php if ($this->countModules('breadcrumbs')) : ?>
+					<jdoc:include type="modules" name="breadcrumbs" />
 				<?php endif; ?>
 				<?php if ($this->countModules('position-0')) : ?>
 					<div id="search">
@@ -148,14 +140,14 @@ JHtmlBootstrap::tooltip();
 				<div class="clearfix"></div>
 			<?php endif; ?>
 			<?php require $modules . 'top.php'; ?>
-			<?php if ($this->countModules('position-7')) : ?>
+			<?php if ($this->countModules('sidebar-left')) : ?>
 				<div id="leftcol">
-					<jdoc:include type="modules" name="position-7" style="allroundersidebar" />
+					<jdoc:include type="modules" name="sidebar-left" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
-			<?php if ($this->countModules('position-8') and !$params->get('rightSidebarPosition', 1)) : ?>
+			<?php if ($this->countModules('sidebar-right') and !$params->get('rightSidebarPosition', 1)) : ?>
 				<div id="rightcol">
-					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
+					<jdoc:include type="modules" name="sidebar-right" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
@@ -168,9 +160,9 @@ JHtmlBootstrap::tooltip();
 				<span class="shadow-right">&nbsp;</span>
 				<?php require $modules . 'aftercontent.php'; ?>
 			</div>
-			<?php if ($this->countModules('position-8') and $params->get('rightSidebarPosition', 1)) : ?>
+			<?php if ($this->countModules('sidebar-right') and $params->get('rightSidebarPosition', 1)) : ?>
 				<div id="rightcol">
-					<jdoc:include type="modules" name="position-8" style="allroundersidebar" />
+					<jdoc:include type="modules" name="sidebar-right" style="allroundersidebar" />
 				</div>
 			<?php endif; ?>
 			<div class="clearfix"></div>
@@ -198,7 +190,7 @@ JHtmlBootstrap::tooltip();
 				<span class="feckl">&nbsp;</span>
 				<span class="feckr">&nbsp;</span>
 				<div id="scroll_up">
-					<a href="#" class="hasTooltip" id="gotop" title="<?php echo JText::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
+					<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
 						&uarr;&uarr;&uarr;
 					</a>
 				</div>
@@ -206,7 +198,7 @@ JHtmlBootstrap::tooltip();
 			</div>
 			<div class="footer-bottom">
 				<?php if ($params->get('showDate', 1)) : ?>
-					<span id="date"><?php echo JHTML::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
+					<span id="date"><?php echo HTMLHelper::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
 				<?php endif; ?>
 			</div>
 		</div>
