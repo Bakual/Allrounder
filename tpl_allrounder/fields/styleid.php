@@ -1,16 +1,18 @@
 <?php
 /**
- * @package     Allrounder
- * @subpackage  Template
- * @author      Thomas Hunziker <bakual@bakual.net>
+ * @package         Allrounder
+ * @subpackage      Template
+ * @author          Thomas Hunziker <bakual@bakual.net>
  * @copyright   (C) 2014 - Thomas Hunziker
- * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @license         GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  **/
 
 defined('_JEXEC') or die();
 
-JFormHelper::loadFieldClass('hidden');
+use Joomla\CMS\Factory;
+use Joomla\CMS\Form\FormHelper;
 
+FormHelper::loadFieldClass('hidden');
 
 /**
  * StyleID Field class for the Allrounder Template to store the id of the template style.
@@ -37,7 +39,7 @@ class JFormFieldStyleid extends JFormFieldHidden
 	 */
 	protected function getInput()
 	{
-		$this->value = JFactory::getApplication()->input->getInt('id');
+		$this->value = Factory::getApplication()->input->getInt('id');
 
 		return parent::getInput();
 	}
