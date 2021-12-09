@@ -11,7 +11,6 @@
 	<description>TPL_ALLROUNDER_XML_DESCRIPTION</description>
 	<files>
 		<folder>css</folder>
-		<folder>less</folder>
 		<folder>fields</folder>
 		<folder>html</folder>
 		<folder>images</folder>
@@ -23,14 +22,14 @@
 		<filename>template_thumbnail.png</filename>
 	</files>
 	<updateservers>
-		<server type="extension" priority="1" name="Bakual.net">http://www.bakual.net/update/tpl_lessallrounder.xml</server>
+		<server type="extension" priority="1" name="Bakual.net">http://www.bakual.net/update/tpl_allrounder.xml</server>
 	</updateservers>
 	<config>
 		<fields name="params">
 			<fieldset name="globtemplfields"
 				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
 				description=""
-				addfieldpath="/templates/lessallrounder/fields" >
+				addfieldpath="/templates/allrounder/fields" >
 				<field
 					name="styleId"
 					type="styleid"
@@ -495,9 +494,9 @@
 		<position>position-0</position>
 		<position>position-1</position>
 		<position>position-1-1</position>
-		<position>position-2</position>
-		<position>position-7</position>
-		<position>position-8</position>
+		<position>breadcrumbs</position>
+		<position>sidebar-left</position>
+		<position>sidebar-right</position>
 		<position>banner</position>
 		<position>toppanel</position>
 		<position>sidepanel</position>
