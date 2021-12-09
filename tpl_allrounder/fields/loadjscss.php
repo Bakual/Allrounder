@@ -6,10 +6,12 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\HTML\HTMLHelper;
+
 /**
  * LoadJsCSS Field class for the Allrounder Template to load custom Javascript and CSS
  *
- * @package  Allroudner
+ * @package  Allrounder
  * @since    4.0
  */
 class JFormFieldLoadjscss extends JFormField
@@ -17,21 +19,21 @@ class JFormFieldLoadjscss extends JFormField
 	/**
 	 * The form field type.
 	 *
-	 * @var		string
-	 * @since	1.6
+	 * @var        string
+	 * @since    4.0
 	 */
-	protected $type		= 'Loadjscss';
+	protected $type = 'Loadjscss';
 
 	/**
 	 * Method to get the field input markup.
 	 *
-	 * @return	string	The field input markup.
-	 * @since	1.6
+	 * @return    string    The field input markup.
+	 * @since    4.0
 	 */
 	protected function getInput()
 	{
-		JHtml::Script('templates/allrounder/js/params.js');
-		JHtml::Stylesheet('templates/allrounder/css/params.css');
+		HtmlHelper::script('templates/allrounder/js/params.js');
+		HtmlHelper::stylesheet('templates/allrounder/css/params.css');
 
 		return '<input type="hidden" name="' . $this->name . '" id="' . $this->id . '" value="1" />';
 	}
