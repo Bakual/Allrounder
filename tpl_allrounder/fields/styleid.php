@@ -10,6 +10,7 @@
 defined('_JEXEC') or die();
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\Form\FormField;
 use Joomla\CMS\Form\FormHelper;
 
 FormHelper::loadFieldClass('hidden');
@@ -20,7 +21,7 @@ FormHelper::loadFieldClass('hidden');
  * @package  Allrounder
  * @since    1.0
  */
-class JFormFieldStyleid extends JFormFieldHidden
+class JFormFieldStyleid extends FormField
 {
 	/**
 	 * The form field type.

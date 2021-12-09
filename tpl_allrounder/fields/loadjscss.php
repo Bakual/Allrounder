@@ -6,6 +6,7 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Form\FormField;
 use Joomla\CMS\HTML\HTMLHelper;
 
 /**
@@ -14,7 +15,7 @@ use Joomla\CMS\HTML\HTMLHelper;
  * @package  Allrounder
  * @since    4.0
  */
-class JFormFieldLoadjscss extends JFormField
+class JFormFieldLoadjscss extends FormField
 {
 	/**
 	 * The form field type.

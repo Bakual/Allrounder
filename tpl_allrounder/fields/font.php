@@ -1,15 +1,19 @@
 <?php
 /**
- * @package     Allrounder
- * @subpackage  Template
- * @author      Thomas Hunziker <bakual@bakual.net>
- * @copyright   (C) 2014 - Thomas Hunziker
- * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @package         Allrounder
+ * @subpackage      Template
+ * @author          Thomas Hunziker <bakual@bakual.net>
+ * @copyright   (C) 2021 - Thomas Hunziker
+ * @license         GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  **/
 
 defined('_JEXEC') or die();
 
-JFormHelper::loadFieldClass('list');
+use Joomla\CMS\Form\Field\ListField;
+use Joomla\CMS\Form\FormHelper;
+use Joomla\CMS\HTML\HTMLHelper;
+
+FormHelper::loadFieldClass('list');
 
 /**
  * Font Field class for the Allrounder Template to select from a list of fonts or define an own.
@@ -17,7 +21,7 @@ JFormHelper::loadFieldClass('list');
  * @package  Allrounder
  * @since    1.0
  */
-class JFormFieldFont extends JFormFieldList
+class JFormFieldFont extends ListField
 {
 	/**
 	 * The form field type.
@@ -36,21 +40,21 @@ class JFormFieldFont extends JFormFieldList
 	 */
 	protected function getInput()
 	{
-		JHtml::_('formbehavior.chosen', 'select');
-		$size	= $this->element['size'] ? ' size="' . (int) $this->element['size'] . '"' : '';
-		$class	= $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
-		$html	= '<div class="input-prepend">'
-				. '<div type="text" id="' . $this->fieldname . '_text_icon" class="btn add-on icon-checkmark" onclick="toggleElement(\'' . $this->fieldname . '\', 0);"> </div>'
-				. '<input type="text" name="' . $this->name . '" id="' . $this->id . '_text" value="' . htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"'
-				. $class . $size . ' /></div><br />'
-				. '<div class="input-prepend">'
-				. '<div id="' . $this->fieldname . '_icon" class="btn add-on icon-cancel" onclick="toggleElement(\'' . $this->fieldname . '\', 1);"> </div>';
+		HTMLHelper::_('formbehavior.chosen', 'select');
+		$size  = $this->element['size'] ? ' size="' . (int) $this->element['size'] . '"' : '';
+		$class = $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
+		$html  = '<div class="input-prepend">'
+			. '<div type="text" id="' . $this->fieldname . '_text_icon" class="btn add-on icon-checkmark" onclick="toggleElement(\'' . $this->fieldname . '\', 0);"> </div>'
+			. '<input type="text" name="' . $this->name . '" id="' . $this->id . '_text" value="' . htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"'
+			. $class . $size . ' /></div><br />'
+			. '<div class="input-prepend">'
+			. '<div id="' . $this->fieldname . '_icon" class="btn add-on icon-cancel" onclick="toggleElement(\'' . $this->fieldname . '\', 1);"> </div>';
 
 		// This needs to be disabled here and not in the XML due to a security fix in J3.8.12
 		$this->disabled = true;
 
-		$html	.= parent::getInput();
-		$html	.= '</div>';
+		$html .= parent::getInput();
+		$html .= '</div>';
 
 		return $html;
 	}
