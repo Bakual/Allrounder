@@ -36,8 +36,7 @@ Jquery::framework();
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php endif; ?>
 	<jdoc:include type="head" />
-	<?php $id = isset($tpl->id) ? $tpl->id : $params->get('styleId'); ?>
-	<link href="<?php echo $path; ?>css/template<?php echo $params->get('useLESS') ? $id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo $path; ?>css/template.css" rel="stylesheet" type="text/css" media="all" />
 	<?php Bootstrap::loadCss(true, $this->direction); ?>
 
 	<?php if ($params->get('customCss')) : ?>
