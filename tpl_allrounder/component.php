@@ -9,7 +9,10 @@
 
 defined('_JEXEC') or die();
 
-$tpl	= JFactory::getApplication()->getTemplate(true);
+use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\Helpers\Bootstrap;
+
+$tpl	= Factory::getApplication()->getTemplate(true);
 $path	= $this->baseurl . '/templates/' . $tpl->template;
 $params	= $tpl->params;
 ?>
@@ -18,10 +21,10 @@ $params	= $tpl->params;
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<jdoc:include type="head" />
-	<link href="<?php echo $path; ?>/css/template<?php echo $params->get('useLESS') ? $tpl->id : ''; ?>.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo $path; ?>/css/template.css" rel="stylesheet" type="text/css" media="all" />
 	<?php
 	// Load optional rtl Bootstrap css and Bootstrap bugfixes
-	JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
+	Bootstrap::loadCss(true, $this->direction);
 
 	if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
