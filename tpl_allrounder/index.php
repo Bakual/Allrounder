@@ -15,6 +15,7 @@ use Joomla\CMS\HTML\Helpers\Jquery;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
+Bootstrap::loadCss(true, $this->direction);
 HTMLHelper::_('stylesheet', 'system/joomla-fontawesome.css', ['relative' => true]);
 
 // Shortcuts
@@ -37,8 +38,6 @@ Jquery::framework();
 	<?php endif; ?>
 	<jdoc:include type="head" />
 	<link href="<?php echo $path; ?>css/template.css" rel="stylesheet" type="text/css" media="all" />
-	<?php Bootstrap::loadCss(true, $this->direction); ?>
-
 	<?php if ($params->get('customCss')) : ?>
 		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
