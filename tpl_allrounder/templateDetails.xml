@@ -30,7 +30,7 @@
 				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
 				description=""
 				addfieldpath="/templates/allrounder/fields" >
-				<field name="useLESS" type="loadjscss"
+				<field name="dummy" type="loadjscss"
 					label="TPL_ALLROUNDER_WELCOMETEXT" />
 				<field name="whatWidth"
 					label="TPL_ALLROUNDER_TEMPLATE_WIDTH"
@@ -161,7 +161,7 @@
 					label="TPL_ALLROUNDER_SELECT_IMG"
 					description="TPL_ALLROUNDER_SELECT_IMG_DESC"
 					default="logo-transparent.png"
-					directory="/templates/lessallrounder/images/logo"
+					directory="/templates/allrounder/images/logo"
 					hide_default="no"
 					exclude=""
 					stripext="" />
