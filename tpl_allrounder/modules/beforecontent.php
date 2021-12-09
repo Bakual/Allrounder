@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Lessallrounder
+ * @package     Allrounder
  * @subpackage  Template
  * @author      Thomas Hunziker <bakual@bakual.net>
  * @copyright   (C) 2014 - Thomas Hunziker

@@ -23,24 +23,6 @@ class JFormFieldLoadjscss extends JFormField
 	protected $type		= 'Loadjscss';
 
 	/**
-	 * Method to get the field label markup.
-	 *
-	 * @return  string  The field label markup.
-	 *
-	 * @since   11.1
-	 */
-	protected function getLabel()
-	{
-		$label = parent::getLabel();
-		if (!JPluginHelper::isEnabled('system', 'lessallrounder'))
-		{
-			$label .= '<br />';
-			$label .= JText::_('TPL_ALLROUNDER_PLUGIN_NOT_PUBLISHED');
-		}
-		return $label;
-	}
-
-	/**
 	 * Method to get the field input markup.
 	 *
 	 * @return	string	The field input markup.

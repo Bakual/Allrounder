@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Lessallrounder
+ * @package     Allrounder
  * @subpackage  Template
  * @author      Thomas Hunziker <bakual@bakual.net>
  * @copyright   (C) 2014 - Thomas Hunziker
@@ -14,7 +14,7 @@ JFormHelper::loadFieldClass('list');
 /**
  * Font Field class for the Allrounder Template to select from a list of fonts or define an own.
  *
- * @package  Lessallrounder
+ * @package  Allrounder
  * @since    1.0
  */
 class JFormFieldFont extends JFormFieldList
