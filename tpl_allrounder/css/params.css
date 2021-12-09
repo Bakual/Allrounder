@@ -3,61 +3,75 @@
 fieldset.panelform label,
 fieldset.panelform div.paramrow label,
 fieldset.panelform span.faux-label {
-	min-width: 160px;
+  min-width: 160px;
 }
+
 span.spacer hr {
-	width: 380px;
+  width: 380px;
 }
-label.smooth, label.aero, laebl.carbon, label.leather {
-	color: #cccccc;
-	background: #222222 center;
+
+label.smooth, label.aero, label.carbon, label.leather {
+  color: #cccccc;
+  background: #222222 center;
+  padding: 5px 10px;
 }
-label.smooth:hover, label.aero:hover, laebl.carbon:hover, label.leather:hover {
-	color: #ffffff;
-	background: #222222 center;
+
+label.smooth:hover, label.aero:hover, label.carbon:hover, label.leather:hover {
+  color: #ffffff;
 }
+
 label.smooth {
-	background-image: url(../images/dropdown-smooth.png) !important;
+  background-image: url(../images/menu/dropdown-smooth.png) !important;
 }
+
 label.aero {
-	background-image: url(../images/dropdown-aero.png) !important;
+  background-image: url(../images/menu/dropdown-aero.png) !important;
 }
+
 label.carbon {
-	background-image: url(../images/dropdown-carbon.png) !important;
+  background-image: url(../images/menu/dropdown-carbon.png) !important;
 }
+
 label.leather {
-	background-image: url(../images/dropdown-leather.png) !important;
+  background-image: url(../images/menu/dropdown-leather.png) !important;
 }
+
 div.defaultvalue {
-	border-bottom: 1px dashed #666;
+  border-bottom: 1px dashed #666;
 }
+
 a[href="#attrib-globtemplfields"]:before {
-	content: url('../images/xml/sitemap.png');
-	margin-right: 5px;
-	vertical-align: sub;
+  content: url('../images/xml/sitemap.png');
+  margin-right: 5px;
+  vertical-align: sub;
 }
+
 a[href="#attrib-fontfields"]:before {
-	content: url('../images/xml/fonts.png');
-	margin-right: 5px;
-	vertical-align: sub;
+  content: url('../images/xml/fonts.png');
+  margin-right: 5px;
+  vertical-align: sub;
 }
+
 a[href="#attrib-logofields"]:before {
-	content: url('../images/xml/logo.png');
-	margin-right: 5px;
-	vertical-align: sub;
+  content: url('../images/xml/logo.png');
+  margin-right: 5px;
+  vertical-align: sub;
 }
+
 a[href="#attrib-templcolorfields"]:before {
-	content: url('../images/xml/tempcolors.png');
-	margin-right: 5px;
-	vertical-align: sub;
+  content: url('../images/xml/tempcolors.png');
+  margin-right: 5px;
+  vertical-align: sub;
 }
+
 a[href="#attrib-ddcolors"]:before {
-	content: url('../images/xml/ddcolors.png');
-	margin-right: 5px;
-	vertical-align: sub;
+  content: url('../images/xml/ddcolors.png');
+  margin-right: 5px;
+  vertical-align: sub;
 }
+
 a[href="#attrib-advanced"]:before {
-	content: url('../images/xml/advanced.png');
-	margin-right: 5px;
-	vertical-align: sub;
+  content: url('../images/xml/advanced.png');
+  margin-right: 5px;
+  vertical-align: sub;
 }
