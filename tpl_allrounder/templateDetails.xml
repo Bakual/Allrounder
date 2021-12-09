@@ -28,15 +28,14 @@
 		<fields name="params">
 			<fieldset name="globtemplfields"
 				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
-				description=""
 				addfieldpath="/templates/allrounder/fields" >
 				<field name="dummy" type="loadjscss"
-					label="TPL_ALLROUNDER_WELCOMETEXT" />
+					 />
 				<field name="whatWidth"
 					label="TPL_ALLROUNDER_TEMPLATE_WIDTH"
 					description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC"
 					type="radio"
-					class="btn-group btn-group-yesno"
+					class="btn-group"
 					default="1" >
 					<option value="1">TPL_ALLROUNDER_TEMPLATE_WIDTH_OPTION_DYNAMIC</option>
 					<option value="0">TPL_ALLROUNDER_TEMPLATE_WIDTH_OPTION_FIXED</option>
