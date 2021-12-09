@@ -15,7 +15,7 @@ JFormHelper::loadFieldClass('hidden');
 /**
  * StyleID Field class for the Allrounder Template to store the id of the template style.
  *
- * @package  Lessallrounder
+ * @package  Allrounder
  * @since    1.0
  */
 class JFormFieldStyleid extends JFormFieldHidden
