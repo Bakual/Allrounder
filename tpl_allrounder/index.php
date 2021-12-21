@@ -27,6 +27,15 @@ $modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
 /** @var $params Joomla\Registry\Registry */
 $params = $tpl->params;
 
+// Adjust BS Variables with values from template style.
+$bodyBackground = $params->get('bodyBackground', 'rgb(162, 205, 253)');
+$this->addStyleDeclaration('
+:root {
+  --bs-body-bg: ' . $bodyBackground . ';
+  --bs-body-bg-rgb: ' . str_replace(['rgb(', ')'], '', $bodyBackground) . ';
+}
+');
+
 Jquery::framework();
 ?>
 <!DOCTYPE html>

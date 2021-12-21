@@ -223,7 +223,9 @@
 				<field name="bodyBackground" type="color"
 					label="TPL_ALLROUNDER_BODY_BACKGROUND"
 					description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"
-					default="#a2cdfd"
+					default="rgb(162, 205, 253)"
+					format="rgb"
+
 				/>
 				<field
 					name="bodyBackgroundImage"
