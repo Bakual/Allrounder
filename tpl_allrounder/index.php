@@ -29,10 +29,14 @@ $params = $tpl->params;
 
 // Adjust BS Variables with values from template style.
 $bodyBackground = $params->get('bodyBackground', 'rgb(162, 205, 253)');
+$textColor = $params->get('textColor', 'rgb(33, 37, 41)');
 $this->addStyleDeclaration('
 :root {
   --bs-body-bg: ' . $bodyBackground . ';
   --bs-body-bg-rgb: ' . str_replace(['rgb(', ')'], '', $bodyBackground) . ';
+  --bs-body-color: ' . $textColor . ';
+  --bs-body-color-rgb: ' . str_replace(['rgb(', ')'], '', $textColor) . ';
+
 }
 ');
 

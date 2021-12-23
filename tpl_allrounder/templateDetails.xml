@@ -220,13 +220,17 @@
 			<fieldset name="templcolorfields"
 				label="TPL_ALLROUNDER_COLORS_TEMPLATE" description="" >
 				<field type="spacer" label="TPL_ALLROUNDER_COLORS" />
-				<field name="bodyBackground" type="color"
+
+				<field
+					name="bodyBackground"
+					type="color"
 					label="TPL_ALLROUNDER_BODY_BACKGROUND"
 					description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"
 					default="rgb(162, 205, 253)"
 					format="rgb"
 
 				/>
+
 				<field
 					name="bodyBackgroundImage"
 					type="media"
@@ -244,10 +248,16 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="textColor" type="color"
+
+				<field
+					name="textColor"
+					type="color"
 					label="TPL_ALLROUNDER_GLOBAL_FONT"
 					description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"
-					default="#555555" />
+					default="rgb(33, 37, 41)"
+					format="rgb"
+				/>
+
 				<field name="linkColor" type="color"
 					label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT"
 					description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"

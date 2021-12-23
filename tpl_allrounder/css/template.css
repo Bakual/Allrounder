@@ -185,13 +185,6 @@ textarea {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-body {
-	margin: 0;
-	font-family: Verdana, Helvetica, Sans-Serif;
-	font-size: 13px;
-	line-height: 1.3em;
-	color: #555555;
-}
 a {
 	color: #a52a2a;
 	text-decoration: none;
@@ -654,19 +647,17 @@ h4 small {
 	margin: 1.3em 0 1.95em;
 	border-bottom: 1px solid #eee;
 }
-ul,
+/* ul,
 ol {
 	padding: 0;
 	margin: 0 0 0.65em 25px;
 }
+*/
 ul ul,
 ul ol,
 ol ol,
 ol ul {
 	margin-bottom: 0;
-}
-li {
-	line-height: 1.3em;
 }
 ul.unstyled,
 ol.unstyled {
@@ -2888,6 +2879,10 @@ input[type="submit"].btn.btn-mini {
 .alert-block p + p {
 	margin-top: 5px;
 }
+.mod-menu {
+  flex-direction: column;
+}
+/*
 .nav {
 	margin-left: 0;
 	margin-bottom: 1.3em;
@@ -2907,6 +2902,7 @@ input[type="submit"].btn.btn-mini {
 .nav > .pull-right {
 	float: right;
 }
+*/
 .nav-header {
 	display: block;
 	padding: 3px 15px;
@@ -7971,10 +7967,12 @@ a.logo:hover {
 #search label.finder {
 	display: none;
 }
+/*
 #container {
 	text-align: left;
 	margin: auto;
 }
+ */
 @media (min-width: 768px) {
 	#container {
 		padding: 10px 7px 0 7px;
@@ -8081,7 +8079,6 @@ a.logo:hover {
 	float: left;
 	padding-left: 20px;
 }
-.module_menu ul {
 	margin-left: 5px;
 }
 .module_menu ul li {
