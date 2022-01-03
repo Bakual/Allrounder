@@ -10,6 +10,7 @@
 defined('_JEXEC') or die();
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\Helper\MediaHelper as MediaHelperAlias;
 use Joomla\CMS\HTML\Helpers\Bootstrap;
 use Joomla\CMS\HTML\Helpers\Jquery;
 use Joomla\CMS\HTML\HTMLHelper;
@@ -27,18 +28,26 @@ $modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
 /** @var $params Joomla\Registry\Registry */
 $params = $tpl->params;
 
-// Adjust BS Variables with values from template style.
-$bodyBackground = $params->get('bodyBackground', 'rgb(162, 205, 253)');
-$textColor = $params->get('textColor', 'rgb(33, 37, 41)');
+// Get values from template style.
+$bodyBackground            = $params->get('bodyBackground', 'rgb(162, 205, 253)');
+$bodyBackgroundImage       = $params->get('bodyBackgroundImage', 'templates/' . $this->template . '/images/background.png');
+$bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
+$textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
+$linkColor                 = $params->get('linkColor', '#a52a2a');
+
 $this->addStyleDeclaration('
 :root {
   --bs-body-bg: ' . $bodyBackground . ';
   --bs-body-bg-rgb: ' . str_replace(['rgb(', ')'], '', $bodyBackground) . ';
   --bs-body-color: ' . $textColor . ';
   --bs-body-color-rgb: ' . str_replace(['rgb(', ')'], '', $textColor) . ';
-
+  --allrounder-link-color: ' . $linkColor . ';
 }
-');
+body {
+  background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
+  background-repeat: ' . $bodyBackgroundImageRepeat . ';
+}'
+);
 
 Jquery::framework();
 ?>

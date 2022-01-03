@@ -217,51 +217,58 @@
 					description="TPL_ALLROUNDER_SLOGAN_COLOR_DESC"
 					default="#FF2402" />
 			</fieldset>
-			<fieldset name="templcolorfields"
-				label="TPL_ALLROUNDER_COLORS_TEMPLATE" description="" >
-				<field type="spacer" label="TPL_ALLROUNDER_COLORS" />
+			<fieldset
+				name="templcolorfields"
+				label="TPL_ALLROUNDER_COLORS_TEMPLATE_LABEL"
+				description="TPL_ALLROUNDER_COLORS_TEMPLATE_DESC"
+			>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_BODY_LABEL"
+				/>
 
 				<field
 					name="bodyBackground"
 					type="color"
-					label="TPL_ALLROUNDER_BODY_BACKGROUND"
-					description="TPL_ALLROUNDER_BODY_BACKGROUND_DESC"
+					label="TPL_ALLROUNDER_BODY_BACKGROUND_LABEL"
 					default="rgb(162, 205, 253)"
 					format="rgb"
-
 				/>
 
 				<field
 					name="bodyBackgroundImage"
 					type="media"
 					label="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_LABEL"
-					description="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_DESC"
 				/>
+
 				<field
 					name="bodyBackgroundImageRepeat"
 					type="radio"
 					label="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_REPEAT_LABEL"
-					description="TPL_ALLROUNDER_BODY_BACKGROUND_IMAGE_REPEAT_DESC"
-					class="btn-group btn-group-yesno"
+					layout="joomla.form.field.radio.switcher"
+					filter="integer"
 					default="1"
 					>
-					<option value="1">JYES</option>
 					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
 
 				<field
 					name="textColor"
 					type="color"
-					label="TPL_ALLROUNDER_GLOBAL_FONT"
-					description="TPL_ALLROUNDER_GLOBAL_FONT_DESC"
+					label="TPL_ALLROUNDER_GLOBAL_FONT_LABEL"
 					default="rgb(33, 37, 41)"
 					format="rgb"
 				/>
 
-				<field name="linkColor" type="color"
-					label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT"
-					description="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_DESC"
-					default="#a52a2a" />
+				<field
+					name="linkColor"
+					type="color"
+					label="TPL_ALLROUNDER_GLOBAL_HYPERLINKS_FONT_LABEL"
+					default="#a52a2a"
+				/>
+
 				<field type="spacer" hr="true" />
 				<field
 					name="wrapperBgTransparency"

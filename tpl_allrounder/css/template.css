@@ -1,3 +1,7 @@
+:root {
+  --allrounder-link-color: #a52a2a;
+}
+
 article,
 aside,
 details,
@@ -186,7 +190,7 @@ textarea {
 	box-sizing: border-box;
 }
 a {
-	color: #a52a2a;
+	color: var(--allrounder-link-color);
 	text-decoration: none;
 }
 a:hover,
@@ -7841,11 +7845,6 @@ img.featured,
 img.featured-dark {
 	box-shadow: 1px 1px 6px #ccc, 0 0 1px #ccc, inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
 	border-radius: 3px;
-}
-body {
-	background-image: url(../images/background.png);
-	padding-left: 0;
-	padding-right: 0;
 }
 #wrapper,
 #foot_container {
