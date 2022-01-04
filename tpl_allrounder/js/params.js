@@ -1,19 +1,19 @@
 function toggleElement(element, state) {
-	if (state) {
-		jQuery("#" + element + "_text_icon").addClass("icon-cancel").removeClass("icon-checkmark");
-		jQuery("#" + element + "_icon").addClass("icon-checkmark").removeClass("icon-cancel");
-		jQuery("#jform_params_" + element + "_text").attr("disabled", "disabled");
-		jQuery("#jform_params_" + element).removeAttr("disabled");
-		if(jQuery("#jform_params_" + element + "_chzn").length){
-			jQuery("#jform_params_" + element).trigger("liszt:updated");
-		}
-	} else {
-		jQuery("#" + element + "_text_icon").addClass("icon-checkmark").removeClass("icon-cancel");
-		jQuery("#" + element + "_icon").addClass("icon-cancel").removeClass("icon-checkmark");
-		jQuery("#jform_params_" + element + "_text").removeAttr("disabled");
-		jQuery("#jform_params_" + element).attr("disabled", "disabled");
-		if(jQuery("#jform_params_" + element + "_chzn").length){
-			jQuery("#jform_params_" + element).trigger("liszt:updated");
-		}
-	}
+  if (state) {
+    document.getElementById(element + "_text_icon").className = "icon-radio-unchecked text-danger";
+    document.getElementById(element + "_icon").className = "icon-radio-checked text-success";
+    document.getElementById("jform_params_" + element + "_text").disabled = true;
+    document.getElementById("jform_params_" + element).disabled = false;
+    if(document.getElementById("jform_params_" + element + "_chzn")){
+      jQuery("#jform_" + element).trigger("liszt:updated");
+    }
+  } else {
+    document.getElementById(element + "_text_icon").className = "icon-radio-checked text-success";
+    document.getElementById(element + "_icon").className = "icon-radio-unchecked text-danger";
+    document.getElementById("jform_params_" + element + "_text").disabled = false;
+    document.getElementById("jform_params_" + element).disabled = true;
+    if(document.getElementById("jform_params_" + element + "_chzn")){
+      jQuery("#jform_" + element).trigger("liszt:updated");
+    }
+  }
 }

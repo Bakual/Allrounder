@@ -40,15 +40,19 @@ class JFormFieldFont extends ListField
 	 */
 	protected function getInput()
 	{
-		HTMLHelper::_('formbehavior.chosen', 'select');
-		$size  = $this->element['size'] ? ' size="' . (int) $this->element['size'] . '"' : '';
-		$class = $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
-		$html  = '<div class="input-prepend">'
-			. '<div type="text" id="' . $this->fieldname . '_text_icon" class="btn add-on icon-checkmark" onclick="toggleElement(\'' . $this->fieldname . '\', 0);"> </div>'
-			. '<input type="text" name="' . $this->name . '" id="' . $this->id . '_text" value="' . htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"'
-			. $class . $size . ' /></div><br />'
-			. '<div class="input-prepend">'
-			. '<div id="' . $this->fieldname . '_icon" class="btn add-on icon-cancel" onclick="toggleElement(\'' . $this->fieldname . '\', 1);"> </div>';
+		$html  = '<div class="input-group">
+						<button class="btn btn-secondary"
+							type="button" onclick="toggleElement(\'' . $this->fieldname . '\', 0);">
+							<span id="' . $this->fieldname . '_text_icon" class="icon-radio-checked text-success"></span>
+						</button>
+						<input type="text" name="' . $this->name . '" id="' . $this->id . '_text" class="form-control ' . $this->class . '" value="'
+							. htmlspecialchars($this->value, ENT_COMPAT) . '">
+					</div>
+					<div class="input-group">
+						<button class="btn btn-secondary"
+							type="button" onclick="toggleElement(\'' . $this->fieldname . '\', 1);">
+							<span id="' . $this->fieldname . '_icon" class="icon-radio-unchecked text-danger"></span>
+						</button>';
 
 		// This needs to be disabled here and not in the XML due to a security fix in J3.8.12
 		$this->disabled = true;
