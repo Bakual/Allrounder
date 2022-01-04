@@ -34,6 +34,8 @@ $bodyBackgroundImage       = $params->get('bodyBackgroundImage', 'templates/' . 
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
 $linkColor                 = $params->get('linkColor', '#a52a2a');
+$logoColor                 = $params->get('logoColor', '#0299DC');
+$sloganColor               = $params->get('sloganColor', '#FF2402');
 
 $this->addStyleDeclaration('
 :root {
@@ -42,6 +44,8 @@ $this->addStyleDeclaration('
   --bs-body-color: ' . $textColor . ';
   --bs-body-color-rgb: ' . str_replace(['rgb(', ')'], '', $textColor) . ';
   --allrounder-link-color: ' . $linkColor . ';
+  --allrounder-logo-color: ' . $logoColor . ';
+  --allrounder-slogan-color: ' . $sloganColor . ';
 }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');

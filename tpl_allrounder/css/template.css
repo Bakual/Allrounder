@@ -1,6 +1,3 @@
-:root {
-  --allrounder-link-color: #a52a2a;
-}
 
 article,
 aside,
@@ -7898,7 +7895,7 @@ img.featured-dark {
 	overflow: hidden;
 }
 #logo a.logo {
-	color: #0299dc;
+	color: var(--allrounder-logo-color);
 	line-height: normal;
 	font-size: 46px;
 	display: block;
@@ -8198,7 +8195,7 @@ h2.item-title {
 	padding-bottom: 15px;
 }
 div.slogan {
-	color: #ff2402;
+	color: var(--allrounder-slogan-color);
 	font-size: 18px;
 	padding: 0 40px 10px 100px;
 }
