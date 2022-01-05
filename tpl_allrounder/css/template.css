@@ -21,15 +21,8 @@ video {
 audio:not([controls]) {
 	display: none;
 }
-html {
-	font-size: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
 a:focus {
 	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
 }
 a:hover,
 a:active {
@@ -850,53 +843,9 @@ legend small {
 	font-size: 0.975em;
 	color: #999;
 }
-label,
-input,
-button,
-select,
-textarea {
-	font-size: 13px;
-	font-weight: normal;
-	line-height: 1.3em;
-}
-input,
-button,
-select,
-textarea {
-	font-family: Verdana, Helvetica, Sans-Serif;
-}
 label {
 	display: block;
 	margin-bottom: 5px;
-}
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-	display: inline-block;
-	height: 1.3em;
-	padding: 4px 6px;
-	margin-bottom: 0.65em;
-	font-size: 13px;
-	line-height: 1.3em;
-	color: #555;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	vertical-align: middle;
 }
 input,
 textarea,
@@ -907,59 +856,23 @@ textarea {
 	height: auto;
 }
 textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
+input,
+.form-control,
 .uneditable-input {
-	background-color: #efefef;
-	border: 1px solid #ccc;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-	-webkit-transition: border linear .2s, box-shadow linear .2s;
-	-moz-transition: border linear .2s, box-shadow linear .2s;
-	-o-transition: border linear .2s, box-shadow linear .2s;
 	transition: border linear .2s, box-shadow linear .2s;
 }
 textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
+input:focus,
+.form-control:focus,
 .uneditable-input:focus {
 	border-color: rgba(82,168,236,0.8);
 	outline: 0;
-	outline: thin dotted \9;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
 }
 input[type="radio"],
 input[type="checkbox"] {
 	margin: 4px 0 0;
-	*margin-top: 0;
-	margin-top: 1px \9;
 	line-height: normal;
 }
 input[type="file"],
@@ -991,7 +904,6 @@ input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
 	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 .uneditable-input,
@@ -1517,9 +1429,7 @@ select:focus:invalid:focus {
 }
 input.search-query {
 	padding-right: 14px;
-	padding-right: 4px \9;
 	padding-left: 14px;
-	padding-left: 4px \9;
 	margin-bottom: 0;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
@@ -2277,10 +2187,6 @@ button.close {
 	background-color: #ffffff;
 	*background-color: #f2f2f2;
 }
-.btn:active,
-.btn.active {
-	background-color: #e6e6e6 \9;
-}
 .btn:first-child {
 	*margin-left: 0;
 }
@@ -2303,7 +2209,6 @@ button.close {
 .btn.active,
 .btn:active {
 	background-color: #e6e6e6;
-	background-color: #d9d9d9 \9;
 	background-image: none;
 	outline: 0;
 	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
@@ -2394,10 +2299,6 @@ button.close {
 	background-color: #a5532a;
 	*background-color: #914925;
 }
-.btn-primary:active,
-.btn-primary.active {
-	background-color: #7c3f20 \9;
-}
 .btn-warning {
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
@@ -2422,10 +2323,6 @@ button.close {
 	color: #fff;
 	background-color: #f89406;
 	*background-color: #df8505;
-}
-.btn-warning:active,
-.btn-warning.active {
-	background-color: #c67605 \9;
 }
 .btn-danger {
 	color: #fff;
@@ -2452,10 +2349,6 @@ button.close {
 	background-color: #bd362f;
 	*background-color: #a9302a;
 }
-.btn-danger:active,
-.btn-danger.active {
-	background-color: #942a25 \9;
-}
 .btn-success {
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
@@ -2480,10 +2373,6 @@ button.close {
 	color: #fff;
 	background-color: #51a351;
 	*background-color: #499249;
-}
-.btn-success:active,
-.btn-success.active {
-	background-color: #408140 \9;
 }
 .btn-info {
 	color: #fff;
@@ -2510,10 +2399,6 @@ button.close {
 	background-color: #2f96b4;
 	*background-color: #2a85a0;
 }
-.btn-info:active,
-.btn-info.active {
-	background-color: #24748c \9;
-}
 .btn-inverse {
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
@@ -2538,10 +2423,6 @@ button.close {
 	color: #fff;
 	background-color: #222;
 	*background-color: #151515;
-}
-.btn-inverse:active,
-.btn-inverse.active {
-	background-color: #090909 \9;
 }
 button.btn,
 input[type="submit"].btn {
@@ -3502,10 +3383,6 @@ input[type="submit"].btn.btn-mini {
 	background-color: #e6e6e6;
 	*background-color: #d9d9d9;
 }
-.navbar .btn-navbar:active,
-.navbar .btn-navbar.active {
-	background-color: #cccccc \9;
-}
 .navbar .btn-navbar .icon-bar {
 	display: block;
 	width: 18px;
@@ -3729,10 +3606,6 @@ input[type="submit"].btn.btn-mini {
 	color: #fff;
 	background-color: #040404;
 	*background-color: #000000;
-}
-.navbar-inverse .btn-navbar:active,
-.navbar-inverse .btn-navbar.active {
-	background-color: #000000 \9;
 }
 .pager {
 	margin: 1.3em 0;
@@ -7724,10 +7597,6 @@ input.search-query {
 	background-color: #ffffff;
 	*background-color: #f2f2f2;
 }
-.pagination ul li .pagenav:active,
-.pagination ul li .pagenav.active {
-	background-color: #e6e6e6 \9;
-}
 .pagination ul li .pagenav:first-child {
 	*margin-left: 0;
 }
@@ -7750,8 +7619,7 @@ input.search-query {
 .pagination ul li .pagenav.active,
 .pagination ul li .pagenav:active {
 	background-color: #e6e6e6;
-	background-color: #d9d9d9 \9;
-	background-image: none;
+  background-image: none;
 	outline: 0;
 	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
 	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
@@ -7920,7 +7788,6 @@ a.logo:hover {
 	*zoom: 1;
 	min-height: 35px;
 	margin: 10px .2% 0 .2%;
-	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear,0 0,0 100%,from(#f9f9f9),color-stop(33%,#f6f6f6),to(#dddddd));
 	background-image: -webkit-linear-gradient(#f9f9f9,#f6f6f6 33%,#dddddd);
 	background-image: -moz-linear-gradient(top,#f9f9f9,#f6f6f6 33%,#dddddd);
@@ -8125,49 +7992,24 @@ a.logo:hover {
 	font-weight: normal;
 	color: #000000;
 }
+/* From Styleparams */
 select,
 textarea,
 input,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
+.form-control,
 .uneditable-input {
-	height: auto;
 	color: #555555;
 	border-top-color: #cccccc;
 	border-left-color: #cccccc;
 	border-right-color: #ffffff;
 	border-bottom-color: #ffffff;
+	background-color: #efefef;
 }
+/* From Styleparams */
 select:hover,
 textarea:hover,
 input:hover,
-input[type="text"]:hover,
-input[type="password"]:hover,
-input[type="datetime"]:hover,
-input[type="datetime-local"]:hover,
-input[type="date"]:hover,
-input[type="month"]:hover,
-input[type="time"]:hover,
-input[type="week"]:hover,
-input[type="number"]:hover,
-input[type="email"]:hover,
-input[type="url"]:hover,
-input[type="search"]:hover,
-input[type="tel"]:hover,
-input[type="color"]:hover,
-.uneditable-input:hover {
+.form-control:hover {
 	color: #555555;
 	background-color: #f9f9f9;
 }

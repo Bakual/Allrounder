@@ -33,6 +33,9 @@ $bodyBackground            = $params->get('bodyBackground', 'rgb(162, 205, 253)'
 $bodyBackgroundImage       = $params->get('bodyBackgroundImage', 'templates/' . $this->template . '/images/background.png');
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
+$baseFontSize              = $params->get('baseFontSize', '1rem');
+$baseLineHeight            = $params->get('baseLineHeight', '1.5');
+$sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) ? '--bs-font-sans-serif: ' . $sansFontFamily : '';
 $linkColor                 = $params->get('linkColor', '#a52a2a');
 $logoColor                 = $params->get('logoColor', '#0299DC');
 $sloganColor               = $params->get('sloganColor', '#FF2402');
@@ -43,6 +46,9 @@ $this->addStyleDeclaration('
   --bs-body-bg-rgb: ' . str_replace(['rgb(', ')'], '', $bodyBackground) . ';
   --bs-body-color: ' . $textColor . ';
   --bs-body-color-rgb: ' . str_replace(['rgb(', ')'], '', $textColor) . ';
+  --bs-body-font-size: ' . $baseFontSize . ';
+  --bs-body-line-height: ' . $baseLineHeight . ';
+  ' . $sansFontFamily . ';
   --allrounder-link-color: ' . $linkColor . ';
   --allrounder-logo-color: ' . $logoColor . ';
   --allrounder-slogan-color: ' . $sloganColor . ';

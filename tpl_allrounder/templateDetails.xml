@@ -115,20 +115,15 @@
 			</fieldset>
 			<fieldset name="fontfields"
 				label="TPL_ALLROUNDER_FONTS" description="" >
-				<field name="baseFontSize" type="text"
-					label="TPL_ALLROUNDER_FONT_SIZE"
-					description="TPL_ALLROUNDER_FONT_SIZE_DESC"
-					size="10"
-					default="13px" />
 
 				<field
 					name="sansFontFamily"
 					type="font"
 					label="TPL_ALLROUNDER_FONT_FAMILY_LABEL"
 					description="TPL_ALLROUNDER_FONT_FAMILY_DESC"
-					default="Verdana, Helvetica, Sans-Serif"
 					onchange="toggleElement('sansFontFamily', 1);"
 				>
+					<option value="">TPL_ALLROUNDER_FONT_FAMILY_DEFAULT</option>
 					<option value="Verdana, Helvetica, Sans-Serif">Verdana, Helvetica, Sans-Serif</option>
 					<option value="Arial, Helvetica, Sans-Serif">Arial, Helvetica, Sans-Serif</option>
 					<option value="'Times New Roman', Times, Serif">'Times New Roman', Times, Serif</option>
@@ -139,16 +134,20 @@
 					<option value="Monospace">Monospace</option>
 				</field>
 
-				<field name="baseLineHeight" type="text"
-					label="TPL_ALLROUNDER_LINE_HEIGHT"
-					description="TPL_ALLROUNDER_LINE_HEIGHT_DESC"
-					size="10"
-					default="1.3em" />
-				<field name="inputHeight" type="text"
-					label="TPL_ALLROUNDER_INPUTHEIGHT_LABEL"
-					description="TPL_ALLROUNDER_INPUTHEIGHT_DESC"
-					size="10"
-					default="2.2em" />
+				<field
+					name="baseFontSize"
+					type="text"
+					label="TPL_ALLROUNDER_FONT_SIZE_LABEL"
+					default="1rem"
+				/>
+
+				<field
+					name="baseLineHeight"
+					type="text"
+					label="TPL_ALLROUNDER_LINE_HEIGHT_LABEL"
+					default="1.5"
+				/>
+
 			</fieldset>
 
 			<fieldset
