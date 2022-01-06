@@ -266,7 +266,7 @@
 				<field
 					name="bodyBackground"
 					type="color"
-					label="TPL_ALLROUNDER_BODY_BACKGROUND_LABEL"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
 					default="rgb(162, 205, 253)"
 					format="rgb"
 				/>
@@ -304,30 +304,49 @@
 					default="#a52a2a"
 				/>
 
-				<field type="spacer" hr="true" />
 				<field
-					name="wrapperBgTransparency"
+					type="spacer"
+					label="TPL_ALLROUNDER_WRAPPER_LABEL"
+				/>
+
+				<field
+					name="wrapperBgColor"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="rgba(239, 239, 239, 1)"
+					format="rgba"
+				/>
+
+				<field
+					name="wrapperBgOpacity"
 					type="range"
-					label="TPL_ALLROUNDER_WRAPPER_BACKGROUND_TRANSPARENCY_LABEL"
-					description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_TRANSPARENCY_DESC"
+					label="TPL_ALLROUNDER_WRAPPER_BACKGROUND_OPACITY_LABEL"
+					description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_OPACITY_DESC"
 					default="100"
 					min="0"
 					max="100"
 					step="1"
 				/>
-				<field name="wrapperBgColor" type="color"
-					label="TPL_ALLROUNDER_WRAPPER_BACKGROUND"
-					description="TPL_ALLROUNDER_WRAPPER_BACKGROUND_DESC"
-					default="#efefef" />
-				<field name="wrapperBorderColor" type="color"
-					label="TPL_ALLROUNDER_WRAPPER_BORDER"
-					description="TPL_ALLROUNDER_WRAPPER_BORDER_DESC"
-					default="#FFFFFF" />
-				<field type="spacer" hr="true" />
-				<field name="headBgColor" type="color"
-					label="TPL_ALLROUNDER_HEADER_BACKGROUND"
-					description="TPL_ALLROUNDER_HEADER_BACKGROUND_DESC"
-					default="#383838" />
+
+				<field
+					name="wrapperBorderColor"
+					type="color"
+					label="TPL_ALLROUNDER_WRAPPER_BORDER_LABEL"
+					default="#FFFFFF"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_HEADER_LABEL"
+				/>
+
+				<field
+					name="headBgColor"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#383838"
+				/>
+
 				<field name="headBorderColor" type="color" default="#000000" label="TPL_ALLROUNDER_HEADER_BORDER" description="TPL_ALLROUNDER_HEADER_BORDER_DESC" />
 				<field name="headCornerColor" type="color" default="#222222" label="TPL_ALLROUNDER_HEADER_CORNER" description="TPL_ALLROUNDER_HEADER_CORNER_DESC" />
 				<field type="spacer" hr="true" />

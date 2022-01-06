@@ -6336,20 +6336,15 @@ img.featured-dark {
   border-radius: 3px;
 }
 
-#wrapper,
-#foot_container {
+#wrapper {
   width: var(--allrounder-max-width);
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #efefef;
-  border: 1px solid #ffffff;
-}
-
-#wrapper {
-  margin-top: 10px;
   padding-bottom: 10px;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  background-color: var(--allrounder-wrapper-bg-color);
+  opacity: var(--allrounder-wrapper-bg-opacity);
+  border: 1px solid var(--allrounder-wrapper-border-color);
 }
 
 #foot_container {
@@ -6365,9 +6360,9 @@ img.featured-dark {
 #header {
   min-height: 120px;
   position: relative;
-  background-image: linear-gradient(#525252, #5e5e5e 25%, #383838);
+  background-image: linear-gradient(var(--allrounder-header-bg-color), #fff 25%, var(--allrounder-header-bg-color));
   background-repeat: no-repeat;
-  background-color: #383838;
+  background-color: var(--allrounder-header-bg-color);
   border-top: 1px solid #000000;
   border-left: 1px solid #000000;
   border-right: 1px solid #000000;

@@ -40,6 +40,10 @@ $linkColor                 = $params->get('linkColor', '#a52a2a');
 $logoColor                 = $params->get('logoColor', '#0299DC');
 $sloganColor               = $params->get('sloganColor', '#FF2402');
 $pageMaxWidth              = $params->get('pageMaxWidth', '1180px');
+$wrapperBgColor            = $params->get('wrapperBgColor', 'rgba(239, 239, 239, 1)');
+$wrapperBgOpacity          = $params->get('wrapperBgOpacity', '100')/100;
+$wrapperBorderColor        = $params->get('wrapperBorderColor', '#FFFFFF');
+$headBgColor               = $params->get('headBgColor', '#383838');
 
 $this->addStyleDeclaration('
 :root {
@@ -54,11 +58,16 @@ $this->addStyleDeclaration('
   --allrounder-logo-color: ' . $logoColor . ';
   --allrounder-slogan-color: ' . $sloganColor . ';
   --allrounder-max-width: ' . $pageMaxWidth . ';
+  --allrounder-wrapper-bg-color: ' . $wrapperBgColor . ';
+  --allrounder-wrapper-bg-opacity: ' . $wrapperBgOpacity . ';
+  --allrounder-wrapper-border-color: ' . $wrapperBorderColor . ';
+  --allrounder-header-bg-color: ' . $headBgColor . ';
 }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
-}'
+}
+'
 );
 
 Jquery::framework();
@@ -86,7 +95,7 @@ Jquery::framework();
 	endif; ?>
 </head>
 <body>
-	<div id="wrapper">
+	<div id="wrapper" class="container">
 		<?php require $modules . 'toppanel.php'; ?>
 		<?php require $modules . 'beforehead.php'; ?>
 		<div id="header_container">
@@ -187,41 +196,40 @@ Jquery::framework();
 			<div class="clearfix"></div>
 		</div>
 		<?php require $modules . 'bottom.php'; ?>
-		<div class="clearfix"></div>
-	</div>
-	<div id="foot_container">
-		<?php require $modules . 'foot.php'; ?>
-		<?php if($this->countModules('footer')) : ?>
-			<div id="footermodule">
-				<jdoc:include type="modules" name="footer" />
-			</div>
-		<?php endif; ?>
-		<?php if ($params->get('showSubfoot', 1)) : ?>
-			<div id="subfoot">
-				<?php if ($params->get('showCopy', 1)) : ?>
-					<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText', 'ALLROUNDER')); ?></div>
-				<?php endif; ?>
-			</div>
-		<?php endif; ?>
-		<div class="clearfix"></div>
-		<div id="footer">
-			<div class="footer-inner">
-				<span class="feckl">&nbsp;</span>
-				<span class="feckr">&nbsp;</span>
-				<div id="scroll_up">
-					<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
-						&uarr;&uarr;&uarr;
-					</a>
+		<div id="foot_container">
+			<?php require $modules . 'foot.php'; ?>
+			<?php if($this->countModules('footer')) : ?>
+				<div id="footermodule">
+					<jdoc:include type="modules" name="footer" />
 				</div>
-				<?php require $modules . 'footermodules.php'; ?>
+			<?php endif; ?>
+			<?php if ($params->get('showSubfoot', 1)) : ?>
+				<div id="subfoot">
+					<?php if ($params->get('showCopy', 1)) : ?>
+						<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText', 'ALLROUNDER')); ?></div>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
+			<div class="clearfix"></div>
+			<div id="footer">
+				<div class="footer-inner">
+					<span class="feckl">&nbsp;</span>
+					<span class="feckr">&nbsp;</span>
+					<div id="scroll_up">
+						<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
+							&uarr;&uarr;&uarr;
+						</a>
+					</div>
+					<?php require $modules . 'footermodules.php'; ?>
+				</div>
+				<div class="footer-bottom">
+					<?php if ($params->get('showDate', 1)) : ?>
+						<span id="date"><?php echo HTMLHelper::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
+					<?php endif; ?>
+				</div>
 			</div>
-			<div class="footer-bottom">
-				<?php if ($params->get('showDate', 1)) : ?>
-					<span id="date"><?php echo HTMLHelper::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
-				<?php endif; ?>
-			</div>
+			<div class="clearfix"></div>
 		</div>
-		<div class="clearfix"></div>
 	</div>
 	<?php require $modules . 'sidepanel.php'; ?>
 	<jdoc:include type="modules" name="debug" />
