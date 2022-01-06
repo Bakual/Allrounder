@@ -4576,20 +4576,20 @@ span.dropcap {
 #topmenu {
   min-height: 30px;
 }
-#topmenu ul.menu {
+#topmenu ul.nav {
 	background-color: #222222;
 }
-#topmenu ul.menu li {
+#topmenu ul.nav li {
 	line-height: 1.5em;
 	border-right: 1px solid #555555;
 }
-#topmenu ul.menu li a,
-#topmenu ul.menu li span.separator {
+#topmenu ul.nav li a,
+#topmenu ul.nav li span.separator {
 	min-height: 24px;
 	padding: 10px 15px;
 }
-#topmenu ul.menu > li a,
-#topmenu ul.menu > li span.separator {
+#topmenu ul.nav > li a,
+#topmenu ul.nav > li span.separator {
 	display: block;
 	padding: 10px 15px;
 	background-color: #222222;
@@ -4599,25 +4599,25 @@ span.dropcap {
 	border-bottom: 1px solid #333333;
 	color: #cccccc;
 }
-#topmenu ul.menu > li a:hover,
-#topmenu ul.menu > li span.separator:hover {
+#topmenu ul.nav > li a:hover,
+#topmenu ul.nav > li span.separator:hover {
 	color: #ffffff;
 }
-#topmenu ul.menu ul.nav-child {
+#topmenu ul.nav ul.nav-child {
 	background-color: #222222;
 	padding: 5px;
 	border: 2px solid #000000;
 	display: none;
 }
-#topmenu ul.menu ul.nav-child a:hover,
-#topmenu ul.menu ul.nav-child a:focus {
+#topmenu ul.nav ul.nav-child a:hover,
+#topmenu ul.nav ul.nav-child a:focus {
 	text-decoration: none;
 }
-#topmenu ul.menu ul.nav-child li {
+#topmenu ul.nav ul.nav-child li {
 	margin: 2px;
 }
-#topmenu ul.menu ul.nav-child li a,
-#topmenu ul.menu ul.nav-child li span.separator {
+#topmenu ul.nav ul.nav-child li a,
+#topmenu ul.nav ul.nav-child li span.separator {
 	background-color: #171717;
 	padding: 4px 8px;
 	border: 1px solid;
@@ -4627,87 +4627,87 @@ span.dropcap {
 	border-bottom-color: #333333;
 	color: #999999;
 }
-#topmenu ul.menu ul.nav-child li a:hover,
-#topmenu ul.menu ul.nav-child li span.separator:hover {
+#topmenu ul.nav ul.nav-child li a:hover,
+#topmenu ul.nav ul.nav-child li span.separator:hover {
 	color: #ffffff;
 }
 @media (min-width: 768px) {
-	#topmenu ul.menu {
+	#topmenu ul.nav {
 		background-repeat: repeat-x;
 		border-top: 3px double #ffffff;
 		border-bottom: 3px double #ffffff;
 	}
-	#topmenu ul.menu,
-	#topmenu ul.menu ul {
+	#topmenu ul.nav,
+	#topmenu ul.nav ul {
 		margin: 0;
 		z-index: 999;
 	}
-	#topmenu ul.menu li {
+	#topmenu ul.nav li {
 		display: inline-block;
 		position: relative;
 	}
-	#topmenu ul.menu li.parent > a,
-	#topmenu ul.menu li.parent > span.separator {
+	#topmenu ul.nav li.parent > a,
+	#topmenu ul.nav li.parent > span.separator {
 		background-repeat: no-repeat;
 		background-position: center right;
 		padding-right: 30px;
 	}
-	#topmenu ul.menu li a img {
+	#topmenu ul.nav li a img {
 		vertical-align: middle;
 		padding-right: 5px;
 	}
-	#topmenu ul.menu li a span {
+	#topmenu ul.nav li a span {
 		vertical-align: middle;
 	}
-	#topmenu ul.menu li .mobile-icon {
+	#topmenu ul.nav li .mobile-icon {
 		display: none;
 	}
-	#topmenu ul.menu,
-	#topmenu ul.menu > li > a,
-	#topmenu ul.menu > li > span.separator {
+	#topmenu ul.nav,
+	#topmenu ul.nav > li > a,
+	#topmenu ul.nav > li > span.separator {
 		background-image: url(../images/menu/dropdown-smooth.png);
 	}
-	#topmenu ul.menu > li a,
-	#topmenu ul.menu > li span.separator {
+	#topmenu ul.nav > li a,
+	#topmenu ul.nav > li span.separator {
 		font-size: 14px;
 	}
-	#topmenu ul.menu > li.parent > a,
-	#topmenu ul.menu > li.parent > span.separator {
+	#topmenu ul.nav > li.parent > a,
+	#topmenu ul.nav > li.parent > span.separator {
 		background-image: url(../images/menu/menu-parent-smooth.png);
 	}
-	#topmenu ul.menu > li.parent > a:hover,
-	#topmenu ul.menu > li.parent > span.separator:hover {
+	#topmenu ul.nav > li.parent > a:hover,
+	#topmenu ul.nav > li.parent > span.separator:hover {
 		background-image: url(../images/menu/menu-parent-hover-smooth.png);
 	}
-	#topmenu ul.menu > li.active.parent > a,
-	#topmenu ul.menu > li.active.parent > span.separator {
+	#topmenu ul.nav > li.active.parent > a,
+	#topmenu ul.nav > li.active.parent > span.separator {
 		background-image: url(../images/menu/menu-parent-hover-smooth.png);
 	}
-	#topmenu ul.menu ul.nav-child {
+	#topmenu ul.nav ul.nav-child {
 		position: absolute;
 		top: 3em;
 		width: 214px;
 		border-radius: 4px;
 	}
-	#topmenu ul.menu ul.nav-child li a,
-	#topmenu ul.menu ul.nav-child li span.separator {
+	#topmenu ul.nav ul.nav-child li a,
+	#topmenu ul.nav ul.nav-child li span.separator {
 		display: inline-block;
 		width: 194px;
 		font-size: 12px;
 	}
-	#topmenu ul.menu ul.nav-child li:hover > a,
-	#topmenu ul.menu ul.nav-child li:hover > span.separator {
+	#topmenu ul.nav ul.nav-child li:hover > a,
+	#topmenu ul.nav ul.nav-child li:hover > span.separator {
 		background-color: #212121;
 	}
-	#topmenu ul.menu ul.nav-child li.parent > a,
-	#topmenu ul.menu ul.nav-child li.parent > span.separator {
+	#topmenu ul.nav ul.nav-child li.parent > a,
+	#topmenu ul.nav ul.nav-child li.parent > span.separator {
 		background-image: url(../images/menu/menulili_parent.gif);
 	}
-	#topmenu ul.menu ul.nav-child li.parent > a:hover,
-	#topmenu ul.menu ul.nav-child li.parent > span.separator:hover {
+	#topmenu ul.nav ul.nav-child li.parent > a:hover,
+	#topmenu ul.nav ul.nav-child li.parent > span.separator:hover {
 		background-image: url(../images/menu/menulili_parent_hover.gif);
 	}
-	#topmenu ul.menu ul.nav-child ul {
+	#topmenu ul.nav ul.nav-child ul {
 		left: 200px;
 		top: 1.1em;
 	}
@@ -4721,34 +4721,34 @@ span.dropcap {
 	#topmenu ul.nav-child {
 		display: none;
 	}
-	#topmenu ul.menu {
+	#topmenu ul.nav {
 		margin: 0px;
 	}
-	#topmenu ul.menu li .mobile-icon {
+	#topmenu ul.nav li .mobile-icon {
 		display: inline-block;
 		width: 1.5em;
 		font-size: 1.1em;
 	}
-	#topmenu ul.menu li.parent > a > .mobile-icon:before,
-	#topmenu ul.menu li.parent > span.separator > .mobile-icon:before {
+	#topmenu ul.nav li.parent > a > .mobile-icon:before,
+	#topmenu ul.nav li.parent > span.separator > .mobile-icon:before {
 		text-align: center;
 		content: "+";
 		color: green;
 	}
-	#topmenu ul.menu li.parent.opened > a > .mobile-icon:before,
-	#topmenu ul.menu li.parent.opened > span.separator > .mobile-icon:before {
+	#topmenu ul.nav li.parent.opened > a > .mobile-icon:before,
+	#topmenu ul.nav li.parent.opened > span.separator > .mobile-icon:before {
 		content: "\2013";
 		color: red;
 	}
-	#topmenu ul.menu li.parent.opened > ul.nav-child {
+	#topmenu ul.nav li.parent.opened > ul.nav-child {
 		display: block;
 	}
-	#topmenu ul.menu > li a,
-	#topmenu ul.menu > li span.separator {
+	#topmenu ul.nav > li a,
+	#topmenu ul.nav > li span.separator {
 		font-size: 18px;
 	}
-	#topmenu ul.menu ul.nav-child li a,
-	#topmenu ul.menu ul.nav-child li span.separator {
+	#topmenu ul.nav ul.nav-child li a,
+	#topmenu ul.nav ul.nav-child li span.separator {
 		font-size: 16px;
 	}
 	nav .navbar {
@@ -5249,13 +5249,13 @@ p.counter {
 	text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
 }
 @media (min-width: 768px) {
-	#topmenu ul.menu ul {
+	#topmenu ul.nav ul {
 		box-shadow: 0 0 10px #000;
 	}
-	#topmenu ul.menu li a {
+	#topmenu ul.nav li a {
 		text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 	}
-	#topmenu ul.menu li ul li a {
+	#topmenu ul.nav li ul li a {
 		text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 	}
 }
