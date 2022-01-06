@@ -1844,7 +1844,7 @@ input[type="submit"].btn.btn-mini {
 
 .controls > .radio:first-child,
 .controls > .checkbox:first-child {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .form-horizontal .controls > .radio:first-child,
@@ -1853,7 +1853,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .form-horizontal .controls > .radio.btn-group:first-child {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .form-horizontal .controls > .radio.btn-group-yesno:first-child {
@@ -4228,7 +4228,7 @@ fieldset.radio.btn-group {
 }
 
 .page-header {
-  margin: 2px 0px 10px 0px;
+  margin: 2px 0 10px 0;
   padding-bottom: 5px;
 }
 
@@ -5653,7 +5653,7 @@ span.dropcap {
   }
 
   #topmenu ul.nav {
-    margin: 0px;
+    margin: 0;
   }
 
   #topmenu ul.nav li .mobile-icon {
@@ -5690,14 +5690,14 @@ span.dropcap {
   }
 
   nav .navbar {
-    margin: 2px 0px;
+    margin: 2px 0;
     line-height: 1.5em;
     border-right: 1px solid #555555;
   }
 
   nav .navbar .btn-navbar,
   nav .navbar .btn-navbar:hover {
-    margin: 0px;
+    margin: 0;
     background: #222222;
     float: none;
     box-shadow: none;
@@ -6353,7 +6353,7 @@ img.featured-dark {
 }
 
 #foot_container {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding-bottom: 7px;
   overflow: visible;
 }
