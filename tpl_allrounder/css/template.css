@@ -2326,6 +2326,7 @@ input[type="submit"].btn.btn-mini {
 	display: block;
 	float: left;
 	margin: 0 10px 0 0;
+  width: 100%;
 }
 .navbar .nav.pull-right {
 	float: right;
