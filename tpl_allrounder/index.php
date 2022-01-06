@@ -64,11 +64,12 @@ body {
 Jquery::framework();
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<jdoc:include type="head" />
+	<jdoc:include type="metas" />
+	<jdoc:include type="styles" />
+	<jdoc:include type="scripts" />
 	<link href="<?php echo $path; ?>css/template.css" rel="stylesheet" type="text/css" media="all" />
 	<?php if ($params->get('customCss')) : ?>
 		<style><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
@@ -130,21 +131,9 @@ Jquery::framework();
 			<?php endif; ?>
 			<?php require $modules . 'afterhead.php'; ?>
 			<?php if ($this->countModules('position-1')) : ?>
-				<nav id="topmenu_container" class="navigation" role="navigation">
-					<div class="navbar">
-						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-							<div>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</div>
-						</a>
-					</div>
-					<div id="topmenu" class="nav-collapse collapse">
-						<jdoc:include type="modules" name="position-1" />
-					</div>
-					<div class="clearfix"></div>
-				</nav>
+				<div id="topmenu">
+					<jdoc:include type="modules" name="position-1" />
+				</div>
 			<?php endif; ?>
 			<?php if ($this->countModules('position-1-1')) : ?>
 				<jdoc:include type="modules" name="position-1-1" />

@@ -1267,15 +1267,6 @@ legend + .control-group {
 .fade.in {
 	opacity: 1;
 }
-.collapse {
-	position: relative;
-	height: 0;
-	overflow: hidden;
-	transition: height .35s ease;
-}
-.collapse.in {
-	height: auto;
-}
 .close {
 	float: right;
 	font-size: 20px;
@@ -2156,9 +2147,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
 	overflow: visible;
 	margin-bottom: 1.3em;
-	*
 	position: relative;
-	*
 	z-index: 2;
 }
 .navbar-inner {
@@ -4584,6 +4573,9 @@ span.dropcap {
 .breadcrumb span {
 	color: #555555;
 }
+#topmenu {
+  min-height: 30px;
+}
 #topmenu ul.menu {
 	background-color: #222222;
 }
@@ -4726,37 +4718,37 @@ span.dropcap {
 		border-top: 3px double #ffffff;
 		border-bottom: 3px double #ffffff;
 	}
-	nav #topmenu ul.nav-child {
+	#topmenu ul.nav-child {
 		display: none;
 	}
-	nav #topmenu ul.menu {
+	#topmenu ul.menu {
 		margin: 0px;
 	}
-	nav #topmenu ul.menu li .mobile-icon {
+	#topmenu ul.menu li .mobile-icon {
 		display: inline-block;
 		width: 1.5em;
 		font-size: 1.1em;
 	}
-	nav #topmenu ul.menu li.parent > a > .mobile-icon:before,
-	nav #topmenu ul.menu li.parent > span.separator > .mobile-icon:before {
+	#topmenu ul.menu li.parent > a > .mobile-icon:before,
+	#topmenu ul.menu li.parent > span.separator > .mobile-icon:before {
 		text-align: center;
 		content: "+";
 		color: green;
 	}
-	nav #topmenu ul.menu li.parent.opened > a > .mobile-icon:before,
-	nav #topmenu ul.menu li.parent.opened > span.separator > .mobile-icon:before {
+	#topmenu ul.menu li.parent.opened > a > .mobile-icon:before,
+	#topmenu ul.menu li.parent.opened > span.separator > .mobile-icon:before {
 		content: "\2013";
 		color: red;
 	}
-	nav #topmenu ul.menu li.parent.opened > ul.nav-child {
+	#topmenu ul.menu li.parent.opened > ul.nav-child {
 		display: block;
 	}
-	nav #topmenu ul.menu > li a,
-	nav #topmenu ul.menu > li span.separator {
+	#topmenu ul.menu > li a,
+	#topmenu ul.menu > li span.separator {
 		font-size: 18px;
 	}
-	nav #topmenu ul.menu ul.nav-child li a,
-	nav #topmenu ul.menu ul.nav-child li span.separator {
+	#topmenu ul.menu ul.nav-child li a,
+	#topmenu ul.menu ul.nav-child li span.separator {
 		font-size: 16px;
 	}
 	nav .navbar {
@@ -5364,9 +5356,6 @@ a.medialogo {
 }
 a.logo:hover {
 	text-decoration: none;
-}
-#topmenu_container {
-	min-height: 30px;
 }
 #subhead {
 	*zoom: 1;

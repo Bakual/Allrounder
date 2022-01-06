@@ -1,30 +1,4 @@
-/* jQuery(document).ready(function($) {
-	// Mobile dropdown menu
-	$('#topmenu ul.menu li').find('a, span.separator').prepend('<span class="mobile-icon"></span>');
-	$('#topmenu ul.menu li').find('.mobile-icon, span.separator').click(
-		function(e){
-			$(this).closest('li').toggleClass('opened');
-			$('#topmenu ul.menu li').not('.opened').find('li.opened').removeClass('opened');
-			$('#topmenu ul.menu li').not('.opened').find('ul').hide();
-			$('#topmenu ul.menu li.opened > ul').show('fast');
-			return false;
-		}
-	);
-
-	// Dropdown menu
-	$('#topmenu').find('ul.menu li').hover(
-		function(){
-			if ($('.navbar .btn-navbar').css('display') == 'none') {
-				$(this).find('ul:first').show('fast');
-			}
-		},
-		function(){
-			if ($('.navbar .btn-navbar').css('display') == 'none') {
-				$(this).find('ul:first').hide();
-			}
-		}
-	);
-*/
+jQuery(document).ready(function($) {
 	// Searchbox animation
 	$('#search').hide().show(400, 'swing');
 
