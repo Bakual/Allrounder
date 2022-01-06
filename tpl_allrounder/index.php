@@ -182,7 +182,7 @@ Jquery::framework();
 			<?php endif; ?>
 			<div id="content_out<?php echo $contentwidth; ?>">
 				<?php require $modules . 'beforecontent.php'; ?>
-				<div id="maincontent" class="row-fluid">
+				<div id="maincontent" class="row">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>

@@ -2907,9 +2907,6 @@ input[type="submit"].btn.btn-mini {
 .thumbnails:after {
 	clear: both;
 }
-.row-fluid .thumbnails {
-	margin-left: 0;
-}
 .thumbnails > li {
 	float: left;
 	margin-bottom: 1.3em;
@@ -3477,12 +3474,6 @@ body.modal {
 .blog-row-rule,
 .blog-item-rule {
 	border: 0;
-}
-.row-fluid .row-reveal {
-	visibility: hidden;
-}
-.row-fluid:hover .row-reveal {
-	visibility: visible;
 }
 .btn-wide {
 	width: 80%;

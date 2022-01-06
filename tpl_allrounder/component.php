@@ -34,7 +34,7 @@ $params = $tpl->params;
 	<?php endif; ?>
 </head>
 <body class="modal">
-	<div id="maincontent" class="row-fluid">
+	<div id="maincontent" class="row">
 		<jdoc:include type="message"/>
 		<jdoc:include type="component"/>
 	</div>

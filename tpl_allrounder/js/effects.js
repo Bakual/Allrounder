@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+/* jQuery(document).ready(function($) {
 	// Mobile dropdown menu
 	$('#topmenu ul.menu li').find('a, span.separator').prepend('<span class="mobile-icon"></span>');
 	$('#topmenu ul.menu li').find('.mobile-icon, span.separator').click(
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 			}
 		}
 	);
-
+*/
 	// Searchbox animation
 	$('#search').hide().show(400, 'swing');
 
