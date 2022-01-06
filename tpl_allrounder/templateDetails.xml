@@ -25,49 +25,40 @@
 		<server type="extension" priority="1" name="Bakual.net">http://www.bakual.net/update/tpl_allrounder.xml</server>
 	</updateservers>
 	<config>
-		<fields name="params">
-			<fieldset name="globtemplfields"
+		<fields
+			name="params"
+		>
+			<fieldset
+				name="globtemplfields"
 				label="TPL_ALLROUNDER_TEMPLATE_LAYOUT"
-				addfieldpath="/templates/allrounder/fields" >
-				<field name="dummy" type="loadjscss"
-					 />
-				<field name="whatWidth"
-					label="TPL_ALLROUNDER_TEMPLATE_WIDTH"
-					description="TPL_ALLROUNDER_TEMPLATE_WIDTH_DESC"
+				addfieldpath="/templates/allrounder/fields"
+			>
+
+				<field
+					name="dummy"
+					type="loadjscss"
+				/>
+
+				<field
+					name="pageMaxWidth"
+					type="text"
+					label="TPL_ALLROUNDER_MAX_WIDTH_LABEL"
+					default="1180px"
+				/>
+
+				<field
+					name="mobileWidth"
 					type="radio"
-					class="btn-group"
-					default="1" >
-					<option value="1">TPL_ALLROUNDER_TEMPLATE_WIDTH_OPTION_DYNAMIC</option>
-					<option value="0">TPL_ALLROUNDER_TEMPLATE_WIDTH_OPTION_FIXED</option>
-				</field>
-				<field name="pageMaxWidth" type="text"
-					label="TPL_ALLROUNDER_MAX_WIDTH"
-					description="TPL_ALLROUNDER_MAX_WIDTH_DESC"
-					showon="whatWidth:1"
-					default="1180px" />
-				<field name="pageWidth" type="text"
-					label="TPL_ALLROUNDER_WIDTH"
-					description="TPL_ALLROUNDER_WIDTH_DESC"
-					showon="whatWidth:0"
-					default="950px" />
-				<field name="mobileWidth" type="radio"
-					label="TPL_ALLROUNDER_MOBILEWIDTH"
+					label="TPL_ALLROUNDER_MOBILEWIDTH_LABEL"
 					description="TPL_ALLROUNDER_MOBILEWIDTH_DESC"
-					class="btn-group btn-group-yesno"
-					default="767" >
-					<option value="0">JNONE</option>
-					<option value="767">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_PHONES</option>
-					<option value="979">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_TABLETS</option>
+					class="btn-group"
+					default="md"
+				>
+					<option value="sm">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_SM</option>
+					<option value="md">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_MD</option>
+					<option value="lg">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_LG</option>
 				</field>
-				<field name="viewport" type="radio"
-					label="TPL_ALLROUNDER_VIEWPORT"
-					description="TPL_ALLROUNDER_VIEWPORT_DESC"
-					class="btn-group btn-group-yesno"
-					showon="mobileWidth:0"
-					default="1" >
-					<option value="1">JGLOBAL_AUTO</option>
-					<option value="0">TPL_ALLROUNDER_VIEWPORT_OPTION_DESKTOP</option>
-				</field>
+
 				<field hr="true" type="spacer" />
 				<field name="leftcolWidth" type="text"
 					label="TPL_ALLROUNDER_LEFT_WIDTH"

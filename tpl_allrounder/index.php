@@ -39,6 +39,7 @@ $sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) 
 $linkColor                 = $params->get('linkColor', '#a52a2a');
 $logoColor                 = $params->get('logoColor', '#0299DC');
 $sloganColor               = $params->get('sloganColor', '#FF2402');
+$pageMaxWidth              = $params->get('pageMaxWidth', '1180px');
 
 $this->addStyleDeclaration('
 :root {
@@ -52,6 +53,7 @@ $this->addStyleDeclaration('
   --allrounder-link-color: ' . $linkColor . ';
   --allrounder-logo-color: ' . $logoColor . ';
   --allrounder-slogan-color: ' . $sloganColor . ';
+  --allrounder-max-width: ' . $pageMaxWidth . ';
 }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
@@ -65,13 +67,11 @@ Jquery::framework();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<?php if ($params->get('mobileWidth', 767) || $params->get('viewport', 1)) : ?>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php endif; ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<jdoc:include type="head" />
 	<link href="<?php echo $path; ?>css/template.css" rel="stylesheet" type="text/css" media="all" />
 	<?php if ($params->get('customCss')) : ?>
-		<style type="text/css"><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
+		<style><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
 	<?php endif; ?>
 	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
 	<?php // Check if the 3 columns are enabled
