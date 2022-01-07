@@ -59,15 +59,50 @@
 					<option value="lg">TPL_ALLROUNDER_MOBILEWIDTH_OPTION_LG</option>
 				</field>
 
-				<field hr="true" type="spacer" />
-				<field name="leftcolWidth" type="text"
-					label="TPL_ALLROUNDER_LEFT_WIDTH"
-					description="TPL_ALLROUNDER_LEFT_WIDTH_DESC"
-					default="20" />
-				<field name="rightcolWidth" type="text"
-					label="TPL_ALLROUNDER_RIGHT_WIDTH"
-					description="TPL_ALLROUNDER_RIGHT_WIDTH_DESC"
-					default="20" />
+				<field
+					name="leftcolWidth"
+					type="text"
+					label="TPL_ALLROUNDER_LEFT_WIDTH_LABEL"
+					default="20%"
+				/>
+
+				<field
+					name="leftcolMobilePosition"
+					type="radio"
+					label="TPL_ALLROUNDER_LEFT_SIDEBAR_POSITION_LABEL"
+					description="TPL_ALLROUNDER_SIDEBAR_POSITION_DESC"
+					class="btn-group"
+					default="1"
+				>
+					<option value="1">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_FIRST</option>
+					<option value="2">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_SECOND</option>
+					<option value="3" disabled="disabled">JGLOBAL_FIELDSET_CONTENT</option>
+					<option value="4">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_FOURTH</option>
+					<option value="5">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_LAST</option>
+				</field>
+
+				<field
+					name="rightcolWidth"
+					type="text"
+					label="TPL_ALLROUNDER_RIGHT_WIDTH_LABEL"
+					default="20%"
+				/>
+
+				<field
+					name="rightcolMobilePosition"
+					type="radio"
+					label="TPL_ALLROUNDER_RIGHT_SIDEBAR_POSITION_LABEL"
+					description="TPL_ALLROUNDER_SIDEBAR_POSITION_DESC"
+					class="btn-group"
+					default="5"
+				>
+					<option value="1">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_FIRST</option>
+					<option value="2">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_SECOND</option>
+					<option value="3" disabled="disabled">JGLOBAL_FIELDSET_CONTENT</option>
+					<option value="4">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_FOURTH</option>
+					<option value="5">TPL_ALLROUNDER_SIDEBAR_POSITION_OPTION_LAST</option>
+				</field>
+
 				<field name="rightSidebarPosition" type="radio"
 					label="TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_LABEL"
 					description="TPL_ALLROUNDER_RIGHTSIDEBARPOSITION_DESC"

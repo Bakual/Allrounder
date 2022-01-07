@@ -6475,35 +6475,34 @@ a.logo:hover {
   padding: 0 0 10px 0;
 }
 
+/* Width of Sidebar Columns */
+@media (min-width: 576px) {
+  .container-sm #leftcol {
+    flex-basis: var(--allrounder-left-sidebar-width);
+  }
+
+  .container-sm #rightcol {
+    flex-basis: var(--allrounder-right-sidebar-width);
+  }
+}
+
 @media (min-width: 768px) {
-  #leftcol {
-    width: 20%;
-    float: left;
+  .container-md #leftcol {
+    flex-basis: var(--allrounder-left-sidebar-width);
   }
 
-  #rightcol {
-    width: 20%;
-    float: right;
+  .container-md #rightcol {
+    flex-basis: var(--allrounder-right-sidebar-width);
+  }
+}
+
+@media (min-width: 992px) {
+  .container-lg #leftcol {
+    flex-basis: var(--allrounder-left-sidebar-width);
   }
 
-  #content_out {
-    margin: 0 0 0 0.2%;
-  }
-
-  #content_outleft {
-    float: right;
-    width: 79%;
-  }
-
-  #content_outmiddle {
-    float: left;
-    margin: 0 1%;
-    width: 58%;
-  }
-
-  #content_outright {
-    float: left;
-    width: 79%;
+  .container-lg #rightcol {
+    flex-basis: var(--allrounder-right-sidebar-width);
   }
 }
 
