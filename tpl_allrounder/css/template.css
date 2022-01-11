@@ -5852,13 +5852,11 @@ span.dropcap {
   }
 }
 
-.module-outer > div,
-.module-outer_menu > div {
+.allroundersidebar > div {
   border: 1px solid #ffffff;
 }
 
-.module-outer > div .module-inner,
-.module-outer_menu > div .module-inner {
+.allroundersidebar > div .module-inner {
   padding: 10px 3%;
   background-color: #f9f9f9;
   border: 1px solid #dddddd;
@@ -6443,12 +6441,6 @@ a.logo:hover {
   #container {
     padding: 10px 0 0 0;
   }
-}
-
-#leftcol,
-#rightcol {
-  margin: 0;
-  padding: 0 0 10px 0;
 }
 
 /* Width of Sidebar Columns */
