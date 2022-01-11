@@ -3,7 +3,7 @@
  * @package     Allrounder
  * @subpackage  Template
  * @author      Thomas Hunziker <bakual@bakual.net>
- * @copyright   (C) 2014 - Thomas Hunziker
+ * @copyright   (C) 2021 - Thomas Hunziker
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  **/
 

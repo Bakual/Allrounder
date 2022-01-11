@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  Template.protostar
- *
- * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+ * @package     Allrounder
+ * @subpackage  Template
+ * @author      Thomas Hunziker <bakual@bakual.net>
+ * @copyright   (C) 2021 - Thomas Hunziker
+ * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ **/
 
-defined('_JEXEC') or die;
+defined('_JEXEC') or die();
 
 $msgList = $displayData['msgList'];
 
