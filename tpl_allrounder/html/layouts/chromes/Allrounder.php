@@ -23,9 +23,9 @@ if ($module->content === null || $module->content === '')
 
 $moduleTag              = htmlspecialchars($params->get('module_tag', 'div'), ENT_QUOTES);
 $moduleAttribs          = [];
-$moduleAttribs['class'] = $module->position . ' allroundersidebarchrome ' . htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_QUOTES);
+$moduleAttribs['class'] = $module->position . ' allrounderchrome ' . htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_QUOTES);
 $headerTag              = htmlspecialchars($params->get('header_tag', 'h3'), ENT_QUOTES);
-$headerClass            = htmlspecialchars($params->get('header_class', 'moduleh3-sidebar'), ENT_QUOTES);
+$headerClass            = htmlspecialchars($params->get('header_class', 'moduleh3'), ENT_QUOTES);
 $headerAttribs          = [];
 
 // Only output a header class if one is set
@@ -49,17 +49,20 @@ $bootstrapSize           = (int) $params->get('bootstrap_size', 0);
 $moduleAttribs['class'] .= $bootstrapSize ? ' col-' . $bootstrapSize : '';
 ?>
 <<?php echo $moduleTag; ?> <?php echo ArrayHelper::toString($moduleAttribs); ?>>
-	<?php if ($module->showtitle) : ?>
-		<<?php echo $headerTag; ?> <?php echo ArrayHelper::toString($headerAttribs); ?>>
-			<?php echo $module->title; ?>
-			<span class="h3eck">&nbsp;</span>
-		</<?php echo $headerTag; ?>>
-	<?php endif; ?>
-	<div class="module">
-		<div class="module-inner">
-			<?php echo $module->content; ?>
+	<div class="module-content chrome-border left-top">
+		<div class="chrome-border right-top">
+			<div class="chrome-border right-bottom">
+				<div class="module-inner chrome-border left-bottom">
+					<?php if ($module->showtitle) : ?>
+						<<?php echo $headerTag; ?> <?php echo ArrayHelper::toString($headerAttribs); ?>>
+							<?php echo $module->title; ?>
+						<<?php echo '/' . $headerTag; ?>>
+					<?php endif; ?>
+					<?php echo $module->content; ?>
+				</div>
+			</div>
 		</div>
 	</div>
 	<span class="shadow-left">&nbsp;</span>
 	<span class="shadow-right">&nbsp;</span>
-</<?php echo $moduleTag; ?>>
+<<?php echo '/' . $moduleTag; ?>>
