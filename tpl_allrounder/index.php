@@ -16,6 +16,8 @@ use Joomla\CMS\HTML\Helpers\Jquery;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
+require_once 'helper/allrounder.php';
+
 Bootstrap::loadCss(true, $this->direction);
 HTMLHelper::_('stylesheet', 'system/joomla-fontawesome.css', ['relative' => true]);
 
@@ -56,8 +58,17 @@ $this->addStyleDeclaration('
   --allrounder-wrapper-bg-opacity: ' . $params->get('wrapperBgOpacity', '100') / 100 . ';
   --allrounder-wrapper-border-color: ' . $params->get('wrapperBorderColor', '#FFFFFF') . ';
   --allrounder-header-bg-color: ' . $params->get('headBgColor', '#383838') . ';
+  --allrounder-header-bg-color-light: ' . AllrounderHelper::luminance($params->get('headBgColor', '#383838'), 0.4) . ';
+  --allrounder-header-border-color: ' . $params->get('headBorderColor', '#000000') . ';
+  --allrounder-header-ribbon-color: ' . $params->get('headRibbonColor', '#222222') . ';
+  --allrounder-subhead-bg-color: ' . $params->get('subheadBgColor', '#f9f9f9') . ';
+  --allrounder-subhead-bg-color-light: ' . AllrounderHelper::luminance($params->get('subheadBgColor', '#f9f9f9'), 0.4) . ';
   --allrounder-left-sidebar-width: ' . $params->get('leftcolWidth', '20%') . ';
   --allrounder-right-sidebar-width: ' . $params->get('rightcolWidth', '20%') . ';
+  --allrounder-margin-top: ' . $params->get('wrapperMarginTop', '10px') . ';
+  --allrounder-margin-bottom: ' . $params->get('wrapperMarginBottom', '5px') . ';
+  --allrounder-padding-top: ' . $params->get('wrapperPaddingTop', '15px') . ';
+  --allrounder-padding-bottom: ' . $params->get('wrapperPaddingBottom', '10px') . ';
 }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');

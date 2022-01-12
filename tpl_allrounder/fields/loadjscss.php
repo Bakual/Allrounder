@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-use Joomla\CMS\Form\FormField;
+use Joomla\CMS\Form\Field\TextField;
 use Joomla\CMS\HTML\HTMLHelper;
 
 /**
@@ -18,7 +18,7 @@ use Joomla\CMS\HTML\HTMLHelper;
  * @package  Allrounder
  * @since    4.0
  */
-class JFormFieldLoadjscss extends FormField
+class JFormFieldLoadjscss extends TextField
 {
 	/**
 	 * The form field type.
@@ -39,6 +39,6 @@ class JFormFieldLoadjscss extends FormField
 		HtmlHelper::script('templates/allrounder/js/params.js');
 		HtmlHelper::stylesheet('templates/allrounder/css/params.css');
 
-		return '<input type="hidden" name="' . $this->name . '" id="' . $this->id . '" value="1" />';
+		return parent::getInput();
 	}
 }

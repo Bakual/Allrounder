@@ -5828,7 +5828,7 @@ input.search-query {
     width: 0;
     height: 0;
     line-height: 0;
-    border-top: 10px solid #222222;
+    border-top: 10px solid var(--allrounder-header-ribbon-color);
     position: absolute;
   }
 
@@ -6092,34 +6092,26 @@ img.featured-dark {
 
 #wrapper {
   width: var(--allrounder-max-width);
-  margin-top: 10px;
+  margin-top: var(--allrounder-margin-top);
+  margin-bottom: var(--allrounder-margin-bottom);
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 10px;
+  padding-top: var(--allrounder-padding-top);
+  padding-bottom: var(--allrounder-padding-bottom);
   background-color: var(--allrounder-wrapper-bg-color);
   opacity: var(--allrounder-wrapper-bg-opacity);
   border: 1px solid var(--allrounder-wrapper-border-color);
 }
 
-#foot_container {
-  margin-bottom: 0;
-  padding-bottom: 7px;
-  overflow: visible;
-}
-
-#header_container {
-  padding-top: 14px;
-}
-
 #header {
   min-height: 120px;
   position: relative;
-  background-image: linear-gradient(var(--allrounder-header-bg-color), #fff 25%, var(--allrounder-header-bg-color));
+  background-image: linear-gradient(var(--allrounder-header-bg-color), var(--allrounder-header-bg-color-light) 25%, var(--allrounder-header-bg-color));
   background-repeat: no-repeat;
   background-color: var(--allrounder-header-bg-color);
-  border-top: 1px solid #000000;
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
+  border-top: 1px solid var(--allrounder-header-border-color);
+  border-left: 1px solid var(--allrounder-header-border-color);
+  border-right: 1px solid var(--allrounder-header-border-color);
 }
 
 @media (min-width: 768px) {
@@ -6159,9 +6151,9 @@ a.logo:hover {
 #subhead {
   min-height: 35px;
   margin: 10px .2% 0 .2%;
-  background-image: linear-gradient(#f9f9f9, #f6f6f6 33%, #dddddd);
+  background-image: linear-gradient(var(--allrounder-subhead-bg-color), var(--allrounder-subhead-bg-color-light) 33%, var(--allrounder-subhead-bg-color));
   background-repeat: no-repeat;
-  background-color: #f9f9f9;
+  background-color: var(--allrounder-subhead-bg-color);
   border: 1px solid #ffffff;
 }
 
