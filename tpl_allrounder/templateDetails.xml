@@ -429,8 +429,18 @@
 					default="#f9f9f9"
 				/>
 
-				<field name="subheadBorderColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_SUBHEAD_BORDER" description="TPL_ALLROUNDER_SUBHEAD_BORDER_DESC" />
-				<field name="breadcrumbColor" type="color" default="#555555" label="TPL_ALLROUNDER_BREADCRUMB_FONT" description="TPL_ALLROUNDER_BREADCRUMB_FONT_DESC" />
+				<field
+					name="subheadBorderColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_COLOR_LABEL"
+					default="#ffffff"
+				/>
+				<field
+					name="subheadFontColor"
+					type="color"
+					label="TPL_ALLROUNDER_GLOBAL_FONT_LABEL"
+					default="#555555"
+				/>
 				<field type="spacer" hr="true" />
 				<field name="contentBgColor" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_CONTENT_BACKGROUND" description="TPL_ALLROUNDER_CONTENT_BACKGROUND_DESC" />
 				<field name="contentBorderColor" type="color" default="#E9E9E9" label="TPL_ALLROUNDER_CONTENT_BORDER" description="TPL_ALLROUNDER_CONTENT_BORDER_DESC" />
