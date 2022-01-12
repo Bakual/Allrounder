@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-if ($this->countModules('footermodule1 or footermodule2')) : ?>
+if ($this->countModules('footermodule1') or $this->countModules('footermodule2')) : ?>
 	<div id="footermodules">
 		<?php if ($this->countModules('footermodule1')) : ?>
 			<div id="footermodule1" class="row">

@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-if ($this->countModules('beforehead1 or beforehead2 or beforehead3')) : ?>
+if ($this->countModules('beforehead1') or $this->countModules('beforehead2') or $this->countModules('beforehead3')) : ?>
 	<div id="beforehead">
 		<?php if ($this->countModules('beforehead1')) : ?>
 			<div id="beforehead1" class="row">

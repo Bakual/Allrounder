@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-if ($this->countModules('top1 or top2 or top3')) : ?>
+if ($this->countModules('top1') or $this->countModules('top2') or $this->countModules('top3')) : ?>
 	<div id="top">
 		<?php if ($this->countModules('top1')) : ?>
 			<div id="top1" class="row">

@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-if ($this->countModules('foot1 or foot2 or foot3')) : ?>
+if ($this->countModules('foot1') or $this->countModules('foot2') or $this->countModules('foot3')) : ?>
 	<div id="foot">
 		<?php if ($this->countModules('foot1')) : ?>
 			<div id="foot1" class="row">

@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-if ($this->countModules('aftercontent1 or aftercontent2 or aftercontent3')) : ?>
+if ($this->countModules('aftercontent1') or $this->countModules('aftercontent2') or $this->countModules('aftercontent3')) : ?>
 	<div id="aftercontent">
 		<?php if ($this->countModules('aftercontent1')) : ?>
 			<div id="aftercontent1" class="row">
@@ -24,27 +24,6 @@ if ($this->countModules('aftercontent1 or aftercontent2 or aftercontent3')) : ?>
 		if ($this->countModules('aftercontent3')) : ?>
 			<div id="aftercontent3" class="row">
 				<jdoc:include type="modules" name="aftercontent3" style="allrounder" />
-			</div>
-		<?php endif; ?>
-	</div>
-<?php endif;
-
-// Advert positions are deprecated. Will be removed with 2.0
-if ($this->countModules('advert4 or advert5 or advert6')) : ?>
-	<div id="aftercontent">
-		<?php if ($this->countModules('advert4')) : ?>
-			<div id="aftercontent1" class="row">
-				<jdoc:include type="modules" name="advert4" style="allrounder" />
-			</div>
-		<?php endif;
-		if ($this->countModules('advert5')) : ?>
-			<div id="aftercontent2" class="row">
-				<jdoc:include type="modules" name="advert5" style="allrounder" />
-			</div>
-		<?php endif;
-		if ($this->countModules('advert6')) : ?>
-			<div id="aftercontent3" class="row">
-				<jdoc:include type="modules" name="advert6" style="allrounder" />
 			</div>
 		<?php endif; ?>
 	</div>
