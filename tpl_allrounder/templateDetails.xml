@@ -487,8 +487,23 @@
 					default="#484848"
 				/>
 
-				<field type="spacer" label="TPL_ALLROUNDER_SIDEBAR_MODULES" />
-				<field name="moduleh3BgColor" type="color" default="#383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC" />
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_SIDEBAR_MODULE_LABEL"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_SIDEBAR_MODULE_TITLE_LABEL"
+				/>
+
+				<field
+					name="moduleh3BgColor"
+					type="color"
+					label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND"
+					default="#383838"
+				/>
+
 				<field name="moduleh3BorderTopColor" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP_DESC" />
 				<field name="moduleh3BorderInnerColor" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_INNER_DESC" />
 				<field name="moduleh3BorderOuterColor" type="color" default="#999999" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_OUTER_DESC" />
