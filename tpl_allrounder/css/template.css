@@ -133,9 +133,66 @@ blockquote small:before {
     border-top-left-radius: 5px;
   }
 }
-
-
 /* End Sidebar Module */
+
+/* Start Media Query for ribbons, todo: Rewrite to make use BS5 sm/md/lg classes from container */
+@media (min-width: 768px) {
+  .ribbon {
+    top: 100%;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+  }
+
+  #leftcol .ribbon,
+  .ribbon.left {
+    border-left-style: solid;
+    border-left-color: transparent;
+    left: 0;
+  }
+
+  #rightcol .ribbon,
+  .ribbon.right {
+    border-right-style: solid;
+    border-right-color: transparent;
+    right: 0;
+  }
+
+  #header .ribbon {
+    border-width: 19px;
+    border-top: 10px solid var(--allrounder-header-ribbon-color);
+  }
+
+  .allroundersidebarchrome .ribbon {
+    border-width: 11px;
+    border-top: 6px solid var(--allrounder-module-title-ribbon-color);
+  }
+
+  #footer .ribbon {
+    border-width: 14px;
+    top: -8px;
+    border-bottom: 7px solid #222222;
+  }
+
+  #leftcol .moduleh3-sidebar {
+    margin: 10px 0 0 -20px;
+  }
+
+  #rightcol .moduleh3-sidebar {
+    margin: 10px -20px 0 0;
+  }
+
+  #footer {
+    margin: 0 -16px;
+  }
+
+  #header {
+    margin: 0 -21px 15px -21px;
+    padding: 0 21px;
+  }
+}
+/* End Media Query */
 
 /* Page Header */
 .page-header {
@@ -3695,92 +3752,6 @@ li.current li {
 input.search-query {
   border-radius: 10px 0 10px 0;
   width: 90px;
-}
-
-@media (min-width: 768px) {
-  .ribbon.left {
-    border-left-style: solid;
-    border-left-color: transparent;
-  }
-
-  .ribbon.right {
-    border-right-style: solid;
-    border-right-color: transparent;
-  }
-
-  #header .ribbon {
-    top: 100%;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border-width: 19px;
-    border-top: 10px solid var(--allrounder-header-ribbon-color);
-    position: absolute;
-  }
-
-  .ribbon.left {
-    left: 0;
-  }
-
-  .ribbon.right {
-    right: 0;
-  }
-
-  .feckl {
-    border-left: 14px solid transparent;
-    left: 0;
-  }
-
-  .feckr {
-    border-right: 14px solid transparent;
-    right: 0;
-  }
-
-  .feckl,
-  .feckr {
-    top: -11px;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border-bottom: 10px solid #222222;
-    position: absolute;
-  }
-
-  #leftcol .h3eck {
-    left: 0;
-    border-left: 11px solid transparent;
-  }
-
-  #rightcol .h3eck {
-    right: 0;
-    border-right: 11px solid transparent;
-  }
-
-  .h3eck {
-    width: 0;
-    height: 0;
-    line-height: 0;
-    top: 100%;
-    border-top: 10px solid var(--allrounder-module-title-ribbon-color);
-    position: absolute;
-  }
-
-  #leftcol .moduleh3-sidebar {
-    margin: 10px 0 0 -20px;
-  }
-
-  #rightcol .moduleh3-sidebar {
-    margin: 10px -20px 0 0;
-  }
-
-  #footer {
-    margin: 0 -16px 0 -16px;
-  }
-
-  #header {
-    margin: 0 -21px 15px -21px;
-    padding: 0 21px;
-  }
 }
 
 @media (max-width: 767px) {

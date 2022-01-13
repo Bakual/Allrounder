@@ -221,8 +221,8 @@ Jquery::framework();
 			<div class="clearfix"></div>
 			<div id="footer">
 				<div class="footer-inner">
-					<span class="feckl">&nbsp;</span>
-					<span class="feckr">&nbsp;</span>
+					<span class="ribbon left">&nbsp;</span>
+					<span class="ribbon right">&nbsp;</span>
 					<div id="scroll_up">
 						<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
 							&uarr;&uarr;&uarr;

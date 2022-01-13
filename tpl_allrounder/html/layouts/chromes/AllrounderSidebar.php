@@ -52,7 +52,7 @@ $moduleAttribs['class'] .= $bootstrapSize ? ' col-' . $bootstrapSize : '';
 	<?php if ($module->showtitle) : ?>
 		<<?php echo $headerTag; ?> <?php echo ArrayHelper::toString($headerAttribs); ?>>
 			<?php echo $module->title; ?>
-			<span class="h3eck">&nbsp;</span>
+			<span class="ribbon">&nbsp;</span>
 		</<?php echo $headerTag; ?>>
 	<?php endif; ?>
 	<div class="module">
