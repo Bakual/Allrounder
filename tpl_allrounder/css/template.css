@@ -3703,32 +3703,22 @@ input.search-query {
     border-color: transparent;
   }
 
-  .header .ribbon {
-
-  }
-
-  .ribbon.left {
-    border-left: 19px solid transparent;
-    left: 0;
-  }
-
-  .ribbon.right {
-    border-right: 19px solid transparent;
-    right: 0;
-  }
-
-  .heckr {
-    right: 0;
-  }
-
-  .heckl,
-  .heckr {
+  #header .ribbon {
     top: 100%;
     width: 0;
     height: 0;
     line-height: 0;
+    border-width: 19px;
     border-top: 10px solid var(--allrounder-header-ribbon-color);
     position: absolute;
+  }
+
+  .ribbon.left {
+    left: 0;
+  }
+
+  .ribbon.right {
+    right: 0;
   }
 
   .feckl {
