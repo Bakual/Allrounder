@@ -67,6 +67,9 @@ $this->addStyleDeclaration('
   --allrounder-subhead-font-color: ' . $params->get('subheadFontColor', '#555555') . ';
   --allrounder-content-bg-color: ' . $params->get('contentBgColor', '#f9f9f9') . ';
   --allrounder-content-border-color: ' . $params->get('contentBorderColor', '#E9E9E9') . ';
+  --allrounder-article-bg-color: ' . $params->get('articleBgColor', '#ffffff') . ';
+  --allrounder-article-border-color: ' . $params->get('articleBorderColor', '#e9e9e9') . ';
+  --allrounder-article-font-color: ' . $params->get('articleTitleColor', '#484848') . ';
   --allrounder-left-sidebar-width: ' . $params->get('leftcolWidth', '20%') . ';
   --allrounder-right-sidebar-width: ' . $params->get('rightcolWidth', '20%') . ';
   --allrounder-margin-top: ' . $params->get('wrapperMarginTop', '10px') . ';

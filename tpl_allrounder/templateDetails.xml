@@ -441,6 +441,7 @@
 					label="TPL_ALLROUNDER_GLOBAL_FONT_LABEL"
 					default="#555555"
 				/>
+
 				<field
 					type="spacer"
 					label="TPL_ALLROUNDER_CONTENT_LABEL"
@@ -460,9 +461,32 @@
 					default="#E9E9E9"
 				/>
 
-				<field name="articleBgColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_ARTICLE_BG_COLOR" description="TPL_ALLROUNDER_ARTICLE_BG_COLOR_DESC" />
-				<field name="articleBorderColor" type="color" default="#e9e9e9" label="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR" description="TPL_ALLROUNDER_ARTICLE_BORDER_COLOR_DESC" />
-				<field name="articletitleColor" type="color" default="#484848" label="TPL_ALLROUNDER_ARTICLE_TITLE_FONT" description="TPL_ALLROUNDER_ARTICLE_TITLE_FONT_DESC" />
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_ARTICLE_LABEL"
+				/>
+
+				<field
+					name="articleBgColor"
+					type="color"
+					default="#ffffff"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+				/>
+
+				<field
+					name="articleBorderColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_COLOR_LABEL"
+					default="#e9e9e9"
+				/>
+
+				<field
+					name="articleTitleColor"
+					type="color"
+					label="TPL_ALLROUNDER_GLOBAL_FONT_LABEL"
+					default="#484848"
+				/>
+
 				<field type="spacer" label="TPL_ALLROUNDER_SIDEBAR_MODULES" />
 				<field name="moduleh3BgColor" type="color" default="#383838" label="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_H3_BACKGROUND_DESC" />
 				<field name="moduleh3BorderTopColor" type="color" default="#555555" label="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP" description="TPL_ALLROUNDER_SIDEMODULE_H3_BORDER_TOP_DESC" />
