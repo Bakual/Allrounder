@@ -76,6 +76,13 @@ $this->addStyleDeclaration('
   --allrounder-margin-bottom: ' . $params->get('wrapperMarginBottom', '5px') . ';
   --allrounder-padding-top: ' . $params->get('wrapperPaddingTop', '15px') . ';
   --allrounder-padding-bottom: ' . $params->get('wrapperPaddingBottom', '10px') . ';
+  --allrounder-module-title-bg-color: ' . $params->get('moduleh3BgColor', '#383838') . ';
+  --allrounder-module-title-bg-color-light: ' . AllrounderHelper::luminance($params->get('moduleh3BgColor', '#383838'), 0.15) . ';
+  --allrounder-module-title-border-color-top: ' . $params->get('moduleh3BorderTopColor', '#555555') . ';
+  --allrounder-module-title-border-color-inner: ' . $params->get('moduleh3BorderInnerColor', '#555555') . ';
+  --allrounder-module-title-border-color-outer: ' . $params->get('moduleh3BorderOuterColor', '#999999') . ';
+  --allrounder-module-title-font-color: ' . $params->get('moduleh3Color', '#dddddd') . ';
+  --allrounder-module-title-ribbon-color: ' . $params->get('moduleh3CornerColor', '#222222') . ';
 }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
@@ -139,8 +146,8 @@ Jquery::framework();
 							<div class="clearfix"></div>
 						</div>
 					<?php endif; ?>
-					<span class="heckl">&nbsp;</span>
-					<span class="heckr">&nbsp;</span>
+					<span class="ribbon left heckl">&nbsp;</span>
+					<span class="ribbon right heckr">&nbsp;</span>
 				</div>
 			<?php endif; ?>
 			<?php require $modules . 'afterhead.php'; ?>
