@@ -146,8 +146,8 @@ Jquery::framework();
 							<div class="clearfix"></div>
 						</div>
 					<?php endif; ?>
-					<span class="ribbon left heckl">&nbsp;</span>
-					<span class="ribbon right heckr">&nbsp;</span>
+					<span class="ribbon left">&nbsp;</span>
+					<span class="ribbon right">&nbsp;</span>
 				</div>
 			<?php endif; ?>
 			<?php require $modules . 'afterhead.php'; ?>

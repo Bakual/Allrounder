@@ -3698,9 +3698,14 @@ input.search-query {
 }
 
 @media (min-width: 768px) {
-  .ribbon {
-    border-style: solid;
-    border-color: transparent;
+  .ribbon.left {
+    border-left-style: solid;
+    border-left-color: transparent;
+  }
+
+  .ribbon.right {
+    border-right-style: solid;
+    border-right-color: transparent;
   }
 
   #header .ribbon {
