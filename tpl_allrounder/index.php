@@ -76,14 +76,30 @@ $this->addStyleDeclaration('
   --allrounder-margin-bottom: ' . $params->get('wrapperMarginBottom', '5px') . ';
   --allrounder-padding-top: ' . $params->get('wrapperPaddingTop', '15px') . ';
   --allrounder-padding-bottom: ' . $params->get('wrapperPaddingBottom', '10px') . ';
-  --allrounder-module-title-bg-color: ' . $params->get('moduleh3BgColor', '#383838') . ';
-  --allrounder-module-title-bg-color-light: ' . AllrounderHelper::luminance($params->get('moduleh3BgColor', '#383838'), 0.15) . ';
-  --allrounder-module-title-border-color-top: ' . $params->get('moduleh3BorderTopColor', '#555555') . ';
-  --allrounder-module-title-border-color-inner: ' . $params->get('moduleh3BorderInnerColor', '#555555') . ';
-  --allrounder-module-title-border-color-outer: ' . $params->get('moduleh3BorderOuterColor', '#999999') . ';
-  --allrounder-module-title-font-color: ' . $params->get('moduleh3Color', '#dddddd') . ';
-  --allrounder-module-title-ribbon-color: ' . $params->get('moduleh3CornerColor', '#222222') . ';
-}
+  --allrounder-subfoot-bg-color: ' . $params->get('subfootBgColor', '#313131') . ';
+  --allrounder-subfoot-font-color: ' . $params->get('subfootColor', '#5b6c71') . ';
+  --allrounder-subfoot-border-top-color: ' . $params->get('subfootBorderTopColor', '#ffffff') . ';
+  --allrounder-subfoot-border-bottom-color: ' . $params->get('subfootBorderBottomColor', '#222222') . ';
+  --allrounder-footer-bg-color: ' . $params->get('footBgColor', '#222222') . ';
+  --allrounder-footer-bg-color-light: ' . AllrounderHelper::luminance($params->get('footBgColor', '#222222'), 0.4) . ';
+  --allrounder-footer-font-color: ' . $params->get('footColor', '#5B6C71') . ';
+  --allrounder-footer-border-color: ' . $params->get('footBorderColor', '#444444') . ';
+  --allrounder-footer-ribbon-color: ' . $params->get('footCornerColor', '#222222') . ';
+  --allrounder-footer-gotop-color: ' . $params->get('gotopLinkColor', '#ffffff') . ';
+  --allrounder-sidebar-module-title-bg-color: ' . $params->get('moduleh3BgColor', '#383838') . ';
+  --allrounder-sidebar-module-title-bg-color-light: ' . AllrounderHelper::luminance($params->get('moduleh3BgColor', '#383838'), 0.15) . ';
+  --allrounder-sidebar-module-title-border-color-top: ' . $params->get('moduleh3BorderTopColor', '#555555') . ';
+  --allrounder-sidebar-module-title-border-color-inner: ' . $params->get('moduleh3BorderInnerColor', '#555555') . ';
+  --allrounder-sidebar-module-title-border-color-outer: ' . $params->get('moduleh3BorderOuterColor', '#999999') . ';
+  --allrounder-sidebar-module-title-font-color: ' . $params->get('moduleh3Color', '#dddddd') . ';
+  --allrounder-sidebar-module-title-ribbon-color: ' . $params->get('moduleh3CornerColor', '#222222') . ';
+  --allrounder-sidebar-module-content-bg-color: ' . $params->get('moduleBgColor', '#f9f9f9') . ';
+  --allrounder-sidebar-module-content-border-color-inner: ' . $params->get('moduleBorderInnerColor', '#dddddd') . ';
+  --allrounder-sidebar-module-content-border-color-outer: ' . $params->get('moduleBorderOuterColor', '#ffffff') . ';
+  --allrounder-sidebar-module-content-font-color: ' . $params->get('moduleColor', '#505050') . ';
+  --allrounder-module-font-color: ' . $params->get('moduletableFont', '#505050') . ';
+  --allrounder-module-bg-color: ' . $params->get('moduletableBg', '#ffffff') . ';
+  }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';

@@ -489,6 +489,102 @@
 
 				<field
 					type="spacer"
+					label="TPL_ALLROUNDER_SUBFOOT_LABEL"
+				/>
+
+				<field
+					name="subfootBgColor"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#313131"
+				/>
+
+				<field
+					name="subfootColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_COLOR_LABEL"
+					default="#5b6c71"
+				/>
+
+				<field
+					name="subfootBorderTopColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_TOP_LABEL"
+					default="#ffffff"
+				/>
+
+				<field
+					name="subfootBorderBottomColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_BOTTOM_LABEL"
+					default="#222222"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_FOOTER_LABEL"
+				/>
+
+				<field
+					name="footBgColor"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#222222"
+				/>
+
+				<field
+					name="footColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_COLOR_LABEL"
+					default="#5B6C71"
+				/>
+
+				<field
+					name="footBorderColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_COLOR_LABEL"
+					default="#444444"
+				/>
+
+				<field
+					name="footCornerColor"
+					type="color"
+					label="TPL_ALLROUNDER_RIBBON_COLOR_LABEL"
+					default="#222222"
+				/>
+
+				<field
+					name="gotopLinkColor"
+					type="color"
+					default="#ffffff"
+					label="TPL_ALLROUNDER_GOTOP_COLOR"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_GLOBAL_MODULE_LABEL"
+				/>
+
+				<field
+					name="moduletableFont"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_COLOR_LABEL"
+					default="#505050"
+				/>
+
+				<field
+					name="moduletableBg"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#ffffff"
+				/>
+
+				<field name="moduletableBorder" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_BORDER" description="TPL_ALLROUNDER_MODULE_BORDER_DESC" />
+				<field name="moduletableh3Bg" type="color" default="#efefef" label="TPL_ALLROUNDER_MODULE_H3_BG" description="TPL_ALLROUNDER_MODULE_H3_BG_DESC" />
+				<field name="moduletableh3Border" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_H3_BORDER" description="TPL_ALLROUNDER_MODULE_H3_BORDER_DESC" />
+
+				<field
+					type="spacer"
 					label="TPL_ALLROUNDER_SIDEBAR_MODULE_LABEL"
 				/>
 
@@ -539,33 +635,46 @@
 					label="TPL_ALLROUNDER_RIBBON_COLOR_LABEL"
 				/>
 
-				<field name="moduleBgColor" type="color" default="#f9f9f9" label="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND" description="TPL_ALLROUNDER_SIDEMODULE_BACKGROUND_DESC" />
-				<field name="moduleBorderInnerColor" type="color" default="#dddddd" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_INNER_DESC" />
-				<field name="moduleBorderOuterColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER" description="TPL_ALLROUNDER_SIDEMODULE_BORDER_OUTER_DESC" />
-				<field name="moduleColor" type="color" default="#505050" label="TPL_ALLROUNDER_SIDEMODULE_FONT" description="TPL_ALLROUNDER_SIDEMODULE_FONT_DESC" />
-				<field type="spacer" hr="true" />
-				<field name="footBgColor" type="color" default="#222222" label="TPL_ALLROUNDER_FOOTER_BACKGROUND" description="TPL_ALLROUNDER_FOOTER_BACKGROUND_DESC" />
-				<field name="footColor" type="color" default="#5B6C71" label="TPL_ALLROUNDER_FOOTER_FONT" description="TPL_ALLROUNDER_FOOTER_FONT_DESC" />
-				<field name="footBorderColor" type="color" default="#444444" label="TPL_ALLROUNDER_FOOTER_BORDER" description="TPL_ALLROUNDER_FOOTER_BORDER_DESC" />
-				<field name="footCornerColor" type="color" default="#222222" label="TPL_ALLROUNDER_FOOTER_CORNER" description="TPL_ALLROUNDER_FOOTER_CORNER_DESC" />
-				<field type="spacer" hr="true" />
-				<field name="gotopLinkColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_GOTOP_COLOR" description="TPL_ALLROUNDER_GOTOP_COLOR_DESC" />
-				<field name="subfootBgColor" type="color" default="#313131" label="TPL_ALLROUNDER_SUBFOOT_BACKGROUND" description="TPL_ALLROUNDER_SUBFOOT_BACKGROUND_DESC" />
-				<field name="subfootColor" type="color" default="#5b6c71" label="TPL_ALLROUNDER_SUBFOOT_FONT" description="TPL_ALLROUNDER_SUBFOOT_FONT_DESC" />
-				<field name="subfootBorderTopColor" type="color" default="#ffffff" label="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP" description="TPL_ALLROUNDER_SUBFOOT_BORDER_TOP_DESC" />
-				<field name="subfootBorderBottomColor" type="color" default="#222222" label="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM" description="TPL_ALLROUNDER_SUBFOOT_BORDER_BOTTOM_DESC" />
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_SIDEBAR_MODULE_CONTENT_LABEL"
+				/>
+
+				<field
+					name="moduleBgColor"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#f9f9f9"
+				/>
+
+				<field
+					name="moduleBorderInnerColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_INNER_LABEL"
+					default="#dddddd"
+				/>
+
+				<field
+					name="moduleBorderOuterColor"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_OUTER_LABEL"
+					default="#ffffff"
+				/>
+
+				<field
+					name="moduleColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_COLOR_LABEL"
+					default="#505050"
+				/>
+
 				<field type="spacer" hr="true" />
 				<field name="mainMenuFont" type="color" default="#333333" label="TPL_ALLROUNDER_MAIN_MENU_FONT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_DESC" />
 				<field name="mainMenuBorderBottom" type="color" default="#cccccc" label="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM" description="TPL_ALLROUNDER_MAIN_MENU_BORDER_BOTTOM_DESC" />
 				<field name="mainMenuFontHover" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER" description="TPL_ALLROUNDER_MAIN_MENU_FONT_HOVER_DESC" />
 				<field name="mainMenuFontCurrent" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT" description="TPL_ALLROUNDER_MAIN_MENU_FONT_CURRENT_DESC" />
 				<field name="mainMenuLiLiFont" type="color" default="#000000" label="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT" description="TPL_ALLROUNDER_MAIN_MENU_LI_LI_A_FONT_DESC" />
-				<field type="spacer" label="TPL_ALLROUNDER_GLOB_MODULES" />
-				<field name="moduletableFont" type="color" default="#505050" label="TPL_ALLROUNDER_MODULE_FONT" description="TPL_ALLROUNDER_MODULE_FONT_DESC" />
-				<field name="moduletableBg" type="color" default="#ffffff" label="TPL_ALLROUNDER_MODULE_BG" description="TPL_ALLROUNDER_MODULE_BG_DESC" />
-				<field name="moduletableBorder" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_BORDER" description="TPL_ALLROUNDER_MODULE_BORDER_DESC" />
-				<field name="moduletableh3Bg" type="color" default="#efefef" label="TPL_ALLROUNDER_MODULE_H3_BG" description="TPL_ALLROUNDER_MODULE_H3_BG_DESC" />
-				<field name="moduletableh3Border" type="color" default="#dddddd" label="TPL_ALLROUNDER_MODULE_H3_BORDER" description="TPL_ALLROUNDER_MODULE_H3_BORDER_DESC" />				<field type="spacer" hr="true" />
+				<field type="spacer" hr="true" />
 				<field name="inputFontColor" type="color" default="#555555" label="TPL_ALLROUNDER_INPUT_FONT" description="TPL_ALLROUNDER_INPUT_FONT_DESC" />
 				<field name="inputBackground" type="color" default="#efefef" label="TPL_ALLROUNDER_INPUT_BACKGROUND" description="TPL_ALLROUNDER_INPUT_BACKGROUND_DESC" />
 				<field name="inputHoverFontColor" type="color" default="#555555" label="TPL_ALLROUNDER_INPUT_HOVER_FONT" description="TPL_ALLROUNDER_INPUT_HOVER_FONT_DESC" />
