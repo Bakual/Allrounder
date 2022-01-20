@@ -99,6 +99,10 @@ $this->addStyleDeclaration('
   --allrounder-sidebar-module-content-font-color: ' . $params->get('moduleColor', '#505050') . ';
   --allrounder-module-font-color: ' . $params->get('moduletableFont', '#505050') . ';
   --allrounder-module-bg-color: ' . $params->get('moduletableBg', '#ffffff') . ';
+  --allrounder-module-border-color: ' . $params->get('moduletableBorder', '#dddddd') . ';
+  --allrounder-module-title-bg-color: ' . $params->get('moduletableh3Bg', '#efefef') . ';
+  --allrounder-module-title-bg-color-light: ' . AllrounderHelper::luminance($params->get('moduletableh3Bg', '#efefef'), 0.15)  . ';
+  --allrounder-module-title-border-color: ' . $params->get('moduletableh3Border', '#dddddd') . ';
   }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
