@@ -49,20 +49,16 @@ $bootstrapSize           = (int) $params->get('bootstrap_size', 0);
 $moduleAttribs['class'] .= $bootstrapSize ? ' col-' . $bootstrapSize : '';
 ?>
 <<?php echo $moduleTag; ?> <?php echo ArrayHelper::toString($moduleAttribs); ?>>
-	<div class="module-content chrome-border left-top">
-		<div class="chrome-border right-top">
-			<div class="chrome-border right-bottom">
-				<div class="module-inner chrome-border left-bottom">
-					<?php if ($module->showtitle) : ?>
-						<<?php echo $headerTag; ?> <?php echo ArrayHelper::toString($headerAttribs); ?>>
-							<?php echo $module->title; ?>
-						<<?php echo '/' . $headerTag; ?>>
-					<?php endif; ?>
-					<?php echo $module->content; ?>
-				</div>
+	<div class="module-content shadowed">
+		<div class="chrome-border">
+			<div class="module-inner">
+				<?php if ($module->showtitle) : ?>
+					<<?php echo $headerTag; ?> <?php echo ArrayHelper::toString($headerAttribs); ?>>
+						<?php echo $module->title; ?>
+					<<?php echo '/' . $headerTag; ?>>
+				<?php endif; ?>
+				<?php echo $module->content; ?>
 			</div>
 		</div>
 	</div>
-	<span class="shadow-left">&nbsp;</span>
-	<span class="shadow-right">&nbsp;</span>
 <<?php echo '/' . $moduleTag; ?>>

@@ -208,12 +208,10 @@ Jquery::framework();
 				<?php endif; ?>
 				<div id="content" class="col order-3">
 					<?php require $modules . 'beforecontent.php'; ?>
-					<div id="maincontent" class="row">
+					<div id="maincontent" class="row shadowed">
 						<jdoc:include type="message" />
 						<jdoc:include type="component" />
 					</div>
-					<span class="shadow-left">&nbsp;</span>
-					<span class="shadow-right">&nbsp;</span>
 					<?php require $modules . 'aftercontent.php'; ?>
 				</div>
 				<?php if ($this->countModules('sidebar-right')) : ?>

@@ -1,4 +1,4 @@
-/* Verified Divers */
+/* Verified Diverses */
 a {
   color: var(--allrounder-link-color);
   text-decoration: none;
@@ -63,7 +63,8 @@ blockquote small:before {
 .mod-menu {
   flex-direction: column;
 }
-/* End Verified Divers */
+
+/* End Verified Diverses */
 
 /* Layout */
 #maincontent {
@@ -73,6 +74,7 @@ blockquote small:before {
   background-color: var(--allrounder-content-bg-color);
   border: 3px double var(--allrounder-content-border-color);
 }
+
 #maincontent > div:not([class*="blog"]):not(#system-message-container),
 #maincontent .blog-item {
   background-color: var(--allrounder-article-bg-color);
@@ -100,6 +102,7 @@ blockquote small:before {
     flex-basis: var(--allrounder-right-sidebar-width);
   }
 }
+
 /* End Layout */
 
 /* Sidebar Module */
@@ -204,6 +207,7 @@ blockquote small:before {
     padding: 0 21px;
   }
 }
+
 /* End Media Query */
 
 /* Page Header */
@@ -239,6 +243,7 @@ h2.item-title,
 h2.item-title a {
   color: var(--allrounder-article-font-color);
 }
+
 /* End Page Header */
 
 /* Logo */
@@ -247,6 +252,7 @@ div.slogan {
   font-size: 18px;
   padding: 0 40px 10px 100px;
 }
+
 /* End Logo */
 
 /* Foot and Footer */
@@ -275,9 +281,11 @@ div.slogan {
   border: 1px solid var(--allrounder-footer-border-color);
   border-bottom-width: 2px;
 }
+
 #footer a#gotop {
   color: var(--allrounder-footer-gotop-color);
 }
+
 /* End Foot and Footer */
 
 /* Buttons */
@@ -317,6 +325,7 @@ div.slogan {
   background-color: #e6e6e6;
   background-image: none;
 }
+
 .btn-primary {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -449,6 +458,7 @@ div.slogan {
   text-decoration: underline;
   background-color: transparent;
 }
+
 /* End Buttons */
 
 .nav li + .nav-header {
@@ -3527,62 +3537,58 @@ span.dropcap {
   font-size: 1.3em;
   line-height: 1em;
 }
+
 /* End Module */
 
 /* Default Style */
+.allrounderchrome .module-inner {
+  margin: -100px;
+}
+
 .allrounderchrome .chrome-border {
-  background-repeat: no-repeat;
+  border: 100px solid transparent;
+  border-image-source: url(../images/modules/modulecorner.png);
+  border-image-slice: 50% 50% 50% 50%;
 }
 
-.allrounderchrome .chrome-border.left-top {
-  background-image: url(../images/modules/module-lt.png);
-  background-position: left top;
-}
-
-.allrounderchrome .chrome-border.right-top {
-  background-image: url(../images/modules/module-rt.png);
-  background-position: right top;
-}
-
-.allrounderchrome .chrome-border.right-bottom {
-  background-image: url(../images/modules/module-rb.png);
-  background-position: right bottom;
-}
-
-.allrounderchrome .chrome-border.left-bottom {
-  background-image: url(../images/modules/module-lb.png);
-  background-position: left bottom;
-}
 /* End Default Style */
+
+/* Shadows */
+#content,
+.allroundersidebarchrome,
+.allrounderchrome {
+  z-index: 0;
+}
+
+.shadowed {
+  position: relative;
+}
+
+.shadowed:before,
+.shadowed:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  box-shadow: 0 5px 5px #787878;
+  transform: rotate(-1deg);
+}
+
+.shadowed:after {
+  transform: rotate(1deg);
+  right: 10px;
+  left: auto;
+}
+
+/* End Shadows */
 
 .module-style1 .module-content {
   color: #505050;
   border: 1px solid #ddd;
   background-color: #fff;
-}
-
-.module-style1 .chrome-border {
-  background-repeat: no-repeat;
-}
-
-.module-style1 .chrome-border.left-top {
-  background-image: url(../images/modules/module-lt.png);
-  background-position: left top;
-}
-
-.module-style1 .chrome-border.right-top {
-  background-image: url(../images/modules/module-rt.png);
-  background-position: right top;
-}
-
-.module-style1 .chrome-border.right-bottom {
-  background-image: url(../images/modules/paper-rb.png);
-  background-position: right bottom;
-}
-
-.module-style1 .chrome-border.left-bottom {
-  background-image: url(../images/modules/module-lb.png);
-  background-position: left bottom;
 }
 
 .module-style2 .module-content {
@@ -3643,24 +3649,6 @@ span.dropcap {
   #rightcol .moduleh3-sidebar {
     padding: 0 10px 0 30px;
   }
-}
-
-.shadow-left,
-.shadow-right {
-  display: block;
-  height: 8px;
-  background-repeat: no-repeat;
-}
-
-.shadow-left {
-  background-image: url('../images/modules/shadow-l.png');
-  background-position: left;
-}
-
-.shadow-right {
-  background-image: url('../images/modules/shadow-r.png');
-  background-position: right;
-  margin-top: -8px;
 }
 
 .shadows-off .shadow-left,
