@@ -3947,7 +3947,6 @@ img.featured-dark {
 }
 
 #wrapper {
-  width: var(--allrounder-max-width);
   margin-top: var(--allrounder-margin-top);
   margin-bottom: var(--allrounder-margin-bottom);
   padding-left: 0;

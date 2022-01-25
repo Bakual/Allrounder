@@ -51,7 +51,6 @@ $this->addStyleDeclaration('
   --allrounder-link-color: ' . $params->get('linkColor', '#a52a2a') . ';
   --allrounder-logo-color: ' . $params->get('logoColor', '#0299DC') . ';
   --allrounder-slogan-color: ' . $params->get('sloganColor', '#FF2402') . ';
-  --allrounder-max-width: ' . $params->get('pageMaxWidth', '1180px') . ';
   --allrounder-mobile-breakpoint: ' . $mobileBreakPoint . ';
   --allrounder-mobile-breakpoint-value: ' . $mobileBreakPointValue . ';
   --allrounder-wrapper-bg-color: ' . $params->get('wrapperBgColor', 'rgba(239, 239, 239, 1)') . ';
