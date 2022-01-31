@@ -102,7 +102,33 @@ $this->addStyleDeclaration('
   --allrounder-module-title-bg-color: ' . $params->get('moduletableh3Bg', '#efefef') . ';
   --allrounder-module-title-bg-color-light: ' . AllrounderHelper::luminance($params->get('moduletableh3Bg', '#efefef'), 0.15)  . ';
   --allrounder-module-title-border-color: ' . $params->get('moduletableh3Border', '#dddddd') . ';
-  }
+  --allrounder-menu-font-color: ' . $params->get('mainMenuFont', '#333333') . ';
+  --allrounder-menu-border-bottom-color: ' . $params->get('mainMenuBorderBottom', '#cccccc') . ';
+  --allrounder-menu-font-hover-color: ' . $params->get('mainMenuFontHover', '#000000') . ';
+  --allrounder-menu-font-current-color: ' . $params->get('mainMenuFontCurrent', '#000000') . ';
+  --allrounder-menu-font-submenu-color: ' . $params->get('mainMenuLiLiFont', '#000000') . ';
+  --allrounder-input-font-color: ' . $params->get('inputFontColor', '#555555') . ';
+  --allrounder-input-bg-color: ' . $params->get('inputBackground', '#efefef') . ';
+  --allrounder-input-font-hover-color: ' . $params->get('inputHoverFontColor', '#555555') . ';
+  --allrounder-input-bg-hover-color: ' . $params->get('inputHoverBgColor', '#f9f9f9') . ';
+  --allrounder-input-border-left-color: ' . $params->get('inputBorderLeftColor', '#cccccc') . ';
+  --allrounder-input-border-top-color: ' . $params->get('inputBorderTopColor', '#cccccc') . ';
+  --allrounder-input-border-right-color: ' . $params->get('inputBorderRightColor', '#ffffff') . ';
+  --allrounder-input-border-bottom-color: ' . $params->get('inputBorderBottomColor', '#ffffff') . ';
+  --allrounder-button-font-color: ' . $params->get('buttonColor', '#555555') . ';
+  --allrounder-button-bg-color: ' . $params->get('buttonBgColor', '#efefef') . ';
+  --allrounder-button-bg-color-light: ' . AllrounderHelper::luminance($params->get('buttonBgColor', '#efefef'), .3) . ';
+  --allrounder-button-font-hover-color: ' . $params->get('buttonHoverColor', '#555555') . ';
+  --allrounder-button-bg-hover-color: ' . $params->get('buttonBgHoverColor', '#efefef') . ';
+  --allrounder-button-bg-hover-color-light: ' . AllrounderHelper::luminance($params->get('buttonBgHoverColor', '#efefef'), .3) . ';
+  --allrounder-button-border-left-color: ' . $params->get('buttonBorderLeft', '#cccccc') . ';
+  --allrounder-button-border-top-color: ' . $params->get('buttonBorderTop', '#cccccc') . ';
+  --allrounder-button-border-right-color: ' . $params->get('buttonBorderRight', '#ffffff') . ';
+  --allrounder-button-border-bottom-color: ' . $params->get('buttonBorderBottom', '#ffffff') . ';
+  --allrounder-tooltip-font-color: ' . $params->get('tooltipFont', '#800000') . ';
+  --allrounder-tooltip-bg-color: ' . $params->get('tooltipBg', '#F2F3F5') . ';
+  --allrounder-tooltip-border-color: ' . $params->get('tooltipBorder', '#A6A7AB') . ';
+}
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
