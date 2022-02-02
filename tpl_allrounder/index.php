@@ -128,6 +128,31 @@ $this->addStyleDeclaration('
   --allrounder-tooltip-font-color: ' . $params->get('tooltipFont', '#800000') . ';
   --allrounder-tooltip-bg-color: ' . $params->get('tooltipBg', '#F2F3F5') . ';
   --allrounder-tooltip-border-color: ' . $params->get('tooltipBorder', '#A6A7AB') . ';
+  --allrounder-dropdown-bg-image: url(../images/menu/dropdown-' . $params->get('dropdownImage', 'smooth') . '.png);
+  --allrounder-dropdown-bg-image-parent: url(../images/menu/menu-parent-' . $params->get('dropdownImage', 'smooth') . '.png);
+  --allrounder-dropdown-bg-image-parent-hover: url(../images/menu/menu-parent-hover-' . $params->get('dropdownImage', 'smooth') . '.png);
+  --allrounder-dropdown-bg-color: ' . $params->get('ddBackground', '#222222') . ';
+  --allrounder-dropdown-border-top-color: ' . $params->get('ddBorderTop', '#ffffff') . ';
+  --allrounder-dropdown-border-bottom-color: ' . $params->get('ddBorderBottom', '#ffffff') . ';
+  --allrounder-dropdown-li-border-right-color: ' . $params->get('ulLiBorderRight', '#555555') . ';
+  --allrounder-dropdown-li-a-border-left-color: ' . $params->get('ulLiaBorderLeft', '#000000') . ';
+  --allrounder-dropdown-li-a-border-top-color: ' . $params->get('ulLiaBorderTop', '#000000') . ';
+  --allrounder-dropdown-li-a-border-right-color: ' . $params->get('ulLiaBorderRight', '#222222') . ';
+  --allrounder-dropdown-li-a-border-bottom-color: ' . $params->get('ulLiaBorderBottom', '#333333') . ';
+  --allrounder-dropdown-li-a-font-color: ' . $params->get('ulLiaColor', '#cccccc') . ';
+  --allrounder-dropdown-li-a-bg-color: ' . $params->get('ulLiaBackground', '#222222') . ';
+  --allrounder-dropdown-li-a-font-hover-color: ' . $params->get('ulLiaHoverColor', '#ffffff') . ';
+  --allrounder-dropdown-li-a-font-hover-color: ' . $params->get('ulLiaHoverColor', '#ffffff') . ';
+  --allrounder-dropdown-l2-ul-bg-color: ' . $params->get('ululBackground', '#222222') . ';
+  --allrounder-dropdown-l2-ul-border-color: ' . $params->get('ululBorder', '#000000') . ';
+  --allrounder-dropdown-l2-ul-li-a-border-left-color: ' . $params->get('ulLiliaBorderLeft', '#333333') . ';
+  --allrounder-dropdown-l2-ul-li-a-border-top-color: ' . $params->get('ulLiliaBorderTop', '#000000') . ';
+  --allrounder-dropdown-l2-ul-li-a-border-right-color: ' . $params->get('ulLiliaBorderRight', '#333333') . ';
+  --allrounder-dropdown-l2-ul-li-a-border-bottom-color: ' . $params->get('ulLiliaBorderBottom', '#333333') . ';
+  --allrounder-dropdown-l2-ul-li-a-font-color: ' . $params->get('ulLiliaColor', '#999999') . ';
+  --allrounder-dropdown-l2-ul-li-a-font-hover-color: ' . $params->get('ulLiliaHoverColor', '#ffffff') . ';
+  --allrounder-dropdown-l2-ul-li-a-bg-color: ' . $params->get('ulLiliBackground', '#171717') . ';
+  --allrounder-dropdown-l2-ul-li-a-bg-hover-color: ' . $params->get('ulLiliHoverBackground', '#212121') . ';
 }
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');

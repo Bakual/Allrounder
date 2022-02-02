@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die();
 
-use Joomla\CMS\Form\Field\TextField;
+use Joomla\CMS\Form\Field\RadioField;
 use Joomla\CMS\HTML\HTMLHelper;
 
 /**
@@ -18,7 +18,7 @@ use Joomla\CMS\HTML\HTMLHelper;
  * @package  Allrounder
  * @since    4.0
  */
-class JFormFieldLoadjscss extends TextField
+class JFormFieldLoadjscss extends RadioField
 {
 	/**
 	 * The form field type.

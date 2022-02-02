@@ -1,77 +1,74 @@
 /****************** Joomla Backend Parameter Style Pimp ******************/
-
-fieldset.panelform label,
-fieldset.panelform div.paramrow label,
-fieldset.panelform span.faux-label {
-  min-width: 160px;
+label.smooth,
+label.aero,
+label.carbon,
+label.leather {
+	color: #cccccc;
+	background: #222222;
 }
 
-span.spacer hr {
-  width: 380px;
+.btn-check:checked + .btn-outline-secondary.smooth,
+.btn-check:checked + .btn-outline-secondary.aero,
+.btn-check:checked + .btn-outline-secondary.carbon,
+.btn-check:checked + .btn-outline-secondary.leather {
+	background: #1c7000;
 }
 
-label.smooth, label.aero, label.carbon, label.leather {
-  color: #cccccc;
-  background: #222222 center;
-  padding: 5px 10px;
-}
-
-label.smooth:hover, label.aero:hover, label.carbon:hover, label.leather:hover {
-  color: #ffffff;
+label.smooth:hover,
+label.aero:hover,
+label.carbon:hover,
+label.leather:hover {
+	color: #ffffff;
 }
 
 label.smooth {
-  background-image: url(../images/menu/dropdown-smooth.png) !important;
+	background-image: url(../images/menu/dropdown-smooth.png) !important;
 }
 
 label.aero {
-  background-image: url(../images/menu/dropdown-aero.png) !important;
+	background-image: url(../images/menu/dropdown-aero.png) !important;
 }
 
 label.carbon {
-  background-image: url(../images/menu/dropdown-carbon.png) !important;
+	background-image: url(../images/menu/dropdown-carbon.png) !important;
 }
 
 label.leather {
-  background-image: url(../images/menu/dropdown-leather.png) !important;
+	background-image: url(../images/menu/dropdown-leather.png) !important;
 }
 
-div.defaultvalue {
-  border-bottom: 1px dashed #666;
+button[aria-controls="attrib-globtemplfields"]:before {
+	content: url('../images/xml/sitemap.png');
+	margin-right: 5px;
+	vertical-align: sub;
 }
 
-a[href="#attrib-globtemplfields"]:before {
-  content: url('../images/xml/sitemap.png');
-  margin-right: 5px;
-  vertical-align: sub;
+button[aria-controls="attrib-fontfields"]:before {
+	content: url('../images/xml/fonts.png');
+	margin-right: 5px;
+	vertical-align: sub;
 }
 
-a[href="#attrib-fontfields"]:before {
-  content: url('../images/xml/fonts.png');
-  margin-right: 5px;
-  vertical-align: sub;
+button[aria-controls="attrib-logofields"]:before {
+	content: url('../images/xml/logo.png');
+	margin-right: 5px;
+	vertical-align: sub;
 }
 
-a[href="#attrib-logofields"]:before {
-  content: url('../images/xml/logo.png');
-  margin-right: 5px;
-  vertical-align: sub;
+button[aria-controls="attrib-templcolorfields"]:before {
+	content: url('../images/xml/tempcolors.png');
+	margin-right: 5px;
+	vertical-align: sub;
 }
 
-a[href="#attrib-templcolorfields"]:before {
-  content: url('../images/xml/tempcolors.png');
-  margin-right: 5px;
-  vertical-align: sub;
+button[aria-controls="attrib-ddcolors"]:before {
+	content: url('../images/xml/ddcolors.png');
+	margin-right: 5px;
+	vertical-align: sub;
 }
 
-a[href="#attrib-ddcolors"]:before {
-  content: url('../images/xml/ddcolors.png');
-  margin-right: 5px;
-  vertical-align: sub;
-}
-
-a[href="#attrib-advanced"]:before {
-  content: url('../images/xml/advanced.png');
-  margin-right: 5px;
-  vertical-align: sub;
+button[aria-controls="attrib-advanced"]:before {
+	content: url('../images/xml/advanced.png');
+	margin-right: 5px;
+	vertical-align: sub;
 }

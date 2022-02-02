@@ -36,15 +36,8 @@
 			>
 
 				<field
-					name="pageMaxWidth"
-					type="loadjscss"
-					label="TPL_ALLROUNDER_MAX_WIDTH_LABEL"
-					default="1180px"
-				/>
-
-				<field
 					name="mobileWidth"
-					type="radio"
+					type="loadjscss"
 					label="TPL_ALLROUNDER_MOBILEWIDTH_LABEL"
 					description="TPL_ALLROUNDER_MOBILEWIDTH_DESC"
 					class="btn-group"
@@ -879,71 +872,205 @@
 				/>
 			</fieldset>
 
-			<fieldset name="ddcolors"
-				label="TPL_ALLROUNDER_DD_COLORS" description="">
-				<field type="spacer" label="TPL_ALLROUNDER_COLORS_DD"/>
-				<field name="dropdownImage" type="radio"
+			<fieldset
+				name="ddcolors"
+				label="TPL_ALLROUNDER_DD_COLORS_LABEL"
+				description="TPL_ALLROUNDER_DD_COLORS_DESC"
+			>
+				<field
+					name="dropdownImage"
+					type="radio"
 					label="TPL_ALLROUNDER_DROPDOWN_STYLE"
 					description="TPL_ALLROUNDER_DROPDOWN_STYLE_DESC"
 					class="btn-group"
-					default="smooth">
-					<option value="smooth" class="smooth">smooth</option>
-					<option value="aero" class="aero">aero</option>
-					<option value="carbon" class="carbon">carbon</option>
-					<option value="leather" class="leather">leather</option>
+					default="smooth"
+				>
+					<option value="smooth" class="btn btn-outline-secondary smooth">smooth</option>
+					<option value="aero" class="btn btn-outline-secondary aero">aero</option>
+					<option value="carbon" class="btn btn-outline-secondary carbon">carbon</option>
+					<option value="leather" class="btn btn-outline-secondary leather">leather</option>
 				</field>
-				<field type="spacer" label="TPL_ALLROUNDER_LEVEL_ONE" description=""/>
-				<field name="ddBackground" type="color" default="#222222" label="TPL_ALLROUNDER_UL_BG"
-					description="TPL_ALLROUNDER_UL_BG_DESC"/>
-				<field name="ddBorderTop" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_TOP"
-					description="TPL_ALLROUNDER_UL_BORDER_TOP_DESC"/>
-				<field name="ddBorderBottom" type="color" default="#ffffff" label="TPL_ALLROUNDER_UL_BORDER_BOTTOM"
-					description="TPL_ALLROUNDER_UL_BORDER_BOTTOM_DESC"/>
-				<field name="ulLiBorderRight" type="color" default="#555555" label="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT"
-					description="TPL_ALLROUNDER_UL_LI_BORDER_RIGHT_DESC"/>
-				<field name="ulLiaBorderTop" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_BORDER_TOP"
-					description="TPL_ALLROUNDER_UL_LI_BORDER_TOP_DESC"/>
-				<field name="ulLiaBorderRight" type="color" default="#222222"
-					label="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT" description="TPL_ALLROUNDER_UL_LI_A_BORDER_RIGHT_DESC"/>
-				<field name="ulLiaBorderLeft" type="color" default="#000000" label="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT"
-					description="TPL_ALLROUNDER_UL_LI_A_BORDER_LEFT_DESC"/>
-				<field name="ulLiaBorderBottom" type="color" default="#333333"
-					label="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM"
-					description="TPL_ALLROUNDER_UL_LI_A_BORDER_BOTTOM_DESC"/>
-				<field name="ulLiaColor" type="color" default="#cccccc" label="TPL_ALLROUNDER_UL_LI_A_FONT"
-					description="TPL_ALLROUNDER_UL_LI_A_FONT_DESC"/>
-				<field name="ulLiaBackground" type="color" default="#222222" label="TPL_ALLROUNDER_UL_LI_A_BACKGROUND"
-					description="TPL_ALLROUNDER_UL_LI_A_BACKGROUND_DESC"/>
-				<field name="ulLiaHoverColor" type="color" default="#ffffff"
-					label="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT"
-					description="TPL_ALLROUNDER_UL_LI_A_BORDER_HOVER_FONT_DESC"/>
-				<field type="spacer" label="TPL_ALLROUNDER_LEVEL_TWO"/>
-				<field name="ululBackground" type="color" default="#222222" label="TPL_ALLROUNDER_UL_UL_BACKGROUND"
-					description="TPL_ALLROUNDER_UL_UL_BACKGROUND_DESC"/>
-				<field name="ululBorder" type="color" default="#000000" label="TPL_ALLROUNDER_UL_UL_BORDER"
-					description="TPL_ALLROUNDER_UL_UL_BORDER_DESC"/>
-				<field name="ulLiliaBorderTop" type="color" default="#000000"
-					label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP"
-					description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_TOP_DESC"/>
-				<field name="ulLiliaBorderRight" type="color" default="#333333"
-					label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT"
-					description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_RIGHT_DESC"/>
-				<field name="ulLiliaBorderLeft" type="color" default="#333333"
-					label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT"
-					description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_LEFT_DESC"/>
-				<field name="ulLiliaBorderBottom" type="color" default="#333333"
-					label="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM"
-					description="TPL_ALLROUNDER_UL_LI_UL_LI_A_BORDER_BOTTOM_DESC"/>
-				<field name="ulLiliaColor" type="color" default="#999999" label="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT"
-					description="TPL_ALLROUNDER_UL_LI_UL_LI_A_FONT_DESC"/>
-				<field name="ulLiliaHoverColor" type="color" default="#ffffff"
-					label="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT"
-					description="TPL_ALLROUNDER_UL_LI_UL_LI_A_HOVER_FONT_DESC"/>
-				<field name="ulLiliBackground" type="color" default="#171717" label="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND"
-					description="TPL_ALLROUNDER_UL_LI_LI_BACKGROUND_DESC"/>
-				<field name="ulLiliHoverBackground" type="color" default="#212121"
-					label="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND"
-					description="TPL_ALLROUNDER_UL_LI_LI_HOVER_BACKGROUND_DESC"/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_LEVEL_ONE_LABEL"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_UL_LABEL"
+				/>
+
+				<field
+					name="ddBackground"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#222222"
+				/>
+
+				<field
+					name="ddBorderTop"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_TOP_LABEL"
+					default="#ffffff"
+				/>
+
+				<field
+					name="ddBorderBottom"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_BOTTOM_LABEL"
+					default="#ffffff"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_UL_LI_LABEL"
+				/>
+
+				<field
+					name="ulLiBorderRight"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_RIGHT_LABEL"
+					default="#555555"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_UL_LI_A_LABEL"
+				/>
+
+				<field
+					name="ulLiaBackground"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#222222"
+				/>
+
+				<field
+					name="ulLiaBorderLeft"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_LEFT_LABEL"
+					default="#000000"
+				/>
+
+				<field
+					name="ulLiaBorderTop"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_TOP_LABEL"
+					default="#000000"
+				/>
+
+				<field
+					name="ulLiaBorderRight"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_RIGHT_LABEL"
+					default="#222222"
+				/>
+
+				<field
+					name="ulLiaBorderBottom"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_BOTTOM_LABEL"
+					default="#333333"
+				/>
+
+				<field
+					name="ulLiaColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_COLOR_LABEL"
+					default="#cccccc"
+				/>
+
+				<field
+					name="ulLiaHoverColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_HOVER_LABEL"
+					default="#ffffff"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_LEVEL_TWO"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_UL_LABEL"
+				/>
+
+				<field
+					name="ululBackground"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#222222"
+				/>
+				<field
+					name="ululBorder"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_COLOR_LABEL"
+					default="#000000"
+				/>
+
+				<field
+					type="spacer"
+					label="TPL_ALLROUNDER_UL_LI_A_LABEL"
+				/>
+
+				<field
+					name="ulLiliaBorderLeft"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_LEFT_LABEL"
+					default="#333333"
+				/>
+
+				<field
+					name="ulLiliaBorderTop"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_TOP_LABEL"
+					default="#000000"
+				/>
+
+				<field
+					name="ulLiliaBorderRight"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_RIGHT_LABEL"
+					default="#333333"
+				/>
+
+				<field
+					name="ulLiliaBorderBottom"
+					type="color"
+					label="TPL_ALLROUNDER_BORDER_BOTTOM_LABEL"
+					default="#333333"
+				/>
+
+				<field
+					name="ulLiliaColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_COLOR_LABEL"
+					default="#999999"
+				/>
+
+				<field
+					name="ulLiliaHoverColor"
+					type="color"
+					label="TPL_ALLROUNDER_FONT_HOVER_LABEL"
+					default="#ffffff"
+				/>
+
+				<field
+					name="ulLiliBackground"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_COLOR_LABEL"
+					default="#171717"
+				/>
+
+				<field
+					name="ulLiliHoverBackground"
+					type="color"
+					label="TPL_ALLROUNDER_BACKGROUND_HOVER_LABEL"
+					default="#212121"
+				/>
 			</fieldset>
 			<fieldset name="advanced"
 				label="TPL_ALLROUNDER_ADVANCED_OPTIONS" description="">
