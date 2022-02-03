@@ -1059,30 +1059,45 @@
 					default="#212121"
 				/>
 			</fieldset>
-			<fieldset name="advanced"
-				label="TPL_ALLROUNDER_ADVANCED_OPTIONS" description="">
-				<field name="contentheadingImage" type="radio"
-					label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE"
-					description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_DESC"
+
+			<fieldset
+				name="advanced"
+				label="TPL_ALLROUNDER_ADVANCED_OPTIONS"
+			>
+				<field
+					name="contentheadingImage"
+					type="radio"
+					label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_LABEL"
 					class="btn-group"
-					default="1">
+					default="1"
+				>
 					<option value="1">JDEFAULT</option>
 					<option value="2">TPL_ALLROUNDER_CONTENTHEADING_IMAGE_CHOICE_OPTION_OWN</option>
 					<option value="0">JNONE</option>
 				</field>
-				<field name="contentheadingImageMedia" type="media"
-					label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA"
+
+				<field
+					name="contentheadingImageMedia"
+					type="media"
+					label="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA_LABEL"
 					description="TPL_ALLROUNDER_CONTENTHEADING_IMAGE_MEDIA_DESC"
-					hide_default="1"/>
+					hide_default="1"
+					showon="contentheadingImage:2"
+				/>
+
 				<field type="spacer" hr="true"/>
-				<field name="ribbonsOnOff" type="radio"
-					label="TPL_ALLROUNDER_RIBBONSONOFF"
+
+				<field
+					name="ribbonsOnOff"
+					type="radio"
+					label="TPL_ALLROUNDER_RIBBONSONOFF_LABEL"
 					description="TPL_ALLROUNDER_RIBBONSONOFF_DESC"
-					class="btn-group btn-group-yesno"
+					layout="joomla.form.field.radio.switcher"
 					default="1">
-					<option value="1">JON</option>
 					<option value="0">JOFF</option>
+					<option value="1">JON</option>
 				</field>
+
 				<field name="css3effects" type="radio"
 					label="TPL_ALLROUNDER_CSS3EFFECTS"
 					description="TPL_ALLROUNDER_CSS3EFFECTS_DESC"

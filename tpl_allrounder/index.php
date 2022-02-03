@@ -36,6 +36,21 @@ $bodyBackgroundImage       = $params->get('bodyBackgroundImage', 'templates/' . 
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
 $sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) ? '--bs-font-sans-serif: ' . $sansFontFamily : '';
+$contentHeadingImage       = $params->get('contentheadingImage', 1);
+$ribbon                    = $params->get('ribbonsOnOff', 1);
+
+if ($contentHeadingImage == 1)
+{
+	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/allrounder/images/balloon.png)';
+}
+elseif ($contentHeadingImage == 2)
+{
+	$contentHeadingImageValue = 'url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($params->get('contentheadingImageMedia')) . ')';
+}
+else
+{
+	$contentHeadingImageValue = '';
+}
 
 $this->addStyleDeclaration('
 :root {
@@ -153,9 +168,18 @@ $this->addStyleDeclaration('
 body {
   background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
-}
-'
+}'
 );
+if ($contentHeadingImageValue)
+{
+	$this->addStyleDeclaration('
+	.page-header h2,
+	h2.item-title {
+		background-image: ' . $contentHeadingImageValue . ';
+		background-repeat: no-repeat;
+		padding-left: 40px;
+	}');
+}
 
 Jquery::framework();
 ?>
@@ -173,7 +197,7 @@ Jquery::framework();
 	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
 </head>
 <body>
-	<div id="wrapper" class="container-md">
+	<div id="wrapper" class="container-md<?php echo $params->get('ribbonsOnOff', 1) ? ' has-ribbons' : ''; ?>">
 		<?php require $modules . 'toppanel.php'; ?>
 		<?php require $modules . 'beforehead.php'; ?>
 		<div id="header_container">

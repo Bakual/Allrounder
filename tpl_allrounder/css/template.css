@@ -110,16 +110,6 @@ blockquote small:before {
 	margin-bottom: 25px;
 }
 
-@media (min-width: 576px) {
-	.container-sm #leftcol {
-		flex-basis: var(--allrounder-left-sidebar-width);
-	}
-
-	.container-sm #rightcol {
-		flex-basis: var(--allrounder-right-sidebar-width);
-	}
-}
-
 @media (min-width: 768px) {
 	.container-md #leftcol {
 		flex-basis: var(--allrounder-left-sidebar-width);
@@ -177,9 +167,9 @@ blockquote small:before {
 
 /* End Sidebar Module */
 
-/* Start Media Query for ribbons, todo: Rewrite to make use BS5 sm/md/lg classes from container */
+/* Start Media Query for ribbons */
 @media (min-width: 768px) {
-	.ribbon {
+	.has-ribbons .ribbon {
 		top: 100%;
 		width: 0;
 		height: 0;
@@ -187,49 +177,49 @@ blockquote small:before {
 		position: absolute;
 	}
 
-	#leftcol .ribbon,
-	.ribbon.left {
+	.has-ribbons #leftcol .ribbon,
+	.has-ribbons .ribbon.left {
 		border-left-style: solid;
 		border-left-color: transparent;
 		left: 0;
 	}
 
-	#rightcol .ribbon,
-	.ribbon.right {
+	.has-ribbons #rightcol .ribbon,
+	.has-ribbons .ribbon.right {
 		border-right-style: solid;
 		border-right-color: transparent;
 		right: 0;
 	}
 
-	#header .ribbon {
+	.has-ribbons #header .ribbon {
 		border-width: 19px;
 		border-top: 10px solid var(--allrounder-header-ribbon-color);
 	}
 
-	.allroundersidebarchrome .ribbon {
+	.has-ribbons .allroundersidebarchrome .ribbon {
 		border-width: 11px;
 		border-top: 6px solid var(--allrounder-sidebar-module-title-ribbon-color);
 	}
 
-	#footer .ribbon {
+	.has-ribbons #footer .ribbon {
 		border-width: 14px;
 		top: -8px;
 		border-bottom: 7px solid var(--allrounder-footer-ribbon-color);
 	}
 
-	#leftcol .moduleh3-sidebar {
+	.has-ribbons #leftcol .moduleh3-sidebar {
 		margin: 10px 0 0 -20px;
 	}
 
-	#rightcol .moduleh3-sidebar {
+	.has-ribbons #rightcol .moduleh3-sidebar {
 		margin: 10px -20px 0 0;
 	}
 
-	#footer {
+	.has-ribbons #footer {
 		margin: 0 -16px;
 	}
 
-	#header {
+	.has-ribbons #header {
 		margin: 0 -21px 15px -21px;
 		padding: 0 21px;
 	}
@@ -254,9 +244,6 @@ blockquote small:before {
 
 .page-header h2,
 h2.item-title {
-	background-image: url(../images/balloon.png);
-	background-repeat: no-repeat;
-	padding-left: 40px;
 	line-height: 32px;
 	min-height: 32px;
 	margin: 10px 0;
@@ -3985,16 +3972,6 @@ a.logo:hover {
 @media (max-width: 767px) {
 	#container {
 		padding: 10px 0 0 0;
-	}
-}
-
-@media (min-width: 992px) {
-	.container-lg #leftcol {
-		flex-basis: var(--allrounder-left-sidebar-width);
-	}
-
-	.container-lg #rightcol {
-		flex-basis: var(--allrounder-right-sidebar-width);
 	}
 }
 
