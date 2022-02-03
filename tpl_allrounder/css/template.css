@@ -90,6 +90,10 @@ blockquote small:before {
 	border-right: 1px solid var(--allrounder-header-border-color);
 }
 
+#content {
+	margin: 0 0.75rem;
+}
+
 #maincontent {
 	padding: 20px 3% 20px 3%;
 	min-height: 200px;
@@ -3252,6 +3256,7 @@ span.dropcap {
 #topmenu .navbar {
 	margin: 0;
 	padding: 0;
+
 }
 
 #topmenu ul.nav {
@@ -3259,6 +3264,8 @@ span.dropcap {
 	background-color: var(--allrounder-dropdown-bg-color);
 	border-top: 3px double var(--allrounder-dropdown-border-top-color);
 	border-bottom: 3px double var(--allrounder-dropdown-border-bottom-color);
+	position: relative;
+	display: flex;
 }
 
 #topmenu ul.nav li {
@@ -3321,13 +3328,11 @@ span.dropcap {
 	text-decoration: none;
 }
 
-@media (max-width: 767px) {
-	#topmenu .navbar .nav {
-		display: flex;
-	}
-}
-
 @media (min-width: 768px) {
+	#topmenu ul.nav {
+		flex-direction: row;
+	}
+
 	#topmenu ul.nav,
 	#topmenu ul.nav > li > a,
 	#topmenu ul.nav > li > span.separator {

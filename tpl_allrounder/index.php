@@ -36,8 +36,6 @@ $bodyBackgroundImage       = $params->get('bodyBackgroundImage', 'templates/' . 
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
 $sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) ? '--bs-font-sans-serif: ' . $sansFontFamily : '';
-$mobileBreakPoint          = $params->get('mobileWidth', 'md');
-$mobileBreakPointValue     = ($mobileBreakPoint === 'lg') ? '992px' : (($mobileBreakPoint === 'md') ? '768px' : '576px');
 
 $this->addStyleDeclaration('
 :root {
@@ -51,8 +49,6 @@ $this->addStyleDeclaration('
   --allrounder-link-color: ' . $params->get('linkColor', '#a52a2a') . ';
   --allrounder-logo-color: ' . $params->get('logoColor', '#0299DC') . ';
   --allrounder-slogan-color: ' . $params->get('sloganColor', '#FF2402') . ';
-  --allrounder-mobile-breakpoint: ' . $mobileBreakPoint . ';
-  --allrounder-mobile-breakpoint-value: ' . $mobileBreakPointValue . ';
   --allrounder-wrapper-bg-color: ' . $params->get('wrapperBgColor', 'rgba(239, 239, 239, 1)') . ';
   --allrounder-wrapper-bg-opacity: ' . $params->get('wrapperBgOpacity', '100') / 100 . ';
   --allrounder-wrapper-border-color: ' . $params->get('wrapperBorderColor', '#FFFFFF') . ';
@@ -177,7 +173,7 @@ Jquery::framework();
 	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
 </head>
 <body>
-	<div id="wrapper" class="container-<?php echo $mobileBreakPoint ;?>">
+	<div id="wrapper" class="container-md">
 		<?php require $modules . 'toppanel.php'; ?>
 		<?php require $modules . 'beforehead.php'; ?>
 		<div id="header_container">
@@ -252,7 +248,7 @@ Jquery::framework();
 			<?php require $modules . 'top.php'; ?>
 			<div class="row">
 				<?php if ($this->countModules('sidebar-left')) : ?>
-					<div id="leftcol" class="order-<?php echo $mobileBreakPoint ;?>-1 order-<?php echo $params->get('leftcolMobilePosition', '1'); ?>">
+					<div id="leftcol" class="order-md-1 order-<?php echo $params->get('leftcolMobilePosition', '1'); ?>">
 						<jdoc:include type="modules" name="sidebar-left" style="allroundersidebar" />
 					</div>
 				<?php endif; ?>
@@ -265,7 +261,7 @@ Jquery::framework();
 					<?php require $modules . 'aftercontent.php'; ?>
 				</div>
 				<?php if ($this->countModules('sidebar-right')) : ?>
-					<div id="rightcol" class="order-<?php echo $mobileBreakPoint ;?>-5 order-<?php echo $params->get('rightcolMobilePosition', '5'); ?>">
+					<div id="rightcol" class="order-md-5 order-<?php echo $params->get('rightcolMobilePosition', '5'); ?>">
 						<jdoc:include type="modules" name="sidebar-right" style="allroundersidebar" />
 					</div>
 				<?php endif; ?>
