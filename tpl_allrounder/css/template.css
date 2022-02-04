@@ -302,6 +302,33 @@ div.slogan {
 
 /* End Foot and Footer */
 
+/* Start Module Edit */
+.btn.jmodedit {
+	background-color: hsla(0,0%,100%,.5);
+	border: 1px solid #58595a;
+	border-radius: .25rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 900;
+	line-height: 1;
+}
+
+[role=tooltip]:not(.show) {
+	background: #fff;
+	border: 1px solid #6d757e;
+	border-radius: .25rem;
+	box-shadow: 0 0 .5rem rgba(0,0,0,.8);
+	color: #000;
+	display: none;
+	margin: .5em;
+	max-width: 100%;
+	padding: .5em;
+	right: 5em;
+	text-align: start;
+	z-index: 1070;
+}
+/* End Module Edit */
 /* Start Buttons */
 .btn {
 	color: var(--allrounder-button-font-color);

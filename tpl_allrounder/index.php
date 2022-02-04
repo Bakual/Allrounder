@@ -41,7 +41,7 @@ $ribbon                    = $params->get('ribbonsOnOff', 1);
 
 if ($contentHeadingImage == 1)
 {
-	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/allrounder/images/balloon.png)';
+	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/' . $this->template . '/images/balloon.png)';
 }
 elseif ($contentHeadingImage == 2)
 {
@@ -191,8 +191,8 @@ Jquery::framework();
 	<jdoc:include type="styles" />
 	<jdoc:include type="scripts" />
 	<link href="<?php echo $path; ?>css/template.css" rel="stylesheet" type="text/css" media="all" />
-	<?php if ($params->get('customCss')) : ?>
-		<style><?php echo htmlspecialchars($params->get('customCssCode')); ?></style>
+	<?php if ($customCssCode = $params->get('customCssCode')) : ?>
+		<style><?php echo htmlspecialchars($customCssCode); ?></style>
 	<?php endif; ?>
 	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
 </head>
@@ -301,8 +301,8 @@ Jquery::framework();
 			<?php endif; ?>
 			<?php if ($params->get('showSubfoot', 1)) : ?>
 				<div id="subfoot">
-					<?php if ($params->get('showCopy', 1)) : ?>
-						<div class="copytext">&copy; <?php echo htmlspecialchars($params->get('copyText', 'ALLROUNDER')); ?></div>
+					<?php if ($copyText = $params->get('copyText')) : ?>
+						<div class="copytext">&copy; <?php echo htmlspecialchars($copyText); ?></div>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>
@@ -320,7 +320,7 @@ Jquery::framework();
 				</div>
 				<div class="footer-bottom">
 					<?php if ($params->get('showDate', 1)) : ?>
-						<span id="date"><?php echo HTMLHelper::_('date', 'now', JText::_('DATE_FORMAT_LC1')); ?></span>
+						<span id="date"><?php echo HTMLHelper::_('date', 'now', Text::_('DATE_FORMAT_LC1')); ?></span>
 					<?php endif; ?>
 				</div>
 			</div>
