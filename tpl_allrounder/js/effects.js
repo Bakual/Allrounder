@@ -34,6 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }, false);
         }
     }
+
+    // Article Details
+    let infoTerms = document.querySelectorAll('.article-info-term');
+    for (let i = 0; i < infoTerms.length; i++) {
+        infoTerms[i].addEventListener('click', function (event) {
+            infoTerms[i].parentNode.classList.toggle('opened')
+        });
+    }
+
 // Searchbox animation
     $('#search').hide().show(400, 'swing');
 
@@ -41,12 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     $('a#gotop').click(function () {
         $('html, body').animate({scrollTop: 0}, 1200);
         return false;
-    });
-
-// Article Details
-    $('.article-info dd').hide();
-    $('.article-info-term').click(function () {
-        $(this).siblings('.article-info dd').slideToggle('fast');
     });
 
 // Toppanel

@@ -64,6 +64,43 @@ blockquote small:before {
 	flex-direction: column;
 }
 
+dl.article-info {
+	font-size: 11px;
+	padding-left: 20px;
+}
+
+.article-info dd {
+	transition: opacity 1s;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+.article-info.opened dd {
+	opacity: 1;
+	height: auto;
+}
+
+.article-info-term {
+	color: var(--allrounder-link-color);
+	cursor: pointer;
+	margin-left: -5px;
+	margin-bottom: 1px;
+	letter-spacing: 2px;
+	display: inline-block;
+}
+
+.article-info-term:hover {
+	border-bottom: 1px solid var(--allrounder-link-color);
+	margin-bottom: 0;
+}
+
+.article-info-term:before {
+	font-family: Font Awesome\ 5 Free;
+	font-weight: 900;
+	content: "\f0fe";
+}
+
 /* End Verified Diverses */
 
 /* Layout */
@@ -2541,66 +2578,6 @@ div.modal.jviewport-width100 {
 
 .content_rating img {
 	padding: 0 4px 10px 4px;
-}
-
-dl.article-info {
-	font-size: 11px;
-	padding-left: 20px;
-}
-
-dl.article-info .icon-calendar,
-dl.article-info .icon-drawer-2,
-dl.article-info .icon-archive,
-dl.article-info .icon-eye-open,
-dl.article-info .icon-eye {
-	width: 16px;
-}
-
-dl.article-info .icon-calendar:before,
-dl.article-info .icon-drawer-2:before,
-dl.article-info .icon-archive:before,
-dl.article-info .icon-eye-open:before,
-dl.article-info .icon-eye:before {
-	vertical-align: middle;
-}
-
-dl.article-info .createdby:before {
-	content: url('../images/article-info/createdby.png');
-	vertical-align: middle;
-}
-
-dl.article-info .category-name:before {
-	content: url('../images/article-info/category.png');
-	vertical-align: middle;
-}
-
-dl.article-info .parent-category-name:before {
-	content: url('../images/article-info/parent-category.png');
-	vertical-align: middle;
-}
-
-dl.article-info .modified .icon-calendar:before {
-	content: url('../images/article-info/modified.png');
-	vertical-align: middle;
-}
-
-.article-info-term {
-	color: #a52a2a;
-	cursor: pointer;
-	margin-left: -5px;
-	margin-bottom: 1px;
-	letter-spacing: 2px;
-	display: inline-block;
-}
-
-.article-info-term:hover {
-	border-bottom: 1px solid #a52a2a;
-	margin-bottom: 0;
-}
-
-.article-info-term:before {
-	content: url('../images/article-info/article-detailer-plus.png');
-	padding-right: 5px;
 }
 
 th {
