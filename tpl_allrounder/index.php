@@ -312,8 +312,8 @@ Jquery::framework();
 					<span class="ribbon left">&nbsp;</span>
 					<span class="ribbon right">&nbsp;</span>
 					<div id="scroll_up">
-						<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP'); ?>">
-							&uarr;&uarr;&uarr;
+						<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP_TIP'); ?>">
+							<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP_TEXT'); ?>
 						</a>
 					</div>
 					<?php require $modules . 'footermodules.php'; ?>
