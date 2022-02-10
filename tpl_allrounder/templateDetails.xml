@@ -205,6 +205,7 @@
 					exclude=""
 					stripext=""
 					default="logo-transparent.png"
+					showon="showimgLogo:1"
 				/>
 
 				<field hr="true" type="spacer"/>
@@ -226,6 +227,7 @@
 					type="media"
 					label="TPL_ALLROUNDER_MEDIA_LOGO_LABEL"
 					description="TPL_ALLROUNDER_MEDIA_LOGO_DESC"
+					showon="showMediaLogo:1"
 				/>
 
 				<field hr="true" type="spacer"/>
@@ -249,6 +251,7 @@
 					description="TPL_ALLROUNDER_TEXT_LOGO_INPUT_DESC"
 					default=""
 					rows="1"
+					showon="showtextLogo:1"
 				/>
 
 				<field
@@ -256,6 +259,7 @@
 					type="color"
 					label="TPL_ALLROUNDER_TEXT_LOGO_COLOR_LABEL"
 					default="#0299DC"
+					showon="showtextLogo:1"
 				/>
 
 				<field hr="true" type="spacer"/>
@@ -278,6 +282,7 @@
 					label="TPL_ALLROUNDER_SLOGANINPUT_LABEL"
 					hint="TPL_ALLROUNDER_SLOGANINPUT_HINT"
 					rows="1"
+					showon="showSlogan:1"
 				/>
 
 				<field
@@ -285,6 +290,7 @@
 					type="color"
 					label="TPL_ALLROUNDER_SLOGAN_COLOR_LABEL"
 					default="#FF2402"
+					showon="showSlogan:1"
 				/>
 
 			</fieldset>
