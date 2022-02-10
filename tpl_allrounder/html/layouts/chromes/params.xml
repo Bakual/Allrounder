@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset
+			name="advanced">
+
+			<field
+				name="allrounder_chrome_design"
+				type="list"
+				label="TPL_ALLROUNDER_CHROME_DESIGN_LABEL"
+				showon="style:Allrounder-Allrounder[OR]style:Allrounder-AllrounderSidebar"
+				default="0"
+			>
+				<option value="0">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_DEFAULT</option>
+				<option value="1">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_PAPER</option>
+				<option value="2">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_POSTIT</option>
+				<option value="3">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_CARBON</option>
+				<option value="4">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_RAUSCH</option>
+				<option value="5">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_SCAN</option>
+				<option value="6">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_RIFFLE</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

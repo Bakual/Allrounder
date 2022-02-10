@@ -24,6 +24,11 @@ if ($module->content === null || $module->content === '')
 $moduleTag              = htmlspecialchars($params->get('module_tag', 'div'), ENT_QUOTES);
 $moduleAttribs          = [];
 $moduleAttribs['class'] = $module->position . ' allroundersidebarchrome ' . htmlspecialchars($params->get('moduleclass_sfx', 'shadowed'), ENT_QUOTES);
+$bootstrapSize           = (int) $params->get('bootstrap_size', 0);
+$moduleAttribs['class'] .= $bootstrapSize ? ' col-' . $bootstrapSize : '';
+$chromeDesign            = (int) $params->get('allrounder_chrome_design', 0);
+$moduleAttribs['class'] .= $chromeDesign ? ' module-style' . $chromeDesign : '';
+
 $headerTag              = htmlspecialchars($params->get('header_tag', 'h3'), ENT_QUOTES);
 $headerClass            = htmlspecialchars($params->get('header_class', 'moduleh3-sidebar'), ENT_QUOTES);
 $headerAttribs          = [];
@@ -44,9 +49,6 @@ if ($moduleTag !== 'div')
 		$moduleAttribs['aria-label'] = $module->title;
 	endif;
 }
-
-$bootstrapSize           = (int) $params->get('bootstrap_size', 0);
-$moduleAttribs['class'] .= $bootstrapSize ? ' col-' . $bootstrapSize : '';
 ?>
 <<?php echo $moduleTag; ?> <?php echo ArrayHelper::toString($moduleAttribs); ?>>
 	<?php if ($module->showtitle) : ?>

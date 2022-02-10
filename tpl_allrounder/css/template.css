@@ -1759,11 +1759,12 @@ img.featured-dark {
 }
 
 /* End Shadows */
-
+/* Start Module Style Designs */
 .module-style1 .module-content {
-  color: #505050;
-  border: 1px solid #ddd;
-  background-color: #fff;
+  background-image: url(../images/modules/paper-rb.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  min-height: 200px;
 }
 
 .module-style2 .module-content {
@@ -1812,6 +1813,7 @@ img.featured-dark {
   background-image: url(../images/modules/riffle-h3.jpg);
   background-repeat: repeat-x;
 }
+/* End Module Style Designs */
 
 @media (min-width: 768px) {
   #rightcol .moduleh3-sidebar {
