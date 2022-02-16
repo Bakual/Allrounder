@@ -9,6 +9,8 @@
 	<license>http://www.gnu.org/licenses/gpl.html</license>
 	<version>4.0.1</version>
 	<description>TPL_ALLROUNDER_XML_DESCRIPTION</description>
+	<inheritable>1</inheritable>
+	<scriptfile>script.php</scriptfile>
 	<files>
 		<folder>fields</folder>
 		<folder>helper</folder>
@@ -17,7 +19,7 @@
 		<folder>language</folder>
 		<filename>component.php</filename>
 		<filename>index.php</filename>
-		<filename>template_thumbnail.png</filename>
+		<filename>joomla.asset.json</filename>
 	</files>
 	<media destination="templates/site/allrounder" folder="media">
 		<folder>js</folder>
@@ -202,7 +204,7 @@
 					type="imagelist"
 					label="TPL_ALLROUNDER_SELECT_IMG_LABEL"
 					description="TPL_ALLROUNDER_SELECT_IMG_DESC"
-					directory="/templates/allrounder/images/logo"
+					directory="media/templates/site/allrounder/images/logo"
 					hide_default="no"
 					exclude=""
 					stripext=""

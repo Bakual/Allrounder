@@ -36,8 +36,8 @@ class JFormFieldLoadjscss extends RadioField
 	 */
 	protected function getInput()
 	{
-		HtmlHelper::script('templates/allrounder/js/params.js');
-		HtmlHelper::stylesheet('templates/allrounder/css/params.css');
+		HtmlHelper::script('media/templates/site/allrounder/js/params.js');
+		HtmlHelper::stylesheet('media/templates/site/allrounder/css/params.css');
 
 		return parent::getInput();
 	}

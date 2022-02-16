@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "allrounder",
+  "version": "4.0.1",
+  "description": "This file contains details of the assets used by Allrounder template.",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "template.allrounder.ltr",
+      "description": "The css file to be used when the site is left to right (LTR).",
+      "type": "style",
+      "uri": "template.min.css",
+      "dependencies": [
+        "fontawesome",
+        "bootstrap.css"
+      ]
+    },
+    {
+      "name": "template.allrounder.rtl",
+      "description": "The css file to be used when the site is right to left (RTL).",
+      "type": "style",
+      "uri": "template-rtl.min.css",
+      "dependencies": [
+        "fontawesome",
+        "bootstrap.css"
+      ]
+    },
+    {
+      "name": "template.offline",
+      "description": "The css file to be used when the site is offline and offline.php is being used.",
+      "type": "style",
+      "uri": "offline.css"
+    },
+    {
+      "name": "template.active.language",
+      "description": "An asset to allow language specific css, eg 'language/[lang-CODE]/[lang-CODE].css', to use it as a dependency to the active template",
+      "type": "style",
+      "uri": "",
+      "class": "LangActiveAssetItem",
+      "dependencies": [
+        "template.active"
+      ]
+    },
+    {
+      "name": "template.user",
+      "description": "A file where a user can add their own css.",
+      "type": "style",
+      "uri": "user.css",
+      "dependencies": [
+        "template.active",
+        "template.active.language"
+      ]
+    },
+    {
+      "name": "template.allrounder",
+      "description": "The file containing the javascript for this template.",
+      "type": "script",
+      "uri": "template.js",
+      "attributes" : {
+        "defer": true
+      },
+      "dependencies": [
+        "core"
+      ]
+    },
+    {
+      "name": "template.active",
+      "description": "A dummy asset to allow extensions to use it as a dependency to the active template.",
+      "type": "script",
+      "uri": "",
+      "dependencies": [
+        "template.allrounder"
+      ]
+    },
+    {
+      "name": "template.user",
+      "description": "The name of a file where a user can add their own javascript",
+      "type": "script",
+      "uri":  "user.js",
+      "dependencies": [
+        "template.active"
+      ]
+    },
+    {
+      "name": "template.allrounder.ltr",
+      "type": "preset",
+      "dependencies": [
+        "template.allrounder.ltr#style",
+        "template.allrounder#script"
+      ]
+    },
+    {
+      "name": "template.allrounder.rtl",
+      "type": "preset",
+      "dependencies": [
+        "template.allrounder.rtl#style",
+        "template.allrounder#script"
+      ]
+    },
+    {
+      "name": "fontawesome",
+      "type": "style",
+      "uri": "system/joomla-fontawesome.min.css"
+    }
+  ]
+}

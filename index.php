@@ -19,10 +19,25 @@ use Joomla\CMS\Language\Text;
 require_once 'helper/allrounder.php';
 
 Bootstrap::loadCss(true, $this->direction);
-HTMLHelper::_('stylesheet', 'system/joomla-fontawesome.css', ['relative' => true]);
 
 // Shortcuts
 $app     = Factory::getApplication();
+$wa  = $this->getWebAssetManager();
+
+// Enable assets
+$wa->usePreset('template.allrounder.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'))
+		->useStyle('template.active.language')
+		->useStyle('template.user')
+		->useScript('template.user');
+
+// Override 'template.active' asset to set correct ltr/rtl dependency
+$wa->registerStyle('template.active', '', [], [], ['template.allrounder.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr')]);
+
+// Browsers support SVG favicons
+$this->addHeadLink(HTMLHelper::_('image', 'joomla-favicon.svg', '', [], true, 1), 'icon', 'rel', ['type' => 'image/svg+xml']);
+$this->addHeadLink(HTMLHelper::_('image', 'favicon.ico', '', [], true, 1), 'alternate icon', 'rel', ['type' => 'image/vnd.microsoft.icon']);
+$this->addHeadLink(HTMLHelper::_('image', 'joomla-favicon-pinned.svg', '', [], true, 1), 'mask-icon', 'rel', ['color' => '#000']);
+
 $tpl     = $app->getTemplate(true);
 $path    = $this->baseurl . '/templates/' . $this->template . '/';
 $modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
@@ -41,7 +56,8 @@ $ribbon                    = $params->get('ribbonsOnOff', 1);
 
 if ($contentHeadingImage == 1)
 {
-	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/' . $this->template . '/images/balloon.png)';
+//	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/' . $this->template . '/images/balloon.png)';
+	$contentHeadingImageValue = 'url(' . HTMLHelper::_('image', 'balloon.png', '', null, true) . ')';
 }
 elseif ($contentHeadingImage == 2)
 {
@@ -52,8 +68,7 @@ else
 	$contentHeadingImageValue = '';
 }
 
-$this->addStyleDeclaration('
-:root {
+$wa->addInlineStyle(':root {
   --bs-body-bg: ' . $bodyBackground . ';
   --bs-body-bg-rgb: ' . str_replace(['rgb(', ')'], '', $bodyBackground) . ';
   --bs-body-color: ' . $textColor . ';
@@ -170,6 +185,7 @@ body {
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
 }'
 );
+
 if ($contentHeadingImageValue)
 {
 	$this->addStyleDeclaration('
@@ -190,11 +206,10 @@ Jquery::framework();
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 	<jdoc:include type="scripts" />
-	<link href="<?php echo $path; ?>css/template.css" rel="stylesheet" type="text/css" media="all" />
 	<?php if ($customCssCode = $params->get('customCssCode')) : ?>
 		<style><?php echo htmlspecialchars($customCssCode); ?></style>
 	<?php endif; ?>
-	<script src="<?php echo $path; ?>js/effects.js" type="text/javascript"></script>
+	<script src="media/templates/site/allrounder/js/effects.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="wrapper" class="container-md<?php echo $params->get('ribbonsOnOff', 1) ? ' has-ribbons' : ''; ?>">
@@ -218,7 +233,7 @@ Jquery::framework();
 					<?php endif; ?>
 					<div id="logo">
 						<?php if ($params->get('showimgLogo', 1)) : ?>
-							<a class="imglogo" href="index.php"><img alt="Logo" src="<?php echo $path; ?>images/logo/<?php echo htmlspecialchars($params->get('imgLogo', 'logo-transparent.png')); ?>"/></a>
+							<a class="imglogo" href="index.php"><?php echo HTMLHelper::_('image', 'logo/' . $params->get('imgLogo', 'logo-transparent.png'), 'Logo', null, true); ?></a>
 						<?php endif;?>
 						<?php if ($params->get('showMediaLogo')) : ?>
 							<a class="medialogo" href="index.php"><img alt="Logo" src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
