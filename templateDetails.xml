@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.5" type="template" client="site" method="upgrade">
+<extension version="4.1" type="template" client="site" method="upgrade">
 	<name>Allrounder</name>
-	<creationDate>2021-12-09</creationDate>
+	<creationDate>2022-02-16</creationDate>
 	<author>Thomas Hunziker</author>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>http://www.bakual.net</authorUrl>
-	<copyright>(C) 2021</copyright>
+	<copyright>(C) 2022</copyright>
 	<license>http://www.gnu.org/licenses/gpl.html</license>
-	<version>4.0.0</version>
+	<version>4.0.1</version>
 	<description>TPL_ALLROUNDER_XML_DESCRIPTION</description>
 	<files>
-		<folder>css</folder>
 		<folder>fields</folder>
 		<folder>helper</folder>
 		<folder>html</folder>
-		<folder>images</folder>
-		<folder>js</folder>
 		<folder>modules</folder>
 		<folder>language</folder>
 		<filename>component.php</filename>
 		<filename>index.php</filename>
 		<filename>template_thumbnail.png</filename>
 	</files>
+	<media destination="templates/site/allrounder" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
 	<updateservers>
 		<server type="extension" priority="1" name="Bakual.net">http://www.bakual.net/update/tpl_allrounder.xml</server>
 	</updateservers>
