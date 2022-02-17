@@ -96,11 +96,12 @@ class AllrounderInstallerScript extends InstallerScript
 	 */
 	public function update($parent)
 	{
-		if (version_compare($this->oldRelease, '4.0.1', '<'))
+		if (version_compare($this->oldRelease, '4.0.2', '<'))
 		{
 			$this->deleteFolders[] = '/templates/allrounder/css';
 			$this->deleteFolders[] = '/templates/allrounder/images';
 			$this->deleteFolders[] = '/templates/allrounder/js';
+			$this->deleteFiles[] = '/media/templates/site/allrounder/js/effects.js';
 
 			$db    = Factory::getDbo();
 			$query = $db->getQuery(true);

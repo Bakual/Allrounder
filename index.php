@@ -18,8 +18,6 @@ use Joomla\CMS\Language\Text;
 
 require_once 'helper/allrounder.php';
 
-Bootstrap::loadCss(true, $this->direction);
-
 // Shortcuts
 $app     = Factory::getApplication();
 $wa  = $this->getWebAssetManager();
@@ -47,7 +45,7 @@ $params = $tpl->params;
 
 // Get values from template style.
 $bodyBackground            = $params->get('bodyBackground', 'rgb(162, 205, 253)');
-$bodyBackgroundImage       = $params->get('bodyBackgroundImage', 'templates/' . $this->template . '/images/background.png');
+$bodyBackgroundImage       = MediaHelperAlias::getCleanMediaFieldValue($params->get('bodyBackgroundImage', HTMLHelper::_('image', $params->get('bodyBackgroundImage', 'background.png'), '', null, true, 1)));
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
 $sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) ? '--bs-font-sans-serif: ' . $sansFontFamily : '';
@@ -57,7 +55,7 @@ $ribbon                    = $params->get('ribbonsOnOff', 1);
 if ($contentHeadingImage == 1)
 {
 //	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/' . $this->template . '/images/balloon.png)';
-	$contentHeadingImageValue = 'url(' . HTMLHelper::_('image', 'balloon.png', '', null, true) . ')';
+	$contentHeadingImageValue = 'url(' . HTMLHelper::_('image', 'balloon.png', '', null, true, 1) . ')';
 }
 elseif ($contentHeadingImage == 2)
 {
@@ -181,7 +179,7 @@ $wa->addInlineStyle(':root {
   --allrounder-dropdown-l2-ul-li-a-bg-hover-color: ' . $params->get('ulLiliHoverBackground', '#212121') . ';
 }
 body {
-  background-image: url(' . $this->baseurl . '/'. MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
+  background-image: url(' . MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
 }'
 );
@@ -196,8 +194,6 @@ if ($contentHeadingImageValue)
 		padding-left: 40px;
 	}');
 }
-
-Jquery::framework();
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -209,7 +205,6 @@ Jquery::framework();
 	<?php if ($customCssCode = $params->get('customCssCode')) : ?>
 		<style><?php echo htmlspecialchars($customCssCode); ?></style>
 	<?php endif; ?>
-	<script src="media/templates/site/allrounder/js/effects.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="wrapper" class="container-md<?php echo $params->get('ribbonsOnOff', 1) ? ' has-ribbons' : ''; ?>">

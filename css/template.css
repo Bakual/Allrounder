@@ -1854,9 +1854,12 @@ img.featured-dark {
 }
 
 #toppanel {
+  transition: height .25s ease;
+  overflow: hidden;
+}
+#toppanel:not(.active) {
   display: none;
 }
-
 #toppanel .module-content {
   margin-top: 0;
 }
@@ -1879,15 +1882,19 @@ img.featured-dark {
   position: fixed;
   top: 30%;
 }
-
 #sidepanel {
-  display: none;
   padding: 10px 20px;
   min-height: 110px;
   float: left;
   background: #222;
   border: 2px solid #434345;
   border-left: 0;
+  transition: width 0.25s ease;
+  overflow: hidden;
+}
+
+#sidepanel:not(.active) {
+  display: none;
 }
 
 #sidepanel-toggle {

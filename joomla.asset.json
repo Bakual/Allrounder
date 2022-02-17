@@ -59,9 +59,7 @@
       "attributes" : {
         "defer": true
       },
-      "dependencies": [
-        "core"
-      ]
+      "dependencies": []
     },
     {
       "name": "template.active",
