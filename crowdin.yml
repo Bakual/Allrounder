@@ -1,5 +1,5 @@
 files:
-  - source: /tpl_allrounder/language/en-GB/tpl_allrounder.sys.ini
-    translation: /tpl_allrounder/language/%locale%/tpl_allrounder.sys.ini
-  - source: /tpl_allrounder/language/en-GB/tpl_allrounder.ini
-    translation: /tpl_allrounder/language/%locale%/tpl_allrounder.ini
+  - source: /language/en-GB/tpl_allrounder.sys.ini
+    translation: /language/%locale%/tpl_allrounder.sys.ini
+  - source: /language/en-GB/tpl_allrounder.ini
+    translation: /language/%locale%/tpl_allrounder.ini
