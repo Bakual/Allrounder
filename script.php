@@ -101,6 +101,14 @@ class AllrounderInstallerScript extends InstallerScript
 			$this->deleteFolders[] = '/templates/allrounder/css';
 			$this->deleteFolders[] = '/templates/allrounder/images';
 			$this->deleteFolders[] = '/templates/allrounder/js';
+
+			$db    = Factory::getDbo();
+			$query = $db->getQuery(true);
+			$query->update('#__template_styles')
+				->set($db->quoteName('inheritable') . ' = 1')
+				->where($db->quoteName('template') . ' = ' . $db->quote('allrounder'));
+			$db->setQuery($query);
+			$db->execute();
 		}
 	}
 
