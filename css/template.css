@@ -2271,6 +2271,13 @@ a.logo:hover {
   color: var(--allrounder-menu-font-submenu-color);
 }
 
+.mod-menu li:before {
+  float: left;
+  font-family: Font Awesome\ 5 Free;
+  font-weight: bold;
+  speak: none;
+  content: '\f0da';
+}
 /* End Menu */
 
 
