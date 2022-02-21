@@ -48,57 +48,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Toppanel
   let toppanel = document.getElementById('toppanel');
+  let toppaneltoggle = document.getElementById('toppanel-toggle');
 
-  document.getElementById('toppanel-toggle').addEventListener('click', function (event) {
-    event.preventDefault();
+  if (toppaneltoggle) {
+    toppaneltoggle.addEventListener('click', function (event) {
+      event.preventDefault();
 
-    if (!toppanel.classList.contains('active')) {
-      toppanel.classList.add('active');
-      toppanel.style.height = 'auto';
+      if (!toppanel.classList.contains('active')) {
+        toppanel.classList.add('active');
+        toppanel.style.height = 'auto';
 
-      let height = toppanel.clientHeight + "px";
+        let height = toppanel.clientHeight + "px";
 
-      toppanel.style.height = '0px';
+        toppanel.style.height = '0px';
 
-      setTimeout(function () {
-        toppanel.style.height = height;
-      }, 0);
-    } else {
-      toppanel.style.height = '0px';
+        setTimeout(function () {
+          toppanel.style.height = height;
+        }, 0);
+      } else {
+        toppanel.style.height = '0px';
 
-      toppanel.addEventListener('transitionend', function () {
-        toppanel.classList.remove('active');
-      }, {
-        once: true
-      });
-    }
-  });
+        toppanel.addEventListener('transitionend', function () {
+          toppanel.classList.remove('active');
+        }, {
+          once: true
+        });
+      }
+    });
+  }
 
+  // Sidepanel
   let sidepanel = document.getElementById('sidepanel');
+  let sidepaneltoggle = document.getElementById('sidepanel-toggle');
 
-  document.getElementById('sidepanel-toggle').addEventListener('click', function (event) {
-    event.preventDefault();
+  if (sidepaneltoggle) {
+    sidepaneltoggle.addEventListener('click', function (event) {
+      event.preventDefault();
 
-    if (!sidepanel.classList.contains('active')) {
-      sidepanel.classList.add('active');
-      sidepanel.style.width = 'auto';
+      if (!sidepanel.classList.contains('active')) {
+        sidepanel.classList.add('active');
+        sidepanel.style.width = 'auto';
 
-      let height = sidepanel.clientWidth + "px";
+        let width = sidepanel.clientWidth + "px";
 
-      sidepanel.style.width = '0px';
+        sidepanel.style.width = '0px';
 
-      setTimeout(function () {
-        sidepanel.style.width = height;
-      }, 0);
-    } else {
-      sidepanel.style.width = '0px';
+        setTimeout(function () {
+          sidepanel.style.width = width;
+        }, 0);
+      } else {
+        sidepanel.style.width = '0px';
 
-      sidepanel.addEventListener('transitionend', function () {
-        sidepanel.classList.remove('active');
-      }, {
-        once: true
-      });
-    }
-  });
+        sidepanel.addEventListener('transitionend', function () {
+          sidepanel.classList.remove('active');
+        }, {
+          once: true
+        });
+      }
+    });
+  }
 })
 ;
