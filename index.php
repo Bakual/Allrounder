@@ -283,7 +283,7 @@ if ($contentHeadingImageValue)
 			<div class="row">
 				<?php if ($this->countModules('sidebar-left')) : ?>
 					<div id="leftcol" class="order-md-1 order-<?php echo $params->get('leftcolMobilePosition', '1'); ?>">
-						<jdoc:include type="modules" name="sidebar-left" style="allroundersidebar" />
+						<jdoc:include type="modules" name="sidebar-left" style="AllrounderSidebar" />
 					</div>
 				<?php endif; ?>
 				<div id="content" class="col order-3">
@@ -296,7 +296,7 @@ if ($contentHeadingImageValue)
 				</div>
 				<?php if ($this->countModules('sidebar-right')) : ?>
 					<div id="rightcol" class="order-md-5 order-<?php echo $params->get('rightcolMobilePosition', '5'); ?>">
-						<jdoc:include type="modules" name="sidebar-right" style="allroundersidebar" />
+						<jdoc:include type="modules" name="sidebar-right" style="AllrounderSidebar" />
 					</div>
 				<?php endif; ?>
 			</div>
