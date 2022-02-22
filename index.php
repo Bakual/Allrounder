@@ -85,7 +85,7 @@ $wa->addInlineStyle(':root {
   --allrounder-header-border-color: ' . $params->get('headBorderColor', '#000000') . ';
   --allrounder-header-ribbon-color: ' . $params->get('headRibbonColor', '#222222') . ';
   --allrounder-subhead-bg-color: ' . $params->get('subheadBgColor', '#f9f9f9') . ';
-  --allrounder-subhead-bg-color-light: ' . AllrounderHelper::luminance($params->get('subheadBgColor', '#f9f9f9'), 0.4) . ';
+  --allrounder-subhead-bg-color-dark: ' . AllrounderHelper::luminance($params->get('subheadBgColor', '#f9f9f9'), -0.15) . ';
   --allrounder-subhead-border-color: ' . $params->get('subheadBorderColor', '#ffffff') . ';
   --allrounder-subhead-font-color: ' . $params->get('subheadFontColor', '#555555') . ';
   --allrounder-content-bg-color: ' . $params->get('contentBgColor', '#f9f9f9') . ';

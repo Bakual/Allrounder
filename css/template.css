@@ -137,10 +137,6 @@ dl.article-info {
   visibility: hidden;
 }
 
-.mod-breadcrumbs__wrapper {
-  float: left;
-}
-
 /* End Verified Diverses */
 
 /* Layout */
@@ -2162,22 +2158,15 @@ a.logo:hover {
 #subhead {
   min-height: 35px;
   margin: 10px .2% 0 .2%;
-  background-image: linear-gradient(var(--allrounder-subhead-bg-color), var(--allrounder-subhead-bg-color-light) 33%, var(--allrounder-subhead-bg-color));
+  background-image: linear-gradient(var(--allrounder-subhead-bg-color), var(--allrounder-subhead-bg-color) 20%, var(--allrounder-subhead-bg-color-dark));
   background-repeat: no-repeat;
   background-color: var(--allrounder-subhead-bg-color);
   border: 1px solid var(--allrounder-subhead-border-color);
   color: var(--allrounder-subhead-font-color);
 }
 
-#subhead:before,
-#subhead:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-
-#subhead:after {
-  clear: both;
+#subhead .breadcrumb {
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
