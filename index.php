@@ -215,14 +215,14 @@ if ($contentHeadingImageValue)
 				<div id="header">
 					<?php if ($this->countModules('headermodule1')) : ?>
 						<div id="headermodule1">
-							<jdoc:include type="modules" name="headermodule1" />
+							<jdoc:include type="modules" name="headermodule1" style="none" />
 							<div class="clearfix"></div>
 						</div>
 					<?php endif; ?>
 					<?php if ($this->countModules('banner')) : ?>
 						<div id="banner_outer">
 							<div id="banner">
-								<jdoc:include type="modules" name="banner"/>
+								<jdoc:include type="modules" name="banner" style="none" />
 							</div>
 						</div>
 					<?php endif; ?>
@@ -242,7 +242,7 @@ if ($contentHeadingImageValue)
 					</div>
 					<?php if ($this->countModules('headermodule2')) : ?>
 						<div id="headermodule2">
-							<jdoc:include type="modules" name="headermodule2" />
+							<jdoc:include type="modules" name="headermodule2" style="none" />
 							<div class="clearfix"></div>
 						</div>
 					<?php endif; ?>
@@ -253,21 +253,21 @@ if ($contentHeadingImageValue)
 			<?php require $modules . 'afterhead.php'; ?>
 			<?php if ($this->countModules('position-1')) : ?>
 				<div id="topmenu">
-					<jdoc:include type="modules" name="position-1" />
+					<jdoc:include type="modules" name="position-1" style="none" />
 				</div>
 			<?php endif; ?>
 			<?php if ($this->countModules('position-1-1')) : ?>
-				<jdoc:include type="modules" name="position-1-1" />
+				<jdoc:include type="modules" name="position-1-1" style="none" />
 			<?php endif; ?>
 		</div>
 		<?php if ($this->countModules('breadcrumbs') or $this->countModules('position-0')) : ?>
 			<div id="subhead">
 				<?php if ($this->countModules('breadcrumbs')) : ?>
-					<jdoc:include type="modules" name="breadcrumbs" />
+					<jdoc:include type="modules" name="breadcrumbs" style="none" />
 				<?php endif; ?>
 				<?php if ($this->countModules('position-0')) : ?>
 					<div id="search">
-						<jdoc:include type="modules" name="position-0" />
+						<jdoc:include type="modules" name="position-0" style="none" />
 					</div>
 				<?php endif; ?>
 			</div>
@@ -275,7 +275,7 @@ if ($contentHeadingImageValue)
 		<div id="container">
 			<?php if ($this->countModules('slider')) : ?>
 				<div id="slider">
-					<jdoc:include type="modules" name="slider" />
+					<jdoc:include type="modules" name="slider" style="none" />
 				</div>
 				<div class="clearfix"></div>
 			<?php endif; ?>
@@ -306,7 +306,7 @@ if ($contentHeadingImageValue)
 			<?php require $modules . 'foot.php'; ?>
 			<?php if($this->countModules('footer')) : ?>
 				<div id="footermodule">
-					<jdoc:include type="modules" name="footer" />
+					<jdoc:include type="modules" name="footer" style="none" />
 				</div>
 			<?php endif; ?>
 			<?php if ($params->get('showSubfoot', 1)) : ?>
@@ -338,6 +338,6 @@ if ($contentHeadingImageValue)
 		</div>
 	</div>
 	<?php require $modules . 'sidepanel.php'; ?>
-	<jdoc:include type="modules" name="debug" />
+	<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
