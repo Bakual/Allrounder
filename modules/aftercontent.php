@@ -13,17 +13,17 @@ if ($this->countModules('aftercontent1') or $this->countModules('aftercontent2')
 	<div id="aftercontent">
 		<?php if ($this->countModules('aftercontent1')) : ?>
 			<div id="aftercontent1" class="row">
-				<jdoc:include type="modules" name="aftercontent1" style="allrounder" />
+				<jdoc:include type="modules" name="aftercontent1" style="Allrounder" />
 			</div>
 		<?php endif;
 		if ($this->countModules('aftercontent2')) : ?>
 			<div id="aftercontent2" class="row">
-				<jdoc:include type="modules" name="aftercontent2" style="allrounder" />
+				<jdoc:include type="modules" name="aftercontent2" style="Allrounder" />
 			</div>
 		<?php endif;
 		if ($this->countModules('aftercontent3')) : ?>
 			<div id="aftercontent3" class="row">
-				<jdoc:include type="modules" name="aftercontent3" style="allrounder" />
+				<jdoc:include type="modules" name="aftercontent3" style="Allrounder" />
 			</div>
 		<?php endif; ?>
 	</div>
