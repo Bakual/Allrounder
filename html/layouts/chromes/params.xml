@@ -18,6 +18,7 @@
 				<option value="4">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_RAUSCH</option>
 				<option value="5">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_SCAN</option>
 				<option value="6">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLACK_RIFFLE</option>
+				<option value="7">TPL_ALLROUNDER_CHROME_DESIGN_OPTION_BLANK</option>
 			</field>
 		</fieldset>
 	</fields>

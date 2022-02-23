@@ -1763,6 +1763,24 @@ img.featured-dark {
   min-height: 200px;
 }
 
+.module-style2 .chrome-border,
+.module-style3 .chrome-border,
+.module-style4 .chrome-border,
+.module-style5 .chrome-border,
+.module-style6 .chrome-border,
+.module-style7 .chrome-border {
+  border: 0;
+}
+
+.module-style2 .module-inner,
+.module-style3 .module-inner,
+.module-style4 .module-inner,
+.module-style5 .module-inner,
+.module-style6 .module-inner,
+.module-style7 .module-inner {
+  margin: 0;
+}
+
 .module-style2 .module-content {
   background-image: linear-gradient(to bottom, #FFFF99, #f7f7a1);
   background-repeat: repeat-x;
@@ -1770,6 +1788,12 @@ img.featured-dark {
   border: 1px solid #dddd00;
   color: #000066;
   font-family: "Comic Sans MS";
+}
+
+.module-style3 .moduleh3,
+.module-style4 .moduleh3,
+.module-style5 .moduleh3 {
+  background: #444444;
 }
 
 .module-style3 .module-content {
@@ -1809,6 +1833,7 @@ img.featured-dark {
   background-image: url(../images/modules/riffle-h3.jpg);
   background-repeat: repeat-x;
 }
+
 /* End Module Style Designs */
 
 @media (min-width: 768px) {
@@ -1853,9 +1878,11 @@ img.featured-dark {
   transition: height .25s ease;
   overflow: hidden;
 }
+
 #toppanel:not(.active) {
   display: none;
 }
+
 #toppanel .module-content {
   margin-top: 0;
 }
@@ -1878,6 +1905,7 @@ img.featured-dark {
   position: fixed;
   top: 30%;
 }
+
 #sidepanel {
   padding: 10px 20px;
   min-height: 110px;
@@ -2267,6 +2295,7 @@ a.logo:hover {
   speak: none;
   content: '\f0da';
 }
+
 /* End Menu */
 
 
