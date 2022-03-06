@@ -1581,6 +1581,7 @@ img.featured-dark {
     top: 3em;
     width: 214px;
     border-radius: 4px;
+    z-index: 1;
   }
 
   #topmenu ul.nav ul.mod-menu__sub li.parent > a,
