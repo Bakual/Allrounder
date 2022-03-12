@@ -142,8 +142,21 @@ dl.article-info {
   background-color: var(--allrounder-wrapper-bg-color);
   opacity: var(--allrounder-wrapper-bg-opacity);
   border: 1px solid var(--allrounder-wrapper-border-color);
+  display: flex;
+  flex-direction: column;
 }
-
+#beforehead {
+  order: 1;
+}
+#header_container {
+  order: 2;
+}
+#container {
+  order: 3
+}
+#foot_container {
+  order: 4;
+}
 #header {
   min-height: 120px;
   position: relative;
@@ -2043,6 +2056,7 @@ a.logo:hover {
   background-color: var(--allrounder-subhead-bg-color);
   border: 1px solid var(--allrounder-subhead-border-color);
   color: var(--allrounder-subhead-font-color);
+  order: 2;
 }
 
 #subhead .breadcrumb {

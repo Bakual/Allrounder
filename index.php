@@ -192,150 +192,150 @@ if ($contentHeadingImageValue)
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<jdoc:include type="metas"/>
-	<jdoc:include type="styles"/>
-	<jdoc:include type="scripts"/>
-	<?php if ($customCssCode = $params->get('customCssCode')) : ?>
-		<style><?php echo htmlspecialchars($customCssCode); ?></style>
-	<?php endif; ?>
-</head>
-<body>
-<div id="wrapper" class="container-md<?php echo $params->get('ribbonsOnOff', 1) ? ' has-ribbons' : ''; ?>">
-	<?php require $modules . 'toppanel.php'; ?>
-	<?php require $modules . 'beforehead.php'; ?>
-	<div id="header_container">
-		<?php if ($params->get('showHeader', 1)) : ?>
-			<div id="header">
-				<?php if ($this->countModules('headermodule1')) : ?>
-					<div id="headermodule1">
-						<jdoc:include type="modules" name="headermodule1" style="none"/>
-						<div class="clearfix"></div>
-					</div>
-				<?php endif; ?>
-				<?php if ($this->countModules('banner')) : ?>
-					<div id="banner_outer">
-						<div id="banner">
-							<jdoc:include type="modules" name="banner" style="none"/>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<jdoc:include type="metas"/>
+		<jdoc:include type="styles"/>
+		<jdoc:include type="scripts"/>
+		<?php if ($customCssCode = $params->get('customCssCode')) : ?>
+			<style><?php echo htmlspecialchars($customCssCode); ?></style>
+		<?php endif; ?>
+	</head>
+	<body>
+		<div id="wrapper" class="container-md<?php echo $params->get('ribbonsOnOff', 1) ? ' has-ribbons' : ''; ?>">
+			<?php require $modules . 'toppanel.php'; ?>
+			<?php require $modules . 'beforehead.php'; ?>
+			<div id="header_container">
+				<?php if ($params->get('showHeader', 1)) : ?>
+					<div id="header">
+						<?php if ($this->countModules('headermodule1')) : ?>
+							<div id="headermodule1">
+								<jdoc:include type="modules" name="headermodule1" style="none"/>
+								<div class="clearfix"></div>
+							</div>
+						<?php endif; ?>
+						<?php if ($this->countModules('banner')) : ?>
+							<div id="banner_outer">
+								<div id="banner">
+									<jdoc:include type="modules" name="banner" style="none"/>
+								</div>
+							</div>
+						<?php endif; ?>
+						<div id="logo">
+							<?php if ($params->get('showimgLogo', 1)) : ?>
+								<a class="imglogo"
+								   href="index.php"><?php echo HTMLHelper::_('image', 'logo/' . $params->get('imgLogo', 'logo-transparent.png'), 'Logo', null, true); ?></a>
+							<?php endif; ?>
+							<?php if ($params->get('showMediaLogo')) : ?>
+								<a class="medialogo" href="index.php"><img alt="Logo"
+																		   src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
+							<?php endif; ?>
+							<?php if ($params->get('showtextLogo')) : ?>
+								<a class="logo"
+								   href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->get('sitename'))); ?></a>
+							<?php endif; ?>
+							<?php if ($params->get('showSlogan')) : ?>
+								<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>
+							<?php endif; ?>
 						</div>
+						<?php if ($this->countModules('headermodule2')) : ?>
+							<div id="headermodule2">
+								<jdoc:include type="modules" name="headermodule2" style="none"/>
+								<div class="clearfix"></div>
+							</div>
+						<?php endif; ?>
+						<span class="ribbon left">&nbsp;</span>
+						<span class="ribbon right">&nbsp;</span>
 					</div>
 				<?php endif; ?>
-				<div id="logo">
-					<?php if ($params->get('showimgLogo', 1)) : ?>
-						<a class="imglogo"
-						   href="index.php"><?php echo HTMLHelper::_('image', 'logo/' . $params->get('imgLogo', 'logo-transparent.png'), 'Logo', null, true); ?></a>
-					<?php endif; ?>
-					<?php if ($params->get('showMediaLogo')) : ?>
-						<a class="medialogo" href="index.php"><img alt="Logo"
-																   src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
-					<?php endif; ?>
-					<?php if ($params->get('showtextLogo')) : ?>
-						<a class="logo"
-						   href="index.php"><?php echo htmlspecialchars($params->get('textLogo', $app->get('sitename'))); ?></a>
-					<?php endif; ?>
-					<?php if ($params->get('showSlogan')) : ?>
-						<div class="slogan"><?php echo htmlspecialchars($params->get('slogan')); ?></div>
-					<?php endif; ?>
-				</div>
-				<?php if ($this->countModules('headermodule2')) : ?>
-					<div id="headermodule2">
-						<jdoc:include type="modules" name="headermodule2" style="none"/>
-						<div class="clearfix"></div>
+				<?php require $modules . 'afterhead.php'; ?>
+				<?php if ($this->countModules('position-1')) : ?>
+					<div id="topmenu">
+						<jdoc:include type="modules" name="position-1" style="none"/>
 					</div>
 				<?php endif; ?>
-				<span class="ribbon left">&nbsp;</span>
-				<span class="ribbon right">&nbsp;</span>
-			</div>
-		<?php endif; ?>
-		<?php require $modules . 'afterhead.php'; ?>
-		<?php if ($this->countModules('position-1')) : ?>
-			<div id="topmenu">
-				<jdoc:include type="modules" name="position-1" style="none"/>
-			</div>
-		<?php endif; ?>
-		<?php if ($this->countModules('position-1-1')) : ?>
-			<jdoc:include type="modules" name="position-1-1" style="none"/>
-		<?php endif; ?>
-	</div>
-	<?php if ($this->countModules('breadcrumbs') or $this->countModules('position-0')) : ?>
-		<div id="subhead">
-			<?php if ($this->countModules('breadcrumbs')) : ?>
-				<jdoc:include type="modules" name="breadcrumbs" style="none"/>
-			<?php endif; ?>
-			<?php if ($this->countModules('position-0')) : ?>
-				<div id="search">
-					<jdoc:include type="modules" name="position-0" style="none"/>
-				</div>
-			<?php endif; ?>
-		</div>
-	<?php endif; ?>
-	<div id="container">
-		<?php if ($this->countModules('slider')) : ?>
-			<div id="slider">
-				<jdoc:include type="modules" name="slider" style="none"/>
-			</div>
-			<div class="clearfix"></div>
-		<?php endif; ?>
-		<?php require $modules . 'top.php'; ?>
-		<div class="row">
-			<?php if ($this->countModules('sidebar-left')) : ?>
-				<div id="leftcol" class="order-md-1 order-<?php echo $params->get('leftcolMobilePosition', '1'); ?>">
-					<jdoc:include type="modules" name="sidebar-left" style="AllrounderSidebar"/>
-				</div>
-			<?php endif; ?>
-			<?php if ($this->countModules('sidebar-right')) : ?>
-				<div id="rightcol" class="order-md-5 order-<?php echo $params->get('rightcolMobilePosition', '5'); ?>">
-					<jdoc:include type="modules" name="sidebar-right" style="AllrounderSidebar"/>
-				</div>
-			<?php endif; ?>
-			<div id="content" class="col order-3">
-				<?php require $modules . 'beforecontent.php'; ?>
-				<div id="maincontent" class="row shadowed">
-					<jdoc:include type="message"/>
-					<jdoc:include type="component"/>
-				</div>
-				<?php require $modules . 'aftercontent.php'; ?>
-			</div>
-		</div>
-		<?php require $modules . 'bottom.php'; ?>
-	</div>
-	<div id="foot_container">
-		<?php require $modules . 'foot.php'; ?>
-		<?php if ($this->countModules('footer')) : ?>
-			<div id="footermodule">
-				<jdoc:include type="modules" name="footer" style="none"/>
-			</div>
-		<?php endif; ?>
-		<?php if ($params->get('showSubfoot', 1)) : ?>
-			<div id="subfoot">
-				<?php if ($copyText = $params->get('copyText')) : ?>
-					<div class="copytext">&copy; <?php echo htmlspecialchars($copyText); ?></div>
+				<?php if ($this->countModules('position-1-1')) : ?>
+					<jdoc:include type="modules" name="position-1-1" style="none"/>
 				<?php endif; ?>
 			</div>
-		<?php endif; ?>
-		<div class="clearfix"></div>
-		<div id="footer">
-			<div class="footer-inner">
-				<span class="ribbon left">&nbsp;</span>
-				<span class="ribbon right">&nbsp;</span>
-				<div id="scroll_up">
-					<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP_TIP'); ?>">
-						<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP_TEXT'); ?>
-					</a>
+			<?php if ($this->countModules('breadcrumbs') or $this->countModules('position-0')) : ?>
+				<div id="subhead">
+					<?php if ($this->countModules('breadcrumbs')) : ?>
+						<jdoc:include type="modules" name="breadcrumbs" style="none"/>
+					<?php endif; ?>
+					<?php if ($this->countModules('position-0')) : ?>
+						<div id="search">
+							<jdoc:include type="modules" name="position-0" style="none"/>
+						</div>
+					<?php endif; ?>
 				</div>
-				<?php require $modules . 'footermodules.php'; ?>
-			</div>
-			<div class="footer-bottom">
-				<?php if ($params->get('showDate', 1)) : ?>
-					<span id="date"><?php echo HTMLHelper::_('date', 'now', Text::_('DATE_FORMAT_LC1')); ?></span>
+			<?php endif; ?>
+			<div id="foot_container">
+				<?php require $modules . 'foot.php'; ?>
+				<?php if ($this->countModules('footer')) : ?>
+					<div id="footermodule">
+						<jdoc:include type="modules" name="footer" style="none"/>
+					</div>
 				<?php endif; ?>
+				<?php if ($params->get('showSubfoot', 1)) : ?>
+					<div id="subfoot">
+						<?php if ($copyText = $params->get('copyText')) : ?>
+							<div class="copytext">&copy; <?php echo htmlspecialchars($copyText); ?></div>
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
+				<div class="clearfix"></div>
+				<div id="footer">
+					<div class="footer-inner">
+						<span class="ribbon left">&nbsp;</span>
+						<span class="ribbon right">&nbsp;</span>
+						<div id="scroll_up">
+							<a href="#" id="gotop" title="<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP_TIP'); ?>">
+								<?php echo Text::_('TPL_ALLROUNDER_SCROLL_TOP_TEXT'); ?>
+							</a>
+						</div>
+						<?php require $modules . 'footermodules.php'; ?>
+					</div>
+					<div class="footer-bottom">
+						<?php if ($params->get('showDate', 1)) : ?>
+							<span id="date"><?php echo HTMLHelper::_('date', 'now', Text::_('DATE_FORMAT_LC1')); ?></span>
+						<?php endif; ?>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div id="container">
+				<?php if ($this->countModules('slider')) : ?>
+					<div id="slider">
+						<jdoc:include type="modules" name="slider" style="none"/>
+					</div>
+					<div class="clearfix"></div>
+				<?php endif; ?>
+				<?php require $modules . 'top.php'; ?>
+				<div class="row">
+					<?php if ($this->countModules('sidebar-left')) : ?>
+						<div id="leftcol" class="order-md-1 order-<?php echo $params->get('leftcolMobilePosition', '1'); ?>">
+							<jdoc:include type="modules" name="sidebar-left" style="AllrounderSidebar"/>
+						</div>
+					<?php endif; ?>
+					<?php if ($this->countModules('sidebar-right')) : ?>
+						<div id="rightcol" class="order-md-5 order-<?php echo $params->get('rightcolMobilePosition', '5'); ?>">
+							<jdoc:include type="modules" name="sidebar-right" style="AllrounderSidebar"/>
+						</div>
+					<?php endif; ?>
+					<div id="content" class="col order-3">
+						<?php require $modules . 'beforecontent.php'; ?>
+						<div id="maincontent" class="row shadowed">
+							<jdoc:include type="message"/>
+							<jdoc:include type="component"/>
+						</div>
+						<?php require $modules . 'aftercontent.php'; ?>
+					</div>
+				</div>
+				<?php require $modules . 'bottom.php'; ?>
 			</div>
 		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<?php require $modules . 'sidepanel.php'; ?>
-<jdoc:include type="modules" name="debug" style="none"/>
-</body>
+		<jdoc:include type="modules" name="debug" style="none"/>
+	</body>
+	<?php require $modules . 'sidepanel.php'; ?>
 </html>
