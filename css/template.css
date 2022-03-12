@@ -1944,7 +1944,6 @@ li.current li {
   background-color: #e6e6e6;
   background-image: none;
   opacity: 0.65;
-  filter: alpha(opacity=65);
   box-shadow: none;
 }
 
@@ -1960,7 +1959,6 @@ li.current li {
   background-color: #d6d6d6;
   background-image: none !important;
   opacity: 0.65;
-  filter: alpha(opacity=65);
   box-shadow: none;
 }
 
@@ -2146,7 +2144,7 @@ a.logo:hover {
   float: left;
   font-family: Font Awesome\ 5 Free;
   font-weight: bold;
-  speak: none;
+  speak: never;
   content: '\f0da';
 }
 
