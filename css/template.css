@@ -577,10 +577,16 @@ div.slogan {
 }
 
 /* End Buttons */
+
+/* Start Modals */
 .modal-footer {
   background-color: #f5f5f5;
 }
-
+/* Fix for modal background z-index issue */
+.modal-open #content {
+  z-index: auto;
+}
+/* End Modals */
 @media (max-width: 767px) {
   body {
     padding-left: 20px;
