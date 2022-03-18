@@ -1342,7 +1342,13 @@ img.featured-dark {
 #topmenu .navbar {
   margin: 0;
   padding: 0;
-
+  background-color: var(--allrounder-dropdown-bg-color);
+}
+#topmenu .icon-menu {
+  color: var(--allrounder-dropdown-li-a-font-color);
+}
+#topmenu .navbar-collapse ul.nav {
+  border-top: 0;
 }
 
 #topmenu ul.nav {
