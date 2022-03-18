@@ -1483,12 +1483,6 @@ img.featured-dark {
 
 /* End Topmenu */
 @media (max-width: 767px) {
-  nav {
-    background-color: #222222;
-    border-top: 3px double #ffffff;
-    border-bottom: 3px double #ffffff;
-  }
-
   #topmenu ul.mod-menu__sub {
     display: none;
   }
