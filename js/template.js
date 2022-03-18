@@ -11,18 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       link.insertBefore(mobileIconNode, link.firstChild);
       let ul = entry.querySelector('ul');
       if (ul) {
-        entry.addEventListener('mouseover', function (event) {
-          if (!event.target.classList.contains('mobile-icon')) {
-            entry.querySelector('ul').style.display = 'block';
-            entry.classList.add('opened');
-          }
-        }, false);
-        entry.addEventListener('mouseout', function (event) {
-          if (!event.target.classList.contains('mobile-icon')) {
-            entry.querySelector('ul').style.display = 'none';
-            entry.classList.remove('opened');
-          }
-        }, false);
         let mobileIcon = entry.querySelector('.mobile-icon');
         mobileIcon.addEventListener('click', function (event) {
           if (entry.classList.contains('opened')) {
