@@ -201,7 +201,7 @@ if ($contentHeadingImageValue)
 			<style><?php echo htmlspecialchars($customCssCode); ?></style>
 		<?php endif; ?>
 	</head>
-	<body class="<?php echo $this->direction === 'rtl' ? 'rtl' : ''; ?>">
+	<body class="<?php echo $this->direction === 'rtl' ? 'rtl' : ''; ?> component">
 		<div id="maincontent" class="row">
 			<jdoc:include type="message" />
 			<jdoc:include type="component" />
