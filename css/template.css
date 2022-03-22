@@ -435,7 +435,36 @@ div.slogan {
 }
 
 /* End Buttons */
-
+/* Blog Columns Layout */
+@supports (display: grid) {
+  .blog-items {
+    display: grid;
+    margin: 0 0 1em;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+  .blog-items .blog-item {
+    padding: 0;
+  }
+  .blog-items[class^=columns-] > div, .blog-items[class*=" columns-"] > div {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: none;
+  }
+  @media (min-width: 992px) {
+    .blog-items.columns-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+    .blog-items.columns-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .blog-items.columns-4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+/* End Blog Columns Layout */
 /* Blog Masonry Layout */
 .blog-items[class^=masonry-], .blog-items[class*=" masonry-"] {
   display: block;
