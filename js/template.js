@@ -12,16 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
       let ul = entry.querySelector('ul');
       if (ul) {
         entry.addEventListener('mouseover', function (event) {
-          let parent = entry.closest('div');
-          if (window.getComputedStyle(parent).display === 'flex')
+          let parent = entry.closest('ul.mod-menu');
+          if (window.getComputedStyle(parent).flexDirection === 'row')
           {
             entry.querySelector('ul').style.display = 'block';
             entry.classList.add('opened');
           }
         }, false);
         entry.addEventListener('mouseout', function (event) {
-          let parent = entry.closest('div');
-          if (window.getComputedStyle(parent).display === 'flex')
+          let parent = entry.closest('ul.mod-menu');
+          if (window.getComputedStyle(parent).flexDirection === 'row')
           {
             entry.querySelector('ul').style.display = 'none';
             entry.classList.remove('opened');
