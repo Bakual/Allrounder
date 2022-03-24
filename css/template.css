@@ -1481,6 +1481,10 @@ img.featured-dark {
   color: var(--allrounder-dropdown-l2-ul-li-a-font-hover-color);
 }
 
+#topmenu ul.nav ul.mod-menu__sub li.deeper.parent {
+  position: relative;
+}
+
 #topmenu ul.nav ul.mod-menu__sub a:hover,
 #topmenu ul.nav ul.mod-menu__sub a:focus {
   text-decoration: none;
@@ -1543,7 +1547,7 @@ img.featured-dark {
   }
 
   #topmenu ul.nav ul.mod-menu__sub ul {
-    left: 190px;
+    left: 180px;
     top: 1em;
   }
 }
