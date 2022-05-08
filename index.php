@@ -174,7 +174,7 @@ $wa->addInlineStyle(':root {
   --allrounder-dropdown-l2-ul-li-a-bg-hover-color: ' . $params->get('ulLiliHoverBackground', '#212121') . ';
 }
 body {
-  background-image: url(' . MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
+  background-image: url(' . $this->baseurl . '/' . MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
 }'
 );
