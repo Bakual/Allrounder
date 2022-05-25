@@ -25,7 +25,7 @@ $moduleTag              = htmlspecialchars($params->get('module_tag', 'div'), EN
 $moduleAttribs          = [];
 $moduleAttribs['class'] = $module->position . ' allroundersidebarchrome ' . htmlspecialchars($params->get('moduleclass_sfx', 'shadowed'), ENT_QUOTES);
 $bootstrapSize           = (int) $params->get('bootstrap_size', 0);
-$moduleAttribs['class'] .= $bootstrapSize ? ' col-' . $bootstrapSize : '';
+$moduleAttribs['class'] .= $bootstrapSize ? ' col-md-' . $bootstrapSize : '';
 $chromeDesign            = (int) $params->get('allrounder_chrome_design', 0);
 $moduleAttribs['class'] .= $chromeDesign ? ' module-style' . $chromeDesign : '';
 
