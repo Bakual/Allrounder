@@ -183,7 +183,8 @@ if ($contentHeadingImageValue)
 {
 	$this->addStyleDeclaration('
 	.page-header h2,
-	h2.item-title {
+	h2.item-title,
+	.page-header h1[itemprop] {
 		background-image: ' . $contentHeadingImageValue . ';
 		background-repeat: no-repeat;
 		padding-left: 40px;

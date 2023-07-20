@@ -312,7 +312,7 @@ dl.article-info {
   padding-bottom: 5px;
 }
 
-.page-header h1 {
+.page-header h1:not([itemprop]) {
   text-align: right;
   margin: 0 0 25px 0;
   padding: 0 10px;
@@ -322,7 +322,8 @@ dl.article-info {
 }
 
 .page-header h2,
-h2.item-title {
+h2.item-title,
+.page-header h1[itemprop] {
   line-height: 32px;
   min-height: 32px;
   margin: 10px 0;
@@ -333,7 +334,9 @@ h2.item-title {
 .page-header h2,
 .page-header h2 a,
 h2.item-title,
-h2.item-title a {
+h2.item-title a,
+.page-header h1[itemprop],
+.page-header h1[itemprop] a {
   color: var(--allrounder-article-font-color);
 }
 
