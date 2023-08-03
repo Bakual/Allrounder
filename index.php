@@ -34,7 +34,8 @@ $this->addHeadLink(HTMLHelper::_('image', 'joomla-favicon.svg', '', [], true, 1)
 $this->addHeadLink(HTMLHelper::_('image', 'favicon.ico', '', [], true, 1), 'alternate icon', 'rel', ['type' => 'image/vnd.microsoft.icon']);
 $this->addHeadLink(HTMLHelper::_('image', 'joomla-favicon-pinned.svg', '', [], true, 1), 'mask-icon', 'rel', ['color' => '#000']);
 
-$modules = JPATH_ROOT . '/templates/' . $this->template . '/modules/';
+// Don't use $this->template as the files are not copied to child templates.
+$modules = JPATH_ROOT . '/templates/allrounder/modules/';
 
 $params = $this->params;
 
