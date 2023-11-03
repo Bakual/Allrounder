@@ -97,7 +97,7 @@ dl.article-info {
 }
 
 .article-info-term:before {
-  font-family: Font Awesome\ 5 Free;
+  font-family: Font Awesome\ 6 Free;
   font-weight: 900;
   content: "\f0fe";
 }
@@ -2244,7 +2244,7 @@ a.logo:hover {
 
 .mod-menu li:before {
   float: left;
-  font-family: Font Awesome\ 5 Free;
+  font-family: Font Awesome\ 6 Free;
   font-weight: bold;
   speak: never;
   content: '\f0da';
