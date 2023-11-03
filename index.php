@@ -13,6 +13,7 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\MediaHelper as MediaHelperAlias;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
+use Joomla\CMS\Uri\Uri;
 
 require_once 'helper/allrounder.php';
 
@@ -41,21 +42,19 @@ $params = $this->params;
 
 // Get values from template style.
 $bodyBackground            = $params->get('bodyBackground', 'rgb(162, 205, 253)');
-$bodyBackgroundImage       = MediaHelperAlias::getCleanMediaFieldValue($params->get('bodyBackgroundImage', HTMLHelper::_('image', $params->get('bodyBackgroundImage', 'background.png'), '', null, true, 1)));
+$bodyBackgroundImage       = MediaHelperAlias::getCleanMediaFieldValue($params->get('bodyBackgroundImage', 'media/templates/site/allrounder/images/background.png'));
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
 $sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) ? '--bs-font-sans-serif: ' . $sansFontFamily : '';
 $contentHeadingImage       = $params->get('contentheadingImage', 1);
 $ribbon                    = $params->get('ribbonsOnOff', 1);
-
 if ($contentHeadingImage == 1)
 {
-//	$contentHeadingImageValue = 'url(' . $this->baseurl . '/templates/' . $this->template . '/images/balloon.png)';
 	$contentHeadingImageValue = 'url(' . HTMLHelper::_('image', 'balloon.png', '', null, true, 1) . ')';
 }
 elseif ($contentHeadingImage == 2)
 {
-	$contentHeadingImageValue = 'url(' . $this->baseurl . '/' . MediaHelperAlias::getCleanMediaFieldValue($params->get('contentheadingImageMedia')) . ')';
+	$contentHeadingImageValue = 'url(' . Uri::root() . MediaHelperAlias::getCleanMediaFieldValue($params->get('contentheadingImageMedia')) . ')';
 }
 else
 {
@@ -175,7 +174,7 @@ $wa->addInlineStyle(':root {
   --allrounder-dropdown-l2-ul-li-a-bg-hover-color: ' . $params->get('ulLiliHoverBackground', '#212121') . ';
 }
 body {
-  background-image: url(' . $this->baseurl . '/' . MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
+  background-image: url(' . Uri::root() . $bodyBackgroundImage . ');
   background-repeat: ' . $bodyBackgroundImageRepeat . ';
 }'
 );
@@ -230,7 +229,7 @@ if ($contentHeadingImageValue)
 							<?php endif; ?>
 							<?php if ($params->get('showMediaLogo')) : ?>
 								<a class="medialogo" href="index.php"><img alt="Logo"
-																		   src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
+																		   src="<?php echo Uri::root() . htmlspecialchars($params->get('mediaLogo')); ?>"/></a>
 							<?php endif; ?>
 							<?php if ($params->get('showtextLogo')) : ?>
 								<a class="logo"
