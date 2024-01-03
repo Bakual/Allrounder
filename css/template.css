@@ -128,7 +128,9 @@ dl.article-info {
   display: none;
   visibility: hidden;
 }
-
+.table {
+  --bs-table-bg: var(--allrounder-article-bg-color);
+}
 /* End Verified Diverses */
 
 /* Layout */
