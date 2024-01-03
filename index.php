@@ -199,7 +199,7 @@ if ($contentHeadingImageValue)
 		<jdoc:include type="styles"/>
 		<jdoc:include type="scripts"/>
 		<?php if ($customCssCode = $params->get('customCssCode')) : ?>
-			<style><?php echo htmlspecialchars($customCssCode); ?></style>
+			<style><?php echo htmlspecialchars($customCssCode, ENT_NOQUOTES); ?></style>
 		<?php endif; ?>
 	</head>
 	<body>
