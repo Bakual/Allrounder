@@ -1433,7 +1433,8 @@ img.featured-dark {
 }
 
 #topmenu ul.nav > li a,
-#topmenu ul.nav > li span.separator {
+#topmenu ul.nav > li span.separator,
+#topmenu ul.nav > li span.nav-header {
   padding: 10px 15px;
   background-color: var(--allrounder-dropdown-li-a-bg-color);
   border-left: 1px solid var(--allrounder-dropdown-li-a-border-left-color);
@@ -1449,7 +1450,8 @@ img.featured-dark {
 }
 
 #topmenu ul.nav > li a:hover,
-#topmenu ul.nav > li span.separator:hover {
+#topmenu ul.nav > li span.separator:hover,
+#topmenu ul.nav > li span.nav-header:hover {
   color: var(--allrounder-dropdown-li-a-font-hover-color);
 }
 
@@ -1469,7 +1471,8 @@ img.featured-dark {
 }
 
 #topmenu ul.nav ul.mod-menu__sub li a,
-#topmenu ul.nav ul.mod-menu__sub li span.separator {
+#topmenu ul.nav ul.mod-menu__sub li span.separator,
+#topmenu ul.nav ul.mod-menu__sub li span.nav-header {
   background-color: var(--allrounder-dropdown-l2-ul-li-a-bg-color);
   padding: 4px 8px;
   border: 1px solid;
@@ -1481,7 +1484,8 @@ img.featured-dark {
 }
 
 #topmenu ul.nav ul.mod-menu__sub li:hover > a,
-#topmenu ul.nav ul.mod-menu__sub li:hover > span.separator {
+#topmenu ul.nav ul.mod-menu__sub li:hover > span.separator,
+#topmenu ul.nav ul.mod-menu__sub li:hover > span.nav-header {
   background-color: var(--allrounder-dropdown-l2-ul-li-a-bg-hover-color);
   color: var(--allrounder-dropdown-l2-ul-li-a-font-hover-color);
 }
@@ -1502,26 +1506,31 @@ img.featured-dark {
 
   #topmenu ul.nav,
   #topmenu ul.nav > li > a,
-  #topmenu ul.nav > li > span.separator {
+  #topmenu ul.nav > li > span.separator,
+  #topmenu ul.nav > li > span.nav-header {
     background-image: var(--allrounder-dropdown-bg-image);
   }
 
   #topmenu ul.nav li.parent > a,
-  #topmenu ul.nav li.parent > span.separator {
+  #topmenu ul.nav li.parent > span.separator,
+  #topmenu ul.nav li.parent > span.nav-header {
     background-repeat: no-repeat;
     background-position: center right;
     padding-right: 30px;
   }
 
   #topmenu ul.nav > li.parent > a,
-  #topmenu ul.nav > li.parent > span.separator {
+  #topmenu ul.nav > li.parent > span.separator,
+  #topmenu ul.nav > li.parent > span.nav-header {
     background-image: var(--allrounder-dropdown-bg-image-parent);
   }
 
   #topmenu ul.nav > li.active.parent > a,
   #topmenu ul.nav > li.active.parent > span.separator,
+  #topmenu ul.nav > li.active.parent > span.nav-header,
   #topmenu ul.nav > li.parent > a:hover,
-  #topmenu ul.nav > li.parent > span.separator:hover {
+  #topmenu ul.nav > li.parent > span.separator:hover,
+  #topmenu ul.nav > li.parent > span.nav-header:hover {
     background-image: var(--allrounder-dropdown-bg-image-parent-hover);
   }
 
@@ -1542,12 +1551,14 @@ img.featured-dark {
   }
 
   #topmenu ul.nav ul.mod-menu__sub li.parent > a,
-  #topmenu ul.nav ul.mod-menu__sub li.parent > span.separator {
+  #topmenu ul.nav ul.mod-menu__sub li.parent > span.separator,
+  #topmenu ul.nav ul.mod-menu__sub li.parent > span.nav-header {
     background-image: url(../images/menu/menulili_parent.gif);
   }
 
   #topmenu ul.nav ul.mod-menu__sub li.parent > a:hover,
-  #topmenu ul.nav ul.mod-menu__sub li.parent > span.separator:hover {
+  #topmenu ul.nav ul.mod-menu__sub li.parent > span.separator:hover,
+  #topmenu ul.nav ul.mod-menu__sub li.parent > span.nav-header:hover {
     background-image: url(../images/menu/menulili_parent_hover.gif);
   }
 
@@ -1579,14 +1590,16 @@ img.featured-dark {
   }
 
   #topmenu ul.nav li.parent > a > .mobile-icon:before,
-  #topmenu ul.nav li.parent > span.separator > .mobile-icon:before {
+  #topmenu ul.nav li.parent > span.separator > .mobile-icon:before,
+  #topmenu ul.nav li.parent > span.nav-header > .mobile-icon:before {
     text-align: center;
     content: "+";
     color: green;
   }
 
   #topmenu ul.nav li.parent.opened > a > .mobile-icon:before,
-  #topmenu ul.nav li.parent.opened > span.separator > .mobile-icon:before {
+  #topmenu ul.nav li.parent.opened > span.separator > .mobile-icon:before,
+  #topmenu ul.nav li.parent.opened > span.nav-header > .mobile-icon:before {
     content: "\2013";
     color: red;
   }
@@ -1596,12 +1609,14 @@ img.featured-dark {
   }
 
   #topmenu ul.nav > li a,
-  #topmenu ul.nav > li span.separator {
+  #topmenu ul.nav > li span.separator,
+  #topmenu ul.nav > li span.nav-header {
     font-size: 18px;
   }
 
   #topmenu ul.nav ul.mod-menu__sub li a,
-  #topmenu ul.nav ul.mod-menu__sub li span.separator {
+  #topmenu ul.nav ul.mod-menu__sub li span.separator,
+  #topmenu ul.nav ul.mod-menu__sub li span.nav-header {
     font-size: 16px;
   }
 
