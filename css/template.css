@@ -1356,6 +1356,9 @@ a.information:before {
   content: url(../images/icons/info.gif);
 }
 
+img {
+  max-width: 100%;
+}
 
 img.border-dark {
   border: 1px solid #555;
