@@ -1,4 +1,4 @@
 Allrounder Template
 ===================
 
-A Bootstrap based template for Joomla 4
+A Bootstrap based template for Joomla 4+
