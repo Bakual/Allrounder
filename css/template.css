@@ -1437,7 +1437,7 @@ img.featured-dark {
 
 #topmenu ul.nav > li a,
 #topmenu ul.nav > li span.separator,
-#topmenu ul.nav > li span.nav-header {
+#topmenu ul.nav > li .mod-menu__toggle-sub {
   padding: 10px 15px;
   background-color: var(--allrounder-dropdown-li-a-bg-color);
   border-left: 1px solid var(--allrounder-dropdown-li-a-border-left-color);
