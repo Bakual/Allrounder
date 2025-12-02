@@ -1434,10 +1434,18 @@ img.featured-dark {
   line-height: 1.5em;
   border-right: 1px solid var(--allrounder-dropdown-li-border-right-color);
 }
+#topmenu .mod-menu li.nav-item a,
+#topmenu .mod-menu li.nav-item > span {
+  display: block;
+  padding-left: 15px;
+}
+
+#topmenu ul.nav > li .mod-menu__toggle-sub {
+  display: none;
+}
 
 #topmenu ul.nav > li a,
-#topmenu ul.nav > li span.separator,
-#topmenu ul.nav > li .mod-menu__toggle-sub {
+#topmenu ul.nav > li span.separator {
   padding: 10px 15px;
   background-color: var(--allrounder-dropdown-li-a-bg-color);
   border-left: 1px solid var(--allrounder-dropdown-li-a-border-left-color);
@@ -2220,7 +2228,7 @@ a.logo:hover {
 .mod-menu li.nav-item a,
 .mod-menu li.nav-item > span {
   color: var(--allrounder-menu-font-color);
-  display: block;
+  display: inline-block;
   padding-left: 15px;
   border-bottom: 1px dotted var(--allrounder-menu-border-bottom-color);
 }
