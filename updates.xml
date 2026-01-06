@@ -24,7 +24,7 @@
 		<type>template</type>
 		<version>5.0.0</version>
 		<client>site</client>
-		<infourl title="Allrounder Template 5.0.0">https://github.com/Bakual/Allrounder/releases/tag/5.0.5</infourl>
+		<infourl title="Allrounder Template 5.0.0">https://github.com/Bakual/Allrounder/releases/tag/5.0.0</infourl>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/Bakual/Allrounder/archive/refs/tags/5.0.0.zip</downloadurl>
 		</downloads>
