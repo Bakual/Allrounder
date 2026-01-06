@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="5.0" type="template" client="site" method="upgrade">
+<extension version="6.0" type="template" client="site" method="upgrade">
 	<name>allrounder</name>
-	<creationDate>2023-12-01</creationDate>
+	<creationDate>2026-01-06</creationDate>
 	<author>Thomas Hunziker</author>
 	<authorEmail>bakual@bakual.net</authorEmail>
 	<authorUrl>https://www.bakual.net</authorUrl>
-	<copyright>(C) 2023</copyright>
+	<copyright>(C) 2026</copyright>
 	<license>https://www.gnu.org/licenses/gpl.html</license>
-	<version>5.0.0</version>
+	<version>6.0.0</version>
 	<description>TPL_ALLROUNDER_XML_DESCRIPTION</description>
 	<inheritable>1</inheritable>
 	<scriptfile>script.php</scriptfile>
