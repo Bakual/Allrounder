@@ -192,6 +192,15 @@ if ($contentHeadingImageValue)
 		padding-left: 40px;
 	}');
 }
+
+if ($params->get('imagesFluid', 1))
+{
+	$wa->addInlineStyle('
+	img {
+	  max-width: 100%;
+	  height: auto;
+	}');
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
