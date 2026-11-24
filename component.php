@@ -10,7 +10,7 @@
 defined('_JEXEC') or die();
 
 use Joomla\CMS\Factory;
-use Joomla\CMS\Helper\MediaHelper as MediaHelperAlias;
+use Joomla\CMS\Helper\MediaHelper;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Uri\Uri;
 
@@ -41,7 +41,7 @@ $params = $this->params;
 
 // Get values from template style.
 $bodyBackground            = $params->get('bodyBackground', 'rgb(162, 205, 253)');
-$bodyBackgroundImage       = MediaHelperAlias::getCleanMediaFieldValue($params->get('bodyBackgroundImage', 'media/templates/site/allrounder/images/background.png'));
+$bodyBackgroundImage       = MediaHelper::getCleanMediaFieldValue($params->get('bodyBackgroundImage', 'media/templates/site/allrounder/images/background.png'));
 $bodyBackgroundImageRepeat = $params->get('bodyBackgroundImageRepeat', 1) ? 'repeat' : 'no-repeat';
 $textColor                 = $params->get('textColor', 'rgb(33, 37, 41)');
 $sansFontFamily            = ($sansFontFamily = $params->get('sansFontFamily')) ? '--bs-font-sans-serif: ' . $sansFontFamily : '';
@@ -54,7 +54,7 @@ if ($contentHeadingImage == 1)
 }
 elseif ($contentHeadingImage == 2)
 {
-	$contentHeadingImageValue = 'url(' . Uri::root() . MediaHelperAlias::getCleanMediaFieldValue($params->get('contentheadingImageMedia')) . ')';
+	$contentHeadingImageValue = 'url(' . Uri::root() . MediaHelper::getCleanMediaFieldValue($params->get('contentheadingImageMedia')) . ')';
 }
 else
 {
@@ -172,16 +172,19 @@ $wa->addInlineStyle(':root {
   --allrounder-dropdown-l2-ul-li-a-font-hover-color: ' . $params->get('ulLiliaHoverColor', '#ffffff') . ';
   --allrounder-dropdown-l2-ul-li-a-bg-color: ' . $params->get('ulLiliBackground', '#171717') . ';
   --allrounder-dropdown-l2-ul-li-a-bg-hover-color: ' . $params->get('ulLiliHoverBackground', '#212121') . ';
+}');
+
+if ($bodyBackgroundImage)
+{
+	$wa->addInlineStyle('body {
+	  background-image: url(' . Uri::root() . $bodyBackgroundImage . ');
+	  background-repeat: ' . $bodyBackgroundImageRepeat . ';
+	}');
 }
-body {
-  background-image: url(' . MediaHelperAlias::getCleanMediaFieldValue($bodyBackgroundImage) . ');
-  background-repeat: ' . $bodyBackgroundImageRepeat . ';
-}'
-);
 
 if ($contentHeadingImageValue)
 {
-	$this->addStyleDeclaration('
+	$wa->addInlineStyle('
 	.page-header h2,
 	h2.item-title {
 		background-image: ' . $contentHeadingImageValue . ';
@@ -198,7 +201,7 @@ if ($contentHeadingImageValue)
 		<jdoc:include type="styles"/>
 		<jdoc:include type="scripts"/>
 		<?php if ($customCssCode = $params->get('customCssCode')) : ?>
-			<style><?php echo htmlspecialchars($customCssCode); ?></style>
+			<?php $wa->addInlineStyle($customCssCode); ?>
 		<?php endif; ?>
 	</head>
 	<body class="<?php echo $this->direction === 'rtl' ? 'rtl' : ''; ?> component">
