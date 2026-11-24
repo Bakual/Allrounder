@@ -40,19 +40,19 @@
 		<name>Allrounder Template</name>
 		<element>allrounder</element>
 		<type>template</type>
-		<version>6.0.0</version>
+		<version>6.1.0</version>
 		<client>site</client>
 			<changelogurl>https://www.bakual.net/update/tpl_allrounder-changelog.xml</changelogurl>
-		<infourl title="Allrounder Template 6.0.0">https://github.com/Bakual/Allrounder/releases/tag/6.0.0</infourl>
+		<infourl title="Allrounder Template 6.1.0">https://github.com/Bakual/Allrounder/releases/tag/6.1.0</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/Bakual/Allrounder/archive/refs/tags/6.0.0.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/Bakual/Allrounder/archive/refs/tags/6.1.0.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
 		</tags>
 		<maintainer>Thomas Hunziker</maintainer>
 		<maintainerurl>https://www.sermonspeaker.net/</maintainerurl>
-		<targetplatform name="joomla" version="6.[01234]"/>
-		<sha256>c8f1be77957a2172c0b438fdd200514366d89cbe6b6a3d066dd806f49aeefc8e</sha256>
+		<targetplatform name="joomla" version="6.[0123456789]"/>
+		<sha256>3dacf77305329127f637d0168239b0210974ee85d550720d7cf89d552293848e</sha256>
 	</update>
 </updates>
