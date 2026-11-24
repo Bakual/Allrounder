@@ -3,7 +3,7 @@
   "name": "allrounder",
   "version": "4.0.1",
   "description": "This file contains details of the assets used by Allrounder template.",
-  "license": "GPL-2.0-or-later",
+  "license": "GPL-3.0-or-later",
   "assets": [
     {
       "name": "template.allrounder.ltr",
