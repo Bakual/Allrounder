@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+	<changelog>
+		<element>com_sermonspeaker</element>
+		<type>component</type>
+		<version>6.1.0</version>
+		<security>
+		</security>
+		<fix>
+			<item>Opacity now only makes the wrapper transparent, leaving childs alone.</item>
+		</fix>
+		<language>
+		</language>
+		<addition>
+			<item>Added option to make images responsive by default</item>
+		</addition>
+		<change>
+		</change>
+		<remove>
+		</remove>
+		<note>
+		</note>
+	</changelog>
+</changelogs>
