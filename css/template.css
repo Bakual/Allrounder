@@ -770,11 +770,6 @@ a.disabled:hover {
   margin: 5px 0;
 }
 
-.blog-row-rule,
-.blog-item-rule {
-  border: 0;
-}
-
 body.modal {
   padding-top: 0;
 }
@@ -792,11 +787,6 @@ body.modal {
 
 .row-even {
   background-color: #f9f9f9;
-}
-
-.blog-row-rule,
-.blog-item-rule {
-  border: 0;
 }
 
 .btn-wide {
