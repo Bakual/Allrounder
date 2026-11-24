@@ -614,26 +614,6 @@ div.slogan {
   background-color: #2f96b4;
 }
 
-.btn-inverse {
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #363636;
-  background-image: linear-gradient(to bottom, #444, #222);
-  background-repeat: repeat-x;
-  border-color: #222 #222 #000000;
-}
-
-.btn-inverse:hover,
-.btn-inverse:focus,
-.btn-inverse:active,
-.btn-inverse.active,
-.btn-inverse.disabled,
-.btn-inverse[disabled] {
-  color: #fff;
-  background-image: none;
-  background-color: #222;
-}
-
 .btn-link,
 .btn-link:active {
   background-color: transparent;
@@ -686,13 +666,6 @@ body.component #maincontent > div {
     padding-right: 20px;
   }
 
-  .navbar-fixed-top,
-  .navbar-fixed-bottom,
-  .navbar-static-top {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-
   .container-fluid {
     padding: 0;
   }
@@ -705,11 +678,6 @@ body.component #maincontent > div {
   }
 
   .dl-horizontal dd {
-    margin-left: 0;
-  }
-
-  .thumbnails > li {
-    float: none;
     margin-left: 0;
   }
 }
@@ -792,17 +760,6 @@ a.disabled:hover {
   background-color: transparent;
   cursor: default;
   text-decoration: none;
-}
-
-.hero-unit {
-  text-align: center;
-}
-
-.hero-unit .lead {
-  margin-bottom: 18px;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 27px;
 }
 
 .btn .caret {
@@ -891,20 +848,6 @@ body.modal {
   margin: 0 0 10px 10px;
 }
 
-.radio.btn-group input[type=radio] {
-  display: none;
-}
-
-.radio.btn-group > label:first-of-type {
-  margin-left: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
-}
-
-fieldset.radio.btn-group {
-  padding-left: 0;
-}
-
 .iframe-bordered {
   border: 1px solid #ddd;
 }
@@ -937,17 +880,6 @@ fieldset.radio.btn-group {
 
 .btn-group > .btn-micro {
   font-size: 10px;
-}
-
-.tip-wrap {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  background-color: #000;
-  border-radius: 4px;
-  z-index: 100;
 }
 
 .element-invisible {
@@ -985,10 +917,6 @@ fieldset.radio.btn-group {
   width: auto;
 }
 
-.btn-group .chzn-results {
-  white-space: normal;
-}
-
 
 .invalid {
   color: #9d261d;
@@ -998,12 +926,6 @@ fieldset.radio.btn-group {
 input.invalid {
   border: 1px solid #9d261d;
   background: #f2dede;
-}
-
-select.chzn-done.invalid + .chzn-container.chzn-container-single > a.chzn-single,
-select.chzn-done.invalid + .chzn-container.chzn-container-multi > ul.chzn-choices {
-  border-color: #9d261d;
-  color: #9d261d;
 }
 
 /* Start jviewport, copied from Cassiopeia */
