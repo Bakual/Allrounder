@@ -141,11 +141,10 @@ dl.article-info {
   padding-right: 0;
   padding-top: var(--allrounder-padding-top);
   padding-bottom: var(--allrounder-padding-bottom);
-  background-color: var(--allrounder-wrapper-bg-color);
-  opacity: var(--allrounder-wrapper-bg-opacity);
   border: 1px solid var(--allrounder-wrapper-border-color);
   display: flex;
   flex-direction: column;
+  background-color: color-mix(in srgb, var(--allrounder-wrapper-bg-color) calc(var(--allrounder-wrapper-bg-opacity) * 100%), transparent);
 }
 #beforehead {
   order: 1;
